@@ -79,36 +79,7 @@
         <div id="allMembers">
         
 
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="scala.reactive.Isolate.Looper" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Looper[T]extendsIsolate[T]"></a>
-      <a id="Looper[T]:Looper[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="Isolate$$Looper.html"><span class="name">Looper</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a>[<span class="extype" name="scala.reactive.Isolate.Looper.T">T</span>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="scala.reactive.Isolate.State" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="StateextendsAnyRef"></a>
-      <a id="State:State"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">sealed </span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="Isolate$$State.html"><span class="name">State</span></a><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
-      </span>
-      </h4>
-      
-    </li></ol>
-            </div>
+        
 
         
 
@@ -179,45 +150,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="scala.reactive.Isolate.Created" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Created"></a>
-      <a id="Created:Created"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Isolate$$Created$.html"><span class="name">Created</span></a><span class="result"> extends <a href="Isolate$$State.html" class="extype" name="scala.reactive.Isolate.State">State</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="scala.reactive.Isolate.Running" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Running"></a>
-      <a id="Running:Running"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Isolate$$Running$.html"><span class="name">Running</span></a><span class="result"> extends <a href="Isolate$$State.html" class="extype" name="scala.reactive.Isolate.State">State</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="scala.reactive.Isolate.Terminated" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Terminated"></a>
-      <a id="Terminated:Terminated"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Isolate$$Terminated$.html"><span class="name">Terminated</span></a><span class="result"> extends <a href="Isolate$$State.html" class="extype" name="scala.reactive.Isolate.State">State</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -373,6 +305,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.reactive.Isolate#of" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="of[T]:scala.reactive.Isolate[T]"></a>
+      <a id="of[T]:Isolate[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">of</span><span class="tparams">[<span name="T">T</span>]</span><span class="result">: <a href="Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a>[<span class="extype" name="scala.reactive.Isolate.of.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the current isolate that produces events of type <code>T</code>.</p>
     </li><li name="scala.reactive.Isolate#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="self[I&lt;:scala.reactive.Isolate[_]]:I"></a>
       <a id="self[I&lt;:Isolate[_]]:I"></a>
@@ -388,7 +333,23 @@
       <p class="shortcomment cmt">Returns the current isolate.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the current isolate.</p><p> If the caller is not executing in an isolate,
  throws an <code>IllegalStateException</code>.</p><p> The caller must specify the type of the current isolate
  if the type of the isolate is required.
-</p></div><dl class="paramcmts block"><dt class="tparam">I</dt><dd class="cmt"><p>the type of the current isolate
+</p></div><dl class="paramcmts block"><dt class="tparam">I</dt><dd class="cmt"><p>the type of the current isolate</p></dd><dt>returns</dt><dd class="cmt"><p>the current isolate
+</p></dd></dl></div>
+    </li><li name="scala.reactive.Isolate#selfOrNull" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="selfOrNull[I&lt;:scala.reactive.Isolate[_]]:I"></a>
+      <a id="selfOrNull[I&lt;:Isolate[_]]:I"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">selfOrNull</span><span class="tparams">[<span name="I">I &lt;: <a href="Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a>[_]</span>]</span><span class="result">: <span class="extype" name="scala.reactive.Isolate.selfOrNull.I">I</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the current isolate, or <code>null</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the current isolate, or <code>null</code>.</p><p> The caller must specify the type of the current isolate
+ if the type of the isolate is required.
+</p></div><dl class="paramcmts block"><dt class="tparam">I</dt><dd class="cmt"><p>the type of the current isolate</p></dd><dt>returns</dt><dd class="cmt"><p>the current isolate, or <code>null</code>
 </p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>

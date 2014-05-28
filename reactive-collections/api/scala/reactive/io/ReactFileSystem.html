@@ -247,7 +247,8 @@
         <span class="name">channel</span><span class="result">: <a href="../Channel.html" class="extype" name="scala.reactive.Channel">Channel</a>[<a href="ReactFileSystem$$Command.html" class="extype" name="scala.reactive.io.ReactFileSystem.Command">Command</a>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a></dd></dl></div>
+      <p class="shortcomment cmt">The default channel of this isolate.</p><div class="fullcomment"><div class="comment cmt"><p>The default channel of this isolate.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -373,7 +374,8 @@
         <span class="name">failures</span><span class="result">: <a href="../Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<a href="../../package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a></dd></dl></div>
+      <p class="shortcomment cmt">The failures event stream.</p><div class="fullcomment"><div class="comment cmt"><p>The failures event stream.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -464,7 +466,8 @@
         <span class="name">later</span><span class="result">: <a href="../Enqueuer.html" class="extype" name="scala.reactive.Enqueuer">Enqueuer</a>[<a href="ReactFileSystem$$Command.html" class="extype" name="scala.reactive.io.ReactFileSystem.Command">Command</a>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a></dd></dl></div>
+      <p class="shortcomment cmt">The <code>Enqueuer</code> interface to the default event queue.</p><div class="fullcomment"><div class="comment cmt"><p>The <code>Enqueuer</code> interface to the default event queue.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -518,6 +521,21 @@
       </h4>
       <p class="shortcomment cmt">Called internally - when the mutable reactive or its internal value has been mutated.</p><div class="fullcomment"><div class="comment cmt"><p>Called internally - when the mutable reactive or its internal value has been mutated.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../container/ReactRecord.html" class="extype" name="scala.reactive.container.ReactRecord">ReactRecord</a> → <a href="../ReactMutable.html" class="extype" name="scala.reactive.ReactMutable">ReactMutable</a></dd></dl></div>
+    </li><li name="scala.reactive.Isolate#open" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="open[Q](implicitevidence$1:scala.reactive.Arrayable[Q],implicitfactory:scala.reactive.EventQueue.Factory):scala.reactive.isolate.Connector[Q]"></a>
+      <a id="open[Q](Arrayable[Q],Factory):Connector[Q]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">open</span><span class="tparams">[<span name="Q">Q</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Isolate.open.Q">Q</span>]</span>, <span name="factory">factory: <a href="../EventQueue$$Factory.html" class="extype" name="scala.reactive.EventQueue.Factory">Factory</a> = <span class="symbol"><span class="name"><a href="../isolate/IsolateFrame.html#eventQueueFactory:scala.reactive.EventQueue.Factory">frame.eventQueueFactory</a></span></span></span>)</span><span class="result">: <a href="../isolate/Connector.html" class="extype" name="scala.reactive.isolate.Connector">Connector</a>[<span class="extype" name="scala.reactive.Isolate.open.Q">Q</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Opens a new channel for this isolate.</p><div class="fullcomment"><div class="comment cmt"><p>Opens a new channel for this isolate.
+</p></div><dl class="paramcmts block"><dt class="tparam">Q</dt><dd class="cmt"><p>type of the events in the new channel</p></dd><dt class="param">factory</dt><dd class="cmt"><p>event queue factory</p></dd><dt>returns</dt><dd class="cmt"><p>the connector object of the new channel
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a></dd></dl></div>
     </li><li name="scala.reactive.container.ReactRecord.react" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="react"></a>
       <a id="react:react"></a>
@@ -556,7 +574,8 @@
         <span class="name">source</span><span class="result">: <a href="../Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<a href="ReactFileSystem$$Command.html" class="extype" name="scala.reactive.io.ReactFileSystem.Command">Command</a>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a></dd></dl></div>
+      <p class="shortcomment cmt">The default event stream of this isolate.</p><div class="fullcomment"><div class="comment cmt"><p>The default event stream of this isolate.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -582,7 +601,8 @@
         <span class="name">sysEvents</span><span class="result">: <a href="../Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<a href="../package$$SysEvent.html" class="extype" name="scala.reactive.SysEvent">SysEvent</a>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a></dd></dl></div>
+      <p class="shortcomment cmt">The system event stream.</p><div class="fullcomment"><div class="comment cmt"><p>The system event stream.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a></dd></dl></div>
     </li><li name="scala.reactive.Isolate#system" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="system:scala.reactive.IsolateSystem"></a>
       <a id="system:IsolateSystem"></a>
@@ -595,7 +615,8 @@
         <span class="name">system</span><span class="result">: <a href="../IsolateSystem.html" class="extype" name="scala.reactive.IsolateSystem">IsolateSystem</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a></dd></dl></div>
+      <p class="shortcomment cmt">The isolate system of this isolate.</p><div class="fullcomment"><div class="comment cmt"><p>The isolate system of this isolate.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>

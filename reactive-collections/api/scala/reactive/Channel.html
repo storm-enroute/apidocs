@@ -119,6 +119,36 @@ c.attach(r) <span class="cmt">// this call will not attach a reactive</span></pr
       <p class="shortcomment cmt">Attaches a reactive value to this channel.</p><div class="fullcomment"><div class="comment cmt"><p>Attaches a reactive value to this channel.</p><p> This call has no effect if the reactive is already sealed.
 </p></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>the reactive to attach</p></dd><dt>returns</dt><dd class="cmt"><p>this reactive channel, to chain attach calls or call <code>seal</code>
 </p></dd></dl></div>
+    </li><li name="scala.reactive.Channel#isSealed" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="isSealed:Boolean"></a>
+      <a id="isSealed:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isSealed</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Checks if this channel was sealed.</p><div class="fullcomment"><div class="comment cmt"><p>Checks if this channel was sealed.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the channel is sealed, <code>false</code> otherwise
+</p></dd></dl></div>
+    </li><li name="scala.reactive.Channel#isTerminated" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="isTerminated:Boolean"></a>
+      <a id="isTerminated:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTerminated</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Checks if this channel was terminated.</p><div class="fullcomment"><div class="comment cmt"><p>Checks if this channel was terminated.</p><p> A channel is terminated if it is sealed and all its reactives are unreacted.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the channel is terminated, <code>false</code> otherwise
+</p></dd></dl></div>
     </li><li name="scala.reactive.Channel#seal" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="seal():scala.reactive.Channel[T]"></a>
       <a id="seal():Channel[T]"></a>
@@ -132,7 +162,8 @@ c.attach(r) <span class="cmt">// this call will not attach a reactive</span></pr
       </span>
       </h4>
       <p class="shortcomment cmt">Seals this channel.</p><div class="fullcomment"><div class="comment cmt"><p>Seals this channel.</p><p> Once a seal is successful, no more <code>attach</code> calls will succeed.
-</p></div></div>
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>this reactive channel
+</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -253,6 +284,22 @@ c.attach(r) <span class="cmt">// this call will not attach a reactive</span></pr
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.reactive.Channel#attachEmitter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="attachEmitter():scala.reactive.Reactive.Emitter[T]"></a>
+      <a id="attachEmitter():Emitter[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">attachEmitter</span><span class="params">()</span><span class="result">: <a href="Reactive$$Emitter.html" class="extype" name="scala.reactive.Reactive.Emitter">Emitter</a>[<span class="extype" name="scala.reactive.Channel.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates and attaches an emitter to the channel.</p><div class="fullcomment"><div class="comment cmt"><p>Creates and attaches an emitter to the channel.</p><p> The call <code>c.attachEmitter()</code> is equivalent to:</p><pre><span class="kw">val</span> e = <span class="kw">new</span> Reactive.Emitter[T]
+c.attach(e)
+e</pre></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the new emitter, just attached to this reactive
+</p></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -498,6 +545,22 @@ c.attach(r) <span class="cmt">// this call will not attach a reactive</span></pr
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.reactive.Channel#send" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="send(x:T):scala.reactive.Channel[T]"></a>
+      <a id="send(T):Channel[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">send</span><span class="params">(<span name="x">x: <span class="extype" name="scala.reactive.Channel.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.Channel">Channel</a>[<span class="extype" name="scala.reactive.Channel.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Asynchronously sends a single event to this channel.</p><div class="fullcomment"><div class="comment cmt"><p>Asynchronously sends a single event to this channel.</p><p> When multiple events need to be sent,
+ it is **much** more efficient to attach an emitter.</p><p> <b>Note</b>: the channel must not be sealed.
+</p></div><dl class="paramcmts block"><dt class="param">x</dt><dd class="cmt"><p>the event to send to the channel</p></dd><dt>returns</dt><dd class="cmt"><p>this channel
+</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

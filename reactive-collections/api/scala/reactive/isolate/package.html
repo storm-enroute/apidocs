@@ -81,7 +81,20 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="scala.reactive.isolate.DefaultIsolateSystem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="scala.reactive.isolate.Connector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Connector[T]extendsAnyRef"></a>
+      <a id="Connector[T]:Connector[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Connector.html"><span class="name">Connector</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">An entity that encapsulates an event queue and the corresponding channel.</p>
+    </li><li name="scala.reactive.isolate.DefaultIsolateSystem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DefaultIsolateSystemextendsIsolateSystem"></a>
       <a id="DefaultIsolateSystem:DefaultIsolateSystem"></a>
       <h4 class="signature">
@@ -94,32 +107,45 @@
       </span>
       </h4>
       <p class="comment cmt">Default isolate system implementation.</p>
-    </li><li name="scala.reactive.isolate.EventQueue" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="EventQueue[Q]extendsEnqueuer[Q]"></a>
-      <a id="EventQueue[Q]:EventQueue[Q]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="EventQueue.html"><span class="name">EventQueue</span></a><span class="tparams">[<span name="Q">Q</span>]</span><span class="result"> extends <a href="../Enqueuer.html" class="extype" name="scala.reactive.Enqueuer">Enqueuer</a>[<span class="extype" name="scala.reactive.isolate.EventQueue.Q">Q</span>]</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Defines event queue.</p>
     </li><li name="scala.reactive.isolate.IsolateFrame" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="IsolateFrame[T]extendsReactor[T]"></a>
-      <a id="IsolateFrame[T]:IsolateFrame[T]"></a>
+      <a id="IsolateFrameextends()=&gt;Unit"></a>
+      <a id="IsolateFrame:IsolateFrame"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IsolateFrame.html"><span class="name">IsolateFrame</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../Reactor.html" class="extype" name="scala.reactive.Reactor">Reactor</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>
+        <a href="IsolateFrame.html"><span class="name">IsolateFrame</span></a><span class="result"> extends () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       
+    </li><li name="scala.reactive.isolate.Looper" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Looper[T]extendsIsolate[T]"></a>
+      <a id="Looper[T]:Looper[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Looper.html"><span class="name">Looper</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a>[<span class="extype" name="scala.reactive.isolate.Looper.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.isolate.Multiplexer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MultiplexerextendsAnyRef"></a>
+      <a id="Multiplexer:Multiplexer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Multiplexer.html"><span class="name">Multiplexer</span></a><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A thread-safe collection containing connectors.</p>
     </li></ol>
             </div>
 
@@ -127,16 +153,16 @@
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="scala.reactive.isolate.EventQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="EventQueue"></a>
-      <a id="EventQueue:EventQueue"></a>
+              <ol><li name="scala.reactive.isolate.Connector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Connector"></a>
+      <a id="Connector:Connector"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="EventQueue$.html"><span class="name">EventQueue</span></a>
+        <a href="Connector$.html"><span class="name">Connector</span></a>
       </span>
       </h4>
       
@@ -150,6 +176,19 @@
       </span>
       <span class="symbol">
         <a href="IsolateFrame$.html"><span class="name">IsolateFrame</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.isolate.Multiplexer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Multiplexer"></a>
+      <a id="Multiplexer:Multiplexer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Multiplexer$.html"><span class="name">Multiplexer</span></a>
       </span>
       </h4>
       

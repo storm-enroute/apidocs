@@ -347,6 +347,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.reactive.Proto#eventQueueFactory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="eventQueueFactory:scala.reactive.EventQueue.Factory"></a>
+      <a id="eventQueueFactory:Factory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eventQueueFactory</span><span class="result">: <a href="EventQueue$$Factory.html" class="extype" name="scala.reactive.EventQueue.Factory">Factory</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -425,6 +438,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.reactive.Proto#multiplexer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="multiplexer:scala.reactive.isolate.Multiplexer"></a>
+      <a id="multiplexer:Multiplexer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multiplexer</span><span class="result">: <a href="isolate/Multiplexer.html" class="extype" name="scala.reactive.isolate.Multiplexer">Multiplexer</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -474,6 +500,19 @@
       </span>
       <span class="symbol">
         <span class="name">params</span><span class="result">: <a href="../package.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="scala.Any">Any</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.Proto#scheduler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="scheduler:String"></a>
+      <a id="scheduler:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">scheduler</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
       
@@ -560,6 +599,49 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="scala.reactive.Proto#withEventQueue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withEventQueue(f:scala.reactive.EventQueue.Factory):scala.reactive.Proto[I]"></a>
+      <a id="withEventQueue(Factory):Proto[I]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withEventQueue</span><span class="params">(<span name="f">f: <a href="EventQueue$$Factory.html" class="extype" name="scala.reactive.EventQueue.Factory">Factory</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.Proto">Proto</a>[<span class="extype" name="scala.reactive.Proto.I">I</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Associates the specified event queue type and returns the new <code>Proto</code> object.</p><div class="fullcomment"><div class="comment cmt"><p>Associates the specified event queue type and returns the new <code>Proto</code> object.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>event queue factory, used to instantiate the event queue object</p></dd><dt>returns</dt><dd class="cmt"><p>a new <code>Proto</code> object
+</p></dd></dl></div>
+    </li><li name="scala.reactive.Proto#withMultiplexer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withMultiplexer(m:scala.reactive.isolate.Multiplexer):scala.reactive.Proto[I]"></a>
+      <a id="withMultiplexer(Multiplexer):Proto[I]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withMultiplexer</span><span class="params">(<span name="m">m: <a href="isolate/Multiplexer.html" class="extype" name="scala.reactive.isolate.Multiplexer">Multiplexer</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.Proto">Proto</a>[<span class="extype" name="scala.reactive.Proto.I">I</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.Proto#withScheduler" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withScheduler(sname:String):scala.reactive.Proto[I]"></a>
+      <a id="withScheduler(String):Proto[I]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withScheduler</span><span class="params">(<span name="sname">sname: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.Proto">Proto</a>[<span class="extype" name="scala.reactive.Proto.I">I</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Associates the specified scheduler and returns the new <code>Proto</code> object.</p><div class="fullcomment"><div class="comment cmt"><p>Associates the specified scheduler and returns the new <code>Proto</code> object.</p><p> Note that the scheduler name needs to be registered with the <code>IsolateSystem</code> object.
+</p></div><dl class="paramcmts block"><dt class="param">sname</dt><dd class="cmt"><p>name of the scheduler</p></dd><dt>returns</dt><dd class="cmt"><p>a new <code>Proto</code> object
+</p></dd></dl></div>
     </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="→[B](y:B):(A,B)"></a>
       <a id="→[B](B):(Proto[I],B)"></a>

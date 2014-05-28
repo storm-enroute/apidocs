@@ -50,7 +50,7 @@
           <div class="superTypes hiddenContent"><a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a href="Scheduler$$Dedicated.html" class="extype" name="scala.reactive.Scheduler.Dedicated">Dedicated</a>, <a href="Scheduler$$Executed.html" class="extype" name="scala.reactive.Scheduler.Executed">Executed</a>, <a href="Scheduler$$Dedicated$$NewThread.html" class="extype" name="scala.reactive.Scheduler.Dedicated.NewThread">NewThread</a>, <a href="Scheduler$$Dedicated$$Piggyback.html" class="extype" name="scala.reactive.Scheduler.Dedicated.Piggyback">Piggyback</a></div>
+          <div class="subClasses hiddenContent"><a href="Scheduler$$Dedicated.html" class="extype" name="scala.reactive.Scheduler.Dedicated">Dedicated</a>, <a href="Scheduler$$Executed.html" class="extype" name="scala.reactive.Scheduler.Executed">Executed</a>, <a href="Scheduler$$Dedicated$$NewThread.html" class="extype" name="scala.reactive.Scheduler.Dedicated.NewThread">NewThread</a>, <a href="Scheduler$$Dedicated$$Piggyback.html" class="extype" name="scala.reactive.Scheduler.Dedicated.Piggyback">Piggyback</a>, <a href="Scheduler$$Timer.html" class="extype" name="scala.reactive.Scheduler.Timer">Timer</a></div>
         </div></div>
         
 
@@ -119,34 +119,31 @@
 </p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><span class="extype" name="scala.util.control.NonFatal">scala.util.control.NonFatal</span>
 </p></span></dd></dl></div>
     </li><li name="scala.reactive.Scheduler#initiate" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="initiate[T](frame:scala.reactive.isolate.IsolateFrame[T]):Unit"></a>
-      <a id="initiate[T](IsolateFrame[T]):Unit"></a>
+      <a id="initiate(frame:scala.reactive.isolate.IsolateFrame):Unit"></a>
+      <a id="initiate(IsolateFrame):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">initiate</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="frame">frame: <a href="isolate/IsolateFrame.html" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.Scheduler.initiate.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">initiate</span><span class="params">(<span name="frame">frame: <a href="isolate/IsolateFrame.html" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Initiates the isolate frame.</p><div class="fullcomment"><div class="comment cmt"><p>Initiates the isolate frame.
- Clients never call this method directly.</p><p> The scheduler can use the <code>schedulerInfo</code> field of the isolate frame
- to store its custom configuration objects for this isolate frame.
- For example, a <code>Scheduler</code> based on a Java <code>Executor</code> would typically
- store a <code>Runnable</code> object here and later use it from the <code>schedule</code> method.
+ Clients never call this method directly.
 </p></div><dl class="paramcmts block"><dt class="param">frame</dt><dd class="cmt"><p>the isolate frame to initiate
 </p></dd></dl></div>
     </li><li name="scala.reactive.Scheduler#schedule" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="schedule[T](frame:scala.reactive.isolate.IsolateFrame[T]):Unit"></a>
-      <a id="schedule[T](IsolateFrame[T]):Unit"></a>
+      <a id="schedule(frame:scala.reactive.isolate.IsolateFrame):Unit"></a>
+      <a id="schedule(IsolateFrame):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">schedule</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="frame">frame: <a href="isolate/IsolateFrame.html" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.Scheduler.schedule.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">schedule</span><span class="params">(<span name="frame">frame: <a href="isolate/IsolateFrame.html" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Schedules an isolate frame for execution.</p><div class="fullcomment"><div class="comment cmt"><p>Schedules an isolate frame for execution.
@@ -478,6 +475,21 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.reactive.Scheduler#newInfo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="newInfo(frame:scala.reactive.isolate.IsolateFrame):scala.reactive.Scheduler.Info"></a>
+      <a id="newInfo(IsolateFrame):Info"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">newInfo</span><span class="params">(<span name="frame">frame: <a href="isolate/IsolateFrame.html" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a></span>)</span><span class="result">: <a href="Scheduler$$Info.html" class="extype" name="scala.reactive.Scheduler.Info">Info</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates an <code>Info</code> object for the isolate frame.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an <code>Info</code> object for the isolate frame.
+</p></div><dl class="paramcmts block"><dt class="param">frame</dt><dd class="cmt"><p>the isolate frame</p></dd><dt>returns</dt><dd class="cmt"><p>creates a fresh scheduler info object
+</p></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>

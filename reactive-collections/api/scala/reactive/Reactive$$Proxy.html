@@ -66,7 +66,7 @@
               </div><div id="ancestors">
                 <span class="filtertype">Implicitly<br />
                 </span>
-                <ol id="implicits"> <li class="in" name="scala.reactive.Reactive.ReactiveOps" data-hidden="false"><span>by ReactiveOps</span></li><li class="in" name="scala.reactive.Reactive.ReactiveOps" data-hidden="false"><span>by ReactiveOps</span></li><li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
+                <ol id="implicits"> <li class="in" name="scala.reactive.Reactive.reactive2ops" data-hidden="false"><span>by reactive2ops</span></li><li class="in" name="scala.reactive.Reactive.reactive2ops" data-hidden="false"><span>by reactive2ops</span></li><li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -711,6 +711,21 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
       <p class="shortcomment cmt">A shorthand for <code>onReaction</code> -- the specified function is invoked whenever there is an event.</p><div class="fullcomment"><div class="comment cmt"><p>A shorthand for <code>onReaction</code> -- the specified function is invoked whenever there is an event.
 </p></div><dl class="paramcmts block"><dt class="param">reactor</dt><dd class="cmt"><p>the callback for events</p></dd><dt>returns</dt><dd class="cmt"><p>a subcriptions for unsubscribing from reactions
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a></dd></dl></div>
+    </li><li name="scala.reactive.Reactive#onReactUnreact" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onReactUnreact(reactFunc:T=&gt;Unit)(unreactFunc:=&gt;Unit):scala.reactive.Reactive.Subscription"></a>
+      <a id="onReactUnreact((T)⇒Unit)(⇒Unit):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onReactUnreact</span><span class="params">(<span name="reactFunc">reactFunc: (<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="params">(<span name="unreactFunc">unreactFunc: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A shorthand for <code>onReaction</code> -- the specified functions are invoked whenever there is an event or an unreaction.</p><div class="fullcomment"><div class="comment cmt"><p>A shorthand for <code>onReaction</code> -- the specified functions are invoked whenever there is an event or an unreaction.
+</p></div><dl class="paramcmts block"><dt class="param">reactFunc</dt><dd class="cmt"><p>called when this reactive produces an event</p></dd><dt class="param">unreactFunc</dt><dd class="cmt"><p>called when this reactive unreacts</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription for unsubscribing from reactions
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a></dd></dl></div>
     </li><li name="scala.reactive.Reactive.Proxy#onReaction" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="onReaction(r:scala.reactive.Reactor[T]):scala.reactive.Reactive.Subscription"></a>
       <a id="onReaction(Reactor[T]):Subscription"></a>
@@ -750,6 +765,22 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
       <p class="shortcomment cmt">Executes the specified block when <code>this</code> reactive unreacts.</p><div class="fullcomment"><div class="comment cmt"><p>Executes the specified block when <code>this</code> reactive unreacts.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a subscription for the unreaction notification
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a></dd></dl></div>
+    </li><li name="scala.reactive.Reactive#once" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="once:scala.reactive.Reactive[T]withscala.reactive.Reactive.Subscription"></a>
+      <a id="once:Reactive[T]withSubscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">once</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a reactive that forwards an event from this reactive only once.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a reactive that forwards an event from this reactive only once.</p><p> The resulting reactive emits only a single event produced by <code>this</code> reactive after <code>once</code> is called, and then unreacts.</p><pre>time -----------------&gt;
+<span class="kw">this</span> --<span class="num">1</span>-----<span class="num">2</span>----<span class="num">3</span>---&gt;
+once      ---<span class="num">2</span>|</pre></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a subscription and a reactive with the first event from <code>this</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a></dd></dl></div>
     </li><li name="scala.reactive.Reactive#scanPast" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="scanPast[S](z:S)(op:(S,T)=&gt;S):scala.reactive.Signal[S]withscala.reactive.Reactive.Subscription"></a>
       <a id="scanPast[S](S)((S,T)⇒S):Signal[S]withSubscription"></a>
@@ -778,6 +809,38 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
  if a reactive value were a sequence of elements, then <code>scanLeft</code> would produce
  a new sequence whose elements correspond to the events of the resulting reactive.
 </p></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the events in the resulting reactive value</p></dd><dt class="param">z</dt><dd class="cmt"><p>the initial value of the scan past</p></dd><dt class="param">op</dt><dd class="cmt"><p>the operator the combines the last produced and the current event into a new one</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription that is also a reactive value that scans events from <code>this</code> reactive value
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a></dd></dl></div>
+    </li><li name="scala.reactive.Reactive#split" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="split[P&lt;:AnyRef,Q&lt;:AnyRef](pf:T=&gt;P)(qf:T=&gt;Q)(implicitev:&lt;:&lt;[T,AnyRef]):scala.reactive.ReactPair[P,Q]"></a>
+      <a id="split[P&lt;:AnyRef,Q&lt;:AnyRef]((T)⇒P)((T)⇒Q)(&lt;:&lt;[T,AnyRef]):ReactPair[P,Q]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">split</span><span class="tparams">[<span name="P">P &lt;: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>, <span name="Q">Q &lt;: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>]</span><span class="params">(<span name="pf">pf: (<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>) ⇒ <span class="extype" name="scala.reactive.Reactive.split.P">P</span></span>)</span><span class="params">(<span name="qf">qf: (<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>) ⇒ <span class="extype" name="scala.reactive.Reactive.split.Q">Q</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>]</span>)</span><span class="result">: <a href="ReactPair.html" class="extype" name="scala.reactive.ReactPair">ReactPair</a>[<span class="extype" name="scala.reactive.Reactive.split.P">P</span>, <span class="extype" name="scala.reactive.Reactive.split.Q">Q</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Splits the events from this reactive into a reactive pair.</p><div class="fullcomment"><div class="comment cmt"><p>Splits the events from this reactive into a reactive pair.</p><p> <b>Note:</b>
+ This reactive needs to contain object events.
+</p></div><dl class="paramcmts block"><dt class="tparam">P</dt><dd class="cmt"><p>the type of the first value in the reactive pair</p></dd><dt class="tparam">Q</dt><dd class="cmt"><p>the type of the second value in the reactive pair</p></dd><dt class="param">pf</dt><dd class="cmt"><p>mapping function from events in this reactive to the first part of the pair</p></dd><dt class="param">qf</dt><dd class="cmt"><p>mapping function from events in this reactive to the second part of the pair</p></dd><dt>returns</dt><dd class="cmt"><p>reactive pair
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a></dd></dl></div>
+    </li><li name="scala.reactive.Reactive#split" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="split[P&lt;:AnyVal,Q&lt;:AnyRef](pf:scala.reactive.calc.RefValFun[T,P])(qf:T=&gt;Q)(implicitev:&lt;:&lt;[T,AnyRef]):scala.reactive.ReactPair[P,Q]"></a>
+      <a id="split[P&lt;:AnyVal,Q&lt;:AnyRef](RefValFun[T,P])((T)⇒Q)(&lt;:&lt;[T,AnyRef]):ReactPair[P,Q]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">split</span><span class="tparams">[<span name="P">P &lt;: <span class="extype" name="scala.AnyVal">AnyVal</span></span>, <span name="Q">Q &lt;: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>]</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.reactive.calc.RefValFun">RefValFun</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <span class="extype" name="scala.reactive.Reactive.split.P">P</span>]</span>)</span><span class="params">(<span name="qf">qf: (<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>) ⇒ <span class="extype" name="scala.reactive.Reactive.split.Q">Q</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>]</span>)</span><span class="result">: <a href="ReactPair.html" class="extype" name="scala.reactive.ReactPair">ReactPair</a>[<span class="extype" name="scala.reactive.Reactive.split.P">P</span>, <span class="extype" name="scala.reactive.Reactive.split.Q">Q</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Splits the events from this reactive into a reactive pair.</p><div class="fullcomment"><div class="comment cmt"><p>Splits the events from this reactive into a reactive pair.</p><p> <b>Note:</b>
+ This reactive needs to contain object events.
+</p></div><dl class="paramcmts block"><dt class="tparam">P</dt><dd class="cmt"><p>the type of the first value in the reactive pair</p></dd><dt class="tparam">Q</dt><dd class="cmt"><p>the type of the second value in the reactive pair</p></dd><dt class="param">pf</dt><dd class="cmt"><p>mapping function from events in this reactive to the first part of the pair</p></dd><dt class="param">qf</dt><dd class="cmt"><p>mapping function from events in this reactive to the second part of the pair</p></dd><dt>returns</dt><dd class="cmt"><p>reactive pair
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
@@ -822,6 +885,36 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
  until <code>that</code> produces an event.</p><p> If <code>this</code> unreacts before <code>that</code> produces a value, the resulting reactive unreacts.
  Otherwise, the resulting reactive unreacts whenever <code>that</code> produces a value.
 </p></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of <code>that</code> reactive</p></dd><dt class="param">that</dt><dd class="cmt"><p>the reactive until whose first event the result propagates events</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and the resulting reactive that emits only until <code>that</code> emits
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a></dd></dl></div>
+    </li><li name="scala.reactive.Reactive#valsplit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="valsplit[P&lt;:AnyVal,Q&lt;:AnyVal](pf:scala.reactive.calc.RefValFun[T,P])(qf:scala.reactive.calc.RefValFun[T,Q])(implicitev:&lt;:&lt;[T,AnyRef]):scala.reactive.ReactValPair[P,Q]"></a>
+      <a id="valsplit[P&lt;:AnyVal,Q&lt;:AnyVal](RefValFun[T,P])(RefValFun[T,Q])(&lt;:&lt;[T,AnyRef]):ReactValPair[P,Q]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">valsplit</span><span class="tparams">[<span name="P">P &lt;: <span class="extype" name="scala.AnyVal">AnyVal</span></span>, <span name="Q">Q &lt;: <span class="extype" name="scala.AnyVal">AnyVal</span></span>]</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.reactive.calc.RefValFun">RefValFun</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <span class="extype" name="scala.reactive.Reactive.valsplit.P">P</span>]</span>)</span><span class="params">(<span name="qf">qf: <span class="extype" name="scala.reactive.calc.RefValFun">RefValFun</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <span class="extype" name="scala.reactive.Reactive.valsplit.Q">Q</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>]</span>)</span><span class="result">: <a href="ReactValPair.html" class="extype" name="scala.reactive.ReactValPair">ReactValPair</a>[<span class="extype" name="scala.reactive.Reactive.valsplit.P">P</span>, <span class="extype" name="scala.reactive.Reactive.valsplit.Q">Q</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Splits the object events from this reactive into a reactive value pair.</p><div class="fullcomment"><div class="comment cmt"><p>Splits the object events from this reactive into a reactive value pair.</p><p> Events in this reactive must be objects.
+</p></div><dl class="paramcmts block"><dt class="tparam">P</dt><dd class="cmt"><p>the type of the first value in the reactive pair</p></dd><dt class="tparam">Q</dt><dd class="cmt"><p>the type of the second value in the reactive pair</p></dd><dt class="param">pf</dt><dd class="cmt"><p>mapping function from events in this reactive to the first part of the pair</p></dd><dt class="param">qf</dt><dd class="cmt"><p>mapping function from events in this reactive to the second part of the pair</p></dd><dt class="param">ev</dt><dd class="cmt"><p>evidence that events in this reactive are values</p></dd><dt>returns</dt><dd class="cmt"><p>reactive value pair
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a></dd></dl></div>
+    </li><li name="scala.reactive.Reactive#valsplit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="valsplit[P&lt;:AnyVal,Q&lt;:AnyVal](pf:T=&gt;P)(qf:T=&gt;Q)(implicite:&lt;:&lt;[T,AnyVal]):scala.reactive.ReactValPair[P,Q]"></a>
+      <a id="valsplit[P&lt;:AnyVal,Q&lt;:AnyVal]((T)⇒P)((T)⇒Q)(&lt;:&lt;[T,AnyVal]):ReactValPair[P,Q]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">valsplit</span><span class="tparams">[<span name="P">P &lt;: <span class="extype" name="scala.AnyVal">AnyVal</span></span>, <span name="Q">Q &lt;: <span class="extype" name="scala.AnyVal">AnyVal</span></span>]</span><span class="params">(<span name="pf">pf: (<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>) ⇒ <span class="extype" name="scala.reactive.Reactive.valsplit.P">P</span></span>)</span><span class="params">(<span name="qf">qf: (<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>) ⇒ <span class="extype" name="scala.reactive.Reactive.valsplit.Q">Q</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="e">e: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <span class="extype" name="scala.AnyVal">AnyVal</span>]</span>)</span><span class="result">: <a href="ReactValPair.html" class="extype" name="scala.reactive.ReactValPair">ReactValPair</a>[<span class="extype" name="scala.reactive.Reactive.valsplit.P">P</span>, <span class="extype" name="scala.reactive.Reactive.valsplit.Q">Q</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Splits the primitive value events from this reactive into a reactive value pair.</p><div class="fullcomment"><div class="comment cmt"><p>Splits the primitive value events from this reactive into a reactive value pair.</p><p> Events in this reactive must be primitive values.
+</p></div><dl class="paramcmts block"><dt class="tparam">P</dt><dd class="cmt"><p>the type of the first value in the reactive pair</p></dd><dt class="tparam">Q</dt><dd class="cmt"><p>the type of the second value in the reactive pair</p></dd><dt class="param">pf</dt><dd class="cmt"><p>mapping function from events in this reactive to the first part of the pair</p></dd><dt class="param">qf</dt><dd class="cmt"><p>mapping function from events in this reactive to the second part of the pair</p></dd><dt class="param">e</dt><dd class="cmt"><p>evidence that events in this reactive are values</p></dd><dt>returns</dt><dd class="cmt"><p>reactive value pair
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
@@ -902,7 +995,7 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
 
         <div id="values" class="values members">
               <h3>Shadowed Implicit Value Members</h3>
-              <ol><li name="scala.reactive.Reactive.ReactiveOps#asSignal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="scala.reactive.Reactive.reactive2ops#asSignal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asSignal:scala.reactive.Reactive.ReactiveOps[T]withscala.reactive.Signal[T]"></a>
       <a id="asSignal:ReactiveOps[T]withSignal[T]"></a>
       <h4 class="signature">
@@ -918,10 +1011,10 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the signal version of the current reactive
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).asSignal</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#asSignal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#asSignal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asSignal:scala.reactive.Reactive.ReactiveOps[T]withscala.reactive.Signal[T]"></a>
       <a id="asSignal:ReactiveOps[T]withSignal[T]"></a>
       <h4 class="signature">
@@ -937,10 +1030,10 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the signal version of the current reactive
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).asSignal</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#asSignalOrElse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#asSignalOrElse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asSignalOrElse(init:T):scala.reactive.Signal[T]"></a>
       <a id="asSignalOrElse(T):Signal[T]"></a>
       <h4 class="signature">
@@ -958,10 +1051,10 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
 </p></div><dl class="paramcmts block"><dt class="param">init</dt><dd class="cmt"><p>optional value to use when converting the reactive to a signal</p></dd><dt>returns</dt><dd class="cmt"><p>the signal version of the current reactive
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).asSignalOrElse(init)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#asSignalOrElse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#asSignalOrElse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asSignalOrElse(init:T):scala.reactive.Signal[T]"></a>
       <a id="asSignalOrElse(T):Signal[T]"></a>
       <h4 class="signature">
@@ -979,10 +1072,10 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
 </p></div><dl class="paramcmts block"><dt class="param">init</dt><dd class="cmt"><p>optional value to use when converting the reactive to a signal</p></dd><dt>returns</dt><dd class="cmt"><p>the signal version of the current reactive
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).asSignalOrElse(init)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#concat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#concat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="concat[S]()(implicitevidence:&lt;:&lt;[T,scala.reactive.Reactive[S]],implicita:scala.reactive.Arrayable[S],implicitb:scala.reactive.CanBeBuffered):scala.reactive.Reactive[S]withscala.reactive.Reactive.Subscription"></a>
       <a id="concat[S]()(&lt;:&lt;[T,Reactive[S]],Arrayable[S],CanBeBuffered):Reactive[S]withSubscription"></a>
       <h4 class="signature">
@@ -991,7 +1084,7 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">concat</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>]]</span>, <span name="a">a: <a href="package$$Arrayable.html" class="extype" name="scala.reactive.Arrayable">Arrayable</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
+        <span class="implicit shadowed">concat</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>]]</span>, <span name="a">a: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Concatenates the events produced by all the reactives emitted by <code>this</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Concatenates the events produced by all the reactives emitted by <code>this</code>.</p><p> This operation is only available for reactive values that emit
@@ -1000,7 +1093,7 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
                    actually reactive values of type <code>S</code></p></dd><dt class="param">a</dt><dd class="cmt"><p>evidence that arrays can be created for type <code>S</code></p></dd><dt class="param">b</dt><dd class="cmt"><p>evidence that buffering events is allowed</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and the reactive that concatenates all the events
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).concat()(evidence, a, b)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd><dt>Note</dt><dd><span class="cmt"><p>This operation potentially buffers events from the nested reactives.
  Unless each reactive emitted by <code>this</code> is known to unreact eventually,
@@ -1008,7 +1101,7 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
  To enforce this, clients are required to import the <code>CanBeBuffered</code> evidence
  explicitly into the scope in which they call <code>concat</code>.
 </p></span></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#concat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#concat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="concat(that:scala.reactive.Reactive[T])(implicita:scala.reactive.Arrayable[T],implicitb:scala.reactive.CanBeBuffered):scala.reactive.Reactive[T]withscala.reactive.Reactive.Subscription"></a>
       <a id="concat(Reactive[T])(Arrayable[T],CanBeBuffered):Reactive[T]withSubscription"></a>
       <h4 class="signature">
@@ -1017,7 +1110,7 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">concat</span><span class="params">(<span name="that">that: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="a">a: <a href="package$$Arrayable.html" class="extype" name="scala.reactive.Arrayable">Arrayable</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
+        <span class="implicit shadowed">concat</span><span class="params">(<span name="that">that: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="a">a: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Creates a concatenation of <code>this</code> and <code>that</code> reactive.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a concatenation of <code>this</code> and <code>that</code> reactive.</p><p> The resulting reactive value produces all the events from <code>this</code> reactive
@@ -1027,14 +1120,14 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
  When <code>that</code> unreacts, the resulting reactive value unreacts.</p><p> <b>Use case:</b></p><pre><span class="kw">def</span> concat(that: Reactive[T]): Reactive[T]</pre></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p>another reactive value for the concatenation</p></dd><dt class="param">a</dt><dd class="cmt"><p>evidence that arrays can be created for the type <code>T</code></p></dd><dt class="param">b</dt><dd class="cmt"><p>evidence that the client allows events from <code>that</code> to be buffered</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and a reactive value that concatenates events from <code>this</code> and <code>that</code>
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).concat(that)(a, b)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd><dt>Note</dt><dd><span class="cmt"><p>This operation potentially caches events from <code>that</code>.
  Unless certain that <code>this</code> eventually unreacts, <code>concat</code> should not be used.
  To enforce this, clients must import the <code>CanBeBuffered</code> evidence explicitly
  into the scope in which they call <code>concat</code>.
 </p></span></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#concat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#concat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="concat[S]()(implicitevidence:&lt;:&lt;[T,scala.reactive.Reactive[S]],implicita:scala.reactive.Arrayable[S],implicitb:scala.reactive.CanBeBuffered):scala.reactive.Reactive[S]withscala.reactive.Reactive.Subscription"></a>
       <a id="concat[S]()(&lt;:&lt;[T,Reactive[S]],Arrayable[S],CanBeBuffered):Reactive[S]withSubscription"></a>
       <h4 class="signature">
@@ -1043,7 +1136,7 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">concat</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>]]</span>, <span name="a">a: <a href="package$$Arrayable.html" class="extype" name="scala.reactive.Arrayable">Arrayable</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
+        <span class="implicit shadowed">concat</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>]]</span>, <span name="a">a: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Concatenates the events produced by all the reactives emitted by <code>this</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Concatenates the events produced by all the reactives emitted by <code>this</code>.</p><p> This operation is only available for reactive values that emit
@@ -1052,7 +1145,7 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
                    actually reactive values of type <code>S</code></p></dd><dt class="param">a</dt><dd class="cmt"><p>evidence that arrays can be created for type <code>S</code></p></dd><dt class="param">b</dt><dd class="cmt"><p>evidence that buffering events is allowed</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and the reactive that concatenates all the events
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).concat()(evidence, a, b)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd><dt>Note</dt><dd><span class="cmt"><p>This operation potentially buffers events from the nested reactives.
  Unless each reactive emitted by <code>this</code> is known to unreact eventually,
@@ -1060,7 +1153,7 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
  To enforce this, clients are required to import the <code>CanBeBuffered</code> evidence
  explicitly into the scope in which they call <code>concat</code>.
 </p></span></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#concat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#concat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="concat(that:scala.reactive.Reactive[T])(implicita:scala.reactive.Arrayable[T],implicitb:scala.reactive.CanBeBuffered):scala.reactive.Reactive[T]withscala.reactive.Reactive.Subscription"></a>
       <a id="concat(Reactive[T])(Arrayable[T],CanBeBuffered):Reactive[T]withSubscription"></a>
       <h4 class="signature">
@@ -1069,7 +1162,7 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">concat</span><span class="params">(<span name="that">that: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="a">a: <a href="package$$Arrayable.html" class="extype" name="scala.reactive.Arrayable">Arrayable</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
+        <span class="implicit shadowed">concat</span><span class="params">(<span name="that">that: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="a">a: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Creates a concatenation of <code>this</code> and <code>that</code> reactive.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a concatenation of <code>this</code> and <code>that</code> reactive.</p><p> The resulting reactive value produces all the events from <code>this</code> reactive
@@ -1079,14 +1172,48 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
  When <code>that</code> unreacts, the resulting reactive value unreacts.</p><p> <b>Use case:</b></p><pre><span class="kw">def</span> concat(that: Reactive[T]): Reactive[T]</pre></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p>another reactive value for the concatenation</p></dd><dt class="param">a</dt><dd class="cmt"><p>evidence that arrays can be created for the type <code>T</code></p></dd><dt class="param">b</dt><dd class="cmt"><p>evidence that the client allows events from <code>that</code> to be buffered</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and a reactive value that concatenates events from <code>this</code> and <code>that</code>
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).concat(that)(a, b)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd><dt>Note</dt><dd><span class="cmt"><p>This operation potentially caches events from <code>that</code>.
  Unless certain that <code>this</code> eventually unreacts, <code>concat</code> should not be used.
  To enforce this, clients must import the <code>CanBeBuffered</code> evidence explicitly
  into the scope in which they call <code>concat</code>.
 </p></span></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#pipe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="pipe(c:scala.reactive.Channel[T]):Unit"></a>
+      <a id="pipe(Channel[T]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">pipe</span><span class="params">(<span name="c">c: <a href="Channel.html" class="extype" name="scala.reactive.Channel">Channel</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Pipes the events from this reactive to the specified channel.</p><div class="fullcomment"><div class="comment cmt"><p>Pipes the events from this reactive to the specified channel.</p><p> The call <code>r.pipe(c)</code> is equivalent to the following:</p><pre>c.attach(r)</pre></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).pipe(c)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
+    </li><li name="scala.reactive.Reactive.reactive2ops#pipe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="pipe(c:scala.reactive.Channel[T]):Unit"></a>
+      <a id="pipe(Channel[T]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">pipe</span><span class="params">(<span name="c">c: <a href="Channel.html" class="extype" name="scala.reactive.Channel">Channel</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Pipes the events from this reactive to the specified channel.</p><div class="fullcomment"><div class="comment cmt"><p>Pipes the events from this reactive to the specified channel.</p><p> The call <code>r.pipe(c)</code> is equivalent to the following:</p><pre>c.attach(r)</pre></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).pipe(c)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
+    </li><li name="scala.reactive.Reactive.reactive2ops#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="self:scala.reactive.Reactive[T]"></a>
       <a id="self:Reactive[T]"></a>
       <h4 class="signature">
@@ -1100,10 +1227,10 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="self:scala.reactive.Reactive[T]"></a>
       <a id="self:Reactive[T]"></a>
       <h4 class="signature">
@@ -1117,7 +1244,7 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
     </li><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -1154,7 +1281,7 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
             <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd>StringFormat</dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#signal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#signal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="signal(init:T):scala.reactive.Signal[T]withscala.reactive.Reactive.Subscription"></a>
       <a id="signal(T):Signal[T]withSubscription"></a>
       <h4 class="signature">
@@ -1171,10 +1298,10 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
 </p></div><dl class="paramcmts block"><dt class="param">init</dt><dd class="cmt"><p>an initial value for the signal</p></dd><dt>returns</dt><dd class="cmt"><p>the signal version of the current reactive
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).signal(init)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#signal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#signal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="signal(init:T):scala.reactive.Signal[T]withscala.reactive.Reactive.Subscription"></a>
       <a id="signal(T):Signal[T]withSubscription"></a>
       <h4 class="signature">
@@ -1191,10 +1318,10 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
 </p></div><dl class="paramcmts block"><dt class="param">init</dt><dd class="cmt"><p>an initial value for the signal</p></dd><dt>returns</dt><dd class="cmt"><p>the signal version of the current reactive
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).signal(init)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#sync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#sync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sync[S,R](that:scala.reactive.Reactive[S])(f:(T,S)=&gt;R)(implicitat:scala.reactive.Arrayable[T],implicitas:scala.reactive.Arrayable[S],implicitb:scala.reactive.CanBeBuffered):scala.reactive.Reactive[R]withscala.reactive.Reactive.Subscription"></a>
       <a id="sync[S,R](Reactive[S])((T,S)⇒R)(Arrayable[T],Arrayable[S],CanBeBuffered):Reactive[R]withSubscription"></a>
       <h4 class="signature">
@@ -1203,7 +1330,7 @@ currentEvent    --------<span class="num">2</span>----<span class="num">6</span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">sync</span><span class="tparams">[<span name="S">S</span>, <span name="R">R</span>]</span><span class="params">(<span name="that">that: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>) ⇒ <span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.R">R</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="at">at: <a href="package$$Arrayable.html" class="extype" name="scala.reactive.Arrayable">Arrayable</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>, <span name="as">as: <a href="package$$Arrayable.html" class="extype" name="scala.reactive.Arrayable">Arrayable</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.R">R</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
+        <span class="implicit shadowed">sync</span><span class="tparams">[<span name="S">S</span>, <span name="R">R</span>]</span><span class="params">(<span name="that">that: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>) ⇒ <span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.R">R</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="at">at: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>, <span name="as">as: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.R">R</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Syncs the arrival of events from <code>this</code> and <code>that</code> reactive value.</p><div class="fullcomment"><div class="comment cmt"><p>Syncs the arrival of events from <code>this</code> and <code>that</code> reactive value.</p><p> Ensures that pairs of events from this reactive value and that reactive value
@@ -1218,7 +1345,7 @@ sync   ----<span class="num">1</span>,<span class="num">1</span>-------<span cla
  or when <code>that</code> unreacts and there are no more buffered events from <code>that</code>.</p><p> <b>Use case:</b></p><pre><span class="kw">def</span> sync[S, R](that: Reactive[S])(f: (T, S) <span class="kw">=&gt;</span> R): Reactive[R]</pre></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the events in <code>that</code> reactive</p></dd><dt class="tparam">R</dt><dd class="cmt"><p>the type of the events in the resulting reactive</p></dd><dt class="param">that</dt><dd class="cmt"><p>the reactive to sync with</p></dd><dt class="param">f</dt><dd class="cmt"><p>the mapping function for the pair of events</p></dd><dt class="param">at</dt><dd class="cmt"><p>evidence that arrays can be created for the type <code>T</code></p></dd><dt class="param">as</dt><dd class="cmt"><p>evidence that arrays can be created for the type <code>S</code></p></dd><dt class="param">b</dt><dd class="cmt"><p>evidence that the client allows events to be buffered</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and the reactive with the resulting events
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).sync(that)(f)(at, as, b)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd><dt>Note</dt><dd><span class="cmt"><p>This operation potentially caches events from <code>this</code> and <code>that</code>.
  Unless certain that both <code>this</code> produces a bounded number of events
@@ -1226,7 +1353,7 @@ sync   ----<span class="num">1</span>,<span class="num">1</span>-------<span cla
  To enforce this, clients must import the <code>CanBeBuffered</code> evidence explicitly
  into the scope in which they call <code>sync</code>.
 </p></span></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#sync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#sync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sync[S,R](that:scala.reactive.Reactive[S])(f:(T,S)=&gt;R)(implicitat:scala.reactive.Arrayable[T],implicitas:scala.reactive.Arrayable[S],implicitb:scala.reactive.CanBeBuffered):scala.reactive.Reactive[R]withscala.reactive.Reactive.Subscription"></a>
       <a id="sync[S,R](Reactive[S])((T,S)⇒R)(Arrayable[T],Arrayable[S],CanBeBuffered):Reactive[R]withSubscription"></a>
       <h4 class="signature">
@@ -1235,7 +1362,7 @@ sync   ----<span class="num">1</span>,<span class="num">1</span>-------<span cla
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">sync</span><span class="tparams">[<span name="S">S</span>, <span name="R">R</span>]</span><span class="params">(<span name="that">that: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>) ⇒ <span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.R">R</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="at">at: <a href="package$$Arrayable.html" class="extype" name="scala.reactive.Arrayable">Arrayable</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>, <span name="as">as: <a href="package$$Arrayable.html" class="extype" name="scala.reactive.Arrayable">Arrayable</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.R">R</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
+        <span class="implicit shadowed">sync</span><span class="tparams">[<span name="S">S</span>, <span name="R">R</span>]</span><span class="params">(<span name="that">that: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>, <span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>) ⇒ <span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.R">R</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="at">at: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]</span>, <span name="as">as: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.R">R</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Syncs the arrival of events from <code>this</code> and <code>that</code> reactive value.</p><div class="fullcomment"><div class="comment cmt"><p>Syncs the arrival of events from <code>this</code> and <code>that</code> reactive value.</p><p> Ensures that pairs of events from this reactive value and that reactive value
@@ -1250,7 +1377,7 @@ sync   ----<span class="num">1</span>,<span class="num">1</span>-------<span cla
  or when <code>that</code> unreacts and there are no more buffered events from <code>that</code>.</p><p> <b>Use case:</b></p><pre><span class="kw">def</span> sync[S, R](that: Reactive[S])(f: (T, S) <span class="kw">=&gt;</span> R): Reactive[R]</pre></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the events in <code>that</code> reactive</p></dd><dt class="tparam">R</dt><dd class="cmt"><p>the type of the events in the resulting reactive</p></dd><dt class="param">that</dt><dd class="cmt"><p>the reactive to sync with</p></dd><dt class="param">f</dt><dd class="cmt"><p>the mapping function for the pair of events</p></dd><dt class="param">at</dt><dd class="cmt"><p>evidence that arrays can be created for the type <code>T</code></p></dd><dt class="param">as</dt><dd class="cmt"><p>evidence that arrays can be created for the type <code>S</code></p></dd><dt class="param">b</dt><dd class="cmt"><p>evidence that the client allows events to be buffered</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and the reactive with the resulting events
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).sync(that)(f)(at, as, b)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd><dt>Note</dt><dd><span class="cmt"><p>This operation potentially caches events from <code>this</code> and <code>that</code>.
  Unless certain that both <code>this</code> produces a bounded number of events
@@ -1258,7 +1385,7 @@ sync   ----<span class="num">1</span>,<span class="num">1</span>-------<span cla
  To enforce this, clients must import the <code>CanBeBuffered</code> evidence explicitly
  into the scope in which they call <code>sync</code>.
 </p></span></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#union" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#union" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="union[S]()(implicitevidence:&lt;:&lt;[T,scala.reactive.Reactive[S]]):scala.reactive.Reactive[S]withscala.reactive.Reactive.Subscription"></a>
       <a id="union[S]()(&lt;:&lt;[T,Reactive[S]]):Reactive[S]withSubscription"></a>
       <h4 class="signature">
@@ -1280,10 +1407,10 @@ sync   ----<span class="num">1</span>,<span class="num">1</span>-------<span cla
 union -----<span class="num">1</span>----<span class="num">2</span>-<span class="num">4</span>---<span class="num">5</span>--<span class="num">3</span>-<span class="num">6</span>-<span class="num">7</span>--&gt;</pre><p> <b>Use case:</b></p><pre><span class="kw">def</span> union[S](): Reactive[S]</pre></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the events in reactives emitted by <code>this</code></p></dd><dt class="param">evidence</dt><dd class="cmt"><p>evidence that events of type <code>T</code> produced by <code>this</code> are
                    actually reactive values of type <code>S</code></p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and the reactive with the union of all the events</p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).union()(evidence)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#union" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#union" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="union(that:scala.reactive.Reactive[T]):scala.reactive.Reactive[T]withscala.reactive.Reactive.Subscription"></a>
       <a id="union(Reactive[T]):Reactive[T]withSubscription"></a>
       <h4 class="signature">
@@ -1300,10 +1427,10 @@ union -----<span class="num">1</span>----<span class="num">2</span>-<span class=
 </p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p>another reactive value for the union</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and the reactive value with unified events from <code>this</code> and <code>that</code>
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).union(that)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#union" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#union" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="union[S]()(implicitevidence:&lt;:&lt;[T,scala.reactive.Reactive[S]]):scala.reactive.Reactive[S]withscala.reactive.Reactive.Subscription"></a>
       <a id="union[S]()(&lt;:&lt;[T,Reactive[S]]):Reactive[S]withSubscription"></a>
       <h4 class="signature">
@@ -1325,10 +1452,10 @@ union -----<span class="num">1</span>----<span class="num">2</span>-<span class=
 union -----<span class="num">1</span>----<span class="num">2</span>-<span class="num">4</span>---<span class="num">5</span>--<span class="num">3</span>-<span class="num">6</span>-<span class="num">7</span>--&gt;</pre><p> <b>Use case:</b></p><pre><span class="kw">def</span> union[S](): Reactive[S]</pre></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the events in reactives emitted by <code>this</code></p></dd><dt class="param">evidence</dt><dd class="cmt"><p>evidence that events of type <code>T</code> produced by <code>this</code> are
                    actually reactive values of type <code>S</code></p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and the reactive with the union of all the events</p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).union()(evidence)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
-    </li><li name="scala.reactive.Reactive.ReactiveOps#union" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.reactive.Reactive.reactive2ops#union" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="union(that:scala.reactive.Reactive[T]):scala.reactive.Reactive[T]withscala.reactive.Reactive.Subscription"></a>
       <a id="union(Reactive[T]):Reactive[T]withSubscription"></a>
       <h4 class="signature">
@@ -1345,7 +1472,7 @@ union -----<span class="num">1</span>----<span class="num">2</span>-<span class=
 </p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p>another reactive value for the union</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and the reactive value with unified events from <code>this</code> and <code>that</code>
 </p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to
-            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method ReactiveOps in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
+            <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] performed by method reactive2ops in <a href="Reactive$.html" class="extype" name="scala.reactive.Reactive">scala.reactive.Reactive</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(proxy: ReactiveOps[T]).union(that)</pre></div></dd><dt>Definition Classes</dt><dd><a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a></dd></dl></div>
     </li></ol>
@@ -1405,12 +1532,12 @@ union -----<span class="num">1</span>----<span class="num">2</span>-<span class=
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
             </div>
-        <div class="conversion" name="scala.reactive.Reactive.ReactiveOps">
-              <h3>Inherited by implicit conversion ReactiveOps from
+        <div class="conversion" name="scala.reactive.Reactive.reactive2ops">
+              <h3>Inherited by implicit conversion reactive2ops from
                 <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]
               </h3>
-            </div><div class="conversion" name="scala.reactive.Reactive.ReactiveOps">
-              <h3>Inherited by implicit conversion ReactiveOps from
+            </div><div class="conversion" name="scala.reactive.Reactive.reactive2ops">
+              <h3>Inherited by implicit conversion reactive2ops from
                 <a href="" class="extype" name="scala.reactive.Reactive.Proxy">Proxy</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>] to <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.Proxy.T">T</span>]
               </h3>
             </div><div class="conversion" name="scala.Predef.any2stringadd">

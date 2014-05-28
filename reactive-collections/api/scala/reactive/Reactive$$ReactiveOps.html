@@ -31,7 +31,7 @@
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier">implicit </span>
+        <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
@@ -281,7 +281,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">concat</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.T">T</span>, <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>]]</span>, <span name="a">a: <a href="package$$Arrayable.html" class="extype" name="scala.reactive.Arrayable">Arrayable</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
+        <span class="name">concat</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.T">T</span>, <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>]]</span>, <span name="a">a: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.concat.S">S</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Concatenates the events produced by all the reactives emitted by <code>this</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Concatenates the events produced by all the reactives emitted by <code>this</code>.</p><p> This operation is only available for reactive values that emit
@@ -303,7 +303,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">concat</span><span class="params">(<span name="that">that: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="a">a: <a href="package$$Arrayable.html" class="extype" name="scala.reactive.Arrayable">Arrayable</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.T">T</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.T">T</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
+        <span class="name">concat</span><span class="params">(<span name="that">that: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="a">a: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.T">T</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.T">T</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Creates a concatenation of <code>this</code> and <code>that</code> reactive.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a concatenation of <code>this</code> and <code>that</code> reactive.</p><p> The resulting reactive value produces all the events from <code>this</code> reactive
@@ -527,6 +527,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.reactive.Reactive.ReactiveOps#pipe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="pipe(c:scala.reactive.Channel[T]):Unit"></a>
+      <a id="pipe(Channel[T]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pipe</span><span class="params">(<span name="c">c: <a href="Channel.html" class="extype" name="scala.reactive.Channel">Channel</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Pipes the events from this reactive to the specified channel.</p><div class="fullcomment"><div class="comment cmt"><p>Pipes the events from this reactive to the specified channel.</p><p> The call <code>r.pipe(c)</code> is equivalent to the following:</p><pre>c.attach(r)</pre></div></div>
     </li><li name="scala.reactive.Reactive.ReactiveOps#self" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="self:scala.reactive.Reactive[T]"></a>
       <a id="self:Reactive[T]"></a>
@@ -565,7 +578,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sync</span><span class="tparams">[<span name="S">S</span>, <span name="R">R</span>]</span><span class="params">(<span name="that">that: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.reactive.Reactive.ReactiveOps.T">T</span>, <span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>) ⇒ <span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.R">R</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="at">at: <a href="package$$Arrayable.html" class="extype" name="scala.reactive.Arrayable">Arrayable</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.T">T</span>]</span>, <span name="as">as: <a href="package$$Arrayable.html" class="extype" name="scala.reactive.Arrayable">Arrayable</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.R">R</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
+        <span class="name">sync</span><span class="tparams">[<span name="S">S</span>, <span name="R">R</span>]</span><span class="params">(<span name="that">that: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.reactive.Reactive.ReactiveOps.T">T</span>, <span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>) ⇒ <span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.R">R</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="at">at: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.T">T</span>]</span>, <span name="as">as: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.S">S</span>]</span>, <span name="b">b: <a href="package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.ReactiveOps.sync.R">R</span>] with <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Syncs the arrival of events from <code>this</code> and <code>that</code> reactive value.</p><div class="fullcomment"><div class="comment cmt"><p>Syncs the arrival of events from <code>this</code> and <code>that</code> reactive value.</p><p> Ensures that pairs of events from this reactive value and that reactive value

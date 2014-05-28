@@ -35,13 +35,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">IsolateFrame</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../Reactor.html" class="extype" name="scala.reactive.Reactor">Reactor</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>
+        <span class="name">IsolateFrame</span><span class="result"> extends () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../Reactor.html" class="extype" name="scala.reactive.Reactor">Reactor</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>], <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent">() ⇒ <span class="extype" name="scala.Unit">Unit</span>, <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="scala.reactive.isolate.IsolateFrame"><span>IsolateFrame</span></li><li class="in" name="scala.reactive.Reactor"><span>Reactor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="scala.reactive.isolate.IsolateFrame"><span>IsolateFrame</span></li><li class="in" name="scala.Function0"><span>Function0</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
                 <span class="filtertype">Implicitly<br />
@@ -85,15 +85,15 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="scala.reactive.isolate.IsolateFrame#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(name:String,isolateSystem:scala.reactive.IsolateSystem,eventQueue:scala.reactive.isolate.EventQueue[T],systemEmitter:scala.reactive.Reactive.Emitter[scala.reactive.SysEvent],sourceEmitter:scala.reactive.Reactive.Emitter[T],failureEmitter:scala.reactive.Reactive.Emitter[Throwable],scheduler:scala.reactive.Scheduler,state:scala.reactive.isolate.IsolateFrame.State,isolateState:java.util.concurrent.atomic.AtomicReference[scala.reactive.isolate.IsolateFrame.IsolateState]):scala.reactive.isolate.IsolateFrame[T]"></a>
-      <a id="&lt;init&gt;:IsolateFrame[T]"></a>
+      <a id="&lt;init&gt;(name:String,isolateSystem:scala.reactive.IsolateSystem,scheduler:scala.reactive.Scheduler,eventQueueFactory:scala.reactive.EventQueue.Factory,multiplexer:scala.reactive.isolate.Multiplexer,newSourceConnector:scala.reactive.isolate.IsolateFrame=&gt;scala.reactive.isolate.Connector[_]):scala.reactive.isolate.IsolateFrame"></a>
+      <a id="&lt;init&gt;:IsolateFrame"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">IsolateFrame</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="isolateSystem">isolateSystem: <a href="../IsolateSystem.html" class="extype" name="scala.reactive.IsolateSystem">IsolateSystem</a></span>, <span name="eventQueue">eventQueue: <a href="EventQueue.html" class="extype" name="scala.reactive.isolate.EventQueue">EventQueue</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>, <span name="systemEmitter">systemEmitter: <a href="../Reactive$$Emitter.html" class="extype" name="scala.reactive.Reactive.Emitter">Emitter</a>[<a href="../package$$SysEvent.html" class="extype" name="scala.reactive.SysEvent">SysEvent</a>]</span>, <span name="sourceEmitter">sourceEmitter: <a href="../Reactive$$Emitter.html" class="extype" name="scala.reactive.Reactive.Emitter">Emitter</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>, <span name="failureEmitter">failureEmitter: <a href="../Reactive$$Emitter.html" class="extype" name="scala.reactive.Reactive.Emitter">Emitter</a>[<a href="../../package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>]</span>, <span name="scheduler">scheduler: <a href="../Scheduler.html" class="extype" name="scala.reactive.Scheduler">Scheduler</a></span>, <span name="state">state: <a href="IsolateFrame$$State.html" class="extype" name="scala.reactive.isolate.IsolateFrame.State">State</a></span>, <span name="isolateState">isolateState: <span class="extype" name="java.util.concurrent.atomic.AtomicReference">AtomicReference</span>[<a href="IsolateFrame$$IsolateState.html" class="extype" name="scala.reactive.isolate.IsolateFrame.IsolateState">IsolateState</a>]</span>)</span>
+        <span class="name">IsolateFrame</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="isolateSystem">isolateSystem: <a href="../IsolateSystem.html" class="extype" name="scala.reactive.IsolateSystem">IsolateSystem</a></span>, <span name="scheduler">scheduler: <a href="../Scheduler.html" class="extype" name="scala.reactive.Scheduler">Scheduler</a></span>, <span name="eventQueueFactory">eventQueueFactory: <a href="../EventQueue$$Factory.html" class="extype" name="scala.reactive.EventQueue.Factory">Factory</a></span>, <span name="multiplexer">multiplexer: <a href="Multiplexer.html" class="extype" name="scala.reactive.isolate.Multiplexer">Multiplexer</a></span>, <span name="newSourceConnector">newSourceConnector: (<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>) ⇒ <a href="Connector.html" class="extype" name="scala.reactive.isolate.Connector">Connector</a>[_]</span>)</span>
       </span>
       </h4>
       
@@ -158,25 +158,25 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to
             <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
     </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="-&gt;[B](y:B):(A,B)"></a>
-      <a id="-&gt;[B](B):(IsolateFrame[T],B)"></a>
+      <a id="-&gt;[B](B):(IsolateFrame,B)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>] performed by method any2ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
                 <span class="name">@inline</span><span class="args">()</span>
@@ -208,6 +208,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.reactive.isolate.IsolateFrame#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply():Unit"></a>
+      <a id="apply():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> → Function0</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -242,70 +255,70 @@
         </dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
-      <a id="ensuring((IsolateFrame[T])⇒Boolean,⇒Any):IsolateFrame[T]"></a>
+      <a id="ensuring((IsolateFrame)⇒Boolean,⇒Any):IsolateFrame"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean):A"></a>
-      <a id="ensuring((IsolateFrame[T])⇒Boolean):IsolateFrame[T]"></a>
+      <a id="ensuring((IsolateFrame)⇒Boolean):IsolateFrame"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
-      <a id="ensuring(Boolean,⇒Any):IsolateFrame[T]"></a>
+      <a id="ensuring(Boolean,⇒Any):IsolateFrame"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:Boolean):A"></a>
-      <a id="ensuring(Boolean):IsolateFrame[T]"></a>
+      <a id="ensuring(Boolean):IsolateFrame"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -334,29 +347,29 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.reactive.isolate.IsolateFrame#eventQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="eventQueue:scala.reactive.isolate.EventQueue[T]"></a>
-      <a id="eventQueue:EventQueue[T]"></a>
+    </li><li name="scala.reactive.isolate.IsolateFrame#errorHandling" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="errorHandling:PartialFunction[Throwable,Unit]"></a>
+      <a id="errorHandling:PartialFunction[Throwable,Unit]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">eventQueue</span><span class="result">: <a href="EventQueue.html" class="extype" name="scala.reactive.isolate.EventQueue">EventQueue</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>
+        <span class="name">errorHandling</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<a href="../../package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>, <span class="extype" name="scala.Unit">Unit</span>]</span>
       </span>
       </h4>
       
-    </li><li name="scala.reactive.isolate.IsolateFrame#failureEmitter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="failureEmitter:scala.reactive.Reactive.Emitter[Throwable]"></a>
-      <a id="failureEmitter:Emitter[Throwable]"></a>
+    </li><li name="scala.reactive.isolate.IsolateFrame#eventQueueFactory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="eventQueueFactory:scala.reactive.EventQueue.Factory"></a>
+      <a id="eventQueueFactory:Factory"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">failureEmitter</span><span class="result">: <a href="../Reactive$$Emitter.html" class="extype" name="scala.reactive.Reactive.Emitter">Emitter</a>[<a href="../../package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>]</span>
+        <span class="name">eventQueueFactory</span><span class="result">: <a href="../EventQueue$$Factory.html" class="extype" name="scala.reactive.EventQueue.Factory">Factory</a></span>
       </span>
       </h4>
       
@@ -392,7 +405,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to
             <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
@@ -425,19 +438,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.reactive.isolate.IsolateFrame#init" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="init(dummy:scala.reactive.isolate.IsolateFrame[T]):Unit"></a>
-      <a id="init(IsolateFrame[T]):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">init</span><span class="params">(<span name="dummy">dummy: <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -464,16 +464,29 @@
       </span>
       </h4>
       
-    </li><li name="scala.reactive.isolate.IsolateFrame#isTerminating" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="isTerminating:Boolean"></a>
-      <a id="isTerminating:Boolean"></a>
+    </li><li name="scala.reactive.isolate.IsolateFrame#isTerminated" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isTerminated:Boolean"></a>
+      <a id="isTerminated:Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isTerminating</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">isTerminated</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.isolate.IsolateFrame#isolateSourceConnector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isolateSourceConnector:scala.reactive.isolate.Connector[_]"></a>
+      <a id="isolateSourceConnector:Connector[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isolateSourceConnector</span><span class="result">: <a href="Connector.html" class="extype" name="scala.reactive.isolate.Connector">Connector</a>[_]</span>
       </span>
       </h4>
       
@@ -503,6 +516,19 @@
       </span>
       </h4>
       
+    </li><li name="scala.reactive.isolate.IsolateFrame#multiplexer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="multiplexer:scala.reactive.isolate.Multiplexer"></a>
+      <a id="multiplexer:Multiplexer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multiplexer</span><span class="result">: <a href="Multiplexer.html" class="extype" name="scala.reactive.isolate.Multiplexer">Multiplexer</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.reactive.isolate.IsolateFrame#name" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="name:String"></a>
       <a id="name:String"></a>
@@ -529,6 +555,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.reactive.isolate.IsolateFrame#newSourceConnector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="newSourceConnector:scala.reactive.isolate.IsolateFrame=&gt;scala.reactive.isolate.Connector[_]"></a>
+      <a id="newSourceConnector:(IsolateFrame)⇒Connector[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">newSourceConnector</span><span class="result">: (<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>) ⇒ <a href="Connector.html" class="extype" name="scala.reactive.isolate.Connector">Connector</a>[_]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -555,30 +594,16 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.reactive.isolate.IsolateFrame#react" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="react(event:T):Unit"></a>
-      <a id="react(T):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">react</span><span class="params">(<span name="event">event: <span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Called by a reactive or a signal when an event <code>value</code> is produced.</p><div class="fullcomment"><div class="comment cmt"><p>Called by a reactive or a signal when an event <code>value</code> is produced.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> → <a href="../Reactor.html" class="extype" name="scala.reactive.Reactor">Reactor</a></dd></dl></div>
     </li><li name="scala.reactive.isolate.IsolateFrame#run" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="run(dummy:scala.reactive.Dequeuer[T]):Unit"></a>
-      <a id="run(Dequeuer[T]):Unit"></a>
+      <a id="run():Unit"></a>
+      <a id="run():Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">run</span><span class="params">(<span name="dummy">dummy: <a href="../Dequeuer.html" class="extype" name="scala.reactive.Dequeuer">Dequeuer</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">run</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       
@@ -596,28 +621,28 @@
       </h4>
       
     </li><li name="scala.reactive.isolate.IsolateFrame#schedulerInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="schedulerInfo:AnyRef"></a>
-      <a id="schedulerInfo:AnyRef"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">schedulerInfo</span><span class="result">: <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="scala.reactive.isolate.IsolateFrame#sourceEmitter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="sourceEmitter:scala.reactive.Reactive.Emitter[T]"></a>
-      <a id="sourceEmitter:Emitter[T]"></a>
+      <a id="schedulerInfo:scala.reactive.Scheduler.Info"></a>
+      <a id="schedulerInfo:Info"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">sourceEmitter</span><span class="result">: <a href="../Reactive$$Emitter.html" class="extype" name="scala.reactive.Reactive.Emitter">Emitter</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>
+        <span class="name">schedulerInfo</span><span class="result">: <a href="../Scheduler$$Info.html" class="extype" name="scala.reactive.Scheduler.Info">Info</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.isolate.IsolateFrame#sourceConnector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sourceConnector[T]:scala.reactive.isolate.Connector[T]"></a>
+      <a id="sourceConnector[T]:Connector[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sourceConnector</span><span class="tparams">[<span name="T">T</span>]</span><span class="result">: <a href="Connector.html" class="extype" name="scala.reactive.isolate.Connector">Connector</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.sourceConnector.T">T</span>]</span>
       </span>
       </h4>
       
@@ -647,20 +672,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.reactive.isolate.IsolateFrame#systemEmitter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="systemEmitter:scala.reactive.Reactive.Emitter[scala.reactive.SysEvent]"></a>
-      <a id="systemEmitter:Emitter[SysEvent]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">systemEmitter</span><span class="result">: <a href="../Reactive$$Emitter.html" class="extype" name="scala.reactive.Reactive.Emitter">Emitter</a>[<a href="../package$$SysEvent.html" class="extype" name="scala.reactive.SysEvent">SysEvent</a>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Function0#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
       <h4 class="signature">
@@ -672,7 +684,7 @@
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Function0 → AnyRef → Any</dd></dl></div>
     </li><li name="scala.reactive.isolate.IsolateFrame#tryOwn" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="tryOwn():Boolean"></a>
       <a id="tryOwn():Boolean"></a>
@@ -699,20 +711,6 @@
       </span>
       </h4>
       
-    </li><li name="scala.reactive.isolate.IsolateFrame#unreact" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="unreact():Unit"></a>
-      <a id="unreact():Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">unreact</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Called by a reactive or a signal when there will be no further updates.</p><div class="fullcomment"><div class="comment cmt"><p>Called by a reactive or a signal when there will be no further updates.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> → <a href="../Reactor.html" class="extype" name="scala.reactive.Reactor">Reactor</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -788,19 +786,19 @@
         </dd></dl></div>
     </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="→[B](y:B):(A,B)"></a>
-      <a id="→[B](B):(IsolateFrame[T],B)"></a>
+      <a id="→[B](B):(IsolateFrame,B)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>] performed by method any2ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
     </li></ol>
@@ -821,7 +819,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to
             <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(isolateFrame: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
@@ -838,7 +836,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to
             <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(isolateFrame: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd>StringFormat</dd></dl></div>
@@ -849,41 +847,41 @@
               <h3>Deprecated Value Members</h3>
               <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="x:A"></a>
-      <a id="x:IsolateFrame[T]"></a>
+      <a id="x:IsolateFrame"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>] performed by method any2ArrowAssoc in scala.Predef.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(isolateFrame: ArrowAssoc[IsolateFrame[T]]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(isolateFrame: ArrowAssoc[IsolateFrame]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="x:A"></a>
-      <a id="x:IsolateFrame[T]"></a>
+      <a id="x:IsolateFrame"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</span>
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>] performed by method any2Ensuring in scala.Predef.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(isolateFrame: Ensuring[IsolateFrame[T]]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(isolateFrame: Ensuring[IsolateFrame]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
@@ -892,8 +890,8 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.reactive.Reactor">
-              <h3>Inherited from <a href="../Reactor.html" class="extype" name="scala.reactive.Reactor">Reactor</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]</h3>
+        <div class="parent" name="scala.Function0">
+              <h3>Inherited from () ⇒ <span class="extype" name="scala.Unit">Unit</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
@@ -901,19 +899,19 @@
             </div>
         <div class="conversion" name="scala.Predef.any2stringadd">
               <h3>Inherited by implicit conversion any2stringadd from
-                <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to <span class="extype" name="scala.runtime.StringAdd">StringAdd</span>
+                <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to <span class="extype" name="scala.runtime.StringAdd">StringAdd</span>
               </h3>
             </div><div class="conversion" name="scala.Predef.any2stringfmt">
               <h3>Inherited by implicit conversion any2stringfmt from
-                <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to <span class="extype" name="scala.runtime.StringFormat">StringFormat</span>
+                <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to <span class="extype" name="scala.runtime.StringFormat">StringFormat</span>
               </h3>
             </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
               <h3>Inherited by implicit conversion any2ArrowAssoc from
-                <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]]
+                <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>]
               </h3>
             </div><div class="conversion" name="scala.Predef.any2Ensuring">
               <h3>Inherited by implicit conversion any2Ensuring from
-                <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>] to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>[<span class="extype" name="scala.reactive.isolate.IsolateFrame.T">T</span>]]
+                <a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.isolate.IsolateFrame">IsolateFrame</a>]
               </h3>
             </div>
         </div>

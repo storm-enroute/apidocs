@@ -80,7 +80,23 @@
         <div id="allMembers">
         
 
-        
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.reactive.IsolateSystem.Bundle" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BundleextendsAnyRef"></a>
+      <a id="Bundle:Bundle"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IsolateSystem$$Bundle.html"><span class="name">Bundle</span></a><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Contains a set of schedulers registered with each isolate system.</p>
+    </li></ol>
+            </div>
 
         
 
@@ -151,6 +167,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.reactive.IsolateSystem.Bundle" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Bundle"></a>
+      <a id="Bundle:Bundle"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="IsolateSystem$$Bundle$.html"><span class="name">Bundle</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Scheduler bundle factory methods.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -183,19 +212,34 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.reactive.IsolateSystem#default" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="default(name:String):scala.reactive.isolate.DefaultIsolateSystem"></a>
-      <a id="default(String):DefaultIsolateSystem"></a>
+    </li><li name="scala.reactive.IsolateSystem#default" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="default(name:String,bundle:scala.reactive.IsolateSystem.Bundle):scala.reactive.isolate.DefaultIsolateSystem"></a>
+      <a id="default(String,Bundle):DefaultIsolateSystem"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">default</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="isolate/DefaultIsolateSystem.html" class="extype" name="scala.reactive.isolate.DefaultIsolateSystem">DefaultIsolateSystem</a></span>
+        <span class="name">default</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="bundle">bundle: <a href="IsolateSystem$$Bundle.html" class="extype" name="scala.reactive.IsolateSystem.Bundle">Bundle</a> = <span class="symbol"><span class="name"><a href="">IsolateSystem.defaultBundle</a></span></span></span>)</span><span class="result">: <a href="isolate/DefaultIsolateSystem.html" class="extype" name="scala.reactive.isolate.DefaultIsolateSystem">DefaultIsolateSystem</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Retrieves the default isolate system.</p><div class="fullcomment"><div class="comment cmt"><p>Retrieves the default isolate system.
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>the name for the isolate system instance</p></dd><dt>returns</dt><dd class="cmt"><p>a new isolate system instance
+</p></dd></dl></div>
+    </li><li name="scala.reactive.IsolateSystem#defaultBundle" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="defaultBundle:scala.reactive.IsolateSystem.Bundle"></a>
+      <a id="defaultBundle:Bundle"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">defaultBundle</span><span class="result">: <a href="IsolateSystem$$Bundle.html" class="extype" name="scala.reactive.IsolateSystem.Bundle">Bundle</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Default scheduler bundle.</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>

@@ -83,7 +83,7 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="scala.reactive.Reactive.BindEmitter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BindEmitter[T]extendsReactive[T]withReactive.Default[T]withReactMutable.Subscriptions"></a>
+      <a id="BindEmitter[T]extendsReactive[T]withReactive.Default[T]withEventSourcewithReactMutable.Subscriptions"></a>
       <a id="BindEmitter[T]:BindEmitter[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -91,7 +91,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="Reactive$$BindEmitter.html"><span class="name">BindEmitter</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.BindEmitter.T">T</span>] with <a href="Reactive$$Default.html" class="extype" name="scala.reactive.Reactive.Default">Default</a>[<span class="extype" name="scala.reactive.Reactive.BindEmitter.T">T</span>] with <a href="ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a></span>
+        <a href="Reactive$$BindEmitter.html"><span class="name">BindEmitter</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.BindEmitter.T">T</span>] with <a href="Reactive$$Default.html" class="extype" name="scala.reactive.Reactive.Default">Default</a>[<span class="extype" name="scala.reactive.Reactive.BindEmitter.T">T</span>] with <a href="EventSource.html" class="extype" name="scala.reactive.EventSource">EventSource</a> with <a href="ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a></span>
       </span>
       </h4>
       <p class="comment cmt">A reactive emitter that can be used with the <code>mutate</code> block.</p>
@@ -109,7 +109,7 @@
       </h4>
       <p class="comment cmt">The default implementation of a reactive value.</p>
     </li><li name="scala.reactive.Reactive.Emitter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Emitter[T]extendsReactive[T]withReactive.Default[T]"></a>
+      <a id="Emitter[T]extendsReactive[T]withReactive.Default[T]withEventSourcewithReactor[T]"></a>
       <a id="Emitter[T]:Emitter[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -117,7 +117,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="Reactive$$Emitter.html"><span class="name">Emitter</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.Emitter.T">T</span>] with <a href="Reactive$$Default.html" class="extype" name="scala.reactive.Reactive.Default">Default</a>[<span class="extype" name="scala.reactive.Reactive.Emitter.T">T</span>]</span>
+        <a href="Reactive$$Emitter.html"><span class="name">Emitter</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.Emitter.T">T</span>] with <a href="Reactive$$Default.html" class="extype" name="scala.reactive.Reactive.Default">Default</a>[<span class="extype" name="scala.reactive.Reactive.Emitter.T">T</span>] with <a href="EventSource.html" class="extype" name="scala.reactive.EventSource">EventSource</a> with <a href="Reactor.html" class="extype" name="scala.reactive.Reactor">Reactor</a>[<span class="extype" name="scala.reactive.Reactive.Emitter.T">T</span>]</span>
       </span>
       </h4>
       <p class="comment cmt">A reactive value that can programatically emit events.</p>
@@ -165,7 +165,7 @@
       <a id="ReactiveOps[T]:ReactiveOps[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">implicit </span>
+        <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
@@ -173,6 +173,19 @@
       </span>
       </h4>
       
+    </li><li name="scala.reactive.Reactive.SideEffectEmitter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SideEffectEmitter[T]extendsReactive.Default[T]withEventSource"></a>
+      <a id="SideEffectEmitter[T]:SideEffectEmitter[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Reactive$$SideEffectEmitter.html"><span class="name">SideEffectEmitter</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Reactive$$Default.html" class="extype" name="scala.reactive.Reactive.Default">Default</a>[<span class="extype" name="scala.reactive.Reactive.SideEffectEmitter.T">T</span>] with <a href="EventSource.html" class="extype" name="scala.reactive.EventSource">EventSource</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Uses the specified function <code>f</code> to produce an event when the <code>emit</code> method is called.</p>
     </li><li name="scala.reactive.Reactive.Subscription" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="SubscriptionextendsAnyRef"></a>
       <a id="Subscription:Subscription"></a>
@@ -420,23 +433,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="scala.reactive.Reactive#items" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="items[T](events:Array[T]):scala.reactive.Reactive[T]"></a>
-      <a id="items[T](Array[T]):Reactive[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">items</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="events">events: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.reactive.Reactive.items.T">T</span>]</span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.items.T">T</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Defines a new passive reactive that emits several events
- to any new subscriber.</p><div class="fullcomment"><div class="comment cmt"><p>Defines a new passive reactive that emits several events
- to any new subscriber.
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of the events to emit</p></dd><dt class="param">events</dt><dd class="cmt"><p>events to emit</p></dd><dt>returns</dt><dd class="cmt"><p>a reactive that emits the specified events
-</p></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -476,54 +472,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.reactive.Reactive#passive" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="passive[T](f:scala.reactive.Reactor[T]=&gt;scala.reactive.Reactive.Subscription):scala.reactive.Reactive[T]"></a>
-      <a id="passive[T]((Reactor[T])⇒Subscription):Reactive[T]"></a>
+    </li><li name="scala.reactive.Reactive#reactive2ops" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="reactive2ops[T](self:scala.reactive.Reactive[T]):scala.reactive.Reactive.ReactiveOps[T]"></a>
+      <a id="reactive2ops[T](Reactive[T]):ReactiveOps[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">implicit </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">passive</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="f">f: (<a href="Reactor.html" class="extype" name="scala.reactive.Reactor">Reactor</a>[<span class="extype" name="scala.reactive.Reactive.passive.T">T</span>]) ⇒ <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.passive.T">T</span>]</span>
+        <span class="name">reactive2ops</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="self">self: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.reactive2ops.T">T</span>]</span>)</span><span class="result">: <a href="Reactive$$ReactiveOps.html" class="extype" name="scala.reactive.Reactive.ReactiveOps">ReactiveOps</a>[<span class="extype" name="scala.reactive.Reactive.reactive2ops.T">T</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Creates a new reactive that invokes the function <code>f</code> on any <code>Reactor</code> that subscribes to it.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new reactive that invokes the function <code>f</code> on any <code>Reactor</code> that subscribes to it.</p><p> Passive reactives usually emit separate event streams to each reactor
- for which <code>onReaction</code> has been called.</p><p> Once all the events are emitted, clients should call <code>unreact</code> to notify
- the reactor that there will be no more events.</p><p> Example:</p><pre><span class="kw">val</span> r = passive[<span class="std">Int</span>] { reactor <span class="kw">=&gt;</span>
-reactor.react(<span class="num">1</span>)
-reactor.react(<span class="num">2</span>)
-reactor.unreact()
-}</pre><p> Never use <code>passive</code> to install adapt a callback in a 3rd party API.
- For example, *never* do this:</p><pre><span class="kw">val</span> r = passive[<span class="std">String</span>] { reactor <span class="kw">=&gt;</span>
-  Future { <span class="lit">"... "</span> * <span class="num">5</span> + <span class="lit">"done!"</span> } onSuccess {
-    <span class="kw">case</span> e <span class="kw">=&gt;</span> reactor.react(e); reactor.unreact()
-  }
-}
-<span class="kw">val</span> m = Signal.Mutable(mutable.ArrayBuffer[<span class="std">String</span>]())
-<span class="kw">val</span> s1 = r.onEvent(e <span class="kw">=&gt;</span> m += e)
-<span class="kw">val</span> s2 = r.onEvent(e <span class="kw">=&gt;</span> m += e)</pre><p> Above, subscriptions <code>s1</code> and <code>s2</code> could execute concurrenctly and corrupt the buffer.
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of the events in this passive reactive</p></dd><dt class="param">f</dt><dd class="cmt"><p>function to execute on any newly subscribed reactor</p></dd><dt>returns</dt><dd class="cmt"><p>the passive reactive defined by <code>f</code>
-</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>You should never use this method to bind reactors to bind reactors to custom callbacks
-       in 3rd party APIs. Those callbacks may execute on another thread, and that is *unsafe*.
-</p></span></dd></dl></div>
-    </li><li name="scala.reactive.Reactive#single" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="single[T](event:T):scala.reactive.Reactive[T]"></a>
-      <a id="single[T](T):Reactive[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">single</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="event">event: <span class="extype" name="scala.reactive.Reactive.single.T">T</span></span>)</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Reactive.single.T">T</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Defines a new passive reactive that emits a single event
- to any new subscriber.</p><div class="fullcomment"><div class="comment cmt"><p>Defines a new passive reactive that emits a single event
- to any new subscriber.
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of the event to emit</p></dd><dt class="param">event</dt><dd class="cmt"><p>event to emit</p></dd><dt>returns</dt><dd class="cmt"><p>a reactive that emits a single event
-</p></dd></dl></div>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

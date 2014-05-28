@@ -86,7 +86,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="scala.reactive.isolate.DefaultIsolateSystem#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(name:String):scala.reactive.isolate.DefaultIsolateSystem"></a>
+      <a id="&lt;init&gt;(name:String,bundle:scala.reactive.IsolateSystem.Bundle):scala.reactive.isolate.DefaultIsolateSystem"></a>
       <a id="&lt;init&gt;:DefaultIsolateSystem"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -94,10 +94,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">DefaultIsolateSystem</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
+        <span class="name">DefaultIsolateSystem</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="bundle">bundle: <a href="../IsolateSystem$$Bundle.html" class="extype" name="scala.reactive.IsolateSystem.Bundle">Bundle</a> = <span class="symbol">IsolateSystem.defaultBundle</span></span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>the name of this isolate system
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>the name of this isolate system</p></dd><dt class="param">bundle</dt><dd class="cmt"><p>the scheduler bundle used by the isolate system
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -223,6 +223,21 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.reactive.isolate.DefaultIsolateSystem#bundle" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bundle:scala.reactive.IsolateSystem.Bundle"></a>
+      <a id="bundle:Bundle"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bundle</span><span class="result">: <a href="../IsolateSystem$$Bundle.html" class="extype" name="scala.reactive.IsolateSystem.Bundle">Bundle</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">the scheduler bundle used by the isolate system
+</p><div class="fullcomment"><div class="comment cmt"><p>the scheduler bundle used by the isolate system
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.isolate.DefaultIsolateSystem">DefaultIsolateSystem</a> → <a href="../IsolateSystem.html" class="extype" name="scala.reactive.IsolateSystem">IsolateSystem</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -242,19 +257,37 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.reactive.isolate.DefaultIsolateSystem#ensureUnique" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ensureUnique(name:String):String"></a>
-      <a id="ensureUnique(String):String"></a>
+    </li><li name="scala.reactive.IsolateSystem#createAndResetIsolate" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="createAndResetIsolate[T](proto:scala.reactive.Proto[scala.reactive.Isolate[T]]):scala.reactive.Isolate[T]"></a>
+      <a id="createAndResetIsolate[T](Proto[Isolate[T]]):Isolate[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ensureUnique</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">createAndResetIsolate</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="proto">proto: <a href="../Proto.html" class="extype" name="scala.reactive.Proto">Proto</a>[<a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a>[<span class="extype" name="scala.reactive.IsolateSystem.createAndResetIsolate.T">T</span>]]</span>)</span><span class="result">: <a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a>[<span class="extype" name="scala.reactive.IsolateSystem.createAndResetIsolate.T">T</span>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Creates an isolate from the <code>Proto</code> object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an isolate from the <code>Proto</code> object.</p><p> Starts by memoizing the old isolate object,
+ and then calling the creation method.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../IsolateSystem.html" class="extype" name="scala.reactive.IsolateSystem">IsolateSystem</a></dd></dl></div>
+    </li><li name="scala.reactive.IsolateSystem#createFrame" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="createFrame[T](proto:scala.reactive.Proto[scala.reactive.Isolate[T]],name:String)(implicitevidence$2:scala.reactive.Arrayable[T]):scala.reactive.Isolate[T]"></a>
+      <a id="createFrame[T](Proto[Isolate[T]],String)(Arrayable[T]):Isolate[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createFrame</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="proto">proto: <a href="../Proto.html" class="extype" name="scala.reactive.Proto">Proto</a>[<a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a>[<span class="extype" name="scala.reactive.IsolateSystem.createFrame.T">T</span>]]</span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.IsolateSystem.createFrame.T">T</span>]</span>)</span><span class="result">: <a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a>[<span class="extype" name="scala.reactive.IsolateSystem.createFrame.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates an isolate frame.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an isolate frame.</p><p> Should only be overridden if the default isolate initialization order needs to change.
+ See the source code of the default implementation of this method for more details.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of the events for the isolate</p></dd><dt class="param">proto</dt><dd class="cmt"><p>prototype for the isolate</p></dd><dt class="param">name</dt><dd class="cmt"><p>name of the new isolate</p></dd><dt>returns</dt><dd class="cmt"><p>the resulting isolate frame
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../IsolateSystem.html" class="extype" name="scala.reactive.IsolateSystem">IsolateSystem</a></dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
       <a id="ensuring((DefaultIsolateSystem)⇒Boolean,⇒Any):DefaultIsolateSystem"></a>
@@ -428,18 +461,21 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="scala.reactive.isolate.DefaultIsolateSystem#isolate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="isolate[T](proto:scala.reactive.Proto[scala.reactive.Isolate[T]],name:String)(implicitevidence$1:scala.reactive.Arrayable[T],implicitscheduler:scala.reactive.Scheduler):scala.reactive.Channel[T]"></a>
-      <a id="isolate[T](Proto[Isolate[T]],String)(Arrayable[T],Scheduler):Channel[T]"></a>
+      <a id="isolate[T](proto:scala.reactive.Proto[scala.reactive.Isolate[T]],name:String)(implicitevidence$1:scala.reactive.Arrayable[T]):scala.reactive.Channel[T]"></a>
+      <a id="isolate[T](Proto[Isolate[T]],String)(Arrayable[T]):Channel[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isolate</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="proto">proto: <a href="../Proto.html" class="extype" name="scala.reactive.Proto">Proto</a>[<a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a>[<span class="extype" name="scala.reactive.isolate.DefaultIsolateSystem.isolate.T">T</span>]]</span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">null</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../package$$Arrayable.html" class="extype" name="scala.reactive.Arrayable">Arrayable</a>[<span class="extype" name="scala.reactive.isolate.DefaultIsolateSystem.isolate.T">T</span>]</span>, <span name="scheduler">scheduler: <a href="../Scheduler.html" class="extype" name="scala.reactive.Scheduler">Scheduler</a></span>)</span><span class="result">: <a href="../Channel.html" class="extype" name="scala.reactive.Channel">Channel</a>[<span class="extype" name="scala.reactive.isolate.DefaultIsolateSystem.isolate.T">T</span>]</span>
+        <span class="name">isolate</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="proto">proto: <a href="../Proto.html" class="extype" name="scala.reactive.Proto">Proto</a>[<a href="../Isolate.html" class="extype" name="scala.reactive.Isolate">Isolate</a>[<span class="extype" name="scala.reactive.isolate.DefaultIsolateSystem.isolate.T">T</span>]]</span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">null</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.isolate.DefaultIsolateSystem.isolate.T">T</span>]</span>)</span><span class="result">: <a href="../Channel.html" class="extype" name="scala.reactive.Channel">Channel</a>[<span class="extype" name="scala.reactive.isolate.DefaultIsolateSystem.isolate.T">T</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Creates an isolate in this isolate system using the specified scheduler.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an isolate in this isolate system using the specified scheduler.</p><p> <b>Use case:</b></p><pre><span class="kw">def</span> isolate(proto: Proto[Isolate[T]]): Channel[T]</pre></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of the events for the isolate</p></dd><dt class="param">proto</dt><dd class="cmt"><p>the prototype for the isolate</p></dd><dt class="param">scheduler</dt><dd class="cmt"><p>the scheduler used to scheduler the isolate</p></dd><dt>returns</dt><dd class="cmt"><p>the channel for this isolate
+      <p class="shortcomment cmt">Creates an isolate in this isolate system using the specified scheduler.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an isolate in this isolate system using the specified scheduler.</p><p> <b>Use case:</b></p><pre><span class="kw">def</span> isolate(proto: Proto[Isolate[T]]): Channel[T]</pre><p> Implementations of this method must initialize the isolate frame with the <code>createFrame</code> method,
+ add the isolate to the specific bookkeeping code,
+ and then call the <code>wake</code> method on the isolate frame to start it for the first time.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of the events for the isolate</p></dd><dt class="param">proto</dt><dd class="cmt"><p>the prototype for the isolate</p></dd><dt>returns</dt><dd class="cmt"><p>the channel for this isolate
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.isolate.DefaultIsolateSystem">DefaultIsolateSystem</a> → <a href="../IsolateSystem.html" class="extype" name="scala.reactive.IsolateSystem">IsolateSystem</a></dd></dl></div>
     </li><li name="scala.reactive.isolate.DefaultIsolateSystem#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
@@ -453,9 +489,7 @@
         <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">the name of this isolate system
-</p><div class="fullcomment"><div class="comment cmt"><p>the name of this isolate system
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.isolate.DefaultIsolateSystem">DefaultIsolateSystem</a> → <a href="../IsolateSystem.html" class="extype" name="scala.reactive.IsolateSystem">IsolateSystem</a></dd></dl></div>
+      <p class="shortcomment cmt">the name of this isolate system</p><div class="fullcomment"><div class="comment cmt"><p>the name of this isolate system</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.isolate.DefaultIsolateSystem">DefaultIsolateSystem</a> → <a href="../IsolateSystem.html" class="extype" name="scala.reactive.IsolateSystem">IsolateSystem</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -469,6 +503,22 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.reactive.isolate.DefaultIsolateSystem#newChannel" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="newChannel[Q](reactor:scala.reactive.Reactor[Q]):scala.reactive.Channel.Synced[Q]"></a>
+      <a id="newChannel[Q](Reactor[Q]):Synced[Q]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">newChannel</span><span class="tparams">[<span name="Q">Q</span>]</span><span class="params">(<span name="reactor">reactor: <a href="../Reactor.html" class="extype" name="scala.reactive.Reactor">Reactor</a>[<span class="extype" name="scala.reactive.isolate.DefaultIsolateSystem.newChannel.Q">Q</span>]</span>)</span><span class="result">: <a href="../Channel$$Synced.html" class="extype" name="scala.reactive.Channel.Synced">Synced</a>[<span class="extype" name="scala.reactive.isolate.DefaultIsolateSystem.newChannel.Q">Q</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a new channel for the specified isolate frame.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new channel for the specified isolate frame.</p><p> <b>Note:</b>
+ The <code>channel</code> field of the isolate frame is not set at the time this method is called.
+</p></div><dl class="paramcmts block"><dt class="tparam">Q</dt><dd class="cmt"><p>the type of the events for the isolate</p></dd><dt>returns</dt><dd class="cmt"><p>the new channel for the isolate frame
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../package.html" class="extype" name="scala.reactive">scala.reactive</a>] </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.isolate.DefaultIsolateSystem">DefaultIsolateSystem</a> → <a href="../IsolateSystem.html" class="extype" name="scala.reactive.IsolateSystem">IsolateSystem</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -522,19 +572,21 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.reactive.isolate.DefaultIsolateSystem#uniqueName" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="uniqueName():String"></a>
-      <a id="uniqueName():String"></a>
+      <a id="uniqueName(name:String):String"></a>
+      <a id="uniqueName(String):String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">uniqueName</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">uniqueName</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Generates a unique isolate name.</p><div class="fullcomment"><div class="comment cmt"><p>Generates a unique isolate name.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a unique isolate name
+      <p class="shortcomment cmt">Generates a unique isolate name if the <code>name</code> argument is <code>null</code>,
+ and throws an exception if the <code>name</code> is already taken.</p><div class="fullcomment"><div class="comment cmt"><p>Generates a unique isolate name if the <code>name</code> argument is <code>null</code>,
+ and throws an exception if the <code>name</code> is already taken.</p><p> The implementation of this method needs to be thread-safe.
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>proposed name</p></dd><dt>returns</dt><dd class="cmt"><p>a unique isolate name
 </p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.isolate.DefaultIsolateSystem">DefaultIsolateSystem</a> → <a href="../IsolateSystem.html" class="extype" name="scala.reactive.IsolateSystem">IsolateSystem</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>

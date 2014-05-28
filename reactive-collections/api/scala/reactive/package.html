@@ -82,7 +82,7 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="scala.reactive.Abelian" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Abelian[T]=scala.reactive.algebra.Abelian[T]"></a>
+      <a id="Abelian[T]=scala.reactive.calc.Abelian[T]"></a>
       <a id="Abelian[T]:Abelian[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -90,7 +90,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Abelian</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="algebra/package$$Abelian.html" class="extype" name="scala.reactive.algebra.Abelian">reactive.algebra.Abelian</a>[<span class="extype" name="scala.reactive.Abelian.T">T</span>]</span>
+        <span class="name">Abelian</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="calc/package$$Abelian.html" class="extype" name="scala.reactive.calc.Abelian">reactive.calc.Abelian</a>[<span class="extype" name="scala.reactive.Abelian.T">T</span>]</span>
       </span>
       </h4>
       
@@ -107,19 +107,6 @@
       </span>
       </h4>
       
-    </li><li name="scala.reactive.Arrayable" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Arrayable[T]extendsAnyRef"></a>
-      <a id="Arrayable[T]:Arrayable[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Arrayable.html"><span class="name">Arrayable</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">A typeclass that describes how to instantiate an array for the given type <code>T</code>.</p>
     </li><li name="scala.reactive.CanBeBuffered" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="CanBeBufferedextendsAnyRef"></a>
       <a id="CanBeBuffered:CanBeBuffered"></a>
@@ -161,7 +148,7 @@
       </h4>
       
     </li><li name="scala.reactive.Commutoid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Commutoid[T]=scala.reactive.algebra.Commutoid[T]"></a>
+      <a id="Commutoid[T]=scala.reactive.calc.Commutoid[T]"></a>
       <a id="Commutoid[T]:Commutoid[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -169,7 +156,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Commutoid</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="algebra/package$$Commutoid.html" class="extype" name="scala.reactive.algebra.Commutoid">reactive.algebra.Commutoid</a>[<span class="extype" name="scala.reactive.Commutoid.T">T</span>]</span>
+        <span class="name">Commutoid</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="calc/package$$Commutoid.html" class="extype" name="scala.reactive.calc.Commutoid">reactive.calc.Commutoid</a>[<span class="extype" name="scala.reactive.Commutoid.T">T</span>]</span>
       </span>
       </h4>
       
@@ -199,6 +186,32 @@
       </span>
       </h4>
       <p class="comment cmt">An interface for enqueuing events.</p>
+    </li><li name="scala.reactive.EventQueue" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="EventQueue[Q]extendsEnqueuer[Q]"></a>
+      <a id="EventQueue[Q]:EventQueue[Q]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="EventQueue.html"><span class="name">EventQueue</span></a><span class="tparams">[<span name="Q">Q</span>]</span><span class="result"> extends <a href="Enqueuer.html" class="extype" name="scala.reactive.Enqueuer">Enqueuer</a>[<span class="extype" name="scala.reactive.EventQueue.Q">Q</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Defines event queue.</p>
+    </li><li name="scala.reactive.EventSource" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="EventSourceextendsAnyRef"></a>
+      <a id="EventSource:EventSource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="EventSource.html"><span class="name">EventSource</span></a><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">An interface that describes event sources.</p>
     </li><li name="scala.reactive.Foreach" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Foreach[T]extendsAnyRef"></a>
       <a id="Foreach[T]:Foreach[T]"></a>
@@ -238,22 +251,8 @@
       </span>
       </h4>
       <p class="comment cmt">A system used to create, track and identify isolates.</p>
-    </li><li name="scala.reactive.LowPriorityArrayableImplicits" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="LowPriorityArrayableImplicitsextendsAnyRef"></a>
-      <a id="LowPriorityArrayableImplicits:LowPriorityArrayableImplicits"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$LowPriorityArrayableImplicits.html"><span class="name">LowPriorityArrayableImplicits</span></a><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Contains <code>Arrayable</code> typeclasses which have a low priority
- and are selected only if there is no <code>Arrayable</code> for a more specific type.</p>
     </li><li name="scala.reactive.Monoid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Monoid[T]=scala.reactive.algebra.Monoid[T]"></a>
+      <a id="Monoid[T]=scala.reactive.calc.Monoid[T]"></a>
       <a id="Monoid[T]:Monoid[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -261,7 +260,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Monoid</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="algebra/package$$Monoid.html" class="extype" name="scala.reactive.algebra.Monoid">reactive.algebra.Monoid</a>[<span class="extype" name="scala.reactive.Monoid.T">T</span>]</span>
+        <span class="name">Monoid</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="calc/package$$Monoid.html" class="extype" name="scala.reactive.calc.Monoid">reactive.calc.Monoid</a>[<span class="extype" name="scala.reactive.Monoid.T">T</span>]</span>
       </span>
       </h4>
       
@@ -302,6 +301,19 @@
       </span>
       <span class="symbol">
         <span class="name">ReactArray</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="container/ReactArray.html" class="extype" name="scala.reactive.container.ReactArray">reactive.container.ReactArray</a>[<span class="extype" name="scala.reactive.ReactArray.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.ReactBinaryHeap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactBinaryHeap[T]=scala.reactive.container.ReactBinaryHeap[T]"></a>
+      <a id="ReactBinaryHeap[T]:ReactBinaryHeap[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReactBinaryHeap</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="container/ReactBinaryHeap.html" class="extype" name="scala.reactive.container.ReactBinaryHeap">reactive.container.ReactBinaryHeap</a>[<span class="extype" name="scala.reactive.ReactBinaryHeap.T">T</span>]</span>
       </span>
       </h4>
       
@@ -357,16 +369,42 @@
       </span>
       </h4>
       
-    </li><li name="scala.reactive.ReactMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactMap[K,V&gt;:Null&lt;:AnyRef]=scala.reactive.container.ReactMap[K,V]"></a>
-      <a id="ReactMap[K,V&lt;:AnyRef&gt;:Null]:ReactMap[K,V]"></a>
+    </li><li name="scala.reactive.ReactHashMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactHashMap[K,V&gt;:Null&lt;:AnyRef]=scala.reactive.container.ReactHashMap[K,V]"></a>
+      <a id="ReactHashMap[K,V&lt;:AnyRef&gt;:Null]:ReactHashMap[K,V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">ReactMap</span><span class="tparams">[<span name="K">K</span>, <span name="V">V &gt;: <span class="extype" name="scala.Null">Null</span> &lt;: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> = <a href="container/ReactMap.html" class="extype" name="scala.reactive.container.ReactMap">reactive.container.ReactMap</a>[<span class="extype" name="scala.reactive.ReactMap.K">K</span>, <span class="extype" name="scala.reactive.ReactMap.V">V</span>]</span>
+        <span class="name">ReactHashMap</span><span class="tparams">[<span name="K">K</span>, <span name="V">V &gt;: <span class="extype" name="scala.Null">Null</span> &lt;: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> = <a href="container/ReactHashMap.html" class="extype" name="scala.reactive.container.ReactHashMap">reactive.container.ReactHashMap</a>[<span class="extype" name="scala.reactive.ReactHashMap.K">K</span>, <span class="extype" name="scala.reactive.ReactHashMap.V">V</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.ReactHashSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactHashSet[T]=scala.reactive.container.ReactHashSet[T]"></a>
+      <a id="ReactHashSet[T]:ReactHashSet[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReactHashSet</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="container/ReactHashSet.html" class="extype" name="scala.reactive.container.ReactHashSet">reactive.container.ReactHashSet</a>[<span class="extype" name="scala.reactive.ReactHashSet.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.ReactHashValMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactHashValMap[K,V]=scala.reactive.container.ReactHashValMap[K,V]"></a>
+      <a id="ReactHashValMap[K,V]:ReactHashValMap[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReactHashValMap</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> = <a href="container/ReactHashValMap.html" class="extype" name="scala.reactive.container.ReactHashValMap">reactive.container.ReactHashValMap</a>[<span class="extype" name="scala.reactive.ReactHashValMap.K">K</span>, <span class="extype" name="scala.reactive.ReactHashValMap.V">V</span>]</span>
       </span>
       </h4>
       
@@ -383,6 +421,58 @@
       </span>
       </h4>
       <p class="comment cmt">Describes reactives that are either mutable, or contain and emit events that are themselves mutable.</p>
+    </li><li name="scala.reactive.ReactPair" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ReactPair[P,Q&lt;:AnyRef]extendsAnyRef"></a>
+      <a id="ReactPair[P,Q&lt;:AnyRef]:ReactPair[P,Q]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ReactPair.html"><span class="name">ReactPair</span></a><span class="tparams">[<span name="P">P</span>, <span name="Q">Q &lt;: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.ReactPriorityQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactPriorityQueue[T]=scala.reactive.container.ReactPriorityQueue[T]"></a>
+      <a id="ReactPriorityQueue[T]:ReactPriorityQueue[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReactPriorityQueue</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="container/ReactPriorityQueue.html" class="extype" name="scala.reactive.container.ReactPriorityQueue">reactive.container.ReactPriorityQueue</a>[<span class="extype" name="scala.reactive.ReactPriorityQueue.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.ReactQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactQueue[T]=scala.reactive.container.ReactQueue[T]"></a>
+      <a id="ReactQueue[T]:ReactQueue[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReactQueue</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="container/ReactQueue.html" class="extype" name="scala.reactive.container.ReactQueue">reactive.container.ReactQueue</a>[<span class="extype" name="scala.reactive.ReactQueue.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.ReactRandom" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactRandom=scala.reactive.calc.ReactRandom"></a>
+      <a id="ReactRandom:ReactRandom"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReactRandom</span><span class="result"> = <a href="calc/ReactRandom.html" class="extype" name="scala.reactive.calc.ReactRandom">reactive.calc.ReactRandom</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.reactive.ReactRecord" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ReactRecord=scala.reactive.container.ReactRecord"></a>
       <a id="ReactRecord:ReactRecord"></a>
@@ -396,32 +486,6 @@
       </span>
       </h4>
       
-    </li><li name="scala.reactive.ReactSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactSet[T]=scala.reactive.container.ReactSet[T]"></a>
-      <a id="ReactSet[T]:ReactSet[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ReactSet</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="container/ReactSet.html" class="extype" name="scala.reactive.container.ReactSet">reactive.container.ReactSet</a>[<span class="extype" name="scala.reactive.ReactSet.T">T</span>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="scala.reactive.ReactTable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactTable[K,V]=scala.reactive.container.ReactTable[K,V]"></a>
-      <a id="ReactTable[K,V]:ReactTable[K,V]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ReactTable</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> = <a href="container/ReactTable.html" class="extype" name="scala.reactive.container.ReactTable">reactive.container.ReactTable</a>[<span class="extype" name="scala.reactive.ReactTable.K">K</span>, <span class="extype" name="scala.reactive.ReactTable.V">V</span>]</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.reactive.ReactTileMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ReactTileMap[T]=scala.reactive.container.ReactTileMap[T]"></a>
       <a id="ReactTileMap[T]:ReactTileMap[T]"></a>
@@ -432,6 +496,32 @@
       </span>
       <span class="symbol">
         <span class="name">ReactTileMap</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="container/ReactTileMap.html" class="extype" name="scala.reactive.container.ReactTileMap">reactive.container.ReactTileMap</a>[<span class="extype" name="scala.reactive.ReactTileMap.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.ReactUnrolledQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactUnrolledQueue[T]=scala.reactive.container.ReactUnrolledQueue[T]"></a>
+      <a id="ReactUnrolledQueue[T]:ReactUnrolledQueue[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReactUnrolledQueue</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="container/ReactUnrolledQueue.html" class="extype" name="scala.reactive.container.ReactUnrolledQueue">reactive.container.ReactUnrolledQueue</a>[<span class="extype" name="scala.reactive.ReactUnrolledQueue.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.ReactValPair" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ReactValPair[P,Q]extendsAnyRef"></a>
+      <a id="ReactValPair[P,Q]:ReactValPair[P,Q]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ReactValPair.html"><span class="name">ReactValPair</span></a><span class="tparams">[<span name="P">P</span>, <span name="Q">Q</span>]</span><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
       
@@ -600,15 +690,15 @@
         <div id="values" class="values members">
               <h3>Value Members</h3>
               <ol><li name="scala.reactive.package#Abelian" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Abelian:scala.reactive.algebra.Abelian.type"></a>
-      <a id="Abelian:reactive.algebra.Abelian.type"></a>
+      <a id="Abelian:scala.reactive.calc.Abelian.type"></a>
+      <a id="Abelian:reactive.calc.Abelian.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">Abelian</span><span class="result">: <a href="algebra/package$$Abelian$.html" class="extype" name="scala.reactive.algebra.Abelian">reactive.algebra.Abelian</a>.type</span>
+        <span class="name">Abelian</span><span class="result">: <a href="calc/package$$Abelian$.html" class="extype" name="scala.reactive.calc.Abelian">reactive.calc.Abelian</a>.type</span>
       </span>
       </h4>
       
@@ -625,19 +715,6 @@
       </span>
       </h4>
       
-    </li><li name="scala.reactive.Arrayable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Arrayable"></a>
-      <a id="Arrayable:Arrayable"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$Arrayable$.html"><span class="name">Arrayable</span></a><span class="result"> extends <a href="package$$LowPriorityArrayableImplicits.html" class="extype" name="scala.reactive.LowPriorityArrayableImplicits">LowPriorityArrayableImplicits</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Contains default <code>Arrayable</code> typeclasses.</p>
     </li><li name="scala.reactive.Channel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Channel"></a>
       <a id="Channel:Channel"></a>
@@ -665,18 +742,31 @@
       </h4>
       
     </li><li name="scala.reactive.package#Commutoid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Commutoid:scala.reactive.algebra.Commutoid.type"></a>
-      <a id="Commutoid:reactive.algebra.Commutoid.type"></a>
+      <a id="Commutoid:scala.reactive.calc.Commutoid.type"></a>
+      <a id="Commutoid:reactive.calc.Commutoid.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">Commutoid</span><span class="result">: <a href="algebra/package$$Commutoid$.html" class="extype" name="scala.reactive.algebra.Commutoid">reactive.algebra.Commutoid</a>.type</span>
+        <span class="name">Commutoid</span><span class="result">: <a href="calc/package$$Commutoid$.html" class="extype" name="scala.reactive.calc.Commutoid">reactive.calc.Commutoid</a>.type</span>
       </span>
       </h4>
       
+    </li><li name="scala.reactive.EventQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EventQueue"></a>
+      <a id="EventQueue:EventQueue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="EventQueue$.html"><span class="name">EventQueue</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Event queue factory methods and standard implementations.</p>
     </li><li name="scala.reactive.Isolate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Isolate"></a>
       <a id="Isolate:Isolate"></a>
@@ -744,15 +834,15 @@
       </h4>
       <p class="comment cmt">Denotes the termination of an isolate.</p>
     </li><li name="scala.reactive.package#Monoid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Monoid:scala.reactive.algebra.Monoid.type"></a>
-      <a id="Monoid:reactive.algebra.Monoid.type"></a>
+      <a id="Monoid:scala.reactive.calc.Monoid.type"></a>
+      <a id="Monoid:reactive.calc.Monoid.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">Monoid</span><span class="result">: <a href="algebra/package$$Monoid$.html" class="extype" name="scala.reactive.algebra.Monoid">reactive.algebra.Monoid</a>.type</span>
+        <span class="name">Monoid</span><span class="result">: <a href="calc/package$$Monoid$.html" class="extype" name="scala.reactive.calc.Monoid">reactive.calc.Monoid</a>.type</span>
       </span>
       </h4>
       
@@ -808,6 +898,19 @@
       </span>
       </h4>
       
+    </li><li name="scala.reactive.package#ReactBinaryHeap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactBinaryHeap:scala.reactive.container.ReactBinaryHeap.type"></a>
+      <a id="ReactBinaryHeap:reactive.container.ReactBinaryHeap.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReactBinaryHeap</span><span class="result">: <a href="container/ReactBinaryHeap$.html" class="extype" name="scala.reactive.container.ReactBinaryHeap">reactive.container.ReactBinaryHeap</a>.type</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.reactive.package#ReactBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ReactBuilder:scala.reactive.container.ReactBuilder.type"></a>
       <a id="ReactBuilder:reactive.container.ReactBuilder.type"></a>
@@ -860,16 +963,42 @@
       </span>
       </h4>
       
-    </li><li name="scala.reactive.package#ReactMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactMap:scala.reactive.container.ReactMap.type"></a>
-      <a id="ReactMap:reactive.container.ReactMap.type"></a>
+    </li><li name="scala.reactive.package#ReactHashMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactHashMap:scala.reactive.container.ReactHashMap.type"></a>
+      <a id="ReactHashMap:reactive.container.ReactHashMap.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">ReactMap</span><span class="result">: <a href="container/ReactMap$.html" class="extype" name="scala.reactive.container.ReactMap">reactive.container.ReactMap</a>.type</span>
+        <span class="name">ReactHashMap</span><span class="result">: <a href="container/ReactHashMap$.html" class="extype" name="scala.reactive.container.ReactHashMap">reactive.container.ReactHashMap</a>.type</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.package#ReactHashSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactHashSet:scala.reactive.container.ReactHashSet.type"></a>
+      <a id="ReactHashSet:reactive.container.ReactHashSet.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReactHashSet</span><span class="result">: <a href="container/ReactHashSet$.html" class="extype" name="scala.reactive.container.ReactHashSet">reactive.container.ReactHashSet</a>.type</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.package#ReactHashValMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactHashValMap:scala.reactive.container.ReactHashValMap.type"></a>
+      <a id="ReactHashValMap:reactive.container.ReactHashValMap.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReactHashValMap</span><span class="result">: <a href="container/ReactHashValMap$.html" class="extype" name="scala.reactive.container.ReactHashValMap">reactive.container.ReactHashValMap</a>.type</span>
       </span>
       </h4>
       
@@ -886,6 +1015,45 @@
       </span>
       </h4>
       <p class="comment cmt">Helper traits and implementations for reactive mutables.</p>
+    </li><li name="scala.reactive.ReactPair" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactPair"></a>
+      <a id="ReactPair:ReactPair"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ReactPair$.html"><span class="name">ReactPair</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.package#ReactPriorityQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactPriorityQueue:scala.reactive.container.ReactPriorityQueue.type"></a>
+      <a id="ReactPriorityQueue:reactive.container.ReactPriorityQueue.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReactPriorityQueue</span><span class="result">: <a href="container/ReactPriorityQueue$.html" class="extype" name="scala.reactive.container.ReactPriorityQueue">reactive.container.ReactPriorityQueue</a>.type</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.package#ReactQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactQueue:scala.reactive.container.ReactQueue.type"></a>
+      <a id="ReactQueue:reactive.container.ReactQueue.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReactQueue</span><span class="result">: <a href="container/ReactQueue$.html" class="extype" name="scala.reactive.container.ReactQueue">reactive.container.ReactQueue</a>.type</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.reactive.package#ReactRecord" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ReactRecord:scala.reactive.container.ReactRecord.type"></a>
       <a id="ReactRecord:reactive.container.ReactRecord.type"></a>
@@ -899,32 +1067,6 @@
       </span>
       </h4>
       
-    </li><li name="scala.reactive.package#ReactSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactSet:scala.reactive.container.ReactSet.type"></a>
-      <a id="ReactSet:reactive.container.ReactSet.type"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ReactSet</span><span class="result">: <a href="container/ReactSet$.html" class="extype" name="scala.reactive.container.ReactSet">reactive.container.ReactSet</a>.type</span>
-      </span>
-      </h4>
-      
-    </li><li name="scala.reactive.package#ReactTable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactTable:scala.reactive.container.ReactTable.type"></a>
-      <a id="ReactTable:reactive.container.ReactTable.type"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ReactTable</span><span class="result">: <a href="container/ReactTable$.html" class="extype" name="scala.reactive.container.ReactTable">reactive.container.ReactTable</a>.type</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.reactive.package#ReactTileMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ReactTileMap:scala.reactive.container.ReactTileMap.type"></a>
       <a id="ReactTileMap:reactive.container.ReactTileMap.type"></a>
@@ -935,6 +1077,32 @@
       </span>
       <span class="symbol">
         <span class="name">ReactTileMap</span><span class="result">: <a href="container/ReactTileMap$.html" class="extype" name="scala.reactive.container.ReactTileMap">reactive.container.ReactTileMap</a>.type</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.package#ReactUnrolledQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactUnrolledQueue:scala.reactive.container.ReactUnrolledQueue.type"></a>
+      <a id="ReactUnrolledQueue:reactive.container.ReactUnrolledQueue.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReactUnrolledQueue</span><span class="result">: <a href="container/ReactUnrolledQueue$.html" class="extype" name="scala.reactive.container.ReactUnrolledQueue">reactive.container.ReactUnrolledQueue</a>.type</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reactive.ReactValPair" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactValPair"></a>
+      <a id="ReactValPair:ReactValPair"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ReactValPair$.html"><span class="name">ReactValPair</span></a>
       </span>
       </h4>
       
@@ -1042,16 +1210,16 @@
       </span>
       </h4>
       
-    </li><li name="scala.reactive.algebra" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="algebra"></a>
-      <a id="algebra:algebra"></a>
+    </li><li name="scala.reactive.calc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="calc"></a>
+      <a id="calc:calc"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a href="algebra/package.html"><span class="name">algebra</span></a>
+        <a href="calc/package.html"><span class="name">calc</span></a>
       </span>
       </h4>
       
@@ -1068,16 +1236,16 @@
       </span>
       </h4>
       
-    </li><li name="scala.reactive.error" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="error"></a>
-      <a id="error:error"></a>
+    </li><li name="scala.reactive.exception" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="exception"></a>
+      <a id="exception:exception"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="package$$error$.html"><span class="name">error</span></a>
+        <a href="package$$exception$.html"><span class="name">exception</span></a>
       </span>
       </h4>
       
