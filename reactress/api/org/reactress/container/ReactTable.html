@@ -234,19 +234,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="org.reactress.container.ReactContainer#aggregate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="aggregate(m:org.reactress.Monoid[T]):T"></a>
-      <a id="aggregate(Monoid[(K,V)]):(K,V)"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">aggregate</span><span class="params">(<span name="m">m: <a href="../package.html#Monoid[T]=org.reactress.algebra.Monoid[T]" class="extmbr" name="org.reactress.Monoid">Monoid</a>[(<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>)]</span>)</span><span class="result">: (<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>)</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a></dd></dl></div>
     </li><li name="org.reactress.container.ReactTable#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="apply(key:K):V"></a>
       <a id="apply(K):V"></a>
@@ -352,19 +339,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ReactMutable$$Subscriptions.html" class="extype" name="org.reactress.ReactMutable.Subscriptions">Subscriptions</a></dd></dl></div>
-    </li><li name="org.reactress.container.ReactTable#clears" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="clears:org.reactress.Reactive[Unit]"></a>
-      <a id="clears:Reactive[Unit]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">clears</span><span class="result">: <a href="../Reactive.html" class="extype" name="org.reactress.Reactive">Reactive</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -384,6 +358,19 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="org.reactress.container.ReactContainer#collect" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="collect[S&lt;:AnyRef](pf:PartialFunction[T,S])(implicite:&lt;:&lt;[T,AnyRef]):org.reactress.container.ReactContainer[S]"></a>
+      <a id="collect[S&lt;:AnyRef](PartialFunction[(K,V),S])(&lt;:&lt;[(K,V),AnyRef]):ReactContainer[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">collect</span><span class="tparams">[<span name="S">S &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>]</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[(<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>), <span class="extype" name="org.reactress.container.ReactContainer.collect.S">S</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="e">e: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[(<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>), <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>)</span><span class="result">: <a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a>[<span class="extype" name="org.reactress.container.ReactContainer.collect.S">S</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a></dd></dl></div>
     </li><li name="org.reactress.container.ReactTable#container" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="container:org.reactress.container.ReactTable[K,V]"></a>
       <a id="container:ReactTable[K,V]"></a>
@@ -556,6 +543,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a></dd></dl></div>
+    </li><li name="org.reactress.container.ReactContainer#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="filter(p:T=&gt;Boolean):org.reactress.container.ReactContainer[T]"></a>
+      <a id="filter(((K,V))⇒Boolean):ReactContainer[(K,V)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">filter</span><span class="params">(<span name="p">p: ((<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>)) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a>[(<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>)]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -575,6 +575,19 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="org.reactress.container.ReactContainer#fold" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fold(m:org.reactress.Monoid[T]):T"></a>
+      <a id="fold(Monoid[(K,V)]):(K,V)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fold</span><span class="params">(<span name="m">m: <a href="../package.html#Monoid[T]=org.reactress.algebra.Monoid[T]" class="extmbr" name="org.reactress.Monoid">Monoid</a>[(<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>)]</span>)</span><span class="result">: (<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a></dd></dl></div>
     </li><li name="org.reactress.container.ReactContainer#forall" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="forall(p:T=&gt;Boolean):Boolean"></a>
       <a id="forall(((K,V))⇒Boolean):Boolean"></a>
@@ -712,6 +725,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.reactress.container.ReactContainer#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="map[S](f:T=&gt;S):org.reactress.container.ReactContainer[S]"></a>
+      <a id="map[S](((K,V))⇒S):ReactContainer[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">map</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span name="f">f: ((<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>)) ⇒ <span class="extype" name="org.reactress.container.ReactContainer.map.S">S</span></span>)</span><span class="result">: <a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a>[<span class="extype" name="org.reactress.container.ReactContainer.map.S">S</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -843,6 +869,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.reactress.container.ReactContainer#to" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="to[That&lt;:org.reactress.container.ReactContainer[T]](implicitfactory:org.reactress.container.ReactBuilder.Factory[T,That]):That"></a>
+      <a id="to[That&lt;:ReactContainer[(K,V)]](Factory[(K,V),That]):That"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">to</span><span class="tparams">[<span name="That">That &lt;: <a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a>[(<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>)]</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="factory">factory: <a href="ReactBuilder$$Factory.html" class="extype" name="org.reactress.container.ReactBuilder.Factory">Factory</a>[(<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>), <span class="extype" name="org.reactress.container.ReactContainer.to.That">That</span>]</span>)</span><span class="result">: <span class="extype" name="org.reactress.container.ReactContainer.to.That">That</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
@@ -856,6 +895,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.reactress.container.ReactContainer#union" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="union(that:org.reactress.container.ReactContainer[T])(implicitcount:org.reactress.container.ReactContainer.Union.Count[T],implicita:org.reactress.Arrayable[T],implicitb:org.reactress.CanBeBuffered):org.reactress.container.ReactContainer[T]"></a>
+      <a id="union(ReactContainer[(K,V)])(Count[(K,V)],Arrayable[(K,V)],CanBeBuffered):ReactContainer[(K,V)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">union</span><span class="params">(<span name="that">that: <a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a>[(<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>)]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="count">count: <a href="ReactContainer$$Union$$Count.html" class="extype" name="org.reactress.container.ReactContainer.Union.Count">Count</a>[(<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>)]</span>, <span name="a">a: <a href="../package$$Arrayable.html" class="extype" name="org.reactress.Arrayable">Arrayable</a>[(<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>)]</span>, <span name="b">b: <a href="../package$$CanBeBuffered.html" class="extype" name="org.reactress.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a>[(<span class="extype" name="org.reactress.container.ReactTable.K">K</span>, <span class="extype" name="org.reactress.container.ReactTable.V">V</span>)]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReactContainer.html" class="extype" name="org.reactress.container.ReactContainer">ReactContainer</a></dd></dl></div>
     </li><li name="org.reactress.container.ReactTable#update" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="update(key:K,value:V):Unit"></a>
       <a id="update(K,V):Unit"></a>
