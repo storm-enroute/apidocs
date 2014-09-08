@@ -1,0 +1,903 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>coroutines - scala.coroutines</title>
+          <meta name="description" content="coroutines - scala.coroutines" />
+          <meta name="keywords" content="coroutines scala.coroutines" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'scala.coroutines.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="scala">scala</a></p>
+        <h1>coroutines</h1> <span class="permalink">
+      <a href="../../index.html#scala.coroutines.package" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">coroutines</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.coroutines"><span>coroutines</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.coroutines.Analyzer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Analyzer[C&lt;:scala.reflect.macros.whitebox.Context]extendsAnyRef"></a>
+      <a id="Analyzer[C&lt;:Context]:Analyzer[C]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Analyzer.html"><span class="name">Analyzer</span></a><span class="tparams">[<span name="C">C &lt;: <span class="extype" name="scala.reflect.macros.whitebox.Context">Context</span></span>]</span><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@Analyzer[C&lt;:scala.reflect.macros.whitebox.Context]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Declares basic data types and analysis utilities.</p>
+    </li><li name="scala.coroutines.CfgGenerator" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CfgGenerator[C&lt;:scala.reflect.macros.whitebox.Context]extendsAnyRef"></a>
+      <a id="CfgGenerator[C&lt;:Context]:CfgGenerator[C]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CfgGenerator.html"><span class="name">CfgGenerator</span></a><span class="tparams">[<span name="C">C &lt;: <span class="extype" name="scala.reflect.macros.whitebox.Context">Context</span></span>]</span><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@CfgGenerator[C&lt;:scala.reflect.macros.whitebox.Context]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Generates control flow graphs, and converts CFG nodes to ASTs.</p>
+    </li><li name="scala.coroutines.Coroutine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Coroutine[T]extendsAnyRef"></a>
+      <a id="Coroutine[T]:Coroutine[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Coroutine.html"><span class="name">Coroutine</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@Coroutine[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines.CoroutineStoppedException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CoroutineStoppedExceptionextendsExceptionwithProductwithSerializable"></a>
+      <a id="CoroutineStoppedException:CoroutineStoppedException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$CoroutineStoppedException.html"><span class="name">CoroutineStoppedException</span></a><span class="params">()</span><span class="result"> extends <a href="../package.html#Exception=Exception" class="extmbr" name="scala.Exception">Exception</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@CoroutineStoppedExceptionextendsExceptionwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines.ThreeAddressFormTransformation" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ThreeAddressFormTransformation[C&lt;:scala.reflect.macros.whitebox.Context]extendsAnyRef"></a>
+      <a id="ThreeAddressFormTransformation[C&lt;:Context]:ThreeAddressFormTransformation[C]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ThreeAddressFormTransformation.html"><span class="name">ThreeAddressFormTransformation</span></a><span class="tparams">[<span name="C">C &lt;: <span class="extype" name="scala.reflect.macros.whitebox.Context">Context</span></span>]</span><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@ThreeAddressFormTransformation[C&lt;:scala.reflect.macros.whitebox.Context]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Transforms the coroutine body into three address form with restricted control flow
+ that contains only try-catch statements, while loops, if-statements, value and
+ variable declarations, pattern matches, nested blocks and function calls.</p><div class="fullcomment"><div class="comment cmt"><p>Transforms the coroutine body into three address form with restricted control flow
+ that contains only try-catch statements, while loops, if-statements, value and
+ variable declarations, pattern matches, nested blocks and function calls.</p><p> Newly synthesized variables get mangled fresh names, and existing variable names are
+ preserved.</p><p> Coroutine operations usages are checked for correctness, and nested contexts, such
+ as function and class declarations, are checked, but not transformed.
+</p></div></div>
+    </li><li name="scala.coroutines._1$spec$C" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_1$spec$C[S]extendsCoroutine._1[Char,S]"></a>
+      <a id="_1$spec$C[S]:_1$spec$C[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_1$spec$C.html"><span class="name">_1$spec$C</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_1.html" class="extype" name="scala.coroutines.Coroutine._1">_1</a>[<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="scala.coroutines._1$spec$C.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_1$spec$C[S]extendsCoroutine._1[Char,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._1$spec$D" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_1$spec$D[S]extendsCoroutine._1[Double,S]"></a>
+      <a id="_1$spec$D[S]:_1$spec$D[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_1$spec$D.html"><span class="name">_1$spec$D</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_1.html" class="extype" name="scala.coroutines.Coroutine._1">_1</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.coroutines._1$spec$D.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_1$spec$D[S]extendsCoroutine._1[Double,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._1$spec$F" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_1$spec$F[S]extendsCoroutine._1[Float,S]"></a>
+      <a id="_1$spec$F[S]:_1$spec$F[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_1$spec$F.html"><span class="name">_1$spec$F</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_1.html" class="extype" name="scala.coroutines.Coroutine._1">_1</a>[<span class="extype" name="scala.Float">Float</span>, <span class="extype" name="scala.coroutines._1$spec$F.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_1$spec$F[S]extendsCoroutine._1[Float,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._1$spec$I" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_1$spec$I[S]extendsCoroutine._1[Int,S]"></a>
+      <a id="_1$spec$I[S]:_1$spec$I[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_1$spec$I.html"><span class="name">_1$spec$I</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_1.html" class="extype" name="scala.coroutines.Coroutine._1">_1</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.coroutines._1$spec$I.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_1$spec$I[S]extendsCoroutine._1[Int,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._1$spec$J" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_1$spec$J[S]extendsCoroutine._1[Long,S]"></a>
+      <a id="_1$spec$J[S]:_1$spec$J[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_1$spec$J.html"><span class="name">_1$spec$J</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_1.html" class="extype" name="scala.coroutines.Coroutine._1">_1</a>[<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.coroutines._1$spec$J.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_1$spec$J[S]extendsCoroutine._1[Long,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._1$spec$L" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_1$spec$L[T0,S]extendsCoroutine._1[T0,S]"></a>
+      <a id="_1$spec$L[T0,S]:_1$spec$L[T0,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_1$spec$L.html"><span class="name">_1$spec$L</span></a><span class="tparams">[<span name="T0">T0</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_1.html" class="extype" name="scala.coroutines.Coroutine._1">_1</a>[<span class="extype" name="scala.coroutines._1$spec$L.T0">T0</span>, <span class="extype" name="scala.coroutines._1$spec$L.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_1$spec$L[T0,S]extendsCoroutine._1[T0,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._1$spec$S" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_1$spec$S[S]extendsCoroutine._1[Short,S]"></a>
+      <a id="_1$spec$S[S]:_1$spec$S[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_1$spec$S.html"><span class="name">_1$spec$S</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_1.html" class="extype" name="scala.coroutines.Coroutine._1">_1</a>[<span class="extype" name="scala.Short">Short</span>, <span class="extype" name="scala.coroutines._1$spec$S.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_1$spec$S[S]extendsCoroutine._1[Short,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$DD" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$DD[S]extendsCoroutine._2[Double,Double,S]"></a>
+      <a id="_2$spec$DD[S]:_2$spec$DD[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$DD.html"><span class="name">_2$spec$DD</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.coroutines._2$spec$DD.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$DD[S]extendsCoroutine._2[Double,Double,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$DI" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$DI[S]extendsCoroutine._2[Double,Int,S]"></a>
+      <a id="_2$spec$DI[S]:_2$spec$DI[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$DI.html"><span class="name">_2$spec$DI</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.coroutines._2$spec$DI.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$DI[S]extendsCoroutine._2[Double,Int,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$DJ" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$DJ[S]extendsCoroutine._2[Double,Long,S]"></a>
+      <a id="_2$spec$DJ[S]:_2$spec$DJ[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$DJ.html"><span class="name">_2$spec$DJ</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.coroutines._2$spec$DJ.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$DJ[S]extendsCoroutine._2[Double,Long,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$DL" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$DL[T1,S]extendsCoroutine._2[Double,T1,S]"></a>
+      <a id="_2$spec$DL[T1,S]:_2$spec$DL[T1,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$DL.html"><span class="name">_2$spec$DL</span></a><span class="tparams">[<span name="T1">T1</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.coroutines._2$spec$DL.T1">T1</span>, <span class="extype" name="scala.coroutines._2$spec$DL.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$DL[T1,S]extendsCoroutine._2[Double,T1,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$ID" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$ID[S]extendsCoroutine._2[Int,Double,S]"></a>
+      <a id="_2$spec$ID[S]:_2$spec$ID[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$ID.html"><span class="name">_2$spec$ID</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.coroutines._2$spec$ID.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$ID[S]extendsCoroutine._2[Int,Double,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$II" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$II[S]extendsCoroutine._2[Int,Int,S]"></a>
+      <a id="_2$spec$II[S]:_2$spec$II[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$II.html"><span class="name">_2$spec$II</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.coroutines._2$spec$II.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$II[S]extendsCoroutine._2[Int,Int,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$IJ" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$IJ[S]extendsCoroutine._2[Int,Long,S]"></a>
+      <a id="_2$spec$IJ[S]:_2$spec$IJ[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$IJ.html"><span class="name">_2$spec$IJ</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.coroutines._2$spec$IJ.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$IJ[S]extendsCoroutine._2[Int,Long,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$IL" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$IL[T1,S]extendsCoroutine._2[Int,T1,S]"></a>
+      <a id="_2$spec$IL[T1,S]:_2$spec$IL[T1,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$IL.html"><span class="name">_2$spec$IL</span></a><span class="tparams">[<span name="T1">T1</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.coroutines._2$spec$IL.T1">T1</span>, <span class="extype" name="scala.coroutines._2$spec$IL.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$IL[T1,S]extendsCoroutine._2[Int,T1,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$JD" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$JD[S]extendsCoroutine._2[Long,Double,S]"></a>
+      <a id="_2$spec$JD[S]:_2$spec$JD[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$JD.html"><span class="name">_2$spec$JD</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.coroutines._2$spec$JD.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$JD[S]extendsCoroutine._2[Long,Double,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$JI" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$JI[S]extendsCoroutine._2[Long,Int,S]"></a>
+      <a id="_2$spec$JI[S]:_2$spec$JI[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$JI.html"><span class="name">_2$spec$JI</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.coroutines._2$spec$JI.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$JI[S]extendsCoroutine._2[Long,Int,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$JJ" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$JJ[S]extendsCoroutine._2[Long,Long,S]"></a>
+      <a id="_2$spec$JJ[S]:_2$spec$JJ[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$JJ.html"><span class="name">_2$spec$JJ</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.coroutines._2$spec$JJ.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$JJ[S]extendsCoroutine._2[Long,Long,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$JL" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$JL[T1,S]extendsCoroutine._2[Long,T1,S]"></a>
+      <a id="_2$spec$JL[T1,S]:_2$spec$JL[T1,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$JL.html"><span class="name">_2$spec$JL</span></a><span class="tparams">[<span name="T1">T1</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.coroutines._2$spec$JL.T1">T1</span>, <span class="extype" name="scala.coroutines._2$spec$JL.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$JL[T1,S]extendsCoroutine._2[Long,T1,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$LD" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$LD[T0,S]extendsCoroutine._2[T0,Double,S]"></a>
+      <a id="_2$spec$LD[T0,S]:_2$spec$LD[T0,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$LD.html"><span class="name">_2$spec$LD</span></a><span class="tparams">[<span name="T0">T0</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.coroutines._2$spec$LD.T0">T0</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.coroutines._2$spec$LD.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$LD[T0,S]extendsCoroutine._2[T0,Double,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$LI" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$LI[T0,S]extendsCoroutine._2[T0,Int,S]"></a>
+      <a id="_2$spec$LI[T0,S]:_2$spec$LI[T0,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$LI.html"><span class="name">_2$spec$LI</span></a><span class="tparams">[<span name="T0">T0</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.coroutines._2$spec$LI.T0">T0</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.coroutines._2$spec$LI.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$LI[T0,S]extendsCoroutine._2[T0,Int,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$LJ" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$LJ[T0,S]extendsCoroutine._2[T0,Long,S]"></a>
+      <a id="_2$spec$LJ[T0,S]:_2$spec$LJ[T0,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$LJ.html"><span class="name">_2$spec$LJ</span></a><span class="tparams">[<span name="T0">T0</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.coroutines._2$spec$LJ.T0">T0</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.coroutines._2$spec$LJ.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$LJ[T0,S]extendsCoroutine._2[T0,Long,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines._2$spec$LL" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="_2$spec$LL[T0,T1,S]extendsCoroutine._2[T0,T1,S]"></a>
+      <a id="_2$spec$LL[T0,T1,S]:_2$spec$LL[T0,T1,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="_2$spec$LL.html"><span class="name">_2$spec$LL</span></a><span class="tparams">[<span name="T0">T0</span>, <span name="T1">T1</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.coroutines._2$spec$LL.T0">T0</span>, <span class="extype" name="scala.coroutines._2$spec$LL.T1">T1</span>, <span class="extype" name="scala.coroutines._2$spec$LL.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@_2$spec$LL[T0,T1,S]extendsCoroutine._2[T0,T1,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines.coroutine2ops" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="coroutine2ops[T1,T2,S]extendsCoroutine.BlueprintMarker[S]"></a>
+      <a id="coroutine2ops[T1,T2,S]:coroutine2ops[T1,T2,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$coroutine2ops.html"><span class="name">coroutine2ops</span></a><span class="tparams">[<span name="T1">T1</span>, <span name="T2">T2</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$BlueprintMarker.html" class="extype" name="scala.coroutines.Coroutine.BlueprintMarker">BlueprintMarker</a>[<span class="extype" name="scala.coroutines.coroutine2ops.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@coroutine2ops[T1,T2,S]extendsCoroutine.BlueprintMarker[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines.coroutine3ops" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="coroutine3ops[T1,T2,T3,S]extendsCoroutine.BlueprintMarker[S]"></a>
+      <a id="coroutine3ops[T1,T2,T3,S]:coroutine3ops[T1,T2,T3,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$coroutine3ops.html"><span class="name">coroutine3ops</span></a><span class="tparams">[<span name="T1">T1</span>, <span name="T2">T2</span>, <span name="T3">T3</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$BlueprintMarker.html" class="extype" name="scala.coroutines.Coroutine.BlueprintMarker">BlueprintMarker</a>[<span class="extype" name="scala.coroutines.coroutine3ops.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@coroutine3ops[T1,T2,T3,S]extendsCoroutine.BlueprintMarker[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines.~&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="~&gt;[PS,S]extendsCoroutine.BlueprintMarker[S]"></a>
+      <a id="~&gt;[PS,S]:~&gt;[PS,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$$tilde$greater.html"><span title="gt4s: $tilde$greater" class="name">~&gt;</span></a><span class="tparams">[<span name="PS">PS</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$BlueprintMarker.html" class="extype" name="scala.coroutines.Coroutine.BlueprintMarker">BlueprintMarker</a>[<span class="extype" name="scala.coroutines.~&gt;.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@~&gt;[PS,S]extendsCoroutine.BlueprintMarker[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines.~~&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="~~&gt;[T,S]extendsCoroutine.BlueprintMarker[S]"></a>
+      <a id="~~&gt;[T,S]:~~&gt;[T,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$$tilde$tilde$greater.html"><span title="gt4s: $tilde$tilde$greater" class="name">~~&gt;</span></a><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$BlueprintMarker.html" class="extype" name="scala.coroutines.Coroutine.BlueprintMarker">BlueprintMarker</a>[<span class="extype" name="scala.coroutines.~~&gt;.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@~~&gt;[T,S]extendsCoroutine.BlueprintMarker[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines.~~~&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="~~~&gt;[S]extendsCoroutine.BlueprintMarker[S]"></a>
+      <a id="~~~&gt;[S]:~~~&gt;[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$$tilde$tilde$tilde$greater.html"><span title="gt4s: $tilde$tilde$tilde$greater" class="name">~~~&gt;</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="Coroutine$$BlueprintMarker.html" class="extype" name="scala.coroutines.Coroutine.BlueprintMarker">BlueprintMarker</a>[<span class="extype" name="scala.coroutines.~~~&gt;.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@~~~&gt;[S]extendsCoroutine.BlueprintMarker[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.coroutines#COROUTINE_DIRECT_APPLY_ERROR_MESSAGE" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="COROUTINE_DIRECT_APPLY_ERROR_MESSAGE:String"></a>
+      <a id="COROUTINE_DIRECT_APPLY_ERROR_MESSAGE:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">COROUTINE_DIRECT_APPLY_ERROR_MESSAGE</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@COROUTINE_DIRECT_APPLY_ERROR_MESSAGE:String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines.Coroutine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Coroutine"></a>
+      <a id="Coroutine:Coroutine"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Coroutine$.html"><span class="name">Coroutine</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@Coroutine" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines#call" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="call[T](f:T):scala.coroutines.Coroutine[T]"></a>
+      <a id="call[T](T):Coroutine[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">macro </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">call</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="f">f: <span class="extype" name="scala.coroutines.call.T">T</span></span>)</span><span class="result">: <a href="Coroutine.html" class="extype" name="scala.coroutines.Coroutine">Coroutine</a>[<span class="extype" name="scala.coroutines.call.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@call[T](f:T):scala.coroutines.Coroutine[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines#coroutine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="coroutine[T](f:Any):Any"></a>
+      <a id="coroutine[T](Any):Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">macro </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">coroutine</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="f">f: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@coroutine[T](f:Any):Any" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines#coroutine0" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="coroutine0[S](b:scala.coroutines.Coroutine._0[S]):scala.coroutines.package.~~~&gt;[S]"></a>
+      <a id="coroutine0[S](_0[S]):~~~&gt;[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">coroutine0</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span name="b">b: <a href="Coroutine$$_0.html" class="extype" name="scala.coroutines.Coroutine._0">_0</a>[<span class="extype" name="scala.coroutines.coroutine0.S">S</span>]</span>)</span><span class="result">: <a href="package$$$tilde$tilde$tilde$greater.html" class="extype" name="scala.coroutines.~~~&gt;">~~~&gt;</a>[<span class="extype" name="scala.coroutines.coroutine0.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@coroutine0[S](b:scala.coroutines.Coroutine._0[S]):scala.coroutines.package.~~~&gt;[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines#coroutine1" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="coroutine1[T,S](b:scala.coroutines.Coroutine._1[T,S]):scala.coroutines.package.~~&gt;[T,S]"></a>
+      <a id="coroutine1[T,S](_1[T,S]):~~&gt;[T,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">coroutine1</span><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="params">(<span name="b">b: <a href="Coroutine$$_1.html" class="extype" name="scala.coroutines.Coroutine._1">_1</a>[<span class="extype" name="scala.coroutines.coroutine1.T">T</span>, <span class="extype" name="scala.coroutines.coroutine1.S">S</span>]</span>)</span><span class="result">: <a href="package$$$tilde$tilde$greater.html" class="extype" name="scala.coroutines.~~&gt;">~~&gt;</a>[<span class="extype" name="scala.coroutines.coroutine1.T">T</span>, <span class="extype" name="scala.coroutines.coroutine1.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@coroutine1[T,S](b:scala.coroutines.Coroutine._1[T,S]):scala.coroutines.package.~~&gt;[T,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines#coroutine2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="coroutine2[T1,T2,S](b:scala.coroutines.Coroutine._2[T1,T2,S]):scala.coroutines.package.~&gt;[(T1,T2),S]"></a>
+      <a id="coroutine2[T1,T2,S](_2[T1,T2,S]):~&gt;[(T1,T2),S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">coroutine2</span><span class="tparams">[<span name="T1">T1</span>, <span name="T2">T2</span>, <span name="S">S</span>]</span><span class="params">(<span name="b">b: <a href="Coroutine$$_2.html" class="extype" name="scala.coroutines.Coroutine._2">_2</a>[<span class="extype" name="scala.coroutines.coroutine2.T1">T1</span>, <span class="extype" name="scala.coroutines.coroutine2.T2">T2</span>, <span class="extype" name="scala.coroutines.coroutine2.S">S</span>]</span>)</span><span class="result">: <a href="package$$$tilde$greater.html" class="extype" name="scala.coroutines.~&gt;">~&gt;</a>[(<span class="extype" name="scala.coroutines.coroutine2.T1">T1</span>, <span class="extype" name="scala.coroutines.coroutine2.T2">T2</span>), <span class="extype" name="scala.coroutines.coroutine2.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@coroutine2[T1,T2,S](b:scala.coroutines.Coroutine._2[T1,T2,S]):scala.coroutines.package.~&gt;[(T1,T2),S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines#coroutine2ops" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="coroutine2ops[T1,T2,S](c:scala.coroutines.package.~&gt;[(T1,T2),S]):scala.coroutines.package.coroutine2ops[T1,T2,S]"></a>
+      <a id="coroutine2ops[T1,T2,S](~&gt;[(T1,T2),S]):coroutine2ops[T1,T2,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">coroutine2ops</span><span class="tparams">[<span name="T1">T1</span>, <span name="T2">T2</span>, <span name="S">S</span>]</span><span class="params">(<span name="c">c: <a href="package$$$tilde$greater.html" class="extype" name="scala.coroutines.~&gt;">~&gt;</a>[(<span class="extype" name="scala.coroutines.coroutine2ops.T1">T1</span>, <span class="extype" name="scala.coroutines.coroutine2ops.T2">T2</span>), <span class="extype" name="scala.coroutines.coroutine2ops.S">S</span>]</span>)</span><span class="result">: <a href="package$$coroutine2ops.html" class="extype" name="scala.coroutines.coroutine2ops">coroutine2ops</a>[<span class="extype" name="scala.coroutines.coroutine2ops.T1">T1</span>, <span class="extype" name="scala.coroutines.coroutine2ops.T2">T2</span>, <span class="extype" name="scala.coroutines.coroutine2ops.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@coroutine2ops[T1,T2,S](c:scala.coroutines.package.~&gt;[(T1,T2),S]):scala.coroutines.package.coroutine2ops[T1,T2,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines#coroutine3" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="coroutine3[T1,T2,T3,S](b:scala.coroutines.Coroutine._3[T1,T2,T3,S]):scala.coroutines.package.~&gt;[(T1,T2,T3),S]"></a>
+      <a id="coroutine3[T1,T2,T3,S](_3[T1,T2,T3,S]):~&gt;[(T1,T2,T3),S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">coroutine3</span><span class="tparams">[<span name="T1">T1</span>, <span name="T2">T2</span>, <span name="T3">T3</span>, <span name="S">S</span>]</span><span class="params">(<span name="b">b: <a href="Coroutine$$_3.html" class="extype" name="scala.coroutines.Coroutine._3">_3</a>[<span class="extype" name="scala.coroutines.coroutine3.T1">T1</span>, <span class="extype" name="scala.coroutines.coroutine3.T2">T2</span>, <span class="extype" name="scala.coroutines.coroutine3.T3">T3</span>, <span class="extype" name="scala.coroutines.coroutine3.S">S</span>]</span>)</span><span class="result">: <a href="package$$$tilde$greater.html" class="extype" name="scala.coroutines.~&gt;">~&gt;</a>[(<span class="extype" name="scala.coroutines.coroutine3.T1">T1</span>, <span class="extype" name="scala.coroutines.coroutine3.T2">T2</span>, <span class="extype" name="scala.coroutines.coroutine3.T3">T3</span>), <span class="extype" name="scala.coroutines.coroutine3.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@coroutine3[T1,T2,T3,S](b:scala.coroutines.Coroutine._3[T1,T2,T3,S]):scala.coroutines.package.~&gt;[(T1,T2,T3),S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines#coroutine3ops" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="coroutine3ops[T1,T2,T3,S](c:scala.coroutines.package.~&gt;[(T1,T2,T3),S]):scala.coroutines.package.coroutine3ops[T1,T2,T3,S]"></a>
+      <a id="coroutine3ops[T1,T2,T3,S](~&gt;[(T1,T2,T3),S]):coroutine3ops[T1,T2,T3,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">coroutine3ops</span><span class="tparams">[<span name="T1">T1</span>, <span name="T2">T2</span>, <span name="T3">T3</span>, <span name="S">S</span>]</span><span class="params">(<span name="c">c: <a href="package$$$tilde$greater.html" class="extype" name="scala.coroutines.~&gt;">~&gt;</a>[(<span class="extype" name="scala.coroutines.coroutine3ops.T1">T1</span>, <span class="extype" name="scala.coroutines.coroutine3ops.T2">T2</span>, <span class="extype" name="scala.coroutines.coroutine3ops.T3">T3</span>), <span class="extype" name="scala.coroutines.coroutine3ops.S">S</span>]</span>)</span><span class="result">: <a href="package$$coroutine3ops.html" class="extype" name="scala.coroutines.coroutine3ops">coroutine3ops</a>[<span class="extype" name="scala.coroutines.coroutine3ops.T1">T1</span>, <span class="extype" name="scala.coroutines.coroutine3ops.T2">T2</span>, <span class="extype" name="scala.coroutines.coroutine3ops.T3">T3</span>, <span class="extype" name="scala.coroutines.coroutine3ops.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@coroutine3ops[T1,T2,T3,S](c:scala.coroutines.package.~&gt;[(T1,T2,T3),S]):scala.coroutines.package.coroutine3ops[T1,T2,T3,S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines#yieldto" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="yieldto[T](f:scala.coroutines.Coroutine[T]):Unit"></a>
+      <a id="yieldto[T](Coroutine[T]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">yieldto</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="f">f: <a href="Coroutine.html" class="extype" name="scala.coroutines.Coroutine">Coroutine</a>[<span class="extype" name="scala.coroutines.yieldto.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@yieldto[T](f:scala.coroutines.Coroutine[T]):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.coroutines#yieldval" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="yieldval[T](x:T):Unit"></a>
+      <a id="yieldval[T](T):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">yieldval</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="x">x: <span class="extype" name="scala.coroutines.yieldval.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.coroutines.package@yieldval[T](x:T):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

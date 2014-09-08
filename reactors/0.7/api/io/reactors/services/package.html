@@ -1,0 +1,256 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>services - io.reactors.services</title>
+          <meta name="description" content="services - io.reactors.services" />
+          <meta name="keywords" content="services io.reactors.services" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'io.reactors.services.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="io">io</a>.<a href="../package.html" class="extype" name="io.reactors">reactors</a></p>
+        <h1>services</h1><span class="permalink">
+      <a href="../../../index.html#io.reactors.services.package" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">services</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="io.reactors.services.Channels" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ChannelsextendsChannelBuilderwithProtocol.Service"></a>
+      <a id="Channels:Channels"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Channels.html"><span class="name">Channels</span></a><span class="result"> extends <a href="../ChannelBuilder.html" class="extype" name="io.reactors.ChannelBuilder">ChannelBuilder</a> with <a href="../Protocol$$Service.html" class="extype" name="io.reactors.Protocol.Service">Service</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.services.package@ChannelsextendsChannelBuilderwithProtocol.Service" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The channel register used for channel lookup by name, and creating new channels.</p><div class="fullcomment"><div class="comment cmt"><p>The channel register used for channel lookup by name, and creating new channels.</p><p> It can be used to query the channels in the local reactor system.
+ To query channels in remote reactor systems, <code>Names</code> service should be used.
+</p></div></div>
+    </li><li name="io.reactors.services.Clock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ClockextendsProtocol.Service"></a>
+      <a id="Clock:Clock"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Clock.html"><span class="name">Clock</span></a><span class="result"> extends <a href="../Protocol$$Service.html" class="extype" name="io.reactors.Protocol.Service">Service</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.services.package@ClockextendsProtocol.Service" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains various time-related services.</p>
+    </li><li name="io.reactors.services.Debugger" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DebuggerextendsProtocol.Service"></a>
+      <a id="Debugger:Debugger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Debugger.html"><span class="name">Debugger</span></a><span class="result"> extends <a href="../Protocol$$Service.html" class="extype" name="io.reactors.Protocol.Service">Service</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.services.package@DebuggerextendsProtocol.Service" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains services needed to communicate with the debugger.</p>
+    </li><li name="io.reactors.services.Io" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IoextendsProtocol.Service"></a>
+      <a id="Io:Io"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Io.html"><span class="name">Io</span></a><span class="result"> extends <a href="../Protocol$$Service.html" class="extype" name="io.reactors.Protocol.Service">Service</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.services.package@IoextendsProtocol.Service" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains I/O-related services.</p>
+    </li><li name="io.reactors.services.Log" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LogextendsProtocol.Service"></a>
+      <a id="Log:Log"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Log.html"><span class="name">Log</span></a><span class="result"> extends <a href="../Protocol$$Service.html" class="extype" name="io.reactors.Protocol.Service">Service</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.services.package@LogextendsProtocol.Service" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains various logging-related services.</p>
+    </li><li name="io.reactors.services.NameAwaiterReactor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NameAwaiterReactorextendsReactor[(String,io.reactors.Channel[io.reactors.Channel[_]])]"></a>
+      <a id="NameAwaiterReactor:NameAwaiterReactor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NameAwaiterReactor.html"><span class="name">NameAwaiterReactor</span></a><span class="result"> extends <a href="../Reactor.html" class="extype" name="io.reactors.Reactor">Reactor</a>[(<span class="extype" name="scala.Predef.String">String</span>, <a href="../Channel.html" class="extype" name="io.reactors.Channel">Channel</a>[<a href="../Channel.html" class="extype" name="io.reactors.Channel">Channel</a>[_]])]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.services.package@NameAwaiterReactorextendsReactor[(String,io.reactors.Channel[io.reactors.Channel[_]])]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.services.NameResolverReactor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NameResolverReactorextendsReactor[(String,io.reactors.Channel[Option[io.reactors.Channel[_]]])]"></a>
+      <a id="NameResolverReactor:NameResolverReactor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NameResolverReactor.html"><span class="name">NameResolverReactor</span></a><span class="result"> extends <a href="../Reactor.html" class="extype" name="io.reactors.Reactor">Reactor</a>[(<span class="extype" name="scala.Predef.String">String</span>, <a href="../Channel.html" class="extype" name="io.reactors.Channel">Channel</a>[<span class="extype" name="scala.Option">Option</span>[<a href="../Channel.html" class="extype" name="io.reactors.Channel">Channel</a>[_]]])]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.services.package@NameResolverReactorextendsReactor[(String,io.reactors.Channel[Option[io.reactors.Channel[_]]])]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.services.Names" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NamesextendsProtocol.Service"></a>
+      <a id="Names:Names"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Names.html"><span class="name">Names</span></a><span class="result"> extends <a href="../Protocol$$Service.html" class="extype" name="io.reactors.Protocol.Service">Service</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.services.package@NamesextendsProtocol.Service" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains name resolution reactors.</p>
+    </li><li name="io.reactors.services.Net" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NetextendsProtocol.Service"></a>
+      <a id="Net:Net"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Net.html"><span class="name">Net</span></a><span class="result"> extends <a href="../Protocol$$Service.html" class="extype" name="io.reactors.Protocol.Service">Service</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.services.package@NetextendsProtocol.Service" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains common network protocol services.</p>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

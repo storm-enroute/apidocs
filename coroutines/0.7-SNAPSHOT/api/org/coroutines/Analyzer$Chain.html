@@ -1,0 +1,849 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>Chain - org.coroutines.Analyzer.Chain</title>
+          <meta name="description" content="Chain - org.coroutines.Analyzer.Chain" />
+          <meta name="keywords" content="Chain org.coroutines.Analyzer.Chain" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'org.coroutines.Analyzer$Chain';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../lib/class_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="org">org</a>.<a href="package.html" class="extype" name="org.coroutines">coroutines</a>.<a href="Analyzer.html" class="extype" name="org.coroutines.Analyzer">Analyzer</a></p>
+        <h1>Chain</h1> <span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Chain</span><span class="params">(<span name="info">info: <a href="Analyzer$BlockInfo.html" class="extype" name="org.coroutines.Analyzer.BlockInfo">BlockInfo</a></span>, <span name="decls">decls: <span class="extype" name="scala.List">List</span>[(<span class="extype" name="scala.reflect.api.Symbols.Symbol">scala.reflect.macros.Universe.Symbol</span>, <a href="Analyzer$VarInfo.html" class="extype" name="org.coroutines.Analyzer.VarInfo">VarInfo</a>)]</span>, <span name="table">table: <a href="Analyzer$Table.html" class="extype" name="org.coroutines.Analyzer.Table">Table</a></span>, <span name="parent">parent: <a href="" class="extype" name="org.coroutines.Analyzer.Chain">Chain</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="org.coroutines.Analyzer.Chain"><span>Chain</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.coroutines.Analyzer.Chain#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(info:Analyzer.this.BlockInfo,decls:List[(Analyzer.this.c.universe.Symbol,Analyzer.this.VarInfo)],table:Analyzer.this.Table,parent:Analyzer.this.Chain):Analyzer.this.Chain"></a>
+      <a id="&lt;init&gt;:Chain"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Chain</span><span class="params">(<span name="info">info: <a href="Analyzer$BlockInfo.html" class="extype" name="org.coroutines.Analyzer.BlockInfo">BlockInfo</a></span>, <span name="decls">decls: <span class="extype" name="scala.List">List</span>[(<span class="extype" name="scala.reflect.api.Symbols.Symbol">scala.reflect.macros.Universe.Symbol</span>, <a href="Analyzer$VarInfo.html" class="extype" name="org.coroutines.Analyzer.VarInfo">VarInfo</a>)]</span>, <span name="table">table: <a href="Analyzer$Table.html" class="extype" name="org.coroutines.Analyzer.Table">Table</a></span>, <span name="parent">parent: <a href="" class="extype" name="org.coroutines.Analyzer.Chain">Chain</a></span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@&lt;init&gt;(info:Analyzer.this.BlockInfo,decls:List[(Analyzer.this.c.universe.Symbol,Analyzer.this.VarInfo)],table:Analyzer.this.Table,parent:Analyzer.this.Chain):Analyzer.this.Chain" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.coroutines.Analyzer.Chain#alldecls" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="alldecls:List[(Analyzer.this.c.universe.Symbol,Analyzer.this.VarInfo)]"></a>
+      <a id="alldecls:List[(scala.reflect.macros.Universe.Symbol,VarInfo)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">alldecls</span><span class="result">: <span class="extype" name="scala.List">List</span>[(<span class="extype" name="scala.reflect.api.Symbols.Symbol">scala.reflect.macros.Universe.Symbol</span>, <a href="Analyzer$VarInfo.html" class="extype" name="org.coroutines.Analyzer.VarInfo">VarInfo</a>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@alldecls:List[(Analyzer.this.c.universe.Symbol,Analyzer.this.VarInfo)]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="org.coroutines.Analyzer.Chain#ancestors" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ancestors:List[Analyzer.this.Chain]"></a>
+      <a id="ancestors:List[Chain]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ancestors</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="" class="extype" name="org.coroutines.Analyzer.Chain">Chain</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@ancestors:List[Analyzer.this.Chain]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.coroutines.Analyzer.Chain#chainForDecl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="chainForDecl(s:Analyzer.this.c.universe.Symbol):Option[Analyzer.this.Chain]"></a>
+      <a id="chainForDecl(scala.reflect.macros.Universe.Symbol):Option[Chain]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">chainForDecl</span><span class="params">(<span name="s">s: <span class="extype" name="scala.reflect.api.Symbols.Symbol">scala.reflect.macros.Universe.Symbol</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="" class="extype" name="org.coroutines.Analyzer.Chain">Chain</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@chainForDecl(s:Analyzer.this.c.universe.Symbol):Option[Analyzer.this.Chain]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@clone():Object" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.coroutines.Analyzer.Chain#contains" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="contains(s:Analyzer.this.c.universe.Symbol):Boolean"></a>
+      <a id="contains(scala.reflect.macros.Universe.Symbol):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">contains</span><span class="params">(<span name="s">s: <span class="extype" name="scala.reflect.api.Symbols.Symbol">scala.reflect.macros.Universe.Symbol</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@contains(s:Analyzer.this.c.universe.Symbol):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="org.coroutines.Analyzer.Chain#copyWithoutBlocks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="copyWithoutBlocks:Analyzer.this.Chain"></a>
+      <a id="copyWithoutBlocks:Chain"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">copyWithoutBlocks</span><span class="result">: <a href="" class="extype" name="org.coroutines.Analyzer.Chain">Chain</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@copyWithoutBlocks:Analyzer.this.Chain" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="org.coroutines.Analyzer.Chain#decls" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="decls:List[(Analyzer.this.c.universe.Symbol,Analyzer.this.VarInfo)]"></a>
+      <a id="decls:List[(scala.reflect.macros.Universe.Symbol,VarInfo)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">decls</span><span class="result">: <span class="extype" name="scala.List">List</span>[(<span class="extype" name="scala.reflect.api.Symbols.Symbol">scala.reflect.macros.Universe.Symbol</span>, <a href="Analyzer$VarInfo.html" class="extype" name="org.coroutines.Analyzer.VarInfo">VarInfo</a>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@decls:List[(Analyzer.this.c.universe.Symbol,Analyzer.this.VarInfo)]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="org.coroutines.Analyzer.Chain#descend" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="descend(tryuids:Option[(Long,Long)]):Analyzer.this.Chain"></a>
+      <a id="descend(Option[(Long,Long)]):Chain"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">descend</span><span class="params">(<span name="tryuids">tryuids: <span class="extype" name="scala.Option">Option</span>[(<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>)] = <span class="symbol">None</span></span>)</span><span class="result">: <a href="" class="extype" name="org.coroutines.Analyzer.Chain">Chain</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@descend(tryuids:Option[(Long,Long)]):Analyzer.this.Chain" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.coroutines.Analyzer.Chain#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(that:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="that">that: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@equals(that:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.coroutines.Analyzer.Chain">Chain</a> → Equals → AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.coroutines.Analyzer.Chain#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.coroutines.Analyzer.Chain">Chain</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="org.coroutines.Analyzer.Chain#info" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="info:Analyzer.this.BlockInfo"></a>
+      <a id="info:BlockInfo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">info</span><span class="result">: <a href="Analyzer$BlockInfo.html" class="extype" name="org.coroutines.Analyzer.BlockInfo">BlockInfo</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@info:Analyzer.this.BlockInfo" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="org.coroutines.Analyzer.Chain#isAssigned" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isAssigned(s:Analyzer.this.c.universe.Symbol):Boolean"></a>
+      <a id="isAssigned(scala.reflect.macros.Universe.Symbol):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isAssigned</span><span class="params">(<span name="s">s: <span class="extype" name="scala.reflect.api.Symbols.Symbol">scala.reflect.macros.Universe.Symbol</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@isAssigned(s:Analyzer.this.c.universe.Symbol):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="org.coroutines.Analyzer.Chain#isAssignedInAncestors" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isAssignedInAncestors(s:Analyzer.this.c.universe.Symbol):Boolean"></a>
+      <a id="isAssignedInAncestors(scala.reflect.macros.Universe.Symbol):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isAssignedInAncestors</span><span class="params">(<span name="s">s: <span class="extype" name="scala.reflect.api.Symbols.Symbol">scala.reflect.macros.Universe.Symbol</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@isAssignedInAncestors(s:Analyzer.this.c.universe.Symbol):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="org.coroutines.Analyzer.Chain#isDeclared" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isDeclared(s:Analyzer.this.c.universe.Symbol):Boolean"></a>
+      <a id="isDeclared(scala.reflect.macros.Universe.Symbol):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isDeclared</span><span class="params">(<span name="s">s: <span class="extype" name="scala.reflect.api.Symbols.Symbol">scala.reflect.macros.Universe.Symbol</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@isDeclared(s:Analyzer.this.c.universe.Symbol):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="org.coroutines.Analyzer.Chain#isDeclaredInAncestors" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isDeclaredInAncestors(s:Analyzer.this.c.universe.Symbol):Boolean"></a>
+      <a id="isDeclaredInAncestors(scala.reflect.macros.Universe.Symbol):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isDeclaredInAncestors</span><span class="params">(<span name="s">s: <span class="extype" name="scala.reflect.api.Symbols.Symbol">scala.reflect.macros.Universe.Symbol</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@isDeclaredInAncestors(s:Analyzer.this.c.universe.Symbol):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="org.coroutines.Analyzer.Chain#isDescendantOf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isDescendantOf(that:Analyzer.this.Chain):Boolean"></a>
+      <a id="isDescendantOf(Chain):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isDescendantOf</span><span class="params">(<span name="that">that: <a href="" class="extype" name="org.coroutines.Analyzer.Chain">Chain</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@isDescendantOf(that:Analyzer.this.Chain):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.coroutines.Analyzer.Chain#isOccurring" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isOccurring(s:Analyzer.this.c.universe.Symbol):Boolean"></a>
+      <a id="isOccurring(scala.reflect.macros.Universe.Symbol):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isOccurring</span><span class="params">(<span name="s">s: <span class="extype" name="scala.reflect.api.Symbols.Symbol">scala.reflect.macros.Universe.Symbol</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@isOccurring(s:Analyzer.this.c.universe.Symbol):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="org.coroutines.Analyzer.Chain#isOccurringInAncestors" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isOccurringInAncestors(s:Analyzer.this.c.universe.Symbol):Boolean"></a>
+      <a id="isOccurringInAncestors(scala.reflect.macros.Universe.Symbol):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isOccurringInAncestors</span><span class="params">(<span name="s">s: <span class="extype" name="scala.reflect.api.Symbols.Symbol">scala.reflect.macros.Universe.Symbol</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@isOccurringInAncestors(s:Analyzer.this.c.universe.Symbol):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@notify():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.coroutines.Analyzer.Chain#parent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="parent:Analyzer.this.Chain"></a>
+      <a id="parent:Chain"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parent</span><span class="result">: <a href="" class="extype" name="org.coroutines.Analyzer.Chain">Chain</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@parent:Analyzer.this.Chain" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.coroutines.Analyzer.Chain#table" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="table:Analyzer.this.Table"></a>
+      <a id="table:Table"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">table</span><span class="result">: <a href="Analyzer$Table.html" class="extype" name="org.coroutines.Analyzer.Table">Table</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@table:Analyzer.this.Table" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="org.coroutines.Analyzer.Chain#takeDecls" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="takeDecls(n:Int):Analyzer.this.Chain"></a>
+      <a id="takeDecls(Int):Chain"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">takeDecls</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="org.coroutines.Analyzer.Chain">Chain</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@takeDecls(n:Int):Analyzer.this.Chain" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="org.coroutines.Analyzer.Chain#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@toString():String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.coroutines.Analyzer.Chain">Chain</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="org.coroutines.Analyzer.Chain#verboseString" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="verboseString:String"></a>
+      <a id="verboseString:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">verboseString</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@verboseString:String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@wait():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.coroutines.Analyzer.Chain#withDecl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withDecl(valdef:Analyzer.this.c.universe.Tree,isArg:Boolean):Analyzer.this.Chain"></a>
+      <a id="withDecl(scala.reflect.macros.Universe.Tree,Boolean):Chain"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withDecl</span><span class="params">(<span name="valdef">valdef: <span class="extype" name="scala.reflect.api.Trees.Tree">scala.reflect.macros.Universe.Tree</span></span>, <span name="isArg">isArg: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="org.coroutines.Analyzer.Chain">Chain</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#org.coroutines.Analyzer$Chain@withDecl(valdef:Analyzer.this.c.universe.Tree,isArg:Boolean):Analyzer.this.Chain" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

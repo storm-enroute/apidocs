@@ -1,0 +1,1339 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>reactors - io.reactors</title>
+          <meta name="description" content="reactors - io.reactors" />
+          <meta name="keywords" content="reactors io.reactors" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'io.reactors.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="io">io</a></p>
+        <h1>reactors</h1> <span class="permalink">
+      <a href="../../index.html#io.reactors.package" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reactors</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="io.reactors"><span>reactors</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="io.reactors.Channel" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Channel[T]extendsAnyRef"></a>
+      <a id="Channel[T]:Channel[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Channel.html"><span class="name">Channel</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Channel[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"><code>Channel</code> is a shareable reference to a writing endpoint of a reactor.</p><div class="fullcomment"><div class="comment cmt"><p><code>Channel</code> is a shareable reference to a writing endpoint of a reactor.</p><p> By calling the channel's <code>!</code> method, an event is sent to the channel. The event is
+ eventually emitted on the channel's corresponding event stream, which is readable
+ only by the reactor that owns that channel.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of the events propagated by this channel
+</p></dd></dl></div>
+    </li><li name="io.reactors.ChannelBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ChannelBuilderextendsAnyRef"></a>
+      <a id="ChannelBuilder:ChannelBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ChannelBuilder.html"><span class="name">ChannelBuilder</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@ChannelBuilderextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Used for building channel objects.</p>
+    </li><li name="io.reactors.ChannelUrl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ChannelUrlextendsProductwithSerializable"></a>
+      <a id="ChannelUrl:ChannelUrl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$ChannelUrl.html"><span class="name">ChannelUrl</span></a><span class="params">(<span name="reactorUrl">reactorUrl: <a href="package$$ReactorUrl.html" class="extype" name="io.reactors.ReactorUrl">ReactorUrl</a></span>, <span name="anchor">anchor: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@ChannelUrlextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.Connector" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Connector[T]extendsIdentifiable"></a>
+      <a id="Connector[T]:Connector[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Connector.html"><span class="name">Connector</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Identifiable.html" class="extype" name="io.reactors.Identifiable">Identifiable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Connector[T]extendsIdentifiable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A pair of a channel and its event stream.</p><div class="fullcomment"><div class="comment cmt"><p>A pair of a channel and its event stream.</p><p> Allows closing the channel with its <code>seal</code> operation.
+</p></div></div>
+    </li><li name="io.reactors.DebugApi" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DebugApiextendsAnyRef"></a>
+      <a id="DebugApi:DebugApi"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DebugApi.html"><span class="name">DebugApi</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@DebugApiextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Debugger interface for the reactor system.</p>
+    </li><li name="io.reactors.EventQueue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="EventQueue[T]extendsAnyRef"></a>
+      <a id="EventQueue[T]:EventQueue[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="EventQueue.html"><span class="name">EventQueue</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@EventQueue[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A queue that buffers events that arrive on the corresponding channel.</p><div class="fullcomment"><div class="comment cmt"><p>A queue that buffers events that arrive on the corresponding channel.</p><p> The <code>enqueue</code> method may have FIFO queue, priority queue, or some other semantics,
+ depending on the implementation.
+</p></div></div>
+    </li><li name="io.reactors.Events" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Events[T]extendsAnyRef"></a>
+      <a id="Events[T]:Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Events.html"><span class="name">Events</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Events[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A basic event stream.</p><div class="fullcomment"><div class="comment cmt"><p>A basic event stream.</p><p> Event streams are special objects that may produce events of a certain type <code>T</code>.
+ Clients may subscribe side-effecting functions (i.e. callbacks)
+ to these events with <code>onReaction</code>, <code>onEvent</code>, <code>onMatch</code> and <code>on</code> --
+ each of these methods will invoke the callback when an event
+ is produced, but some may be more suitable depending on the use-case.</p><p> An event stream produces events until it <i>unreacts</i>.
+ After the event stream unreacts, it never produces an event again.</p><p> Event streams can also be manipulated using declarative combinators
+ such as <code>map</code>, <code>filter</code>, <code>until</code>, <code>after</code> and <code>scanPast</code>:</p><pre><span class="kw">def</span> positiveSquares(r: Events[<span class="std">Int</span>]) = r.map(x <span class="kw">=&gt;</span> x * x).filter(_ != <span class="num">0</span>)</pre><p> With the exception of <code>onX</code> family of methods, and unless otherwise specified,
+ operators passed to these declarative combinators should be pure -- they should not
+ have any side-effects.</p><p> The result of applying a declarative combinator on <code>Events[T]</code> is usually
+ another <code>Events[S]</code>, possibly with a type parameter <code>S</code> different from <code>T</code>.
+ Event sink combinators, such as <code>onEvent</code>, return a <code>Subscription</code> object used to
+ <code>unsubscribe</code> from their event source.</p><p> Combinators that start with the prefix <code>on</code>, <code>to</code>, <code>pipe</code> or <code>get</code> are called *sink
+ combinators*. Calling these combinators subscribes to the event stream and creates
+ a subscription object. The event source is from there on responsible for propagating
+ events to sink combinators until it either *unreacts*, meaning that it will not
+ emit any other events, or the event sink gets *unsubscribed*. The event sink can be
+ unsubscribed by calling the <code>unsubscribe</code> method of the <code>Subscription</code> object.
+ The client is responsible for unsubscribing from an event source once the events are
+ no longer needed. Failure to do so risks *time leaks*, a form of resource leak in
+ which the program gets slower and slower (because it needs to propagate no longer
+ needed events).</p><p> Event streams are specialized for <code>Int</code>, <code>Long</code> and <code>Double</code>.</p><p> Every event stream is bound to a specific <code>Reactor</code>, the basic unit of concurrency.
+ Within a reactor, at most a single event stream propagates events at a time.
+ An event stream will only produce events during the execution of that reactor --
+ events are never triggered on a different reactor.
+ It is forbidden to share event streams between reactors.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of the events in this event stream
+</p></dd></dl></div>
+    </li><li name="io.reactors.Hash" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Hash[T]extendsAnyRef"></a>
+      <a id="Hash[T]:Hash[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Hash.html"><span class="name">Hash</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Hash[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.IVar" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IVar[T]extendsSignal[T]"></a>
+      <a id="IVar[T]:IVar[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IVar.html"><span class="name">IVar</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a>[<span class="extype" name="io.reactors.IVar.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@IVar[T]extendsSignal[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An event stream that can be either completed, or unreacted at most once.</p><div class="fullcomment"><div class="comment cmt"><p>An event stream that can be either completed, or unreacted at most once.</p><p> Assigning a value propagates an event to all the subscribers,
+ and then propagates an unreaction.
+ To assign a value:</p><pre><span class="kw">val</span> iv = <span class="kw">new</span> Events.IVar[<span class="std">Int</span>]
+iv := <span class="num">5</span>
+assert(iv() == <span class="num">5</span>)</pre><p> To unreact (i.e. seal, or close) an ivar without assigning a value:</p><pre><span class="kw">val</span> iv = <span class="kw">new</span> Events.IVar[<span class="std">Int</span>]
+iv.unreact()
+assert(iv.isUnreacted)</pre></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of the value in the <code>IVar</code>
+</p></dd></dl></div>
+    </li><li name="io.reactors.Identifiable" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="IdentifiableextendsAnyRef"></a>
+      <a id="Identifiable:Identifiable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Identifiable.html"><span class="name">Identifiable</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@IdentifiableextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Any object that contains a unique id within some scope.</p>
+    </li><li name="io.reactors.Observer" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Observer[T]extendsAnyRef"></a>
+      <a id="Observer[T]:Observer[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Observer.html"><span class="name">Observer</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Observer[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An object that can act upon an event or be signalled that
+ there will be no more events.</p><div class="fullcomment"><div class="comment cmt"><p>An object that can act upon an event or be signalled that
+ there will be no more events.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of events the observer responds to
+</p></dd></dl></div>
+    </li><li name="io.reactors.Proto" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Proto[+I&lt;:io.reactors.Reactor[_]]extendsAnyRef"></a>
+      <a id="Proto[+I&lt;:Reactor[_]]:Proto[I]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Proto.html"><span class="name">Proto</span></a><span class="tparams">[<span name="I">+I &lt;: <a href="Reactor.html" class="extype" name="io.reactors.Reactor">Reactor</a>[_]</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Proto[+I&lt;:io.reactors.Reactor[_]]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A prototype for instantiating a reactor that takes specific parameters.</p><div class="fullcomment"><div class="comment cmt"><p>A prototype for instantiating a reactor that takes specific parameters.
+</p></div><dl class="paramcmts block"><dt class="tparam">I</dt><dd class="cmt"><p>type of the reactor
+</p></dd></dl></div>
+    </li><li name="io.reactors.Protocol" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ProtocolextendsAnyRef"></a>
+      <a id="Protocol:Protocol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Protocol.html"><span class="name">Protocol</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@ProtocolextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An encapsulation of a set of event streams and channels.</p>
+    </li><li name="io.reactors.RCell" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RCell[T]extendsSignal[T]withObserver[T]"></a>
+      <a id="RCell[T]:RCell[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RCell.html"><span class="name">RCell</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] with <a href="Observer.html" class="extype" name="io.reactors.Observer">Observer</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@RCell[T]extendsSignal[T]withObserver[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The reactive cell abstraction represents a mutable memory location
+ whose changes may produce events.</p><div class="fullcomment"><div class="comment cmt"><p>The reactive cell abstraction represents a mutable memory location
+ whose changes may produce events.</p><p> An <code>RCell</code> is conceptually similar to a reactive emitter lifted into a signal.
+ An <code>RCell</code> can be created full, or empty. If empty, retrieving its value throws
+ an exception. Once assigned, the <code>RCell</code> is no longer empty, until <code>clear</code> gets
+ called.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of the values it stores</p></dd></dl></div>
+    </li><li name="io.reactors.Reactor" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Reactor[T]extendsAnyRef"></a>
+      <a id="Reactor[T]:Reactor[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Reactor.html"><span class="name">Reactor</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Reactor[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A reactor is a basic unit of concurrency.</p><div class="fullcomment"><div class="comment cmt"><p>A reactor is a basic unit of concurrency.</p><p> A concurrent program in the Reactors framework is composed of multiple reactors,
+ which execute concurrently, and in isolation. The only way they can communicate is
+ by exchanging events using entities called *channels*.</p><p> A <code>Reactor[T]</code> object accepts events of type <code>T</code> on its input channel.
+ One reactor can propagate events concurrently to other reactors.
+ Event streams cannot be shared between reactors --
+ it is an error to use an event stream originating in one reactor
+ in some different reactor.</p><p> Reactors are defined by extending the <code>Reactor</code> trait.
+ The events passed to reactors can be subscribed to using
+ their <code>main.events</code> stream.
+ Here is an example:</p><pre><span class="kw">class</span> MyPrinter <span class="kw">extends</span> Reactor[<span class="std">String</span>] {
+  main.events onEvent {
+    e <span class="kw">=&gt;</span> println(e)
+  }
+}</pre><p> Separate reactor instances that exist at runtime are created using reactor systems.
+ Each reactor belongs to a specific reactor system. Usually there is a single reactor
+ system within a single program instance.
+ Here is an example:</p><pre><span class="kw">val</span> reactorSystem = ReactorSystem.default(<span class="lit">"MyReactorSystem"</span>)
+<span class="kw">val</span> channel = reactorSystem.spawn(Proto[MyPrinter])</pre><p> Creating a reactor returns its channel.
+ Events can be sent to a channel using the <code>!</code> method:</p><pre>channel ! <span class="lit">"Hi!"</span> <span class="cmt">// eventually, this is printed by `MyPrinter`</span></pre><p> To stop, a reactor must seal its main channel.
+ The following reactor seals its main channel after receiving the first event:</p><pre><span class="kw">class</span> MyPrinter <span class="kw">extends</span> Reactor[<span class="std">String</span>] {
+  main.events onEvent {
+    e <span class="kw">=&gt;</span>
+    println(e)
+    main.seal()
+  }
+}</pre><p> Reactors also receive special <code>SysEvent</code> events on the <code>sysEvents</code> stream.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of events, which <code>this</code> reactor produces
+</p></dd></dl></div>
+    </li><li name="io.reactors.ReactorDied" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReactorDiedextendsSysEventwithProductwithSerializable"></a>
+      <a id="ReactorDied:ReactorDied"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ReactorDied.html"><span class="name">ReactorDied</span></a><span class="params">(<span name="t">t: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result"> extends <a href="SysEvent.html" class="extype" name="io.reactors.SysEvent">SysEvent</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@ReactorDiedextendsSysEventwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Denotes that the reactor died due to an exception.</p><div class="fullcomment"><div class="comment cmt"><p>Denotes that the reactor died due to an exception.</p><p> This event is sent after <code>ReactorStarted</code>.
+ This event is sent before <code>ReactorTerminated</code>, *unless* the exception is thrown
+ while <code>ReactorTerminated</code> is being processed, in which case the <code>ReactorDied</code> is
+ not sent.</p><p> Note that, if the exception is thrown during the reactor constructor invocation
+ and before the appropriate event handler is created, this event cannot be sent
+ to that event handler.
+</p></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>the exception that the reactor threw
+</p></dd></dl></div>
+    </li><li name="io.reactors.ReactorError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactorErrorextendsErrorwithProductwithSerializable"></a>
+      <a id="ReactorError:ReactorError"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$ReactorError.html"><span class="name">ReactorError</span></a><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="cause">cause: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Error">Error</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@ReactorErrorextendsErrorwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Thrown when an error in reactor execution occurs.</p>
+    </li><li name="io.reactors.ReactorSystem" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReactorSystemextendsServices"></a>
+      <a id="ReactorSystem:ReactorSystem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ReactorSystem.html"><span class="name">ReactorSystem</span></a><span class="result"> extends <a href="concurrent/Services.html" class="extype" name="io.reactors.concurrent.Services">Services</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@ReactorSystemextendsServices" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A system used to create, track and identify reactors.</p><div class="fullcomment"><div class="comment cmt"><p>A system used to create, track and identify reactors.</p><p> A reactor system is composed of a set of reactors that have
+ a common configuration.
+</p></div></div>
+    </li><li name="io.reactors.ReactorUrl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactorUrlextendsProductwithSerializable"></a>
+      <a id="ReactorUrl:ReactorUrl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$ReactorUrl.html"><span class="name">ReactorUrl</span></a><span class="params">(<span name="systemUrl">systemUrl: <a href="package$$SystemUrl.html" class="extype" name="io.reactors.SystemUrl">SystemUrl</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@ReactorUrlextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.Remote" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RemoteextendsProtocol.Service"></a>
+      <a id="Remote:Remote"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Remote.html"><span class="name">Remote</span></a><span class="result"> extends <a href="Protocol$$Service.html" class="extype" name="io.reactors.Protocol.Service">Service</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@RemoteextendsProtocol.Service" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Service that tracks different transports for remote communication.</p><div class="fullcomment"><div class="comment cmt"><p>Service that tracks different transports for remote communication.</p><p> The most important method is <code>resolve</code>, which creates a channel from a
+ channel URL. This allows communication with reactors in non-local
+ reactor systems, e.g. in another process, or on another machine.
+</p></div></div>
+    </li><li name="io.reactors.Scheduler" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SchedulerextendsAnyRef"></a>
+      <a id="Scheduler:Scheduler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Scheduler.html"><span class="name">Scheduler</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@SchedulerextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An object that schedules reactors for execution.</p><div class="fullcomment"><div class="comment cmt"><p>An object that schedules reactors for execution.</p><p> After a reactor is instantiated, its reactor frame is assigned a scheduler by the
+ reactor system.
+ A reactor that is assigned a specific scheduler will always be executed on that
+ same scheduler.</p><p> After creating a reactor, every reactor system will first call the <code>initSchedule</code>
+ method on the reactor frame.
+ Then, the reactor system will call the <code>schedule</code> method every time there are events
+ ready for the reactor.</p><p> <b>Note:</b>
+ Clients never invoke <code>Scheduler</code> operations directly,
+ but can implement their own scheduler if necessary.
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><span class="extype" name="org.reactors.ReactorSystem">org.reactors.ReactorSystem</span>
+</p></span></dd></dl></div>
+    </li><li name="io.reactors.Signal" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Signal[T]extendsEvents[T]withSubscription"></a>
+      <a id="Signal[T]:Signal[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Signal.html"><span class="name">Signal</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Signal.T">T</span>] with <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Signal[T]extendsEvents[T]withSubscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A special type of an event stream that caches the last emitted event.</p><div class="fullcomment"><div class="comment cmt"><p>A special type of an event stream that caches the last emitted event.</p><p> This last event is called the signal's <i>value</i>.
+ It can be read using the <code>Signal</code>'s <code>apply</code> method.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of the events in this signal
+</p></dd></dl></div>
+    </li><li name="io.reactors.Spec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Spec[T]extendsAnyRef"></a>
+      <a id="Spec[T]:Spec[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Spec.html"><span class="name">Spec</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Spec[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Evidence value for specialized type parameters.</p><div class="fullcomment"><div class="comment cmt"><p>Evidence value for specialized type parameters.</p><p> Used to artificially insert the type into a type signature.
+</p></div></div>
+    </li><li name="io.reactors.Subscription" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SubscriptionextendsAnyRef"></a>
+      <a id="Subscription:Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Subscription.html"><span class="name">Subscription</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@SubscriptionextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A subscription to a certain kind of event, event processing or computation.</p><div class="fullcomment"><div class="comment cmt"><p>A subscription to a certain kind of event, event processing or computation.</p><p> Calling <code>unsubscribe</code> on the subscription causes the events to no longer be
+ propagated to this subscription, or some computation to cease.</p><p> Unsubscribing is idempotent -- calling <code>unsubscribe</code> second time does nothing.
+</p></div></div>
+    </li><li name="io.reactors.SysEvent" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SysEventextendsAnyRef"></a>
+      <a id="SysEvent:SysEvent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SysEvent.html"><span class="name">SysEvent</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@SysEventextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">System events are a special kind of internal events that can be observed
+ by reactors.</p>
+    </li><li name="io.reactors.SystemUrl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SystemUrlextendsProductwithSerializable"></a>
+      <a id="SystemUrl:SystemUrl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$SystemUrl.html"><span class="name">SystemUrl</span></a><span class="params">(<span name="schema">schema: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="host">host: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="port">port: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@SystemUrlextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.UnhandledException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnhandledExceptionextendsExceptionwithProductwithSerializable"></a>
+      <a id="UnhandledException:UnhandledException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$UnhandledException.html"><span class="name">UnhandledException</span></a><span class="params">(<span name="cause">cause: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@UnhandledExceptionextendsExceptionwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Thrown when an exception is propagated to an event handler, such as <code>onEvent</code>.</p>
+    </li><li name="io.reactors.spec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="spec=specialized"></a>
+      <a id="spec:spec"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">spec</span><span class="result"> = <span class="extype" name="scala.specialized">specialized</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@spec=specialized" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="io.reactors.Channel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Channel"></a>
+      <a id="Channel:Channel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Channel$.html"><span class="name">Channel</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Channel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Default channel implementations.</p>
+    </li><li name="io.reactors.DebugApi" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DebugApi"></a>
+      <a id="DebugApi:DebugApi"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DebugApi$.html"><span class="name">DebugApi</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@DebugApi" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.EventQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EventQueue"></a>
+      <a id="EventQueue:EventQueue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="EventQueue$.html"><span class="name">EventQueue</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@EventQueue" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains default event queue implementations.</p>
+    </li><li name="io.reactors.Events" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Events"></a>
+      <a id="Events:Events"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Events$.html"><span class="name">Events</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Events" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains useful <code>Events</code> implementations and factory methods.</p>
+    </li><li name="io.reactors.IVar" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IVar"></a>
+      <a id="IVar:IVar"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="IVar$.html"><span class="name">IVar</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@IVar" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.Lethal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Lethal"></a>
+      <a id="Lethal:Lethal"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$Lethal$.html"><span class="name">Lethal</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Lethal" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Matches lethal throwables.</p>
+    </li><li name="io.reactors.NonLethal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NonLethal"></a>
+      <a id="NonLethal:NonLethal"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$NonLethal$.html"><span class="name">NonLethal</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@NonLethal" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Matches non-lethal throwables.</p>
+    </li><li name="io.reactors.Observer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Observer"></a>
+      <a id="Observer:Observer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Observer$.html"><span class="name">Observer</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Observer" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.Proto" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Proto"></a>
+      <a id="Proto:Proto"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Proto$.html"><span class="name">Proto</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Proto" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.Protocol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Protocol"></a>
+      <a id="Protocol:Protocol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Protocol$.html"><span class="name">Protocol</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Protocol" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.RCell" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RCell"></a>
+      <a id="RCell:RCell"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RCell$.html"><span class="name">RCell</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@RCell" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.Reactor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Reactor"></a>
+      <a id="Reactor:Reactor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Reactor$.html"><span class="name">Reactor</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Reactor" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.ReactorPreempted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReactorPreempted"></a>
+      <a id="ReactorPreempted:ReactorPreempted"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ReactorPreempted$.html"><span class="name">ReactorPreempted</span></a><span class="result"> extends <a href="SysEvent.html" class="extype" name="io.reactors.SysEvent">SysEvent</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@ReactorPreempted" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Denotes that the reactor was preempted by the scheduler.</p><div class="fullcomment"><div class="comment cmt"><p>Denotes that the reactor was preempted by the scheduler.</p><p> Always sent after <code>ReactorStarted</code> and before <code>ReactorTerminated</code>.</p><p> When the reactor is preempted, it loses control of the execution thread, until the
+ scheduler schedules it again on some (possibly the same) thread.
+ This event is typically used to send another message back to the reactor,
+ indicating that he should be scheduled again later.
+</p></div></div>
+    </li><li name="io.reactors.ReactorScheduled" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReactorScheduled"></a>
+      <a id="ReactorScheduled:ReactorScheduled"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ReactorScheduled$.html"><span class="name">ReactorScheduled</span></a><span class="result"> extends <a href="SysEvent.html" class="extype" name="io.reactors.SysEvent">SysEvent</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@ReactorScheduled" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Denotes that the reactor was scheduled for execution by the scheduler.</p><div class="fullcomment"><div class="comment cmt"><p>Denotes that the reactor was scheduled for execution by the scheduler.</p><p> Always sent after <code>ReactorStarted</code> and before <code>ReactorTerminated</code>.</p><p> This event usually occurs when reactor is woken up to process incoming events,
+ but may be invoked even if there are no pending events.
+ This event is typically used in conjunction with a scheduler that periodically
+ wakes up the reactor.
+</p></div></div>
+    </li><li name="io.reactors.ReactorStarted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReactorStarted"></a>
+      <a id="ReactorStarted:ReactorStarted"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ReactorStarted$.html"><span class="name">ReactorStarted</span></a><span class="result"> extends <a href="SysEvent.html" class="extype" name="io.reactors.SysEvent">SysEvent</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@ReactorStarted" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Denotes start of a reactor.</p><div class="fullcomment"><div class="comment cmt"><p>Denotes start of a reactor.</p><p> Produced before any other event.
+</p></div></div>
+    </li><li name="io.reactors.ReactorSystem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReactorSystem"></a>
+      <a id="ReactorSystem:ReactorSystem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ReactorSystem$.html"><span class="name">ReactorSystem</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@ReactorSystem" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains factory methods for creating reactor systems.</p>
+    </li><li name="io.reactors.ReactorTerminated" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReactorTerminated"></a>
+      <a id="ReactorTerminated:ReactorTerminated"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ReactorTerminated$.html"><span class="name">ReactorTerminated</span></a><span class="result"> extends <a href="SysEvent.html" class="extype" name="io.reactors.SysEvent">SysEvent</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@ReactorTerminated" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Denotes the termination of a reactor.</p><div class="fullcomment"><div class="comment cmt"><p>Denotes the termination of a reactor.</p><p> Called after all other events.
+</p></div></div>
+    </li><li name="io.reactors.Remote" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Remote"></a>
+      <a id="Remote:Remote"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Remote$.html"><span class="name">Remote</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Remote" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.Scheduler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Scheduler"></a>
+      <a id="Scheduler:Scheduler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Scheduler$.html"><span class="name">Scheduler</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Scheduler" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Companion object for creating standard reactor schedulers.</p>
+    </li><li name="io.reactors.Signal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Signal"></a>
+      <a id="Signal:Signal"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Signal$.html"><span class="name">Signal</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Signal" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.Subscription" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Subscription"></a>
+      <a id="Subscription:Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Subscription$.html"><span class="name">Subscription</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Default subscription implementations.</p>
+    </li><li name="io.reactors#anySpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="anySpec[T]:io.reactors.package.Spec[T]"></a>
+      <a id="anySpec[T]:Spec[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">anySpec</span><span class="tparams">[<span name="T">T</span>]</span><span class="result">: <a href="package$$Spec.html" class="extype" name="io.reactors.Spec">Spec</a>[<span class="extype" name="io.reactors.anySpec.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@anySpec[T]:io.reactors.package.Spec[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.concurrent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="concurrent"></a>
+      <a id="concurrent:concurrent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="concurrent/package.html"><span class="name">concurrent</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@concurrent" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors#doubleHash" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="doubleHash:io.reactors.package.Hash[Double]"></a>
+      <a id="doubleHash:Hash[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doubleHash</span><span class="result">: <a href="package$$Hash.html" class="extype" name="io.reactors.Hash">Hash</a>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@doubleHash:io.reactors.package.Hash[Double]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors#doubleSpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="doubleSpec:io.reactors.package.Spec[Double]"></a>
+      <a id="doubleSpec:Spec[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doubleSpec</span><span class="result">: <a href="package$$Spec.html" class="extype" name="io.reactors.Spec">Spec</a>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@doubleSpec:io.reactors.package.Spec[Double]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.exception" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="exception"></a>
+      <a id="exception:exception"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$exception$.html"><span class="name">exception</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@exception" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors#ignoreNonLethal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ignoreNonLethal:PartialFunction[Throwable,Unit]"></a>
+      <a id="ignoreNonLethal:PartialFunction[Throwable,Unit]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ignoreNonLethal</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Throwable">Throwable</span>, <span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@ignoreNonLethal:PartialFunction[Throwable,Unit]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Partial function ignores non-lethal throwables.</p><div class="fullcomment"><div class="comment cmt"><p>Partial function ignores non-lethal throwables.</p><p> This is useful in composition with other exception handlers.
+</p></div></div>
+    </li><li name="io.reactors#intHash" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="intHash:io.reactors.package.Hash[Int]"></a>
+      <a id="intHash:Hash[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">intHash</span><span class="result">: <a href="package$$Hash.html" class="extype" name="io.reactors.Hash">Hash</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@intHash:io.reactors.package.Hash[Int]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors#intSpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="intSpec:io.reactors.package.Spec[Int]"></a>
+      <a id="intSpec:Spec[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">intSpec</span><span class="result">: <a href="package$$Spec.html" class="extype" name="io.reactors.Spec">Spec</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@intSpec:io.reactors.package.Spec[Int]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors#isLethal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isLethal(t:Throwable):Boolean"></a>
+      <a id="isLethal(Throwable):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isLethal</span><span class="params">(<span name="t">t: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@isLethal(t:Throwable):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Determines if the throwable is lethal, i.e.</p><div class="fullcomment"><div class="comment cmt"><p>Determines if the throwable is lethal, i.e. should the program immediately stop.
+</p></div></div>
+    </li><li name="io.reactors#isNonLethal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isNonLethal(t:Throwable):Boolean"></a>
+      <a id="isNonLethal(Throwable):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isNonLethal</span><span class="params">(<span name="t">t: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@isNonLethal(t:Throwable):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Determines if the throwable is not lethal.</p>
+    </li><li name="io.reactors.japi" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="japi"></a>
+      <a id="japi:japi"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="japi/package.html"><span class="name">japi</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@japi" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors#longHash" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="longHash:io.reactors.package.Hash[Long]"></a>
+      <a id="longHash:Hash[Long]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">longHash</span><span class="result">: <a href="package$$Hash.html" class="extype" name="io.reactors.Hash">Hash</a>[<span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@longHash:io.reactors.package.Hash[Long]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors#longSpec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="longSpec:io.reactors.package.Spec[Long]"></a>
+      <a id="longSpec:Spec[Long]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">longSpec</span><span class="result">: <a href="package$$Spec.html" class="extype" name="io.reactors.Spec">Spec</a>[<span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@longSpec:io.reactors.package.Spec[Long]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors.pickle" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pickle"></a>
+      <a id="pickle:pickle"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="pickle/package.html"><span class="name">pickle</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@pickle" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="io.reactors#refHash" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="refHash[T&lt;:AnyRef]:io.reactors.package.Hash[T]"></a>
+      <a id="refHash[T&lt;:AnyRef]:Hash[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">refHash</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>]</span><span class="result">: <a href="package$$Hash.html" class="extype" name="io.reactors.Hash">Hash</a>[<span class="extype" name="io.reactors.refHash.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.package@refHash[T&lt;:AnyRef]:io.reactors.package.Hash[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

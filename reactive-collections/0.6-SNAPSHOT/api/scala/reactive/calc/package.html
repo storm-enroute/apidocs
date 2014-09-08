@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>calc - scala.reactive.calc</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
@@ -26,7 +30,11 @@
       <div id="definition">
         <img src="../../../lib/package_big.png" />
         <p id="owner"><a href="../../package.html" class="extype" name="scala">scala</a>.<a href="../package.html" class="extype" name="scala.reactive">reactive</a></p>
-        <h1>calc</h1>
+        <h1>calc</h1> <span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -92,9 +100,13 @@
       <span class="symbol">
         <a href="package$$Abelian.html"><span class="name">Abelian</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="package$$Commutoid.html" class="extype" name="scala.reactive.calc.Commutoid">Commutoid</a>[<span class="extype" name="scala.reactive.calc.Abelian.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@Abelian[T]extendspackage.Commutoid[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.calc.Bijection" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+    </li><li name="scala.reactive.calc.Bijection" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="Bijection[T,S]extendsAnyRef"></a>
       <a id="Bijection[T,S]:Bijection[T,S]"></a>
       <h4 class="signature">
@@ -105,8 +117,21 @@
       <span class="symbol">
         <a href="Bijection.html"><span class="name">Bijection</span></a><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">A bijective function between values of two types <code>T</code> and <code>S</code>.</p>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@Bijection[T,S]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A bijective function between values of two types <code>T</code> and <code>S</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A bijective function between values of two types <code>T</code> and <code>S</code>.</p><p> A bijection maps every element of type <code>T</code> into exactly one
+ element of type <code>S</code>, and every element of type <code>S</code> into exactly
+ one element of type <code>T</code>.
+ It is a function and its inverse bundled together.
+ Additionally, it has the property that <code>b.inv(b.apply(x)) == x</code>
+ and <code>b.apply(b.inv(x)) == x</code>.</p><p> <b>Note:</b>
+ Bijection is specialized.
+ Boxing is avoided for primitive values if both the source type
+ and the target type are integers, longs or doubles.
+</p></div></div>
     </li><li name="scala.reactive.calc.Commutoid" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Commutoid[T]extendspackage.Monoid[T]"></a>
       <a id="Commutoid[T]:Commutoid[T]"></a>
@@ -118,7 +143,11 @@
       <span class="symbol">
         <a href="package$$Commutoid.html"><span class="name">Commutoid</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="package$$Monoid.html" class="extype" name="scala.reactive.calc.Monoid">Monoid</a>[<span class="extype" name="scala.reactive.calc.Commutoid.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@Commutoid[T]extendspackage.Monoid[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.calc.DoubleOps" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DoubleOpsextendsAnyVal"></a>
@@ -131,7 +160,11 @@
       <span class="symbol">
         <a href="package$$DoubleOps.html"><span class="name">DoubleOps</span></a><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@DoubleOpsextendsAnyVal" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.calc.FloatOps" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="FloatOpsextendsAnyVal"></a>
@@ -144,9 +177,13 @@
       <span class="symbol">
         <a href="package$$FloatOps.html"><span class="name">FloatOps</span></a><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@FloatOpsextendsAnyVal" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.calc.Injection" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+    </li><li name="scala.reactive.calc.Injection" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="Injection[T,S]extendsAnyRef"></a>
       <a id="Injection[T,S]:Injection[T,S]"></a>
       <h4 class="signature">
@@ -157,8 +194,24 @@
       <span class="symbol">
         <a href="Injection.html"><span class="name">Injection</span></a><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">An injective function between values of two types <code>T</code> and <code>S</code>.</p>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@Injection[T,S]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An injective function between values of two types <code>T</code> and <code>S</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An injective function between values of two types <code>T</code> and <code>S</code>.</p><p> In mathematics, an injection maps elements of type <code>T</code> into exactly one
+ element of type <code>S</code>, and can map some elements of type <code>S</code> into
+ one element of type <code>T</code>.
+ An injection is undefined for some values in <code>S</code>.
+ Here, an injection may also be undefined for some elements in <code>T</code>.
+ An injection is a partial function and its partial inverse bundled together.</p><p> For example, a mapping from natural numbers to twice their value
+ forms an injection <code>1 -&gt; 2</code>, <code>2 -&gt; 4</code>, <code>3 -&gt; 6</code> and so on.
+ The inverse is not defined for every natural number --
+ <code>2</code> is mapped to <code>1</code>, but <code>3</code> is not mapped to anything.</p><p> Additionally, it has the property that <code>b.inv(b.apply(x)) == x</code>.
+ If <code>b.inv</code> is defined for <code>x</code>, then <code>b.apply(b.inv(x)) == x</code>.</p><p> <b>Note:</b>
+ <code>Injection</code> is not specialized, and neither is the standard library
+ <code>PartialFunction</code> class.
+</p></div></div>
     </li><li name="scala.reactive.calc.IntOps" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="IntOpsextendsAnyVal"></a>
       <a id="IntOps:IntOps"></a>
@@ -170,7 +223,11 @@
       <span class="symbol">
         <a href="package$$IntOps.html"><span class="name">IntOps</span></a><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@IntOpsextendsAnyVal" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.calc.LongOps" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LongOpsextendsAnyVal"></a>
@@ -183,7 +240,11 @@
       <span class="symbol">
         <a href="package$$LongOps.html"><span class="name">LongOps</span></a><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@LongOpsextendsAnyVal" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.calc.Monoid" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Monoid[T]extendsAnyRef"></a>
@@ -196,9 +257,13 @@
       <span class="symbol">
         <a href="package$$Monoid.html"><span class="name">Monoid</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@Monoid[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.calc.ReactRandom" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scala.reactive.calc.ReactRandom" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ReactRandomextendsAnyRef"></a>
       <a id="ReactRandom:ReactRandom"></a>
       <h4 class="signature">
@@ -209,8 +274,14 @@
       <span class="symbol">
         <a href="ReactRandom.html"><span class="name">ReactRandom</span></a><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">Reactive random value.</p>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@ReactRandomextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Reactive random value.</p><div class="fullcomment"><div class="comment cmt"><p>Reactive random value.</p><p> It can be used as a regular random generator that produces random values:</p><pre><span class="kw">val</span> r = <span class="kw">new</span> ReactRandom(<span class="num">1</span>L)
+r.double()</pre><p> Or, as a reactive random value, by subscribing to events produced when <code>emit</code> is called:</p><pre><span class="kw">val</span> evens = r.react.int().filter(_ % <span class="num">2</span> == <span class="num">0</span>)</pre><p> Above, <code>evens</code> contains random values.
+</p></div></div>
     </li></ol>
             </div>
 
@@ -229,7 +300,11 @@
       <span class="symbol">
         <a href="package$$Abelian$.html"><span class="name">Abelian</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@Abelian" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.calc.Bijection" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Bijection"></a>
@@ -242,8 +317,12 @@
       <span class="symbol">
         <a href="Bijection$.html"><span class="name">Bijection</span></a>
       </span>
-      </h4>
-      <p class="comment cmt">Contains factory methods for bijection instances.</p>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@Bijection" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains factory methods for bijection instances.</p>
     </li><li name="scala.reactive.calc.Commutoid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Commutoid"></a>
       <a id="Commutoid:Commutoid"></a>
@@ -255,7 +334,11 @@
       <span class="symbol">
         <a href="package$$Commutoid$.html"><span class="name">Commutoid</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@Commutoid" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.calc.Injection" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Injection"></a>
@@ -268,8 +351,12 @@
       <span class="symbol">
         <a href="Injection$.html"><span class="name">Injection</span></a>
       </span>
-      </h4>
-      <p class="comment cmt">Contains factory methods for injection instances.</p>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@Injection" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains factory methods for injection instances.</p>
     </li><li name="scala.reactive.calc.Monoid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Monoid"></a>
       <a id="Monoid:Monoid"></a>
@@ -281,9 +368,13 @@
       <span class="symbol">
         <a href="package$$Monoid$.html"><span class="name">Monoid</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@Monoid" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.calc.package#Pif" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scala.reactive.calc#Pif" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Pif:Float"></a>
       <a id="Pif:Float"></a>
       <h4 class="signature">
@@ -294,9 +385,13 @@
       <span class="symbol">
         <span class="name">Pif</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@Pif:Float" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.calc.package#euclid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scala.reactive.calc#euclid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="euclid(p:scala.reactive.XY,q:scala.reactive.XY):Double"></a>
       <a id="euclid(XY,XY):Double"></a>
       <h4 class="signature">
@@ -307,9 +402,13 @@
       <span class="symbol">
         <span class="name">euclid</span><span class="params">(<span name="p">p: <a href="../package.html#XY=Long" class="extmbr" name="scala.reactive.XY">XY</a></span>, <span name="q">q: <a href="../package.html#XY=Long" class="extmbr" name="scala.reactive.XY">XY</a></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@euclid(p:scala.reactive.XY,q:scala.reactive.XY):Double" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.calc.package#manhattan" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scala.reactive.calc#manhattan" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="manhattan(p:scala.reactive.XY,q:scala.reactive.XY):Int"></a>
       <a id="manhattan(XY,XY):Int"></a>
       <h4 class="signature">
@@ -320,9 +419,13 @@
       <span class="symbol">
         <span class="name">manhattan</span><span class="params">(<span name="p">p: <a href="../package.html#XY=Long" class="extmbr" name="scala.reactive.XY">XY</a></span>, <span name="q">q: <a href="../package.html#XY=Long" class="extmbr" name="scala.reactive.XY">XY</a></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@manhattan(p:scala.reactive.XY,q:scala.reactive.XY):Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.calc.package#max" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scala.reactive.calc#max" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="max(a:Float,b:Float):Float"></a>
       <a id="max(Float,Float):Float"></a>
       <h4 class="signature">
@@ -333,9 +436,13 @@
       <span class="symbol">
         <span class="name">max</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Float">Float</span></span>, <span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@max(a:Float,b:Float):Float" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.calc.package#max" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scala.reactive.calc#max" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="max(a:Double,b:Double):Double"></a>
       <a id="max(Double,Double):Double"></a>
       <h4 class="signature">
@@ -346,9 +453,13 @@
       <span class="symbol">
         <span class="name">max</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Double">Double</span></span>, <span name="b">b: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@max(a:Double,b:Double):Double" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.calc.package#min" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scala.reactive.calc#min" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="min(a:Float,b:Float):Float"></a>
       <a id="min(Float,Float):Float"></a>
       <h4 class="signature">
@@ -359,9 +470,13 @@
       <span class="symbol">
         <span class="name">min</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Float">Float</span></span>, <span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@min(a:Float,b:Float):Float" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.calc.package#min" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scala.reactive.calc#min" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="min(a:Double,b:Double):Double"></a>
       <a id="min(Double,Double):Double"></a>
       <h4 class="signature">
@@ -372,9 +487,13 @@
       <span class="symbol">
         <span class="name">min</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Double">Double</span></span>, <span name="b">b: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@min(a:Double,b:Double):Double" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.calc.package#nextPow2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scala.reactive.calc#nextPow2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="nextPow2(num:Int):Int"></a>
       <a id="nextPow2(Int):Int"></a>
       <h4 class="signature">
@@ -385,7 +504,11 @@
       <span class="symbol">
         <span class="name">nextPow2</span><span class="params">(<span name="num">num: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@nextPow2(num:Int):Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.calc.structure" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="structure"></a>
@@ -398,7 +521,11 @@
       <span class="symbol">
         <a href="package$$structure$.html"><span class="name">structure</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.calc.package@structure" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li></ol>
             </div>
@@ -429,6 +556,7 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script>
+
+
     </body>
       </html>

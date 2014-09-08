@@ -1,0 +1,736 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>Events - scala.reactive.Events</title>
+          <meta name="description" content="Events - scala.reactive.Events" />
+          <meta name="keywords" content="Events scala.reactive.Events" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'scala.reactive.Events$';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <a href="Events.html" title="Go to companion"><img src="../../lib/object_to_trait_big.png" /></a>
+        <p id="owner"><a href="../package.html" class="extype" name="scala">scala</a>.<a href="package.html" class="extype" name="scala.reactive">reactive</a></p>
+        <h1><a href="Events.html" title="Go to companion">Events</a></h1> <span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Events</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Contains useful <code>Events</code> implementations and factory methods.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.reactive.Events"><span>Events</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.reactive.Events.BindEmitter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BindEmitter[T]extendsEvents[T]withEvents.Default[T]withEventSourcewithReactMutable.Subscriptions"></a>
+      <a id="BindEmitter[T]:BindEmitter[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Events$$BindEmitter.html"><span class="name">BindEmitter</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Events.html" class="extype" name="scala.reactive.Events">Events</a>[<span class="extype" name="scala.reactive.Events.BindEmitter.T">T</span>] with <a href="Events$$Default.html" class="extype" name="scala.reactive.Events.Default">Default</a>[<span class="extype" name="scala.reactive.Events.BindEmitter.T">T</span>] with <a href="EventSource.html" class="extype" name="scala.reactive.EventSource">EventSource</a> with <a href="ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@BindEmitter[T]extendsEvents[T]withEvents.Default[T]withEventSourcewithReactMutable.Subscriptions" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An event emitter that can be used with the <code>mutate</code> block.</p><div class="fullcomment"><div class="comment cmt"><p>An event emitter that can be used with the <code>mutate</code> block.</p><p> Calling <code>mutate</code> with this bind emitter will add a subscription
+ to the emitter that can unsubscribe from that <code>mutate</code> statement.</p><p> For most purposes, clients should just use the regular <code>Events.Emitter</code>.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of events in the bind emitter
+</p></dd></dl></div>
+    </li><li name="scala.reactive.Events.Default" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Default[T]extendsEvents[T]"></a>
+      <a id="Default[T]:Default[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Events$$Default.html"><span class="name">Default</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Events.html" class="extype" name="scala.reactive.Events">Events</a>[<span class="extype" name="scala.reactive.Events.Default.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@Default[T]extendsEvents[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The default implementation of a event stream value.</p><div class="fullcomment"><div class="comment cmt"><p>The default implementation of a event stream value.</p><p> Keeps an optimized weak collection of weak references to subscribers.
+ References to subscribers that are no longer reachable in the application
+ will be removed eventually.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of the events in this event stream value
+</p></dd></dl></div>
+    </li><li name="scala.reactive.Events.Emitter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Emitter[T]extendsEvents[T]withEvents.Default[T]withEventSourcewithReactor[T]"></a>
+      <a id="Emitter[T]:Emitter[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Events$$Emitter.html"><span class="name">Emitter</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Events.html" class="extype" name="scala.reactive.Events">Events</a>[<span class="extype" name="scala.reactive.Events.Emitter.T">T</span>] with <a href="Events$$Default.html" class="extype" name="scala.reactive.Events.Default">Default</a>[<span class="extype" name="scala.reactive.Events.Emitter.T">T</span>] with <a href="EventSource.html" class="extype" name="scala.reactive.EventSource">EventSource</a> with <a href="Reactor.html" class="extype" name="scala.reactive.Reactor">Reactor</a>[<span class="extype" name="scala.reactive.Events.Emitter.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@Emitter[T]extendsEvents[T]withEvents.Default[T]withEventSourcewithReactor[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An event stream value that can programatically emit events.</p><div class="fullcomment"><div class="comment cmt"><p>An event stream value that can programatically emit events.</p><p> Events are emitted to the event stream value by calling the <code>+=</code> method.
+ The emitter can be closed by calling the <code>close</code> method --
+ after this no more events will be accepted through <code>+=</code>.</p><p> Example:</p><pre><span class="kw">val</span> emitter = <span class="kw">new</span> Events.Emitter[<span class="std">Int</span>]
+<span class="kw">val</span> prints = emitter.onEvent(println)
+emitter += <span class="num">1</span>
+emitter += <span class="num">2</span></pre></div></div>
+    </li><li name="scala.reactive.Events.EventsOps" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EventsOps[T]extendsAnyRef"></a>
+      <a id="EventsOps[T]:EventsOps[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Events$$EventsOps.html"><span class="name">EventsOps</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@EventsOps[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.Events.Never" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Never[T]extendsEvents[T]"></a>
+      <a id="Never[T]:Never[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Events$$Never.html"><span class="name">Never</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Events.html" class="extype" name="scala.reactive.Events">Events</a>[<span class="extype" name="scala.reactive.Events.Never.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@Never[T]extendsEvents[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A base trait for event streams that never emit events.</p><div class="fullcomment"><div class="comment cmt"><p>A base trait for event streams that never emit events.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of events never emitted by this event stream
+</p></dd></dl></div>
+    </li><li name="scala.reactive.Events.Proxy" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Proxy[T]extendsEvents[T]"></a>
+      <a id="Proxy[T]:Proxy[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Events$$Proxy.html"><span class="name">Proxy</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Events.html" class="extype" name="scala.reactive.Events">Events</a>[<span class="extype" name="scala.reactive.Events.Proxy.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@Proxy[T]extendsEvents[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The proxy event stream that emits events of its underlying event stream.</p><div class="fullcomment"><div class="comment cmt"><p>The proxy event stream that emits events of its underlying event stream.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of the proxy signal
+</p></dd></dl></div>
+    </li><li name="scala.reactive.Events.ProxySubscription" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ProxySubscriptionextendsEvents.Subscription"></a>
+      <a id="ProxySubscription:ProxySubscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Events$$ProxySubscription.html"><span class="name">ProxySubscription</span></a><span class="result"> extends <a href="Events$$Subscription.html" class="extype" name="scala.reactive.Events.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@ProxySubscriptionextendsEvents.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Unsubscribes by calling <code>unsubscribe</code> on the underlying subscription.</p>
+    </li><li name="scala.reactive.Events.SideEffectEmitter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SideEffectEmitter[T]extendsEvents.Default[T]withEventSource"></a>
+      <a id="SideEffectEmitter[T]:SideEffectEmitter[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Events$$SideEffectEmitter.html"><span class="name">SideEffectEmitter</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Events$$Default.html" class="extype" name="scala.reactive.Events.Default">Default</a>[<span class="extype" name="scala.reactive.Events.SideEffectEmitter.T">T</span>] with <a href="EventSource.html" class="extype" name="scala.reactive.EventSource">EventSource</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@SideEffectEmitter[T]extendsEvents.Default[T]withEventSource" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Uses the specified function <code>f</code> to produce an event when the <code>react</code> method
+ is called.</p>
+    </li><li name="scala.reactive.Events.Subscription" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SubscriptionextendsAnyRef"></a>
+      <a id="Subscription:Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Events$$Subscription.html"><span class="name">Subscription</span></a><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@SubscriptionextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A subscription to a certain kind of event,
+ event processing or computation in general.</p><div class="fullcomment"><div class="comment cmt"><p>A subscription to a certain kind of event,
+ event processing or computation in general.
+ Calling <code>unsubscribe</code> on the subscription
+ causes the events to no longer be propagated
+ to this particular subscription or some computation to cease.</p><p> Unsubscribing is idempotent -- calling <code>unsubscribe</code> second time does
+ nothing.
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.reactive.Events#CompositeSubscription" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CompositeSubscription(ss:scala.reactive.Events.Subscription*):scala.reactive.Events.Subscription"></a>
+      <a id="CompositeSubscription(Subscription*):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CompositeSubscription</span><span class="params">(<span name="ss">ss: <a href="Events$$Subscription.html" class="extype" name="scala.reactive.Events.Subscription">Subscription</a>*</span>)</span><span class="result">: <a href="Events$$Subscription.html" class="extype" name="scala.reactive.Events.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@CompositeSubscription(ss:scala.reactive.Events.Subscription*):scala.reactive.Events.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Unsubscribing will call <code>unsubscribe</code> on all the
+ subscriptions in <code>ss</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Unsubscribing will call <code>unsubscribe</code> on all the
+ subscriptions in <code>ss</code>.
+</p></div><dl class="paramcmts block"><dt class="param">ss</dt><dd class="cmt"><p>the child subscriptions</p></dd><dt>returns</dt><dd class="cmt"><p>the composite subscription
+</p></dd></dl></div>
+    </li><li name="scala.reactive.Events#Never" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Never[T]:scala.reactive.Events[T]"></a>
+      <a id="Never[T]:Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Never</span><span class="tparams">[<span name="T">T</span>]</span><span class="result">: <a href="Events.html" class="extype" name="scala.reactive.Events">Events</a>[<span class="extype" name="scala.reactive.Events.Never.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@Never[T]:scala.reactive.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A event stream that never emits events.</p><div class="fullcomment"><div class="comment cmt"><p>A event stream that never emits events.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of events in this event stream
+</p></dd></dl></div>
+    </li><li name="scala.reactive.Events.Subscription" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Subscription"></a>
+      <a id="Subscription:Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Events$$Subscription$.html"><span class="name">Subscription</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains factory methods for subscription.</p>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@clone():Object" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.reactive.Events#events2ops" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="events2ops[T](self:scala.reactive.Events[T]):scala.reactive.Events.EventsOps[T]"></a>
+      <a id="events2ops[T](Events[T]):EventsOps[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">events2ops</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="self">self: <a href="Events.html" class="extype" name="scala.reactive.Events">Events</a>[<span class="extype" name="scala.reactive.Events.events2ops.T">T</span>]</span>)</span><span class="result">: <a href="Events$$EventsOps.html" class="extype" name="scala.reactive.Events.EventsOps">EventsOps</a>[<span class="extype" name="scala.reactive.Events.events2ops.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@events2ops[T](self:scala.reactive.Events[T]):scala.reactive.Events.EventsOps[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@notify():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@toString():String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@wait():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Events$@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

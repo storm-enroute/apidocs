@@ -1,0 +1,1528 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>RTileMap - scala.reactive.container.RTileMap</title>
+          <meta name="description" content="RTileMap - scala.reactive.container.RTileMap" />
+          <meta name="keywords" content="RTileMap scala.reactive.container.RTileMap" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'scala.reactive.container.RTileMap';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="RTileMap$.html" title="Go to companion"><img src="../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../../package.html" class="extype" name="scala">scala</a>.<a href="../package.html" class="extype" name="scala.reactive">reactive</a>.<a href="package.html" class="extype" name="scala.reactive.container">container</a></p>
+        <h1><a href="RTileMap$.html" title="Go to companion">RTileMap</a></h1> <span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RTileMap</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)] with <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>), <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]] with <a href="RContainer$$Default.html" class="extype" name="scala.reactive.container.RContainer.Default">Default</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="RContainer$$Default.html" class="extype" name="scala.reactive.container.RContainer.Default">Default</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)], <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>), <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]], <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)], <a href="../ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a>, <a href="../ReactMutable.html" class="extype" name="scala.reactive.ReactMutable">ReactMutable</a>, <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.reactive.container.RTileMap"><span>RTileMap</span></li><li class="in" name="scala.reactive.container.RContainer.Default"><span>Default</span></li><li class="in" name="scala.reactive.container.RBuilder"><span>RBuilder</span></li><li class="in" name="scala.reactive.container.RContainer"><span>RContainer</span></li><li class="in" name="scala.reactive.ReactMutable.Subscriptions"><span>Subscriptions</span></li><li class="in" name="scala.reactive.ReactMutable"><span>ReactMutable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="scala.reactive.container.RTileMap#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(dim:Int,dflt:T,compress:Boolean)(implicitevidence$1:scala.reflect.ClassTag[T]):scala.reactive.container.RTileMap[T]"></a>
+      <a id="&lt;init&gt;:RTileMap[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RTileMap</span><span class="params">(<span name="dim">dim: <span class="extype" name="scala.Int">Int</span></span>, <span name="dflt">dflt: <span class="extype" name="scala.reactive.container.RTileMap.T">T</span></span>, <span name="compress">compress: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@&lt;init&gt;(dim:Int,dflt:T,compress:Boolean)(implicitevidence$1:scala.reflect.ClassTag[T]):scala.reactive.container.RTileMap[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@##():Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@+(other:String):String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>] to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#+=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+=(kv:(Int,Int,T)):Boolean"></a>
+      <a id="+=((Int,Int,T)):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus$eq" class="name">+=</span><span class="params">(<span name="kv">kv: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@+=(kv:(Int,Int,T)):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a> → <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#-=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-=(kv:(Int,Int,T)):Boolean"></a>
+      <a id="-=((Int,Int,T)):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$eq" class="name">-=</span><span class="params">(<span name="kv">kv: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@-=(kv:(Int,Int,T)):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a> → <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a></dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(RTileMap[T],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@-&gt;[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply(x:Int,y:Int):T"></a>
+      <a id="apply(Int,Int):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.reactive.container.RTileMap.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@apply(x:Int,y:Int):T" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.reactive.ReactMutable.Subscriptions#bindSubscription" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bindSubscription(s:scala.reactive.Events.Subscription):scala.reactive.Events.Subscription"></a>
+      <a id="bindSubscription(Subscription):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bindSubscription</span><span class="params">(<span name="s">s: <a href="../Events$$Subscription.html" class="extype" name="scala.reactive.Events.Subscription">Subscription</a></span>)</span><span class="result">: <a href="../Events$$Subscription.html" class="extype" name="scala.reactive.Events.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@bindSubscription(s:scala.reactive.Events.Subscription):scala.reactive.Events.Subscription" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Called internally - binds a subscription to this <code>ReactMutable</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Called internally - binds a subscription to this <code>ReactMutable</code>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a> → <a href="../ReactMutable.html" class="extype" name="scala.reactive.ReactMutable">ReactMutable</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#builder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="builder:scala.reactive.container.RBuilder[(Int,Int,T),scala.reactive.container.RTileMap[T]]"></a>
+      <a id="builder:RBuilder[(Int,Int,T),RTileMap[T]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">builder</span><span class="result">: <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>), <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@builder:scala.reactive.container.RBuilder[(Int,Int,T),scala.reactive.container.RTileMap[T]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap#checkRoot" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="checkRoot(d:T):Unit"></a>
+      <a id="checkRoot(T):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">checkRoot</span><span class="params">(<span name="d">d: <span class="extype" name="scala.reactive.container.RTileMap.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@checkRoot(d:T):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#clamp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="clamp(x:Int,y:Int):T"></a>
+      <a id="clamp(Int,Int):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clamp</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.reactive.container.RTileMap.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@clamp(x:Int,y:Int):T" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap#clear" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="clear():Unit"></a>
+      <a id="clear():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clear</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@clear():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap#clearSafe" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clearSafe(dummy:T):Unit"></a>
+      <a id="clearSafe(T):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clearSafe</span><span class="params">(<span name="dummy">dummy: <span class="extype" name="scala.reactive.container.RTileMap.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@clearSafe(dummy:T):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="scala.reactive.ReactMutable.Subscriptions#clearSubscriptions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clearSubscriptions():Unit"></a>
+      <a id="clearSubscriptions():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clearSubscriptions</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@clearSubscriptions():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@clone():Object" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.reactive.container.RContainer#collect" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="collect[S&lt;:AnyRef](pf:PartialFunction[T,S])(implicite:&lt;:&lt;[T,AnyRef]):scala.reactive.container.RContainer[S]"></a>
+      <a id="collect[S&lt;:AnyRef](PartialFunction[(Int,Int,T),S])(&lt;:&lt;[(Int,Int,T),AnyRef]):RContainer[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">collect</span><span class="tparams">[<span name="S">S &lt;: <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>]</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>), <span class="extype" name="scala.reactive.container.RContainer.collect.S">S</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="e">e: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>), <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>]</span>)</span><span class="result">: <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[<span class="extype" name="scala.reactive.container.RContainer.collect.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@collect[S&lt;:AnyRef](pf:PartialFunction[T,S])(implicite:&lt;:&lt;[T,AnyRef]):scala.reactive.container.RContainer[S]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#container" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="container:scala.reactive.container.RTileMap[T]"></a>
+      <a id="container:RTileMap[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">container</span><span class="result">: <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@container:scala.reactive.container.RTileMap[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a> → <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#contains" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="contains(x:Int,y:Int):Boolean"></a>
+      <a id="contains(Int,Int):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">contains</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@contains(x:Int,y:Int):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.reactive.container.RContainer#count" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="count(p:T=&gt;Boolean):Int"></a>
+      <a id="count(((Int,Int,T))⇒Boolean):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">count</span><span class="params">(<span name="p">p: ((<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@count(p:T=&gt;Boolean):Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#default" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="default:T"></a>
+      <a id="default:T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">default</span><span class="result">: <span class="extype" name="scala.reactive.container.RTileMap.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@default:T" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap#dimension" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dimension:Int"></a>
+      <a id="dimension:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dimension</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@dimension:Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap#dimension_=" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dimension_=(ndim:Int):Unit"></a>
+      <a id="dimension_=(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: dimension_$eq" class="name">dimension_=</span><span class="params">(<span name="ndim">ndim: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@dimension_=(ndim:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap#dimensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dimensions:scala.reactive.Events[Int]"></a>
+      <a id="dimensions:Events[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dimensions</span><span class="result">: <a href="../Events.html" class="extype" name="scala.reactive.Events">Events</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@dimensions:scala.reactive.Events[Int]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((RTileMap[T])⇒Boolean,⇒Any):RTileMap[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((RTileMap[T])⇒Boolean):RTileMap[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@ensuring(cond:A=&gt;Boolean):A" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):RTileMap[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):RTileMap[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@ensuring(cond:Boolean):A" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.reactive.container.RContainer#exception" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="exception(t:Throwable):Unit"></a>
+      <a id="exception(Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exception</span><span class="params">(<span name="t">t: <a href="../../package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@exception(t:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">By default, containers throw exceptions that occur during their mutation.</p><div class="fullcomment"><div class="comment cmt"><p>By default, containers throw exceptions that occur during their mutation.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a> → <a href="../ReactMutable.html" class="extype" name="scala.reactive.ReactMutable">ReactMutable</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RContainer#exists" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="exists(p:T=&gt;Boolean):Boolean"></a>
+      <a id="exists(((Int,Int,T))⇒Boolean):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exists</span><span class="params">(<span name="p">p: ((<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@exists(p:T=&gt;Boolean):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RContainer#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="filter(p:T=&gt;Boolean):scala.reactive.container.RContainer[T]"></a>
+      <a id="filter(((Int,Int,T))⇒Boolean):RContainer[(Int,Int,T)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">filter</span><span class="params">(<span name="p">p: ((<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@filter(p:T=&gt;Boolean):scala.reactive.container.RContainer[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.reactive.container.RContainer#fold" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fold(m:scala.reactive.Monoid[T]):T"></a>
+      <a id="fold(Monoid[(Int,Int,T)]):(Int,Int,T)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fold</span><span class="params">(<span name="m">m: <a href="../package.html#Monoid[T]=scala.reactive.calc.Monoid[T]" class="extmbr" name="scala.reactive.Monoid">Monoid</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@fold(m:scala.reactive.Monoid[T]):T" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RContainer#forall" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="forall(p:T=&gt;Boolean):Boolean"></a>
+      <a id="forall(((Int,Int,T))⇒Boolean):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">forall</span><span class="params">(<span name="p">p: ((<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@forall(p:T=&gt;Boolean):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreach(f:((Int,Int,T))=&gt;Unit):Unit"></a>
+      <a id="foreach(((Int,Int,T))⇒Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreach</span><span class="params">(<span name="f">f: ((<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@foreach(f:((Int,Int,T))=&gt;Unit):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a> → <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#foreachLeaf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="foreachLeaf[U](f:T=&gt;U):Unit"></a>
+      <a id="foreachLeaf[U]((T)⇒U):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreachLeaf</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>) ⇒ <span class="extype" name="scala.reactive.container.RTileMap.foreachLeaf.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@foreachLeaf[U](f:T=&gt;U):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap#foreachNonDefaultTile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="foreachNonDefaultTile[U](fromx:Int,fromy:Int,untilx:Int,untily:Int)(t:scala.reactive.container.RTileMap.Applier[T]):Unit"></a>
+      <a id="foreachNonDefaultTile[U](Int,Int,Int,Int)(Applier[T]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreachNonDefaultTile</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="fromx">fromx: <span class="extype" name="scala.Int">Int</span></span>, <span name="fromy">fromy: <span class="extype" name="scala.Int">Int</span></span>, <span name="untilx">untilx: <span class="extype" name="scala.Int">Int</span></span>, <span name="untily">untily: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span name="t">t: <a href="RTileMap$$Applier.html" class="extype" name="scala.reactive.container.RTileMap.Applier">Applier</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@foreachNonDefaultTile[U](fromx:Int,fromy:Int,untilx:Int,untily:Int)(t:scala.reactive.container.RTileMap.Applier[T]):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap#foreachTile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="foreachTile[U](fromx:Int,fromy:Int,untilx:Int,untily:Int)(t:scala.reactive.container.RTileMap.Applier[T]):Unit"></a>
+      <a id="foreachTile[U](Int,Int,Int,Int)(Applier[T]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreachTile</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="fromx">fromx: <span class="extype" name="scala.Int">Int</span></span>, <span name="fromy">fromy: <span class="extype" name="scala.Int">Int</span></span>, <span name="untilx">untilx: <span class="extype" name="scala.Int">Int</span></span>, <span name="untily">untily: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span name="t">t: <a href="RTileMap$$Applier.html" class="extype" name="scala.reactive.container.RTileMap.Applier">Applier</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@foreachTile[U](fromx:Int,fromy:Int,untilx:Int,untily:Int)(t:scala.reactive.container.RTileMap.Applier[T]):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@formatted(fmtstr:String):String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>] to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#init" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="init(d:T):Unit"></a>
+      <a id="init(T):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">init</span><span class="params">(<span name="d">d: <span class="extype" name="scala.reactive.container.RTileMap.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@init(d:T):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#inserts" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inserts:scala.reactive.Events[(Int,Int,T)]"></a>
+      <a id="inserts:Events[(Int,Int,T)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inserts</span><span class="result">: <a href="../Events.html" class="extype" name="scala.reactive.Events">Events</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@inserts:scala.reactive.Events[(Int,Int,T)]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a> → <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#leaf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="leaf(x:Int,y:Int):scala.reactive.container.RTileMap.Node[T]"></a>
+      <a id="leaf(Int,Int):Node[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">leaf</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="RTileMap$$Node.html" class="extype" name="scala.reactive.container.RTileMap.Node">Node</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@leaf(x:Int,y:Int):scala.reactive.container.RTileMap.Node[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RContainer#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="map[S](f:T=&gt;S):scala.reactive.container.RContainer[S]"></a>
+      <a id="map[S](((Int,Int,T))⇒S):RContainer[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">map</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span name="f">f: ((<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)) ⇒ <span class="extype" name="scala.reactive.container.RContainer.map.S">S</span></span>)</span><span class="result">: <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[<span class="extype" name="scala.reactive.container.RContainer.map.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@map[S](f:T=&gt;S):scala.reactive.container.RContainer[S]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RContainer#mutation" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mutation():Unit"></a>
+      <a id="mutation():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mutation</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@mutation():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">By default, containers do not propagate mutation events.</p><div class="fullcomment"><div class="comment cmt"><p>By default, containers do not propagate mutation events.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a> → <a href="../ReactMutable.html" class="extype" name="scala.reactive.ReactMutable">ReactMutable</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#orElse" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="orElse(x:Int,y:Int,elem:T):T"></a>
+      <a id="orElse(Int,Int,T):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">orElse</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>, <span name="elem">elem: <span class="extype" name="scala.reactive.container.RTileMap.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.reactive.container.RTileMap.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@orElse(x:Int,y:Int,elem:T):T" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RContainer.Default#react" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="react:scala.reactive.container.RContainer.Lifted.Default[T]"></a>
+      <a id="react:Default[(Int,Int,T)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">react</span><span class="result">: <a href="RContainer$$Lifted$$Default.html" class="extype" name="scala.reactive.container.RContainer.Lifted.Default">Default</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@react:scala.reactive.container.RContainer.Lifted.Default[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RContainer$$Default.html" class="extype" name="scala.reactive.container.RContainer.Default">Default</a> → <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#read" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="read(array:Array[T],width:Int,height:Int,fromx:Int,fromy:Int,untilx:Int,untily:Int):Unit"></a>
+      <a id="read(Array[T],Int,Int,Int,Int,Int,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">read</span><span class="params">(<span name="array">array: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</span>, <span name="width">width: <span class="extype" name="scala.Int">Int</span></span>, <span name="height">height: <span class="extype" name="scala.Int">Int</span></span>, <span name="fromx">fromx: <span class="extype" name="scala.Int">Int</span></span>, <span name="fromy">fromy: <span class="extype" name="scala.Int">Int</span></span>, <span name="untilx">untilx: <span class="extype" name="scala.Int">Int</span></span>, <span name="untily">untily: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@read(array:Array[T],width:Int,height:Int,fromx:Int,fromy:Int,untilx:Int,untily:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap#removes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removes:scala.reactive.Events[(Int,Int,T)]"></a>
+      <a id="removes:Events[(Int,Int,T)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">removes</span><span class="result">: <a href="../Events.html" class="extype" name="scala.reactive.Events">Events</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@removes:scala.reactive.Events[(Int,Int,T)]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a> → <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#root" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="root:scala.reactive.container.RTileMap.Node[T]"></a>
+      <a id="root:Node[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">root</span><span class="result">: <a href="RTileMap$$Node.html" class="extype" name="scala.reactive.container.RTileMap.Node">Node</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@root:scala.reactive.container.RTileMap.Node[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#root_=" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="root_=(r:scala.reactive.container.RTileMap.Node[T]):Unit"></a>
+      <a id="root_=(Node[T]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: root_$eq" class="name">root_=</span><span class="params">(<span name="r">r: <a href="RTileMap$$Node.html" class="extype" name="scala.reactive.container.RTileMap.Node">Node</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@root_=(r:scala.reactive.container.RTileMap.Node[T]):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#setDimensionSafe" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setDimensionSafe(ndim:Int,dummy:T):Unit"></a>
+      <a id="setDimensionSafe(Int,T):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setDimensionSafe</span><span class="params">(<span name="ndim">ndim: <span class="extype" name="scala.Int">Int</span></span>, <span name="dummy">dummy: <span class="extype" name="scala.reactive.container.RTileMap.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@setDimensionSafe(ndim:Int,dummy:T):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#size" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="size:Int"></a>
+      <a id="size:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">size</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@size:Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a> → <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.reactive.ReactMutable.Subscriptions#subscriptions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="subscriptions:scala.collection.mutable.Set[scala.reactive.Events.Subscription]"></a>
+      <a id="subscriptions:Set[Subscription]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">subscriptions</span><span class="result">: <span class="extype" name="scala.collection.mutable.Set">Set</span>[<a href="../Events$$Subscription.html" class="extype" name="scala.reactive.Events.Subscription">Subscription</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@subscriptions:scala.collection.mutable.Set[scala.reactive.Events.Subscription]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.reactive.container.RContainer#to" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="to[That&lt;:scala.reactive.container.RContainer[T]](implicitfactory:scala.reactive.container.RBuilder.Factory[T,That]):That"></a>
+      <a id="to[That&lt;:RContainer[(Int,Int,T)]](Factory[(Int,Int,T),That]):That"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">to</span><span class="tparams">[<span name="That">That &lt;: <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="factory">factory: <a href="RBuilder$$Factory.html" class="extype" name="scala.reactive.container.RBuilder.Factory">Factory</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>), <span class="extype" name="scala.reactive.container.RContainer.to.That">That</span>]</span>)</span><span class="result">: <span class="extype" name="scala.reactive.container.RContainer.to.That">That</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@to[That&lt;:scala.reactive.container.RContainer[T]](implicitfactory:scala.reactive.container.RBuilder.Factory[T,That]):That" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@toString():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.reactive.container.RContainer#union" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="union(that:scala.reactive.container.RContainer[T])(implicitcount:scala.reactive.container.RContainer.Union.Count[T],implicita:scala.reactive.Arrayable[T],implicitb:scala.reactive.CanBeBuffered):scala.reactive.container.RContainer[T]"></a>
+      <a id="union(RContainer[(Int,Int,T)])(Count[(Int,Int,T)],Arrayable[(Int,Int,T)],CanBeBuffered):RContainer[(Int,Int,T)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">union</span><span class="params">(<span name="that">that: <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="count">count: <a href="RContainer$$Union$$Count.html" class="extype" name="scala.reactive.container.RContainer.Union.Count">Count</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</span>, <span name="a">a: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</span>, <span name="b">b: <a href="../package$$CanBeBuffered.html" class="extype" name="scala.reactive.CanBeBuffered">CanBeBuffered</a></span>)</span><span class="result">: <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@union(that:scala.reactive.container.RContainer[T])(implicitcount:scala.reactive.container.RContainer.Union.Count[T],implicita:scala.reactive.Arrayable[T],implicitb:scala.reactive.CanBeBuffered):scala.reactive.container.RContainer[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a></dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap#update" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="update(x:Int,y:Int,elem:T):Unit"></a>
+      <a id="update(Int,Int,T):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">update</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>, <span name="elem">elem: <span class="extype" name="scala.reactive.container.RTileMap.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@update(x:Int,y:Int,elem:T):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap#update" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="update(xy:scala.reactive.XY,elem:T):Unit"></a>
+      <a id="update(XY,T):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">update</span><span class="params">(<span name="xy">xy: <a href="../package.html#XY=Long" class="extmbr" name="scala.reactive.XY">XY</a></span>, <span name="elem">elem: <span class="extype" name="scala.reactive.container.RTileMap.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@update(xy:scala.reactive.XY,elem:T):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap#updateSafe" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="updateSafe(x:Int,y:Int,elem:T):Unit"></a>
+      <a id="updateSafe(Int,Int,T):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateSafe</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>, <span name="elem">elem: <span class="extype" name="scala.reactive.container.RTileMap.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@updateSafe(x:Int,y:Int,elem:T):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap#updates" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="updates:scala.reactive.Events[scala.reactive.XY]"></a>
+      <a id="updates:Events[XY]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updates</span><span class="result">: <a href="../Events.html" class="extype" name="scala.reactive.Events">Events</a>[<a href="../package.html#XY=Long" class="extmbr" name="scala.reactive.XY">XY</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@updates:scala.reactive.Events[scala.reactive.XY]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap#values" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="values:scala.reactive.container.RContainer[T]"></a>
+      <a id="values:RContainer[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">values</span><span class="result">: <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@values:scala.reactive.container.RContainer[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(RTileMap[T],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.RTileMap@→[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.reactive.container.RContainer.Default">
+              <h3>Inherited from <a href="RContainer$$Default.html" class="extype" name="scala.reactive.container.RContainer.Default">Default</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</h3>
+            </div><div class="parent" name="scala.reactive.container.RBuilder">
+              <h3>Inherited from <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>), <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]]</h3>
+            </div><div class="parent" name="scala.reactive.container.RContainer">
+              <h3>Inherited from <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</h3>
+            </div><div class="parent" name="scala.reactive.ReactMutable.Subscriptions">
+              <h3>Inherited from <a href="../ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a></h3>
+            </div><div class="parent" name="scala.reactive.ReactMutable">
+              <h3>Inherited from <a href="../ReactMutable.html" class="extype" name="scala.reactive.ReactMutable">ReactMutable</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>] to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>] to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>] to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>] to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

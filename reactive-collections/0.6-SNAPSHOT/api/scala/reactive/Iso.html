@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>Iso - scala.reactive.Iso</title>
@@ -9,6 +8,11 @@
           
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../index.html';
@@ -26,7 +30,11 @@
       <div id="definition">
         <a href="Iso$.html" title="Go to companion"><img src="../../lib/trait_to_object_big.png" /></a>
         <p id="owner"><a href="../package.html" class="extype" name="scala">scala</a>.<a href="package.html" class="extype" name="scala.reactive">reactive</a></p>
-        <h1><a href="Iso$.html" title="Go to companion">Iso</a></h1>
+        <h1><a href="Iso$.html" title="Go to companion">Iso</a></h1> <span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,43 +43,40 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Iso</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="package.html#ReactRecord=scala.reactive.container.ReactRecord" class="extmbr" name="scala.reactive.ReactRecord">ReactRecord</a></span>
+        <span class="name">Iso</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An isolated, independent event propagation context.</p><p> An <code>Isolate[T]</code> object accepts events of type <code>T</code> on its input channel.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An isolated, independent event propagation context.</p><p> An <code>Iso[T]</code> object accepts events of type <code>T</code> on its input channel.
  One isolate can propagate events concurrently to other isolates --
  it is a basic element of concurrency.
- Reactive values cannot be shared between isolates --
- it is an error to use a reactive value originating in one isolate
- in some different isolate.</p><p> Isolates are defined by extending the <code>Isolate</code> trait.
+ Event streams cannot be shared between isolates --
+ it is an error to use an event stream originating in one isolate
+ in some different isolate.</p><p> Isolates are defined by extending the <code>Iso</code> trait.
  The events passed to isolates can be subscribed to using
- their <code>events</code> reactive.
- Here is an example:</p><pre><span class="kw">class</span> MyPrinter <span class="kw">extends</span> Isolate[<span class="std">String</span>] {
-react &lt;&lt;= events onEvent {
-  e <span class="kw">=&gt;</span> println(e)
-}
+ their <code>main.events</code> stream.
+ Here is an example:</p><pre><span class="kw">class</span> MyPrinter <span class="kw">extends</span> Iso[<span class="std">String</span>] {
+  <span class="kw">import</span> implicits.canLeak
+  main.events onEvent {
+    e <span class="kw">=&gt;</span> println(e)
+  }
 }</pre><p> Separate isolate instances that exist at runtime
  are created using isolate systems.
- The <code>isolate</code> method in the isolate system requires a scheduler
- to execute the isolate.
- Here is an example:</p><pre><span class="kw">import</span> Scheduler.Implicits.globalExecutionContext
-<span class="kw">val</span> isolateSystem = IsolateSystem.default(<span class="lit">"MyIsolateSystem"</span>)
+ Here is an example:</p><pre><span class="kw">val</span> isolateSystem = IsoSystem.default(<span class="lit">"MyIsolateSystem"</span>)
 <span class="kw">val</span> channel = isolateSystem.isolate(Proto[MyPrinter])</pre><p> Creating an isolate returns its channel.
- Reactives can be attached to channels to propagate their events to isolates.</p><pre><span class="kw">val</span> emitter = <span class="kw">new</span> Reactive.Emitter[<span class="std">String</span>]
-channel.attach(emitter)
-emitter += <span class="lit">"Hi!"</span> <span class="cmt">// eventually, this is printed by `MyPrinter`</span></pre><p> To stop an isolate, its channel needs to be sealed,
- and all the previously attached reactives need to be closed.</p><pre>emitter.close()
-channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on the <code>sysEvents</code> reactive.
- If a subscription on the <code>events</code> reactive throws a non-fatal exception,
- the exception is emitted on the <code>failures</code> reactive.
+ Events can be sent to a channel using the <code>!</code> method:</p><pre>channel ! <span class="lit">"Hi!"</span> <span class="cmt">// eventually, this is printed by `MyPrinter`</span></pre><p> To stop an isolate, the isolate needs to seal its main channel.
+ The following isolate seals its main channel after receiving the first event:</p><pre><span class="kw">class</span> MyPrinter <span class="kw">extends</span> Iso[<span class="std">String</span>] {
+  <span class="kw">import</span> implicits.canLeak
+  main.events onEvent {
+    e <span class="kw">=&gt;</span>
+    println(e)
+    main.seal()
+  }
+}</pre><p> Isolates also receive special <code>SysEvent</code> events on the <code>sysEvents</code> event stream.
 </p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of the events this isolate produces
 </p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="container/ReactRecord.html" class="extype" name="scala.reactive.container.ReactRecord">container.ReactRecord</a>, <a href="ReactMutable.html" class="extype" name="scala.reactive.ReactMutable">ReactMutable</a>, <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
-        </div><div class="toggleContainer block">
-          <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a href="isolate/package$$Looper.html" class="extype" name="scala.reactive.isolate.Looper">Looper</a>, <a href="io/ReactFileSystem.html" class="extype" name="scala.reactive.io.ReactFileSystem">ReactFileSystem</a></div>
+          <div class="superTypes hiddenContent"><a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -89,12 +94,12 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="scala.reactive.Iso"><span>Iso</span></li><li class="in" name="scala.reactive.container.ReactRecord"><span>ReactRecord</span></li><li class="in" name="scala.reactive.ReactMutable"><span>ReactMutable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="scala.reactive.Iso"><span>Iso</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
                 <span class="filtertype">Implicitly<br />
                 </span>
-                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -121,19 +126,6 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
         <div id="values" class="values members">
               <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="!=(x$1:AnyRef):Boolean"></a>
-      <a id="!=(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
@@ -144,8 +136,12 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <a id="##():Int"></a>
@@ -157,7 +153,11 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="+(other:String):String"></a>
@@ -168,15 +168,19 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@+(other:String):String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to
-            <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method any2stringadd in scala.Predef.
             
-          </dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
-    </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="-&gt;[B](y:B):(A,B)"></a>
       <a id="-&gt;[B](B):(Iso[T],B)"></a>
       <h4 class="signature">
@@ -187,29 +191,20 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@-&gt;[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
                 <span class="name">@inline</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="==(x$1:AnyRef):Boolean"></a>
-      <a id="==(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a>
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
@@ -220,8 +215,12 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -233,35 +232,12 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="scala.reactive.ReactMutable#bindSubscription" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="bindSubscription(s:scala.reactive.Reactive.Subscription):scala.reactive.Reactive.Subscription"></a>
-      <a id="bindSubscription(Subscription):Subscription"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">bindSubscription</span><span class="params">(<span name="s">s: <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>)</span><span class="result">: <a href="Reactive$$Subscription.html" class="extype" name="scala.reactive.Reactive.Subscription">Subscription</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Called internally - binds a subscription to this reactive mutable value.</p><div class="fullcomment"><div class="comment cmt"><p>Called internally - binds a subscription to this reactive mutable value.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ReactMutable.html" class="extype" name="scala.reactive.ReactMutable">ReactMutable</a></dd></dl></div>
-    </li><li name="scala.reactive.Iso#channel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="channel:scala.reactive.Channel[T]"></a>
-      <a id="channel:Channel[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">channel</span><span class="result">: <a href="Channel.html" class="extype" name="scala.reactive.Channel">Channel</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The default channel of this isolate.</p>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -273,7 +249,11 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@clone():Object" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -281,7 +261,7 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
       <a id="ensuring((Iso[T])⇒Boolean,⇒Any):Iso[T]"></a>
       <h4 class="signature">
@@ -292,13 +272,17 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
-    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean):A"></a>
       <a id="ensuring((Iso[T])⇒Boolean):Iso[T]"></a>
       <h4 class="signature">
@@ -309,13 +293,17 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@ensuring(cond:A=&gt;Boolean):A" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
-    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
       <a id="ensuring(Boolean,⇒Any):Iso[T]"></a>
       <h4 class="signature">
@@ -326,13 +314,17 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
-    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:Boolean):A"></a>
       <a id="ensuring(Boolean):Iso[T]"></a>
       <h4 class="signature">
@@ -343,10 +335,14 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@ensuring(cond:Boolean):A" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -360,7 +356,11 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a>
@@ -373,34 +373,12 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.reactive.Iso#events" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="events:scala.reactive.Reactive[T]"></a>
-      <a id="events:Reactive[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">events</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The default event stream of this isolate.</p>
-    </li><li name="scala.reactive.Iso#failures" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="failures:scala.reactive.Reactive[Throwable]"></a>
-      <a id="failures:Reactive[Throwable]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">failures</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<a href="../package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The failures event stream.</p>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -412,7 +390,11 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -420,7 +402,7 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="formatted(fmtstr:String):String"></a>
       <a id="formatted(String):String"></a>
       <h4 class="signature">
@@ -431,10 +413,14 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@formatted(fmtstr:String):String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to
-            <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method StringFormat in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
                 <span class="name">@inline</span><span class="args">()</span>
@@ -451,7 +437,11 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
@@ -464,8 +454,29 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.reactive.Iso#implicits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="implicits:scala.reactive.Iso.Implicits"></a>
+      <a id="implicits:Implicits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">implicits</span><span class="result">: <a href="Iso$$Implicits.html" class="extype" name="scala.reactive.Iso.Implicits">Implicits</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@implicits:scala.reactive.Iso.Implicits" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -477,21 +488,29 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="scala.reactive.Iso#later" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="later:scala.reactive.Enqueuer[T]"></a>
-      <a id="later:Enqueuer[T]"></a>
+    </li><li name="scala.reactive.Iso#main" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="main:scala.reactive.Connector[T]"></a>
+      <a id="main:Connector[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">later</span><span class="result">: <a href="Enqueuer.html" class="extype" name="scala.reactive.Enqueuer">Enqueuer</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]</span>
+        <span class="name">main</span><span class="result">: <a href="Connector.html" class="extype" name="scala.reactive.Connector">Connector</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]</span>
       </span>
-      </h4>
-      <p class="shortcomment cmt">The <code>Enqueuer</code> interface to the default event queue.</p>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@main:scala.reactive.Connector[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The main connector of this isolate.</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -503,7 +522,11 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
@@ -516,7 +539,11 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@notify():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -529,63 +556,29 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.reactive.container.ReactRecord#onMutated" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="onMutated():Unit"></a>
-      <a id="onMutated():Unit"></a>
+    </li><li name="scala.reactive.Iso#patterns" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="patterns:reactive.isolate.Patterns"></a>
+      <a id="patterns:Patterns"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">onMutated</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">patterns</span><span class="result">: <a href="isolate/package$$Patterns.html" class="extype" name="scala.reactive.isolate.Patterns">Patterns</a></span>
       </span>
-      </h4>
-      <p class="shortcomment cmt">Called internally - when the mutable reactive or its internal value has been mutated.</p><div class="fullcomment"><div class="comment cmt"><p>Called internally - when the mutable reactive or its internal value has been mutated.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="container/ReactRecord.html" class="extype" name="scala.reactive.container.ReactRecord">ReactRecord</a> → <a href="ReactMutable.html" class="extype" name="scala.reactive.ReactMutable">ReactMutable</a></dd></dl></div>
-    </li><li name="scala.reactive.Iso#open" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="open[Q](implicitevidence$1:scala.reactive.Arrayable[Q],implicitfactory:scala.reactive.EventQueue.Factory):scala.reactive.isolate.Connector[Q]"></a>
-      <a id="open[Q](Arrayable[Q],Factory):Connector[Q]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">open</span><span class="tparams">[<span name="Q">Q</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.Iso.open.Q">Q</span>]</span>, <span name="factory">factory: <a href="EventQueue$$Factory.html" class="extype" name="scala.reactive.EventQueue.Factory">Factory</a> = <span class="symbol"><span class="name"><a href="isolate/IsoFrame.html#eventQueueFactory:scala.reactive.EventQueue.Factory">frame.eventQueueFactory</a></span></span></span>)</span><span class="result">: <a href="isolate/Connector.html" class="extype" name="scala.reactive.isolate.Connector">Connector</a>[<span class="extype" name="scala.reactive.Iso.open.Q">Q</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Opens a new channel for this isolate.</p><div class="fullcomment"><div class="comment cmt"><p>Opens a new channel for this isolate.
-</p></div><dl class="paramcmts block"><dt class="tparam">Q</dt><dd class="cmt"><p>type of the events in the new channel</p></dd><dt class="param">factory</dt><dd class="cmt"><p>event queue factory</p></dd><dt>returns</dt><dd class="cmt"><p>the connector object of the new channel
-</p></dd></dl></div>
-    </li><li name="scala.reactive.container.ReactRecord.react" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="react"></a>
-      <a id="react:react"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="container/ReactRecord$react$.html"><span class="name">react</span></a>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="container/ReactRecord.html" class="extype" name="scala.reactive.container.ReactRecord">ReactRecord</a></dd></dl></div>
-    </li><li name="scala.reactive.container.ReactRecord.recorded" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="recorded"></a>
-      <a id="recorded:recorded"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="container/ReactRecord$recorded$.html"><span class="name">recorded</span></a>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="container/ReactRecord.html" class="extype" name="scala.reactive.container.ReactRecord">ReactRecord</a></dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@patterns:reactive.isolate.Patterns" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -597,21 +590,29 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.reactive.Iso#sysEvents" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="sysEvents:scala.reactive.Reactive[scala.reactive.SysEvent]"></a>
-      <a id="sysEvents:Reactive[SysEvent]"></a>
+      <a id="sysEvents:scala.reactive.Events[scala.reactive.SysEvent]"></a>
+      <a id="sysEvents:Events[SysEvent]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sysEvents</span><span class="result">: <a href="Reactive.html" class="extype" name="scala.reactive.Reactive">Reactive</a>[<a href="package$$SysEvent.html" class="extype" name="scala.reactive.SysEvent">SysEvent</a>]</span>
+        <span class="name">sysEvents</span><span class="result">: <a href="Events.html" class="extype" name="scala.reactive.Events">Events</a>[<a href="package$$SysEvent.html" class="extype" name="scala.reactive.SysEvent">SysEvent</a>]</span>
       </span>
-      </h4>
-      <p class="shortcomment cmt">The system event stream.</p>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@sysEvents:scala.reactive.Events[scala.reactive.SysEvent]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The system event stream of this isolate.</p>
     </li><li name="scala.reactive.Iso#system" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="system:scala.reactive.IsoSystem"></a>
       <a id="system:IsoSystem"></a>
@@ -623,7 +624,11 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">system</span><span class="result">: <a href="IsoSystem.html" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@system:scala.reactive.IsoSystem" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <p class="shortcomment cmt">The isolate system of this isolate.</p>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
@@ -636,7 +641,11 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@toString():String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.reactive.Iso#uid" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="uid:Long"></a>
@@ -649,7 +658,11 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">uid</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@uid:Long" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <p class="shortcomment cmt">The unique id of this isolate.</p><div class="fullcomment"><div class="comment cmt"><p>The unique id of this isolate.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the unique id, assigned only to this isolate
 </p></dd></dl></div>
@@ -664,7 +677,11 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@wait():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -683,7 +700,11 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -702,7 +723,11 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -710,7 +735,7 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="→[B](y:B):(A,B)"></a>
       <a id="→[B](B):(Iso[T],B)"></a>
       <h4 class="signature">
@@ -721,125 +746,45 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <span class="symbol">
         <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.Iso@→[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
     </li></ol>
             </div>
 
-        <div id="values" class="values members">
-              <h3>Shadowed Implicit Value Members</h3>
-              <ol><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="self:Any"></a>
-      <a id="self:Any"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="implicit shadowed">self</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to
-            <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
-            
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(iso: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
-    </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="self:Any"></a>
-      <a id="self:Any"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="implicit shadowed">self</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to
-            <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
-            
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(iso: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd>StringFormat</dd></dl></div>
-    </li></ol>
-            </div>
+        
 
-        <div id="values" class="values members">
-              <h3>Deprecated Value Members</h3>
-              <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="x:A"></a>
-      <a id="x:Iso[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method any2ArrowAssoc in scala.Predef.
-            
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(iso: ArrowAssoc[Iso[T]]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
-    </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="x:A"></a>
-      <a id="x:Iso[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]] performed by method any2Ensuring in scala.Predef.
-            
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(iso: Ensuring[Iso[T]]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
-    </li></ol>
-            </div>
+        
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.reactive.container.ReactRecord">
-              <h3>Inherited from <a href="container/ReactRecord.html" class="extype" name="scala.reactive.container.ReactRecord">container.ReactRecord</a></h3>
-            </div><div class="parent" name="scala.reactive.ReactMutable">
-              <h3>Inherited from <a href="ReactMutable.html" class="extype" name="scala.reactive.ReactMutable">ReactMutable</a></h3>
-            </div><div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
             </div>
         <div class="conversion" name="scala.Predef.any2stringadd">
               <h3>Inherited by implicit conversion any2stringadd from
-                <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to <span class="extype" name="scala.runtime.StringAdd">StringAdd</span>
+                <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]]
               </h3>
-            </div><div class="conversion" name="scala.Predef.any2stringfmt">
-              <h3>Inherited by implicit conversion any2stringfmt from
-                <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to <span class="extype" name="scala.runtime.StringFormat">StringFormat</span>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]]
               </h3>
-            </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
-              <h3>Inherited by implicit conversion any2ArrowAssoc from
-                <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]]
-              </h3>
-            </div><div class="conversion" name="scala.Predef.any2Ensuring">
-              <h3>Inherited by implicit conversion any2Ensuring from
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
                 <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>] to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.Iso.T">T</span>]]
               </h3>
             </div>
         </div>
@@ -856,6 +801,7 @@ channel.seal()</pre><p> Isolates also receive special <code>SysEvent</code>s on 
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script>
+
+
     </body>
       </html>

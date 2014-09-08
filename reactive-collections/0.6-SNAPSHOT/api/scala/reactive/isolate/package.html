@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>isolate - scala.reactive.isolate</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
@@ -26,7 +30,11 @@
       <div id="definition">
         <img src="../../../lib/package_big.png" />
         <p id="owner"><a href="../../package.html" class="extype" name="scala">scala</a>.<a href="../package.html" class="extype" name="scala.reactive">reactive</a></p>
-        <h1>isolate</h1>
+        <h1>isolate</h1> <span class="permalink">
+      <a href="../../../index.html#scala.reactive.isolate.package" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -81,71 +89,74 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="scala.reactive.isolate.Connector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Connector[T]extendsAnyRef"></a>
-      <a id="Connector[T]:Connector[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="Connector.html"><span class="name">Connector</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">An entity that encapsulates an event queue and the corresponding channel.</p>
-    </li><li name="scala.reactive.isolate.DefaultIsoSystem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DefaultIsoSystemextendsIsoSystem"></a>
-      <a id="DefaultIsoSystem:DefaultIsoSystem"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="DefaultIsoSystem.html"><span class="name">DefaultIsoSystem</span></a><span class="result"> extends <a href="../IsoSystem.html" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Default isolate system implementation.</p>
-    </li><li name="scala.reactive.isolate.IsoFrame" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="IsoFrameextends()=&gt;Unit"></a>
-      <a id="IsoFrame:IsoFrame"></a>
+              <ol><li name="scala.reactive.isolate.Frame" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FrameextendsIdentifiable"></a>
+      <a id="Frame:Frame"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IsoFrame.html"><span class="name">IsoFrame</span></a><span class="result"> extends () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>
+        <a href="Frame.html"><span class="name">Frame</span></a><span class="result"> extends <a href="../package$$Identifiable.html" class="extype" name="scala.reactive.Identifiable">Identifiable</a></span>
       </span>
-      </h4>
-      
-    </li><li name="scala.reactive.isolate.Looper" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Looper[T]extendsIso[T]"></a>
-      <a id="Looper[T]:Looper[T]"></a>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.isolate.package@FrameextendsIdentifiable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Placeholder for the isolate's system state.</p>
+    </li><li name="scala.reactive.isolate.Patterns" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PatternsextendsAnyRef"></a>
+      <a id="Patterns:Patterns"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="package$$Looper.html"><span class="name">Looper</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../Iso.html" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.isolate.Looper.T">T</span>]</span>
+        <a href="package$$Patterns.html"><span class="name">Patterns</span></a><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
-      </h4>
-      
-    </li><li name="scala.reactive.isolate.Multiplexer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="MultiplexerextendsAnyRef"></a>
-      <a id="Multiplexer:Multiplexer"></a>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.isolate.package@PatternsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains common communication patterns.</p>
+    </li><li name="scala.reactive.isolate.Services" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ServicesextendsAnyRef"></a>
+      <a id="Services:Services"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="Multiplexer.html"><span class="name">Multiplexer</span></a><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <a href="Services.html"><span class="name">Services</span></a><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">A thread-safe collection containing connectors.</p>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.isolate.package@ServicesextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains services used by an isolate system.</p>
+    </li><li name="scala.reactive.isolate.UniqueStore" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UniqueStore[T&gt;:Null&lt;:scala.reactive.Identifiable]extendsAnyRef"></a>
+      <a id="UniqueStore[T&lt;:Identifiable&gt;:Null]:UniqueStore[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="UniqueStore.html"><span class="name">UniqueStore</span></a><span class="tparams">[<span name="T">T &gt;: <span class="extype" name="scala.Null">Null</span> &lt;: <a href="../package$$Identifiable.html" class="extype" name="scala.reactive.Identifiable">Identifiable</a></span>]</span><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.isolate.package@UniqueStore[T&gt;:Null&lt;:scala.reactive.Identifiable]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Stores <code>Identifiable</code> objects along with their unique names.</p>
     </li></ol>
             </div>
 
@@ -153,58 +164,57 @@
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="scala.reactive.isolate.Connector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Connector"></a>
-      <a id="Connector:Connector"></a>
+              <ol><li name="scala.reactive.isolate.Frame" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Frame"></a>
+      <a id="Frame:Frame"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Connector$.html"><span class="name">Connector</span></a>
+        <a href="Frame$.html"><span class="name">Frame</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.isolate.package@Frame" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.isolate.DefaultIsoSystem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DefaultIsoSystem"></a>
-      <a id="DefaultIsoSystem:DefaultIsoSystem"></a>
+    </li><li name="scala.reactive.isolate.Services" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Services"></a>
+      <a id="Services:Services"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="DefaultIsoSystem$.html"><span class="name">DefaultIsoSystem</span></a>
+        <a href="Services$.html"><span class="name">Services</span></a>
       </span>
-      </h4>
-      
-    </li><li name="scala.reactive.isolate.IsoFrame" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="IsoFrame"></a>
-      <a id="IsoFrame:IsoFrame"></a>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.isolate.package@Services" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains common service implementations.</p>
+    </li><li name="scala.reactive.isolate#patterns" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="patterns:scala.reactive.isolate.package.Patterns"></a>
+      <a id="patterns:Patterns"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <a href="IsoFrame$.html"><span class="name">IsoFrame</span></a>
+        <span class="name">patterns</span><span class="result">: <a href="package$$Patterns.html" class="extype" name="scala.reactive.isolate.Patterns">Patterns</a></span>
       </span>
-      </h4>
-      
-    </li><li name="scala.reactive.isolate.Multiplexer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Multiplexer"></a>
-      <a id="Multiplexer:Multiplexer"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Multiplexer$.html"><span class="name">Multiplexer</span></a>
-      </span>
-      </h4>
-      
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.isolate.package@patterns:scala.reactive.isolate.package.Patterns" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Instance of the <code>Patterns</code> object.</p>
     </li></ol>
             </div>
 
@@ -234,6 +244,7 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script>
+
+
     </body>
       </html>

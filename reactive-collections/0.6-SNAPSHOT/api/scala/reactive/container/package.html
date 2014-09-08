@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>container - scala.reactive.container</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
@@ -26,7 +30,11 @@
       <div id="definition">
         <img src="../../../lib/package_big.png" />
         <p id="owner"><a href="../../package.html" class="extype" name="scala">scala</a>.<a href="../package.html" class="extype" name="scala.reactive">reactive</a></p>
-        <h1>container</h1>
+        <h1>container</h1> <span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -82,7 +90,7 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="scala.reactive.container.AbelianCatamorph" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="AbelianCatamorph[T,S]extendsReactCatamorph[T,S]withReactBuilder[S,scala.reactive.container.AbelianCatamorph[T,S]]"></a>
+      <a id="AbelianCatamorph[T,S]extendsRCatamorph[T,S]withRBuilder[S,scala.reactive.container.AbelianCatamorph[T,S]]"></a>
       <a id="AbelianCatamorph[T,S]:AbelianCatamorph[T,S]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -90,12 +98,16 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="AbelianCatamorph.html"><span class="name">AbelianCatamorph</span></a><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="ReactCatamorph.html" class="extype" name="scala.reactive.container.ReactCatamorph">ReactCatamorph</a>[<span class="extype" name="scala.reactive.container.AbelianCatamorph.T">T</span>, <span class="extype" name="scala.reactive.container.AbelianCatamorph.S">S</span>] with <a href="ReactBuilder.html" class="extype" name="scala.reactive.container.ReactBuilder">ReactBuilder</a>[<span class="extype" name="scala.reactive.container.AbelianCatamorph.S">S</span>, <a href="AbelianCatamorph.html" class="extype" name="scala.reactive.container.AbelianCatamorph">AbelianCatamorph</a>[<span class="extype" name="scala.reactive.container.AbelianCatamorph.T">T</span>, <span class="extype" name="scala.reactive.container.AbelianCatamorph.S">S</span>]]</span>
+        <a href="AbelianCatamorph.html"><span class="name">AbelianCatamorph</span></a><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="RCatamorph.html" class="extype" name="scala.reactive.container.RCatamorph">RCatamorph</a>[<span class="extype" name="scala.reactive.container.AbelianCatamorph.T">T</span>, <span class="extype" name="scala.reactive.container.AbelianCatamorph.S">S</span>] with <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a>[<span class="extype" name="scala.reactive.container.AbelianCatamorph.S">S</span>, <a href="AbelianCatamorph.html" class="extype" name="scala.reactive.container.AbelianCatamorph">AbelianCatamorph</a>[<span class="extype" name="scala.reactive.container.AbelianCatamorph.T">T</span>, <span class="extype" name="scala.reactive.container.AbelianCatamorph.S">S</span>]]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@AbelianCatamorph[T,S]extendsRCatamorph[T,S]withRBuilder[S,scala.reactive.container.AbelianCatamorph[T,S]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.CommuteCatamorph" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="CommuteCatamorph[T,S]extendsReactCatamorph[T,S]withReactBuilder[S,scala.reactive.container.CommuteCatamorph[T,S]]"></a>
+      <a id="CommuteCatamorph[T,S]extendsRCatamorph[T,S]withRBuilder[S,scala.reactive.container.CommuteCatamorph[T,S]]"></a>
       <a id="CommuteCatamorph[T,S]:CommuteCatamorph[T,S]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -103,9 +115,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="CommuteCatamorph.html"><span class="name">CommuteCatamorph</span></a><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="ReactCatamorph.html" class="extype" name="scala.reactive.container.ReactCatamorph">ReactCatamorph</a>[<span class="extype" name="scala.reactive.container.CommuteCatamorph.T">T</span>, <span class="extype" name="scala.reactive.container.CommuteCatamorph.S">S</span>] with <a href="ReactBuilder.html" class="extype" name="scala.reactive.container.ReactBuilder">ReactBuilder</a>[<span class="extype" name="scala.reactive.container.CommuteCatamorph.S">S</span>, <a href="CommuteCatamorph.html" class="extype" name="scala.reactive.container.CommuteCatamorph">CommuteCatamorph</a>[<span class="extype" name="scala.reactive.container.CommuteCatamorph.T">T</span>, <span class="extype" name="scala.reactive.container.CommuteCatamorph.S">S</span>]]</span>
+        <a href="CommuteCatamorph.html"><span class="name">CommuteCatamorph</span></a><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="RCatamorph.html" class="extype" name="scala.reactive.container.RCatamorph">RCatamorph</a>[<span class="extype" name="scala.reactive.container.CommuteCatamorph.T">T</span>, <span class="extype" name="scala.reactive.container.CommuteCatamorph.S">S</span>] with <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a>[<span class="extype" name="scala.reactive.container.CommuteCatamorph.S">S</span>, <a href="CommuteCatamorph.html" class="extype" name="scala.reactive.container.CommuteCatamorph">CommuteCatamorph</a>[<span class="extype" name="scala.reactive.container.CommuteCatamorph.T">T</span>, <span class="extype" name="scala.reactive.container.CommuteCatamorph.S">S</span>]]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@CommuteCatamorph[T,S]extendsRCatamorph[T,S]withRBuilder[S,scala.reactive.container.CommuteCatamorph[T,S]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.LowLowSignalCatamorph" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="LowLowSignalCatamorphextendsAnyRef"></a>
@@ -118,7 +134,11 @@
       <span class="symbol">
         <a href="LowLowSignalCatamorph.html"><span class="name">LowLowSignalCatamorph</span></a><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@LowLowSignalCatamorphextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.LowSignalCatamorph" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="LowSignalCatamorphextendsLowLowSignalCatamorph"></a>
@@ -131,10 +151,14 @@
       <span class="symbol">
         <a href="LowSignalCatamorph.html"><span class="name">LowSignalCatamorph</span></a><span class="result"> extends <a href="LowLowSignalCatamorph.html" class="extype" name="scala.reactive.container.LowLowSignalCatamorph">LowLowSignalCatamorph</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@LowSignalCatamorphextendsLowLowSignalCatamorph" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.MonoidCatamorph" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MonoidCatamorph[T,S]extendsReactCatamorph[T,S]withReactBuilder[S,scala.reactive.container.MonoidCatamorph[T,S]]"></a>
+      <a id="MonoidCatamorph[T,S]extendsRCatamorph[T,S]withRBuilder[S,scala.reactive.container.MonoidCatamorph[T,S]]"></a>
       <a id="MonoidCatamorph[T,S]:MonoidCatamorph[T,S]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -142,9 +166,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="MonoidCatamorph.html"><span class="name">MonoidCatamorph</span></a><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="ReactCatamorph.html" class="extype" name="scala.reactive.container.ReactCatamorph">ReactCatamorph</a>[<span class="extype" name="scala.reactive.container.MonoidCatamorph.T">T</span>, <span class="extype" name="scala.reactive.container.MonoidCatamorph.S">S</span>] with <a href="ReactBuilder.html" class="extype" name="scala.reactive.container.ReactBuilder">ReactBuilder</a>[<span class="extype" name="scala.reactive.container.MonoidCatamorph.S">S</span>, <a href="MonoidCatamorph.html" class="extype" name="scala.reactive.container.MonoidCatamorph">MonoidCatamorph</a>[<span class="extype" name="scala.reactive.container.MonoidCatamorph.T">T</span>, <span class="extype" name="scala.reactive.container.MonoidCatamorph.S">S</span>]]</span>
+        <a href="MonoidCatamorph.html"><span class="name">MonoidCatamorph</span></a><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="RCatamorph.html" class="extype" name="scala.reactive.container.RCatamorph">RCatamorph</a>[<span class="extype" name="scala.reactive.container.MonoidCatamorph.T">T</span>, <span class="extype" name="scala.reactive.container.MonoidCatamorph.S">S</span>] with <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a>[<span class="extype" name="scala.reactive.container.MonoidCatamorph.S">S</span>, <a href="MonoidCatamorph.html" class="extype" name="scala.reactive.container.MonoidCatamorph">MonoidCatamorph</a>[<span class="extype" name="scala.reactive.container.MonoidCatamorph.T">T</span>, <span class="extype" name="scala.reactive.container.MonoidCatamorph.S">S</span>]]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@MonoidCatamorph[T,S]extendsRCatamorph[T,S]withRBuilder[S,scala.reactive.container.MonoidCatamorph[T,S]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.PairBuilder" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="PairBuilder[-P,-Q&lt;:AnyRef,+Repr]extendsReactMutable.Subscriptions"></a>
@@ -157,7 +185,11 @@
       <span class="symbol">
         <a href="PairBuilder.html"><span class="name">PairBuilder</span></a><span class="tparams">[<span name="P">-P</span>, <span name="Q">-Q &lt;: <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>, <span name="Repr">+Repr</span>]</span><span class="result"> extends <a href="../ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@PairBuilder[-P,-Q&lt;:AnyRef,+Repr]extendsReactMutable.Subscriptions" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.PairContainer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="PairContainer[P,Q&lt;:AnyRef]extendsAnyRef"></a>
@@ -170,163 +202,273 @@
       <span class="symbol">
         <a href="PairContainer.html"><span class="name">PairContainer</span></a><span class="tparams">[<span name="P">P</span>, <span name="Q">Q &lt;: <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@PairContainer[P,Q&lt;:AnyRef]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactArray[T]extendsReactContainer[T]"></a>
-      <a id="ReactArray[T]:ReactArray[T]"></a>
+    </li><li name="scala.reactive.container.RArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RArray[T]extendsRContainer[T]"></a>
+      <a id="RArray[T]:RArray[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ReactArray.html"><span class="name">ReactArray</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ReactContainer.html" class="extype" name="scala.reactive.container.ReactContainer">ReactContainer</a>[<span class="extype" name="scala.reactive.container.ReactArray.T">T</span>]</span>
+        <a href="RArray.html"><span class="name">RArray</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[<span class="extype" name="scala.reactive.container.RArray.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RArray[T]extendsRContainer[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactBinaryHeap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactBinaryHeap[T]extendsReactPriorityQueue[T]"></a>
-      <a id="ReactBinaryHeap[T]:ReactBinaryHeap[T]"></a>
+    </li><li name="scala.reactive.container.RBinaryHeap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RBinaryHeap[T]extendsRPriorityQueue[T]"></a>
+      <a id="RBinaryHeap[T]:RBinaryHeap[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ReactBinaryHeap.html"><span class="name">ReactBinaryHeap</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ReactPriorityQueue.html" class="extype" name="scala.reactive.container.ReactPriorityQueue">ReactPriorityQueue</a>[<span class="extype" name="scala.reactive.container.ReactBinaryHeap.T">T</span>]</span>
+        <a href="RBinaryHeap.html"><span class="name">RBinaryHeap</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="RPriorityQueue.html" class="extype" name="scala.reactive.container.RPriorityQueue">RPriorityQueue</a>[<span class="extype" name="scala.reactive.container.RBinaryHeap.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RBinaryHeap[T]extendsRPriorityQueue[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactBuilder" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ReactBuilder[-T,+Repr]extendsReactMutable.Subscriptions"></a>
-      <a id="ReactBuilder[-T,+Repr]:ReactBuilder[T,Repr]"></a>
+    </li><li name="scala.reactive.container.RBuilder" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RBuilder[-T,+Repr]extendsReactMutable.Subscriptions"></a>
+      <a id="RBuilder[-T,+Repr]:RBuilder[T,Repr]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ReactBuilder.html"><span class="name">ReactBuilder</span></a><span class="tparams">[<span name="T">-T</span>, <span name="Repr">+Repr</span>]</span><span class="result"> extends <a href="../ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a></span>
+        <a href="RBuilder.html"><span class="name">RBuilder</span></a><span class="tparams">[<span name="T">-T</span>, <span name="Repr">+Repr</span>]</span><span class="result"> extends <a href="../ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RBuilder[-T,+Repr]extendsReactMutable.Subscriptions" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactCatamorph" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ReactCatamorph[T,S]extendsReactContainer[S]withReactContainer.Default[S]"></a>
-      <a id="ReactCatamorph[T,S]:ReactCatamorph[T,S]"></a>
+    </li><li name="scala.reactive.container.RCatamorph" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RCatamorph[T,S]extendsRContainer[S]withRContainer.Default[S]"></a>
+      <a id="RCatamorph[T,S]:RCatamorph[T,S]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ReactCatamorph.html"><span class="name">ReactCatamorph</span></a><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="ReactContainer.html" class="extype" name="scala.reactive.container.ReactContainer">ReactContainer</a>[<span class="extype" name="scala.reactive.container.ReactCatamorph.S">S</span>] with <a href="ReactContainer$$Default.html" class="extype" name="scala.reactive.container.ReactContainer.Default">Default</a>[<span class="extype" name="scala.reactive.container.ReactCatamorph.S">S</span>]</span>
+        <a href="RCatamorph.html"><span class="name">RCatamorph</span></a><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[<span class="extype" name="scala.reactive.container.RCatamorph.S">S</span>] with <a href="RContainer$$Default.html" class="extype" name="scala.reactive.container.RContainer.Default">Default</a>[<span class="extype" name="scala.reactive.container.RCatamorph.S">S</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RCatamorph[T,S]extendsRContainer[S]withRContainer.Default[S]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactCell" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactCell[T]extendsSignal.Default[T]withReactMutable"></a>
-      <a id="ReactCell[T]:ReactCell[T]"></a>
+    </li><li name="scala.reactive.container.RCell" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RCell[T]extendsSignal.Default[T]withReactMutable"></a>
+      <a id="RCell[T]:RCell[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ReactCell.html"><span class="name">ReactCell</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../Signal$$Default.html" class="extype" name="scala.reactive.Signal.Default">Default</a>[<span class="extype" name="scala.reactive.container.ReactCell.T">T</span>] with <a href="../ReactMutable.html" class="extype" name="scala.reactive.ReactMutable">ReactMutable</a></span>
+        <a href="RCell.html"><span class="name">RCell</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../Signal$$Default.html" class="extype" name="scala.reactive.Signal.Default">Default</a>[<span class="extype" name="scala.reactive.container.RCell.T">T</span>] with <a href="../ReactMutable.html" class="extype" name="scala.reactive.ReactMutable">ReactMutable</a></span>
       </span>
-      </h4>
-      
-    </li><li name="scala.reactive.container.ReactContainer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ReactContainer[T]extendsReactMutable.Subscriptions"></a>
-      <a id="ReactContainer[T]:ReactContainer[T]"></a>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RCell[T]extendsSignal.Default[T]withReactMutable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The reactive cell abstraction represents a mutable memory location
+ whose changes may produce events.</p><div class="fullcomment"><div class="comment cmt"><p>The reactive cell abstraction represents a mutable memory location
+ whose changes may produce events.</p><p> An <code>RCell</code> is conceptually similar to a reactive emitter lifted into a signal.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of the values it stores</p></dd></dl></div>
+    </li><li name="scala.reactive.container.RContainer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RContainer[T]extendsReactMutable.Subscriptions"></a>
+      <a id="RContainer[T]:RContainer[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ReactContainer.html"><span class="name">ReactContainer</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a></span>
+        <a href="RContainer.html"><span class="name">RContainer</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RContainer[T]extendsReactMutable.Subscriptions" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactHashMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactHashMap[K,V&gt;:Null&lt;:AnyRef]extendsReactMap[K,V]withReactBuilder[(K,V),scala.reactive.container.ReactHashMap[K,V]]withPairBuilder[K,V,scala.reactive.container.ReactHashMap[K,V]]"></a>
-      <a id="ReactHashMap[K,V&lt;:AnyRef&gt;:Null]:ReactHashMap[K,V]"></a>
+    </li><li name="scala.reactive.container.RHashMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RHashMap[K,V&gt;:Null&lt;:AnyRef]extendsRMap[K,V]withRBuilder[(K,V),scala.reactive.container.RHashMap[K,V]]withPairBuilder[K,V,scala.reactive.container.RHashMap[K,V]]"></a>
+      <a id="RHashMap[K,V&lt;:AnyRef&gt;:Null]:RHashMap[K,V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ReactHashMap.html"><span class="name">ReactHashMap</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &gt;: <span class="extype" name="scala.Null">Null</span> &lt;: <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends <a href="ReactMap.html" class="extype" name="scala.reactive.container.ReactMap">ReactMap</a>[<span class="extype" name="scala.reactive.container.ReactHashMap.K">K</span>, <span class="extype" name="scala.reactive.container.ReactHashMap.V">V</span>] with <a href="ReactBuilder.html" class="extype" name="scala.reactive.container.ReactBuilder">ReactBuilder</a>[(<span class="extype" name="scala.reactive.container.ReactHashMap.K">K</span>, <span class="extype" name="scala.reactive.container.ReactHashMap.V">V</span>), <a href="ReactHashMap.html" class="extype" name="scala.reactive.container.ReactHashMap">ReactHashMap</a>[<span class="extype" name="scala.reactive.container.ReactHashMap.K">K</span>, <span class="extype" name="scala.reactive.container.ReactHashMap.V">V</span>]] with <a href="PairBuilder.html" class="extype" name="scala.reactive.container.PairBuilder">PairBuilder</a>[<span class="extype" name="scala.reactive.container.ReactHashMap.K">K</span>, <span class="extype" name="scala.reactive.container.ReactHashMap.V">V</span>, <a href="ReactHashMap.html" class="extype" name="scala.reactive.container.ReactHashMap">ReactHashMap</a>[<span class="extype" name="scala.reactive.container.ReactHashMap.K">K</span>, <span class="extype" name="scala.reactive.container.ReactHashMap.V">V</span>]]</span>
+        <a href="RHashMap.html"><span class="name">RHashMap</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &gt;: <span class="extype" name="scala.Null">Null</span> &lt;: <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends <a href="RMap.html" class="extype" name="scala.reactive.container.RMap">RMap</a>[<span class="extype" name="scala.reactive.container.RHashMap.K">K</span>, <span class="extype" name="scala.reactive.container.RHashMap.V">V</span>] with <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a>[(<span class="extype" name="scala.reactive.container.RHashMap.K">K</span>, <span class="extype" name="scala.reactive.container.RHashMap.V">V</span>), <a href="RHashMap.html" class="extype" name="scala.reactive.container.RHashMap">RHashMap</a>[<span class="extype" name="scala.reactive.container.RHashMap.K">K</span>, <span class="extype" name="scala.reactive.container.RHashMap.V">V</span>]] with <a href="PairBuilder.html" class="extype" name="scala.reactive.container.PairBuilder">PairBuilder</a>[<span class="extype" name="scala.reactive.container.RHashMap.K">K</span>, <span class="extype" name="scala.reactive.container.RHashMap.V">V</span>, <a href="RHashMap.html" class="extype" name="scala.reactive.container.RHashMap">RHashMap</a>[<span class="extype" name="scala.reactive.container.RHashMap.K">K</span>, <span class="extype" name="scala.reactive.container.RHashMap.V">V</span>]]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RHashMap[K,V&gt;:Null&lt;:AnyRef]extendsRMap[K,V]withRBuilder[(K,V),scala.reactive.container.RHashMap[K,V]]withPairBuilder[K,V,scala.reactive.container.RHashMap[K,V]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactHashSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactHashSet[T]extendsReactContainer[T]withReactBuilder[T,scala.reactive.container.ReactHashSet[T]]"></a>
-      <a id="ReactHashSet[T]:ReactHashSet[T]"></a>
+    </li><li name="scala.reactive.container.RHashSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RHashSet[T]extendsRSet[T]withRBuilder[T,scala.reactive.container.RHashSet[T]]"></a>
+      <a id="RHashSet[T]:RHashSet[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ReactHashSet.html"><span class="name">ReactHashSet</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ReactContainer.html" class="extype" name="scala.reactive.container.ReactContainer">ReactContainer</a>[<span class="extype" name="scala.reactive.container.ReactHashSet.T">T</span>] with <a href="ReactBuilder.html" class="extype" name="scala.reactive.container.ReactBuilder">ReactBuilder</a>[<span class="extype" name="scala.reactive.container.ReactHashSet.T">T</span>, <a href="ReactHashSet.html" class="extype" name="scala.reactive.container.ReactHashSet">ReactHashSet</a>[<span class="extype" name="scala.reactive.container.ReactHashSet.T">T</span>]]</span>
+        <a href="RHashSet.html"><span class="name">RHashSet</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="RSet.html" class="extype" name="scala.reactive.container.RSet">RSet</a>[<span class="extype" name="scala.reactive.container.RHashSet.T">T</span>] with <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a>[<span class="extype" name="scala.reactive.container.RHashSet.T">T</span>, <a href="RHashSet.html" class="extype" name="scala.reactive.container.RHashSet">RHashSet</a>[<span class="extype" name="scala.reactive.container.RHashSet.T">T</span>]]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RHashSet[T]extendsRSet[T]withRBuilder[T,scala.reactive.container.RHashSet[T]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactHashValMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactHashValMap[K,V]extendsReactContainer[(K,V)]withReactBuilder[(K,V),scala.reactive.container.ReactHashValMap[K,V]]withValPairBuilder[K,V,scala.reactive.container.ReactHashValMap[K,V]]"></a>
-      <a id="ReactHashValMap[K,V]:ReactHashValMap[K,V]"></a>
+    </li><li name="scala.reactive.container.RHashValMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RHashValMap[K,V]extendsRContainer[(K,V)]withRBuilder[(K,V),scala.reactive.container.RHashValMap[K,V]]withValPairBuilder[K,V,scala.reactive.container.RHashValMap[K,V]]"></a>
+      <a id="RHashValMap[K,V]:RHashValMap[K,V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ReactHashValMap.html"><span class="name">ReactHashValMap</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="ReactContainer.html" class="extype" name="scala.reactive.container.ReactContainer">ReactContainer</a>[(<span class="extype" name="scala.reactive.container.ReactHashValMap.K">K</span>, <span class="extype" name="scala.reactive.container.ReactHashValMap.V">V</span>)] with <a href="ReactBuilder.html" class="extype" name="scala.reactive.container.ReactBuilder">ReactBuilder</a>[(<span class="extype" name="scala.reactive.container.ReactHashValMap.K">K</span>, <span class="extype" name="scala.reactive.container.ReactHashValMap.V">V</span>), <a href="ReactHashValMap.html" class="extype" name="scala.reactive.container.ReactHashValMap">ReactHashValMap</a>[<span class="extype" name="scala.reactive.container.ReactHashValMap.K">K</span>, <span class="extype" name="scala.reactive.container.ReactHashValMap.V">V</span>]] with <a href="ValPairBuilder.html" class="extype" name="scala.reactive.container.ValPairBuilder">ValPairBuilder</a>[<span class="extype" name="scala.reactive.container.ReactHashValMap.K">K</span>, <span class="extype" name="scala.reactive.container.ReactHashValMap.V">V</span>, <a href="ReactHashValMap.html" class="extype" name="scala.reactive.container.ReactHashValMap">ReactHashValMap</a>[<span class="extype" name="scala.reactive.container.ReactHashValMap.K">K</span>, <span class="extype" name="scala.reactive.container.ReactHashValMap.V">V</span>]]</span>
+        <a href="RHashValMap.html"><span class="name">RHashValMap</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[(<span class="extype" name="scala.reactive.container.RHashValMap.K">K</span>, <span class="extype" name="scala.reactive.container.RHashValMap.V">V</span>)] with <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a>[(<span class="extype" name="scala.reactive.container.RHashValMap.K">K</span>, <span class="extype" name="scala.reactive.container.RHashValMap.V">V</span>), <a href="RHashValMap.html" class="extype" name="scala.reactive.container.RHashValMap">RHashValMap</a>[<span class="extype" name="scala.reactive.container.RHashValMap.K">K</span>, <span class="extype" name="scala.reactive.container.RHashValMap.V">V</span>]] with <a href="ValPairBuilder.html" class="extype" name="scala.reactive.container.ValPairBuilder">ValPairBuilder</a>[<span class="extype" name="scala.reactive.container.RHashValMap.K">K</span>, <span class="extype" name="scala.reactive.container.RHashValMap.V">V</span>, <a href="RHashValMap.html" class="extype" name="scala.reactive.container.RHashValMap">RHashValMap</a>[<span class="extype" name="scala.reactive.container.RHashValMap.K">K</span>, <span class="extype" name="scala.reactive.container.RHashValMap.V">V</span>]]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RHashValMap[K,V]extendsRContainer[(K,V)]withRBuilder[(K,V),scala.reactive.container.RHashValMap[K,V]]withValPairBuilder[K,V,scala.reactive.container.RHashValMap[K,V]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactMap" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ReactMap[K,V&lt;:AnyRef]extendsReactContainer[(K,V)]"></a>
-      <a id="ReactMap[K,V&lt;:AnyRef]:ReactMap[K,V]"></a>
+    </li><li name="scala.reactive.container.RMap" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="RMap[K,V&lt;:AnyRef]extendsRContainer[(K,V)]"></a>
+      <a id="RMap[K,V&lt;:AnyRef]:RMap[K,V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ReactMap.html"><span class="name">ReactMap</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends <a href="ReactContainer.html" class="extype" name="scala.reactive.container.ReactContainer">ReactContainer</a>[(<span class="extype" name="scala.reactive.container.ReactMap.K">K</span>, <span class="extype" name="scala.reactive.container.ReactMap.V">V</span>)]</span>
+        <a href="RMap.html"><span class="name">RMap</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[(<span class="extype" name="scala.reactive.container.RMap.K">K</span>, <span class="extype" name="scala.reactive.container.RMap.V">V</span>)]</span>
       </span>
-      </h4>
-      
-    </li><li name="scala.reactive.container.ReactPriorityQueue" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ReactPriorityQueue[T]extendsReactQueue[T]"></a>
-      <a id="ReactPriorityQueue[T]:ReactPriorityQueue[T]"></a>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RMap[K,V&lt;:AnyRef]extendsRContainer[(K,V)]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A reactive map is a reactive counterpart of a mutable map.</p><div class="fullcomment"><div class="comment cmt"><p>A reactive map is a reactive counterpart of a mutable map.</p><p> Calling the <code>react</code> method of the <code>RMap</code> type returns.
+</p></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"><p>the type of the keys in the reactive map</p></dd><dt class="tparam">V</dt><dd class="cmt"><p>the type of the values in the reactive map
+</p></dd></dl></div>
+    </li><li name="scala.reactive.container.RPriorityQueue" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RPriorityQueue[T]extendsRQueue[T]"></a>
+      <a id="RPriorityQueue[T]:RPriorityQueue[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ReactPriorityQueue.html"><span class="name">ReactPriorityQueue</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ReactQueue.html" class="extype" name="scala.reactive.container.ReactQueue">ReactQueue</a>[<span class="extype" name="scala.reactive.container.ReactPriorityQueue.T">T</span>]</span>
+        <a href="RPriorityQueue.html"><span class="name">RPriorityQueue</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="RQueue.html" class="extype" name="scala.reactive.container.RQueue">RQueue</a>[<span class="extype" name="scala.reactive.container.RPriorityQueue.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RPriorityQueue[T]extendsRQueue[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactQueue" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ReactQueue[T]extendsReactContainer[T]"></a>
-      <a id="ReactQueue[T]:ReactQueue[T]"></a>
+    </li><li name="scala.reactive.container.RQueue" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RQueue[T]extendsRContainer[T]"></a>
+      <a id="RQueue[T]:RQueue[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ReactQueue.html"><span class="name">ReactQueue</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ReactContainer.html" class="extype" name="scala.reactive.container.ReactContainer">ReactContainer</a>[<span class="extype" name="scala.reactive.container.ReactQueue.T">T</span>]</span>
+        <a href="RQueue.html"><span class="name">RQueue</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[<span class="extype" name="scala.reactive.container.RQueue.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RQueue[T]extendsRContainer[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RSet" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="RSet[T]extendsRContainer[T]"></a>
+      <a id="RSet[T]:RSet[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RSet.html"><span class="name">RSet</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[<span class="extype" name="scala.reactive.container.RSet.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RSet[T]extendsRContainer[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A reactive set container is a reactive counterpart of a mutable set.</p><div class="fullcomment"><div class="comment cmt"><p>A reactive set container is a reactive counterpart of a mutable set.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of the elements in this set
+</p></dd></dl></div>
+    </li><li name="scala.reactive.container.RTileMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RTileMap[T]extendsRContainer[(Int,Int,T)]withRBuilder[(Int,Int,T),scala.reactive.container.RTileMap[T]]withRContainer.Default[(Int,Int,T)]"></a>
+      <a id="RTileMap[T]:RTileMap[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RTileMap.html"><span class="name">RTileMap</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="RContainer.html" class="extype" name="scala.reactive.container.RContainer">RContainer</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)] with <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>), <a href="RTileMap.html" class="extype" name="scala.reactive.container.RTileMap">RTileMap</a>[<span class="extype" name="scala.reactive.container.RTileMap.T">T</span>]] with <a href="RContainer$$Default.html" class="extype" name="scala.reactive.container.RContainer.Default">Default</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.RTileMap.T">T</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RTileMap[T]extendsRContainer[(Int,Int,T)]withRBuilder[(Int,Int,T),scala.reactive.container.RTileMap[T]]withRContainer.Default[(Int,Int,T)]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RUnrolledQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RUnrolledQueue[T]extendsRQueue[T]"></a>
+      <a id="RUnrolledQueue[T]:RUnrolledQueue[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RUnrolledQueue.html"><span class="name">RUnrolledQueue</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="RQueue.html" class="extype" name="scala.reactive.container.RQueue">RQueue</a>[<span class="extype" name="scala.reactive.container.RUnrolledQueue.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RUnrolledQueue[T]extendsRQueue[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.ReactRecord" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ReactRecordextendsReactMutable"></a>
@@ -339,36 +481,14 @@
       <span class="symbol">
         <a href="ReactRecord.html"><span class="name">ReactRecord</span></a><span class="result"> extends <a href="../ReactMutable.html" class="extype" name="scala.reactive.ReactMutable">ReactMutable</a></span>
       </span>
-      </h4>
-      
-    </li><li name="scala.reactive.container.ReactTileMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactTileMap[T]extendsReactContainer[(Int,Int,T)]withReactBuilder[(Int,Int,T),scala.reactive.container.ReactTileMap[T]]withReactContainer.Default[(Int,Int,T)]"></a>
-      <a id="ReactTileMap[T]:ReactTileMap[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="ReactTileMap.html"><span class="name">ReactTileMap</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ReactContainer.html" class="extype" name="scala.reactive.container.ReactContainer">ReactContainer</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.ReactTileMap.T">T</span>)] with <a href="ReactBuilder.html" class="extype" name="scala.reactive.container.ReactBuilder">ReactBuilder</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.ReactTileMap.T">T</span>), <a href="ReactTileMap.html" class="extype" name="scala.reactive.container.ReactTileMap">ReactTileMap</a>[<span class="extype" name="scala.reactive.container.ReactTileMap.T">T</span>]] with <a href="ReactContainer$$Default.html" class="extype" name="scala.reactive.container.ReactContainer.Default">Default</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.reactive.container.ReactTileMap.T">T</span>)]</span>
-      </span>
-      </h4>
-      
-    </li><li name="scala.reactive.container.ReactUnrolledQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactUnrolledQueue[T]extendsReactQueue[T]"></a>
-      <a id="ReactUnrolledQueue[T]:ReactUnrolledQueue[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="ReactUnrolledQueue.html"><span class="name">ReactUnrolledQueue</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ReactQueue.html" class="extype" name="scala.reactive.container.ReactQueue">ReactQueue</a>[<span class="extype" name="scala.reactive.container.ReactUnrolledQueue.T">T</span>]</span>
-      </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@ReactRecordextendsReactMutable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.SignalCatamorph" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="SignalCatamorph[T]extendsReactCatamorph[T,scala.reactive.Signal[T]]withReactBuilder[scala.reactive.Signal[T],scala.reactive.container.SignalCatamorph[T]]"></a>
+      <a id="SignalCatamorph[T]extendsRCatamorph[T,scala.reactive.Signal[T]]withRBuilder[scala.reactive.Signal[T],scala.reactive.container.SignalCatamorph[T]]"></a>
       <a id="SignalCatamorph[T]:SignalCatamorph[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -376,22 +496,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="SignalCatamorph.html"><span class="name">SignalCatamorph</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ReactCatamorph.html" class="extype" name="scala.reactive.container.ReactCatamorph">ReactCatamorph</a>[<span class="extype" name="scala.reactive.container.SignalCatamorph.T">T</span>, <a href="../Signal.html" class="extype" name="scala.reactive.Signal">Signal</a>[<span class="extype" name="scala.reactive.container.SignalCatamorph.T">T</span>]] with <a href="ReactBuilder.html" class="extype" name="scala.reactive.container.ReactBuilder">ReactBuilder</a>[<a href="../Signal.html" class="extype" name="scala.reactive.Signal">Signal</a>[<span class="extype" name="scala.reactive.container.SignalCatamorph.T">T</span>], <a href="SignalCatamorph.html" class="extype" name="scala.reactive.container.SignalCatamorph">SignalCatamorph</a>[<span class="extype" name="scala.reactive.container.SignalCatamorph.T">T</span>]]</span>
+        <a href="SignalCatamorph.html"><span class="name">SignalCatamorph</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="RCatamorph.html" class="extype" name="scala.reactive.container.RCatamorph">RCatamorph</a>[<span class="extype" name="scala.reactive.container.SignalCatamorph.T">T</span>, <a href="../Signal.html" class="extype" name="scala.reactive.Signal">Signal</a>[<span class="extype" name="scala.reactive.container.SignalCatamorph.T">T</span>]] with <a href="RBuilder.html" class="extype" name="scala.reactive.container.RBuilder">RBuilder</a>[<a href="../Signal.html" class="extype" name="scala.reactive.Signal">Signal</a>[<span class="extype" name="scala.reactive.container.SignalCatamorph.T">T</span>], <a href="SignalCatamorph.html" class="extype" name="scala.reactive.container.SignalCatamorph">SignalCatamorph</a>[<span class="extype" name="scala.reactive.container.SignalCatamorph.T">T</span>]]</span>
       </span>
-      </h4>
-      
-    </li><li name="scala.reactive.container.SubscriptionSet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="SubscriptionSetextendsAnyRef"></a>
-      <a id="SubscriptionSet:SubscriptionSet"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="SubscriptionSet.html"><span class="name">SubscriptionSet</span></a><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
-      </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@SignalCatamorph[T]extendsRCatamorph[T,scala.reactive.Signal[T]]withRBuilder[scala.reactive.Signal[T],scala.reactive.container.SignalCatamorph[T]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.ValPairBuilder" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ValPairBuilder[-P,-Q,+Repr]extendsReactMutable.Subscriptions"></a>
@@ -404,7 +515,11 @@
       <span class="symbol">
         <a href="ValPairBuilder.html"><span class="name">ValPairBuilder</span></a><span class="tparams">[<span name="P">-P</span>, <span name="Q">-Q</span>, <span name="Repr">+Repr</span>]</span><span class="result"> extends <a href="../ReactMutable$$Subscriptions.html" class="extype" name="scala.reactive.ReactMutable.Subscriptions">Subscriptions</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@ValPairBuilder[-P,-Q,+Repr]extendsReactMutable.Subscriptions" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.ValPairContainer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ValPairContainer[P,Q]extendsAnyRef"></a>
@@ -417,7 +532,11 @@
       <span class="symbol">
         <a href="ValPairContainer.html"><span class="name">ValPairContainer</span></a><span class="tparams">[<span name="P">P</span>, <span name="Q">Q</span>]</span><span class="result"> extends <a href="../../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@ValPairContainer[P,Q]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li></ol>
             </div>
@@ -437,7 +556,11 @@
       <span class="symbol">
         <a href="AbelianCatamorph$.html"><span class="name">AbelianCatamorph</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@AbelianCatamorph" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.CommuteCatamorph" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CommuteCatamorph"></a>
@@ -450,7 +573,11 @@
       <span class="symbol">
         <a href="CommuteCatamorph$.html"><span class="name">CommuteCatamorph</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@CommuteCatamorph" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.MonoidCatamorph" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MonoidCatamorph"></a>
@@ -463,7 +590,11 @@
       <span class="symbol">
         <a href="MonoidCatamorph$.html"><span class="name">MonoidCatamorph</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@MonoidCatamorph" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.PairBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PairBuilder"></a>
@@ -476,7 +607,11 @@
       <span class="symbol">
         <a href="PairBuilder$.html"><span class="name">PairBuilder</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@PairBuilder" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.PairContainer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PairContainer"></a>
@@ -489,163 +624,266 @@
       <span class="symbol">
         <a href="PairContainer$.html"><span class="name">PairContainer</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@PairContainer" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactArray"></a>
-      <a id="ReactArray:ReactArray"></a>
+    </li><li name="scala.reactive.container.RArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RArray"></a>
+      <a id="RArray:RArray"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ReactArray$.html"><span class="name">ReactArray</span></a>
+        <a href="RArray$.html"><span class="name">RArray</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RArray" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactBinaryHeap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactBinaryHeap"></a>
-      <a id="ReactBinaryHeap:ReactBinaryHeap"></a>
+    </li><li name="scala.reactive.container.RBinaryHeap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RBinaryHeap"></a>
+      <a id="RBinaryHeap:RBinaryHeap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ReactBinaryHeap$.html"><span class="name">ReactBinaryHeap</span></a>
+        <a href="RBinaryHeap$.html"><span class="name">RBinaryHeap</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RBinaryHeap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactBuilder"></a>
-      <a id="ReactBuilder:ReactBuilder"></a>
+    </li><li name="scala.reactive.container.RBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RBuilder"></a>
+      <a id="RBuilder:RBuilder"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ReactBuilder$.html"><span class="name">ReactBuilder</span></a>
+        <a href="RBuilder$.html"><span class="name">RBuilder</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RBuilder" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactCatamorph" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactCatamorph"></a>
-      <a id="ReactCatamorph:ReactCatamorph"></a>
+    </li><li name="scala.reactive.container.RCatamorph" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RCatamorph"></a>
+      <a id="RCatamorph:RCatamorph"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ReactCatamorph$.html"><span class="name">ReactCatamorph</span></a>
+        <a href="RCatamorph$.html"><span class="name">RCatamorph</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RCatamorph" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactCell" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactCell"></a>
-      <a id="ReactCell:ReactCell"></a>
+    </li><li name="scala.reactive.container.RCell" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RCell"></a>
+      <a id="RCell:RCell"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ReactCell$.html"><span class="name">ReactCell</span></a>
+        <a href="RCell$.html"><span class="name">RCell</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RCell" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactContainer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactContainer"></a>
-      <a id="ReactContainer:ReactContainer"></a>
+    </li><li name="scala.reactive.container.RContainer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RContainer"></a>
+      <a id="RContainer:RContainer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ReactContainer$.html"><span class="name">ReactContainer</span></a>
+        <a href="RContainer$.html"><span class="name">RContainer</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RContainer" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactHashMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactHashMap"></a>
-      <a id="ReactHashMap:ReactHashMap"></a>
+    </li><li name="scala.reactive.container.RHashMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RHashMap"></a>
+      <a id="RHashMap:RHashMap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ReactHashMap$.html"><span class="name">ReactHashMap</span></a>
+        <a href="RHashMap$.html"><span class="name">RHashMap</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RHashMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactHashSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactHashSet"></a>
-      <a id="ReactHashSet:ReactHashSet"></a>
+    </li><li name="scala.reactive.container.RHashSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RHashSet"></a>
+      <a id="RHashSet:RHashSet"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ReactHashSet$.html"><span class="name">ReactHashSet</span></a>
+        <a href="RHashSet$.html"><span class="name">RHashSet</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RHashSet" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactHashValMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactHashValMap"></a>
-      <a id="ReactHashValMap:ReactHashValMap"></a>
+    </li><li name="scala.reactive.container.RHashValMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RHashValMap"></a>
+      <a id="RHashValMap:RHashValMap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ReactHashValMap$.html"><span class="name">ReactHashValMap</span></a>
+        <a href="RHashValMap$.html"><span class="name">RHashValMap</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RHashValMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactMap"></a>
-      <a id="ReactMap:ReactMap"></a>
+    </li><li name="scala.reactive.container.RMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RMap"></a>
+      <a id="RMap:RMap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ReactMap$.html"><span class="name">ReactMap</span></a>
+        <a href="RMap$.html"><span class="name">RMap</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactPriorityQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactPriorityQueue"></a>
-      <a id="ReactPriorityQueue:ReactPriorityQueue"></a>
+    </li><li name="scala.reactive.container.RPriorityQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RPriorityQueue"></a>
+      <a id="RPriorityQueue:RPriorityQueue"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ReactPriorityQueue$.html"><span class="name">ReactPriorityQueue</span></a>
+        <a href="RPriorityQueue$.html"><span class="name">RPriorityQueue</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RPriorityQueue" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="scala.reactive.container.ReactQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactQueue"></a>
-      <a id="ReactQueue:ReactQueue"></a>
+    </li><li name="scala.reactive.container.RQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RQueue"></a>
+      <a id="RQueue:RQueue"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ReactQueue$.html"><span class="name">ReactQueue</span></a>
+        <a href="RQueue$.html"><span class="name">RQueue</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RQueue" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RSet"></a>
+      <a id="RSet:RSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RSet$.html"><span class="name">RSet</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RSet" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RTileMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RTileMap"></a>
+      <a id="RTileMap:RTileMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RTileMap$.html"><span class="name">RTileMap</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RTileMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.reactive.container.RUnrolledQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RUnrolledQueue"></a>
+      <a id="RUnrolledQueue:RUnrolledQueue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RUnrolledQueue$.html"><span class="name">RUnrolledQueue</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@RUnrolledQueue" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.ReactRecord" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ReactRecord"></a>
@@ -658,33 +896,11 @@
       <span class="symbol">
         <a href="ReactRecord$.html"><span class="name">ReactRecord</span></a>
       </span>
-      </h4>
-      
-    </li><li name="scala.reactive.container.ReactTileMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactTileMap"></a>
-      <a id="ReactTileMap:ReactTileMap"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="ReactTileMap$.html"><span class="name">ReactTileMap</span></a>
-      </span>
-      </h4>
-      
-    </li><li name="scala.reactive.container.ReactUnrolledQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReactUnrolledQueue"></a>
-      <a id="ReactUnrolledQueue:ReactUnrolledQueue"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="ReactUnrolledQueue$.html"><span class="name">ReactUnrolledQueue</span></a>
-      </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@ReactRecord" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.SignalCatamorph" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SignalCatamorph"></a>
@@ -697,20 +913,11 @@
       <span class="symbol">
         <a href="SignalCatamorph$.html"><span class="name">SignalCatamorph</span></a><span class="result"> extends <a href="LowSignalCatamorph.html" class="extype" name="scala.reactive.container.LowSignalCatamorph">LowSignalCatamorph</a></span>
       </span>
-      </h4>
-      
-    </li><li name="scala.reactive.container.SubscriptionSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="SubscriptionSet"></a>
-      <a id="SubscriptionSet:SubscriptionSet"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="SubscriptionSet$.html"><span class="name">SubscriptionSet</span></a>
-      </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@SignalCatamorph" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.ValPairBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ValPairBuilder"></a>
@@ -723,7 +930,11 @@
       <span class="symbol">
         <a href="ValPairBuilder$.html"><span class="name">ValPairBuilder</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@ValPairBuilder" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.reactive.container.ValPairContainer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ValPairContainer"></a>
@@ -736,7 +947,11 @@
       <span class="symbol">
         <a href="ValPairContainer$.html"><span class="name">ValPairContainer</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#scala.reactive.container.package@ValPairContainer" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li></ol>
             </div>
@@ -767,6 +982,7 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script>
+
+
     </body>
       </html>

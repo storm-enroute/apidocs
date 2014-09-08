@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>IsoSystem - scala.reactive.IsoSystem</title>
@@ -9,6 +8,11 @@
           
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../index.html';
@@ -26,16 +30,20 @@
       <div id="definition">
         <a href="IsoSystem$.html" title="Go to companion"><img src="../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a href="../package.html" class="extype" name="scala">scala</a>.<a href="package.html" class="extype" name="scala.reactive">reactive</a></p>
-        <h1><a href="IsoSystem$.html" title="Go to companion">IsoSystem</a></h1>
+        <h1><a href="IsoSystem$.html" title="Go to companion">IsoSystem</a></h1> <span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
+        <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">IsoSystem</span><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">IsoSystem</span><span class="result"> extends <a href="isolate/Services.html" class="extype" name="scala.reactive.isolate.Services">Services</a></span>
       </span>
       </h4>
       
@@ -43,10 +51,7 @@
  a common configuration.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
-        </div><div class="toggleContainer block">
-          <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a href="isolate/DefaultIsoSystem.html" class="extype" name="scala.reactive.isolate.DefaultIsoSystem">DefaultIsoSystem</a></div>
+          <div class="superTypes hiddenContent"><a href="isolate/Services.html" class="extype" name="scala.reactive.isolate.Services">Services</a>, <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -64,12 +69,12 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="scala.reactive.IsoSystem"><span>IsoSystem</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="scala.reactive.IsoSystem"><span>IsoSystem</span></li><li class="in" name="scala.reactive.isolate.Services"><span>Services</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
                 <span class="filtertype">Implicitly<br />
                 </span>
-                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -89,8 +94,8 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="scala.reactive.IsoSystem#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():scala.reactive.IsoSystem"></a>
+              <ol><li name="scala.reactive.IsoSystem#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(name:String,bundle:scala.reactive.IsoSystem.Bundle):scala.reactive.IsoSystem"></a>
       <a id="&lt;init&gt;:IsoSystem"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -98,164 +103,45 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">IsoSystem</span><span class="params">()</span>
+        <span class="name">IsoSystem</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="bundle">bundle: <a href="IsoSystem$$Bundle.html" class="extype" name="scala.reactive.IsoSystem.Bundle">Bundle</a> = <span class="symbol"><span class="name"><a href="IsoSystem$.html">IsoSystem.defaultBundle</a></span></span></span>)</span>
       </span>
-      </h4>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@&lt;init&gt;(name:String,bundle:scala.reactive.IsoSystem.Bundle):scala.reactive.IsoSystem" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>the name of this isolate system</p></dd><dt class="param">bundle</dt><dd class="cmt"><p>the scheduler bundle used by the isolate system
+</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.reactive.IsoSystem.StandardIsolates" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StandardIsolatesextendsAnyRef"></a>
+      <a id="StandardIsolates:StandardIsolates"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IsoSystem$StandardIsolates.html"><span class="name">StandardIsolates</span></a><span class="result"> extends <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@StandardIsolatesextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains channels of various system isolates.</p>
     </li></ol>
             </div>
 
         
 
         <div id="values" class="values members">
-              <h3>Abstract Value Members</h3>
-              <ol><li name="scala.reactive.IsoSystem#bundle" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="bundle:scala.reactive.IsoSystem.Bundle"></a>
-      <a id="bundle:Bundle"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">bundle</span><span class="result">: <a href="IsoSystem$$Bundle.html" class="extype" name="scala.reactive.IsoSystem.Bundle">Bundle</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Retrieves the bundle for this isolate system.</p><div class="fullcomment"><div class="comment cmt"><p>Retrieves the bundle for this isolate system.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the bundle
-</p></dd></dl></div>
-    </li><li name="scala.reactive.IsoSystem#channels" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="channels:scala.reactive.IsoSystem.Channels"></a>
-      <a id="channels:Channels"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">channels</span><span class="result">: <a href="IsoSystem$$Channels.html" class="extype" name="scala.reactive.IsoSystem.Channels">Channels</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Retrieves the register of channels in this isolate system.</p><div class="fullcomment"><div class="comment cmt"><p>Retrieves the register of channels in this isolate system.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the channels register
-</p></dd></dl></div>
-    </li><li name="scala.reactive.IsoSystem#isolate" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="isolate[T](proto:scala.reactive.Proto[scala.reactive.Iso[T]],name:String)(implicitevidence$1:scala.reactive.Arrayable[T]):scala.reactive.Channel[T]"></a>
-      <a id="isolate[T](Proto[Iso[T]],String)(Arrayable[T]):Channel[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isolate</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="proto">proto: <a href="Proto.html" class="extype" name="scala.reactive.Proto">Proto</a>[<a href="Iso.html" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.IsoSystem.isolate.T">T</span>]]</span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">null</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.IsoSystem.isolate.T">T</span>]</span>)</span><span class="result">: <a href="Channel.html" class="extype" name="scala.reactive.Channel">Channel</a>[<span class="extype" name="scala.reactive.IsoSystem.isolate.T">T</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Creates a new isolate instance in this isolate system.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new isolate instance in this isolate system.</p><p> <b>Use case:</b></p><pre><span class="kw">def</span> isolate(proto: Proto[Iso[T]]): Channel[T]</pre><p> Implementations of this method must initialize the isolate frame with the <code>createFrame</code> method,
- add the isolate to the specific bookkeeping code,
- and then call the <code>wake</code> method on the isolate frame to start it for the first time.
- Finally, they must return the isolate's default channel.
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of the events for the isolate</p></dd><dt class="param">proto</dt><dd class="cmt"><p>the prototype for the isolate</p></dd><dt>returns</dt><dd class="cmt"><p>the channel for this isolate
-</p></dd></dl></div>
-    </li><li name="scala.reactive.IsoSystem#name" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="name:String"></a>
-      <a id="name:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Name of this isolate system instance.</p><div class="fullcomment"><div class="comment cmt"><p>Name of this isolate system instance.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the name of the isolate system
-</p></dd></dl></div>
-    </li><li name="scala.reactive.IsoSystem#newChannel" visbl="prt" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="newChannel[Q](reactor:scala.reactive.Reactor[Q]):scala.reactive.Channel[Q]"></a>
-      <a id="newChannel[Q](Reactor[Q]):Channel[Q]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">newChannel</span><span class="tparams">[<span name="Q">Q</span>]</span><span class="params">(<span name="reactor">reactor: <a href="Reactor.html" class="extype" name="scala.reactive.Reactor">Reactor</a>[<span class="extype" name="scala.reactive.IsoSystem.newChannel.Q">Q</span>]</span>)</span><span class="result">: <a href="Channel.html" class="extype" name="scala.reactive.Channel">Channel</a>[<span class="extype" name="scala.reactive.IsoSystem.newChannel.Q">Q</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Creates a new channel for the specified isolate frame.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new channel for the specified isolate frame.</p><p> <b>Note:</b>
- The <code>channel</code> field of the isolate frame is not set at the time this method is called.
-</p></div><dl class="paramcmts block"><dt class="tparam">Q</dt><dd class="cmt"><p>the type of the events for the isolate</p></dd><dt>returns</dt><dd class="cmt"><p>the new channel for the isolate frame
-</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="package.html" class="extype" name="scala.reactive">scala.reactive</a>] </dd></dl></div>
-    </li><li name="scala.reactive.IsoSystem#releaseName" visbl="prt" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="releaseName(name:String):Unit"></a>
-      <a id="releaseName(String):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">releaseName</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Releases the name after the isolate terminates.</p><div class="fullcomment"><div class="comment cmt"><p>Releases the name after the isolate terminates.
-</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>the name to release
-</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="package.html" class="extype" name="scala.reactive">scala.reactive</a>] </dd></dl></div>
-    </li><li name="scala.reactive.IsoSystem#uniqueId" visbl="prt" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="uniqueId():Long"></a>
-      <a id="uniqueId():Long"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">uniqueId</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Generates a new unique id, generated only once during
- the lifetime of this isolate system.</p><div class="fullcomment"><div class="comment cmt"><p>Generates a new unique id, generated only once during
- the lifetime of this isolate system.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a unique id
-</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li name="scala.reactive.IsoSystem#uniqueName" visbl="prt" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="uniqueName(name:String):String"></a>
-      <a id="uniqueName(String):String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">uniqueName</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Generates a unique isolate name if the <code>name</code> argument is <code>null</code>,
- and throws an exception if the <code>name</code> is already taken.</p><div class="fullcomment"><div class="comment cmt"><p>Generates a unique isolate name if the <code>name</code> argument is <code>null</code>,
- and throws an exception if the <code>name</code> is already taken.</p><p> The implementation of this method needs to be thread-safe.
-</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>proposed name</p></dd><dt>returns</dt><dd class="cmt"><p>a unique isolate name
-</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li></ol>
-            </div>
-
-        <div id="values" class="values members">
-              <h3>Concrete Value Members</h3>
+              <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="!=(x$1:AnyRef):Boolean"></a>
-      <a id="!=(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
@@ -266,8 +152,12 @@
       <span class="symbol">
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <a id="##():Int"></a>
@@ -279,7 +169,11 @@
       <span class="symbol">
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="+(other:String):String"></a>
@@ -290,15 +184,19 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@+(other:String):String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to
-            <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method any2stringadd in scala.Predef.
             
-          </dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
-    </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="-&gt;[B](y:B):(A,B)"></a>
       <a id="-&gt;[B](B):(IsoSystem,B)"></a>
       <h4 class="signature">
@@ -309,29 +207,20 @@
       <span class="symbol">
         <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@-&gt;[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method any2ArrowAssoc in scala.Predef.
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
                 <span class="name">@inline</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="==(x$1:AnyRef):Boolean"></a>
-      <a id="==(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a>
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
@@ -342,8 +231,12 @@
       <span class="symbol">
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -355,8 +248,65 @@
       <span class="symbol">
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.reactive.IsoSystem#bundle" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="bundle:scala.reactive.IsoSystem.Bundle"></a>
+      <a id="bundle:Bundle"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bundle</span><span class="result">: <a href="IsoSystem$$Bundle.html" class="extype" name="scala.reactive.IsoSystem.Bundle">Bundle</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@bundle:scala.reactive.IsoSystem.Bundle" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the scheduler bundle used by the isolate system
+</p>
+    </li><li name="scala.reactive.isolate.Services#channels" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="channels:scala.reactive.isolate.Services.Channels"></a>
+      <a id="channels:Channels"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">channels</span><span class="result">: <a href="isolate/Services$$Channels.html" class="extype" name="scala.reactive.isolate.Services.Channels">Channels</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@channels:scala.reactive.isolate.Services.Channels" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The register of channels in this isolate system.</p><div class="fullcomment"><div class="comment cmt"><p>The register of channels in this isolate system.</p><p> Used for creating and finding channels.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="isolate/Services.html" class="extype" name="scala.reactive.isolate.Services">Services</a></dd></dl></div>
+    </li><li name="scala.reactive.isolate.Services#clock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clock:scala.reactive.isolate.Services.Clock"></a>
+      <a id="clock:Clock"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clock</span><span class="result">: <a href="isolate/Services$$Clock.html" class="extype" name="scala.reactive.isolate.Services.Clock">Clock</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@clock:scala.reactive.isolate.Services.Clock" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Clock services.</p><div class="fullcomment"><div class="comment cmt"><p>Clock services.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="isolate/Services.html" class="extype" name="scala.reactive.isolate.Services">Services</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -368,7 +318,11 @@
       <span class="symbol">
         <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@clone():Object" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -376,38 +330,24 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.reactive.IsoSystem#createAndResetIso" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="createAndResetIso[T](proto:scala.reactive.Proto[scala.reactive.Iso[T]]):scala.reactive.Iso[T]"></a>
-      <a id="createAndResetIso[T](Proto[Iso[T]]):Iso[T]"></a>
+    </li><li name="scala.reactive.isolate.Services#config" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="config:com.typesafe.config.Config"></a>
+      <a id="config:Config"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createAndResetIso</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="proto">proto: <a href="Proto.html" class="extype" name="scala.reactive.Proto">Proto</a>[<a href="Iso.html" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.IsoSystem.createAndResetIso.T">T</span>]]</span>)</span><span class="result">: <a href="Iso.html" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.IsoSystem.createAndResetIso.T">T</span>]</span>
+        <span class="name">config</span><span class="result">: <span class="extype" name="com.typesafe.config.Config">Config</span></span>
       </span>
-      </h4>
-      <p class="shortcomment cmt">Creates an isolate from the <code>Proto</code> object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an isolate from the <code>Proto</code> object.</p><p> Starts by memoizing the old isolate object,
- and then calling the creation method.
-</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li name="scala.reactive.IsoSystem#createFrame" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="createFrame[T](proto:scala.reactive.Proto[scala.reactive.Iso[T]],name:String)(implicitevidence$2:scala.reactive.Arrayable[T]):scala.reactive.Iso[T]"></a>
-      <a id="createFrame[T](Proto[Iso[T]],String)(Arrayable[T]):Iso[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">createFrame</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="proto">proto: <a href="Proto.html" class="extype" name="scala.reactive.Proto">Proto</a>[<a href="Iso.html" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.IsoSystem.createFrame.T">T</span>]]</span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.IsoSystem.createFrame.T">T</span>]</span>)</span><span class="result">: <a href="Iso.html" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.IsoSystem.createFrame.T">T</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Creates an isolate frame.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an isolate frame.</p><p> Should only be overridden if the default isolate initialization order needs to change.
- See the source code of the default implementation of this method for more details.
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of the events for the isolate</p></dd><dt class="param">proto</dt><dd class="cmt"><p>prototype for the isolate</p></dd><dt class="param">name</dt><dd class="cmt"><p>name of the new isolate</p></dd><dt>returns</dt><dd class="cmt"><p>the resulting isolate frame
-</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@config:com.typesafe.config.Config" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">System configuration</p><div class="fullcomment"><div class="comment cmt"><p>System configuration</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="isolate/Services.html" class="extype" name="scala.reactive.isolate.Services">Services</a></dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
       <a id="ensuring((IsoSystem)⇒Boolean,⇒Any):IsoSystem"></a>
       <h4 class="signature">
@@ -418,13 +358,17 @@
       <span class="symbol">
         <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method any2Ensuring in scala.Predef.
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
-    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean):A"></a>
       <a id="ensuring((IsoSystem)⇒Boolean):IsoSystem"></a>
       <h4 class="signature">
@@ -435,13 +379,17 @@
       <span class="symbol">
         <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@ensuring(cond:A=&gt;Boolean):A" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method any2Ensuring in scala.Predef.
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
-    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
       <a id="ensuring(Boolean,⇒Any):IsoSystem"></a>
       <h4 class="signature">
@@ -452,13 +400,17 @@
       <span class="symbol">
         <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method any2Ensuring in scala.Predef.
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
-    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:Boolean):A"></a>
       <a id="ensuring(Boolean):IsoSystem"></a>
       <h4 class="signature">
@@ -469,10 +421,14 @@
       <span class="symbol">
         <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@ensuring(cond:Boolean):A" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method any2Ensuring in scala.Predef.
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -486,7 +442,11 @@
       <span class="symbol">
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a>
@@ -499,7 +459,11 @@
       <span class="symbol">
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
@@ -512,7 +476,11 @@
       <span class="symbol">
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -520,7 +488,7 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="formatted(fmtstr:String):String"></a>
       <a id="formatted(String):String"></a>
       <h4 class="signature">
@@ -531,10 +499,14 @@
       <span class="symbol">
         <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@formatted(fmtstr:String):String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to
-            <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method StringFormat in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
                 <span class="name">@inline</span><span class="args">()</span>
@@ -551,7 +523,11 @@
       <span class="symbol">
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
@@ -564,8 +540,29 @@
       <span class="symbol">
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.reactive.isolate.Services#io" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="io:scala.reactive.isolate.Services.Io"></a>
+      <a id="io:Io"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">io</span><span class="result">: <a href="isolate/Services$$Io.html" class="extype" name="scala.reactive.isolate.Services.Io">Io</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@io:scala.reactive.isolate.Services.Io" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">I/O services.</p><div class="fullcomment"><div class="comment cmt"><p>I/O services.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="isolate/Services.html" class="extype" name="scala.reactive.isolate.Services">Services</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -577,8 +574,70 @@
       <span class="symbol">
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.reactive.IsoSystem#iso" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="iso:IsoSystem.this.StandardIsolates"></a>
+      <a id="iso:StandardIsolates"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">iso</span><span class="result">: <a href="IsoSystem$StandardIsolates.html" class="extype" name="scala.reactive.IsoSystem.StandardIsolates">StandardIsolates</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@iso:IsoSystem.this.StandardIsolates" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains channels for standard isolates.</p>
+    </li><li name="scala.reactive.IsoSystem#isolate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isolate[T](p:scala.reactive.Proto[scala.reactive.Iso[T]])(implicitevidence$1:scala.reactive.Arrayable[T]):scala.reactive.Channel[T]"></a>
+      <a id="isolate[T](Proto[Iso[T]])(Arrayable[T]):Channel[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isolate</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="p">p: <a href="Proto.html" class="extype" name="scala.reactive.Proto">Proto</a>[<a href="Iso.html" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.IsoSystem.isolate.T">T</span>]]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.IsoSystem.isolate.T">T</span>]</span>)</span><span class="result">: <a href="Channel.html" class="extype" name="scala.reactive.Channel">Channel</a>[<span class="extype" name="scala.reactive.IsoSystem.isolate.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@isolate[T](p:scala.reactive.Proto[scala.reactive.Iso[T]])(implicitevidence$1:scala.reactive.Arrayable[T]):scala.reactive.Channel[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates a new isolate instance in this isolate system.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new isolate instance in this isolate system.</p><p> <b>Use case:</b></p><pre><span class="kw">def</span> isolate(proto: Proto[Iso[T]]): Channel[T]</pre><p> Implementations of this method must initialize the isolate frame with the
+ <code>createFrame</code> method,
+ add the isolate to the specific bookkeeping code,
+ and then call the <code>wake</code> method on the isolate frame to start it for the first
+ time.
+ Finally, they must return the isolate's default channel.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of the events for the isolate</p></dd><dt class="param">p</dt><dd class="cmt"><p>the prototype for the isolate</p></dd><dt>returns</dt><dd class="cmt"><p>the channel for this isolate
+</p></dd></dl></div>
+    </li><li name="scala.reactive.IsoSystem#name" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="name:String"></a>
+      <a id="name:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@name:String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the name of this isolate system</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -590,8 +649,29 @@
       <span class="symbol">
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.reactive.isolate.Services#net" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="net:scala.reactive.isolate.Services.Net"></a>
+      <a id="net:Net"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">net</span><span class="result">: <a href="isolate/Services$$Net.html" class="extype" name="scala.reactive.isolate.Services.Net">Net</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@net:scala.reactive.isolate.Services.Net" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Network services.</p><div class="fullcomment"><div class="comment cmt"><p>Network services.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="isolate/Services.html" class="extype" name="scala.reactive.isolate.Services">Services</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -603,7 +683,11 @@
       <span class="symbol">
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@notify():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -616,8 +700,29 @@
       <span class="symbol">
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.reactive.isolate.Services#service" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="service[T&lt;:scala.reactive.Protocol](implicitevidence$1:scala.reflect.ClassTag[T]):T"></a>
+      <a id="service[T&lt;:Protocol](ClassTag[T]):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">service</span><span class="tparams">[<span name="T">T &lt;: <a href="Protocol.html" class="extype" name="scala.reactive.Protocol">Protocol</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="scala.reactive.isolate.Services.service.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.reactive.isolate.Services.service.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@service[T&lt;:scala.reactive.Protocol](implicitevidence$1:scala.reflect.ClassTag[T]):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Arbitrary service.</p><div class="fullcomment"><div class="comment cmt"><p>Arbitrary service.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="isolate/Services.html" class="extype" name="scala.reactive.isolate.Services">Services</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -629,7 +734,11 @@
       <span class="symbol">
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
@@ -642,8 +751,29 @@
       <span class="symbol">
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@toString():String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.reactive.IsoSystem#tryCreateIsolate" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tryCreateIsolate[T](proto:scala.reactive.Proto[scala.reactive.Iso[T]])(implicitevidence$2:scala.reactive.Arrayable[T]):scala.reactive.Channel[T]"></a>
+      <a id="tryCreateIsolate[T](Proto[Iso[T]])(Arrayable[T]):Channel[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tryCreateIsolate</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="proto">proto: <a href="Proto.html" class="extype" name="scala.reactive.Proto">Proto</a>[<a href="Iso.html" class="extype" name="scala.reactive.Iso">Iso</a>[<span class="extype" name="scala.reactive.IsoSystem.tryCreateIsolate.T">T</span>]]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reactive.Arrayable">Arrayable</span>[<span class="extype" name="scala.reactive.IsoSystem.tryCreateIsolate.T">T</span>]</span>)</span><span class="result">: <a href="Channel.html" class="extype" name="scala.reactive.Channel">Channel</a>[<span class="extype" name="scala.reactive.IsoSystem.tryCreateIsolate.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@tryCreateIsolate[T](proto:scala.reactive.Proto[scala.reactive.Iso[T]])(implicitevidence$2:scala.reactive.Arrayable[T]):scala.reactive.Channel[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="package.html" class="extype" name="scala.reactive">scala.reactive</a>] </dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -655,7 +785,11 @@
       <span class="symbol">
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@wait():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -674,7 +808,11 @@
       <span class="symbol">
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -693,7 +831,11 @@
       <span class="symbol">
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -701,7 +843,7 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="→[B](y:B):(A,B)"></a>
       <a id="→[B](B):(IsoSystem,B)"></a>
       <h4 class="signature">
@@ -712,121 +854,47 @@
       <span class="symbol">
         <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#scala.reactive.IsoSystem@→[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method any2ArrowAssoc in scala.Predef.
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
     </li></ol>
             </div>
 
-        <div id="values" class="values members">
-              <h3>Shadowed Implicit Value Members</h3>
-              <ol><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="self:Any"></a>
-      <a id="self:Any"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="implicit shadowed">self</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to
-            <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
-            
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(isoSystem: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
-    </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="self:Any"></a>
-      <a id="self:Any"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="implicit shadowed">self</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to
-            <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
-            
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(isoSystem: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd>StringFormat</dd></dl></div>
-    </li></ol>
-            </div>
+        
 
-        <div id="values" class="values members">
-              <h3>Deprecated Value Members</h3>
-              <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="x:A"></a>
-      <a id="x:IsoSystem"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method any2ArrowAssoc in scala.Predef.
-            
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(isoSystem: ArrowAssoc[IsoSystem]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
-    </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="x:A"></a>
-      <a id="x:IsoSystem"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>] performed by method any2Ensuring in scala.Predef.
-            
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(isoSystem: Ensuring[IsoSystem]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
-    </li></ol>
-            </div>
+        
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.reactive.isolate.Services">
+              <h3>Inherited from <a href="isolate/Services.html" class="extype" name="scala.reactive.isolate.Services">Services</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
             </div>
         <div class="conversion" name="scala.Predef.any2stringadd">
               <h3>Inherited by implicit conversion any2stringadd from
-                <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to <span class="extype" name="scala.runtime.StringAdd">StringAdd</span>
+                <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>]
               </h3>
-            </div><div class="conversion" name="scala.Predef.any2stringfmt">
-              <h3>Inherited by implicit conversion any2stringfmt from
-                <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to <span class="extype" name="scala.runtime.StringFormat">StringFormat</span>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>]
               </h3>
-            </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
-              <h3>Inherited by implicit conversion any2ArrowAssoc from
-                <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>]
-              </h3>
-            </div><div class="conversion" name="scala.Predef.any2Ensuring">
-              <h3>Inherited by implicit conversion any2Ensuring from
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
                 <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reactive.IsoSystem">IsoSystem</a>]
               </h3>
             </div>
         </div>
@@ -843,6 +911,7 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script>
+
+
     </body>
       </html>

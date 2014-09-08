@@ -1,0 +1,2260 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>RCell - io.reactors.RCell</title>
+          <meta name="description" content="RCell - io.reactors.RCell" />
+          <meta name="keywords" content="RCell io.reactors.RCell" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'io.reactors.RCell';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="RCell$.html" title="Go to companion"><img src="../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../package.html" class="extype" name="io">io</a>.<a href="package.html" class="extype" name="io.reactors">reactors</a></p>
+        <h1><a href="RCell$.html" title="Go to companion">RCell</a></h1> <span class="permalink">
+      <a href="../../index.html#io.reactors.RCell" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RCell</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] with <a href="Observer.html" class="extype" name="io.reactors.Observer">Observer</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The reactive cell abstraction represents a mutable memory location
+ whose changes may produce events.</p><p> An <code>RCell</code> is conceptually similar to a reactive emitter lifted into a signal.
+ An <code>RCell</code> can be created full, or empty. If empty, retrieving its value throws
+ an exception. Once assigned, the <code>RCell</code> is no longer empty, until <code>clear</code> gets
+ called.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of the values it stores</p></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="Observer.html" class="extype" name="io.reactors.Observer">Observer</a>[<span class="extype" name="io.reactors.RCell.T">T</span>], <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a>[<span class="extype" name="io.reactors.RCell.T">T</span>], <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a>, <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="io.reactors.RCell"><span>RCell</span></li><li class="in" name="io.reactors.Observer"><span>Observer</span></li><li class="in" name="io.reactors.Signal"><span>Signal</span></li><li class="in" name="io.reactors.Subscription"><span>Subscription</span></li><li class="in" name="io.reactors.Events"><span>Events</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="io.reactors.RCell#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(v:T):io.reactors.RCell[T]"></a>
+      <a id="&lt;init&gt;:RCell[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RCell</span><span class="params">(<span name="v">v: <span class="extype" name="io.reactors.RCell.T">T</span></span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@&lt;init&gt;(v:T):io.reactors.RCell[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates an <code>RCell</code>, initialized with a value.</p>
+    </li><li name="io.reactors.RCell#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():io.reactors.RCell[T]"></a>
+      <a id="&lt;init&gt;:RCell[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RCell</span><span class="params">()</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@&lt;init&gt;():io.reactors.RCell[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates an empty <code>RCell</code>
+</p>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@+(other:String):String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(RCell[T],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@-&gt;[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="io.reactors.RCell#:=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id=":=(v:T):Unit"></a>
+      <a id=":=(T):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $colon$eq" class="name">:=</span><span class="params">(<span name="v">v: <span class="extype" name="io.reactors.RCell.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@:=(v:T):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Assigns a new value to the reactive cell,
+ and emits an event with the new value to all the subscribers.</p><div class="fullcomment"><div class="comment cmt"><p>Assigns a new value to the reactive cell,
+ and emits an event with the new value to all the subscribers.
+</p></div><dl class="paramcmts block"><dt class="param">v</dt><dd class="cmt"><p>the new value
+</p></dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="io.reactors.Events#after" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="after[S](that:io.reactors.Events[S]):io.reactors.Events[T]"></a>
+      <a id="after[S](Events[S]):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">after</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span name="that">that: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.after.S">S</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@after[S](that:io.reactors.Events[S]):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates a new event stream that produces events from <code>this</code> event stream only
+ after <code>that</code> produces an event.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new event stream that produces events from <code>this</code> event stream only
+ after <code>that</code> produces an event.</p><p> After <code>that</code> emits some event, all events from <code>this</code> are produced on the
+ resulting event stream.
+ If <code>that</code> unreacts before an event is produced on <code>this</code>, the resulting event\
+ stream unreacts.
+ If <code>this</code> unreacts, the resulting event stream unreacts.
+</p></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of <code>that</code> event stream</p></dd><dt class="param">that</dt><dd class="cmt"><p>the event stream after whose first event the result can start
+                    propagating events</p></dd><dt>returns</dt><dd class="cmt"><p>the resulting event stream that emits only after <code>that</code> emits
+                    at least once
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Subscription#and" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="and(action:=&gt;Unit):io.reactors.Subscription"></a>
+      <a id="and(⇒Unit):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">and</span><span class="params">(<span name="action">action: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@and(action:=&gt;Unit):io.reactors.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns a new subscription that unsubscribes using this, and executes an action.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a new subscription that unsubscribes using this, and executes an action.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></dd></dl></div>
+    </li><li name="io.reactors.RCell#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply():T"></a>
+      <a id="apply():T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">()</span><span class="result">: <span class="extype" name="io.reactors.RCell.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@apply():T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns the current value in the reactive cell.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the current value in the reactive cell.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the signal's value
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="io.reactors.RCell">RCell</a> → <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="io.reactors.Events#batch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="batch(sz:Int):io.reactors.Events[Seq[T]]"></a>
+      <a id="batch(Int):Events[Seq[T]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">batch</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="io.reactors.RCell.T">T</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@batch(sz:Int):io.reactors.Events[Seq[T]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Groups adjacent events together into batches.</p><div class="fullcomment"><div class="comment cmt"><p>Groups adjacent events together into batches.</p><p> Batches have the specified size, unless <code>this</code> unreacts before sufficiently many
+ events are batched -- in this case, the last batch may have less events than what
+ was specified.</p><p> <b>Note:</b> at the moment, this operation is not specialized, and may incur some
+ boxing when events are primitive elements.</p><pre>time       ---------------------------------------&gt;
+<span class="kw">this</span>       -----<span class="num">1</span>---<span class="num">2</span>---<span class="num">3</span>------------<span class="num">4</span>---<span class="num">5</span>--|
+batch(<span class="num">3</span>)   -------------[<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>]--------[<span class="num">4</span>, <span class="num">5</span>]-|</pre></div><dl class="paramcmts block"><dt class="param">sz</dt><dd class="cmt"><p>the size of each batch, must be greater than <code>0</code></p></dd><dt>returns</dt><dd class="cmt"><p>event stream with batches of adjacent events
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Signal#changes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="changes:io.reactors.Events[T]"></a>
+      <a id="changes:Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">changes</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@changes:io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An event stream that only emits events when the value of <code>this</code> signal changes.</p><div class="fullcomment"><div class="comment cmt"><p>An event stream that only emits events when the value of <code>this</code> signal changes.</p><pre>time    ---------------&gt;
+<span class="kw">this</span>    --<span class="num">1</span>---<span class="num">2</span>--<span class="num">2</span>--<span class="num">3</span>--&gt;
+changes --<span class="num">1</span>---<span class="num">2</span>-----<span class="num">3</span>--&gt;</pre></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a subscription and the signal with changes of <code>this</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a></dd></dl></div>
+    </li><li name="io.reactors.RCell#clear" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="clear():Unit"></a>
+      <a id="clear():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clear</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@clear():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Clears the content of this reactive cell, making it empty.</p>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@clone():Object" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="io.reactors.Events#collect" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="collect[S&lt;:AnyRef](pf:PartialFunction[T,S])(implicitevidence:&lt;:&lt;[T,AnyRef]):io.reactors.Events[S]"></a>
+      <a id="collect[S&lt;:AnyRef](PartialFunction[T,S])(&lt;:&lt;[T,AnyRef]):Events[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">collect</span><span class="tparams">[<span name="S">S &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>]</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="io.reactors.RCell.T">T</span>, <span class="extype" name="io.reactors.Events.collect.S">S</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="io.reactors.RCell.T">T</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.collect.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@collect[S&lt;:AnyRef](pf:PartialFunction[T,S])(implicitevidence:&lt;:&lt;[T,AnyRef]):io.reactors.Events[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Filters events from <code>this</code> event stream and maps them in the same time.</p><div class="fullcomment"><div class="comment cmt"><p>Filters events from <code>this</code> event stream and maps them in the same time.</p><p> The <code>collect</code> combinator uses a partial function <code>pf</code> to filter events
+ from <code>this</code> event stream. Events for which the partial function is defined
+ are mapped using the partial function, others are discarded.</p><p> <b>Note:</b>
+ This combinator is defined only for event streams that contain reference events.
+ You cannot call it for event streams whose events are primitive values, such as
+ <code>Int</code>. This is because the <code>PartialFunction</code> class is not itself specialized.
+</p></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the mapped event stream</p></dd><dt class="param">pf</dt><dd class="cmt"><p>partial function used to filter and map events</p></dd><dt class="param">evidence</dt><dd class="cmt"><p>evidence that <code>T</code> is a reference type</p></dd><dt>returns</dt><dd class="cmt"><p>an event stream with the partially mapped events
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#collectHint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="collectHint[W](pf:PartialFunction[Any,W]):io.reactors.Events[T]"></a>
+      <a id="collectHint[W](PartialFunction[Any,W]):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">collectHint</span><span class="tparams">[<span name="W">W</span>]</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <span class="extype" name="io.reactors.Events.collectHint.W">W</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@collectHint[W](pf:PartialFunction[Any,W]):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Collects values from the event stream by applying a partial function, if possible.</p><div class="fullcomment"><div class="comment cmt"><p>Collects values from the event stream by applying a partial function, if possible.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#concat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="concat[S](implicitevidence:&lt;:&lt;[T,io.reactors.Events[S]],implicita:io.reactors.Arrayable[S]):io.reactors.Events[S]"></a>
+      <a id="concat[S](&lt;:&lt;[T,Events[S]],Arrayable[S]):Events[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">concat</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="io.reactors.RCell.T">T</span>, <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.concat.S">S</span>]]</span>, <span name="a">a: <span class="extype" name="io.reactors.Arrayable">Arrayable</span>[<span class="extype" name="io.reactors.Events.concat.S">S</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.concat.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@concat[S](implicitevidence:&lt;:&lt;[T,io.reactors.Events[S]],implicita:io.reactors.Arrayable[S]):io.reactors.Events[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Concatenates the events produced by all the event streams emitted by <code>this</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Concatenates the events produced by all the event streams emitted by <code>this</code>.</p><p> This operation is only available for event stream values that emit
+ other event streams as events.
+ Once <code>this</code> and all the event streams unreact, this event stream unreacts.</p><p> <b>Use case:</b></p><pre><span class="kw">def</span> concat[S](): Events[S]</pre><p> <b>Note:</b> This operation potentially buffers events from the nested
+ event streams.
+ Unless each event stream emitted by <code>this</code> is known to unreact eventually,
+ this operation should not be called.
+</p></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the events in event streams emitted by <code>this</code></p></dd><dt class="param">evidence</dt><dd class="cmt"><p>evidence that events of type <code>T</code> produced by <code>this</code>
+                   are actually event stream values of type <code>S</code></p></dd><dt class="param">a</dt><dd class="cmt"><p>evidence that arrays can be created for type <code>S</code></p></dd><dt>returns</dt><dd class="cmt"><p>the event stream that concatenates all the events from nested
+                   event streams
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#concat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="concat(that:io.reactors.Events[T])(implicita:io.reactors.Arrayable[T]):io.reactors.Events[T]"></a>
+      <a id="concat(Events[T])(Arrayable[T]):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">concat</span><span class="params">(<span name="that">that: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="a">a: <span class="extype" name="io.reactors.Arrayable">Arrayable</span>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@concat(that:io.reactors.Events[T])(implicita:io.reactors.Arrayable[T]):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates a concatenation of <code>this</code> and <code>that</code> event stream.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a concatenation of <code>this</code> and <code>that</code> event stream.</p><p> The resulting event stream produces all the events from <code>this</code>
+ event stream until <code>this</code> unreacts, and then outputs all the events from
+ <code>that</code> that happened before and after <code>this</code> unreacted.
+ To do this, this operation potentially caches all the events from
+ <code>that</code>.
+ When <code>that</code> unreacts, the resulting event stream unreacts.</p><p> <b>Use case:</b></p><pre><span class="kw">def</span> concat(that: Events[T]): Events[T]</pre><p> <b>Note:</b> This operation potentially caches events from <code>that</code>.
+ Unless certain that <code>this</code> eventually unreacts, <code>concat</code> should not be used.
+</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p>another event stream for the concatenation</p></dd><dt class="param">a</dt><dd class="cmt"><p>evidence that arrays can be created for the type <code>T</code></p></dd><dt>returns</dt><dd class="cmt"><p>event stream that concatenates events from <code>this</code> and <code>that</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#count" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="count(implicitdummy:io.reactors.Spec[T]):io.reactors.Events[Int]"></a>
+      <a id="count(Spec[T]):Events[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">count</span><span class="params">(<span class="implicit">implicit </span><span name="dummy">dummy: <a href="package$$Spec.html" class="extype" name="io.reactors.Spec">Spec</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@count(implicitdummy:io.reactors.Spec[T]):io.reactors.Events[Int]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Emits the total number of events produced by this event stream.</p><div class="fullcomment"><div class="comment cmt"><p>Emits the total number of events produced by this event stream.</p><p> The returned value is a <span class="extype" name="scala.reactive.Signal">scala.reactive.Signal</span> that holds the total number of
+ emitted events.</p><pre>time  ----------------&gt;
+<span class="kw">this</span>  ---x---y--z--|
+count ---<span class="num">1</span>---<span class="num">2</span>--<span class="num">3</span>--|</pre></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an event stream that emits the total number of events emitted
+                   since <code>card</code> was called
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Signal#diffPast" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="diffPast[S](op:(T,T)=&gt;S):io.reactors.Events[S]"></a>
+      <a id="diffPast[S]((T,T)⇒S):Events[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">diffPast</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="io.reactors.RCell.T">T</span>, <span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="io.reactors.Signal.diffPast.S">S</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Signal.diffPast.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@diffPast[S](op:(T,T)=&gt;S):io.reactors.Events[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A signal that produces difference events between the current and previous
+ value of <code>this</code> signal.</p><div class="fullcomment"><div class="comment cmt"><p>A signal that produces difference events between the current and previous
+ value of <code>this</code> signal.</p><pre>time ----------------&gt;
+<span class="kw">this</span> --<span class="num">1</span>--<span class="num">3</span>---<span class="num">6</span>---<span class="num">7</span>--&gt;
+diff --z--<span class="num">2</span>---<span class="num">3</span>---<span class="num">1</span>--&gt;</pre></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the difference event</p></dd><dt class="param">op</dt><dd class="cmt"><p>the operator that computes the difference between
+                 consecutive events</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and a signal with the difference value
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a></dd></dl></div>
+    </li><li name="io.reactors.Events#drop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="drop(n:Int):io.reactors.Events[T]"></a>
+      <a id="drop(Int):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">drop</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@drop(n:Int):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Drops <code>n</code> events from this event stream, and emits the rest.</p><div class="fullcomment"><div class="comment cmt"><p>Drops <code>n</code> events from this event stream, and emits the rest.
+</p></div><dl class="paramcmts block"><dt class="param">n</dt><dd class="cmt"><p>number of events to drop</p></dd><dt>returns</dt><dd class="cmt"><p>event stream with the forwarded events
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#dropAfter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dropAfter(p:T=&gt;Boolean):io.reactors.Events[T]"></a>
+      <a id="dropAfter((T)⇒Boolean):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dropAfter</span><span class="params">(<span name="p">p: (<span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@dropAfter(p:T=&gt;Boolean):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Drop all events after an event that satisfies a predicate.</p><div class="fullcomment"><div class="comment cmt"><p>Drop all events after an event that satisfies a predicate.</p><p> This is similar to <code>takeWhile</code>, but includes the event that satisfies the
+ predicate.</p><pre>time                ------------------------&gt;
+<span class="kw">this</span>                -<span class="num">0</span>---<span class="num">1</span>--<span class="num">2</span>--<span class="num">3</span>-<span class="num">4</span>--<span class="num">1</span>-<span class="num">5</span>--<span class="num">2</span>--&gt;
+dropAfter(_ == <span class="num">4</span>)       -<span class="num">1</span>--<span class="num">2</span>--<span class="num">3</span>-<span class="num">4</span>|</pre></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>the predicate that specifies whether to drop subsequent events</p></dd><dt>returns</dt><dd class="cmt"><p>event stream with the forwarded events
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#dropWhile" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dropWhile(p:T=&gt;Boolean):io.reactors.Events[T]"></a>
+      <a id="dropWhile((T)⇒Boolean):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dropWhile</span><span class="params">(<span name="p">p: (<span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@dropWhile(p:T=&gt;Boolean):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns a new event stream that forwards the events from <code>this</code> event stream as
+ long as they satisfy the predicate <code>p</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a new event stream that forwards the events from <code>this</code> event stream as
+ long as they satisfy the predicate <code>p</code>.</p><p> After an event that does not specify the predicate occurs, the resulting event
+ stream unreacts.</p><p> If the predicate throws an exception, the exceptions is propagated, and the
+ resulting event stream unreacts.</p><pre>time             ------------------------&gt;
+<span class="kw">this</span>             -<span class="num">0</span>---<span class="num">1</span>--<span class="num">2</span>--<span class="num">3</span>-<span class="num">4</span>--<span class="num">1</span>-<span class="num">5</span>--<span class="num">2</span>--&gt;
+dropWhile(_ &lt; <span class="num">4</span>)     ---------<span class="num">4</span>--<span class="num">1</span>-<span class="num">5</span>--<span class="num">2</span>--&gt;</pre></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>the predicate that specifies whether to take the element</p></dd><dt>returns</dt><dd class="cmt"><p>event stream with the forwarded events
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((RCell[T])⇒Boolean,⇒Any):RCell[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((RCell[T])⇒Boolean):RCell[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@ensuring(cond:A=&gt;Boolean):A" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):RCell[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):RCell[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@ensuring(cond:Boolean):A" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="io.reactors.RCell#except" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="except(t:Throwable):Unit"></a>
+      <a id="except(Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">except</span><span class="params">(<span name="t">t: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@except(t:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Propagates the exception to all the reactors.</p><div class="fullcomment"><div class="comment cmt"><p>Propagates the exception to all the reactors.</p></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>the exception passed to the observer</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="io.reactors.RCell">RCell</a> → <a href="Observer.html" class="extype" name="io.reactors.Observer">Observer</a></dd></dl></div>
+    </li><li name="io.reactors.Events#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="filter(p:T=&gt;Boolean):io.reactors.Events[T]"></a>
+      <a id="filter((T)⇒Boolean):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">filter</span><span class="params">(<span name="p">p: (<span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@filter(p:T=&gt;Boolean):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Filters events from <code>this</code> event stream value using a specified predicate <code>p</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Filters events from <code>this</code> event stream value using a specified predicate <code>p</code>.</p><p> Only events from <code>this</code> for which <code>p</code> returns <code>true</code> are emitted on the
+ resulting event stream.
+</p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>the predicate used to filter events</p></dd><dt>returns</dt><dd class="cmt"><p>an event streams with the filtered events
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="io.reactors.Events#first" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="first[S](implicitevidence:&lt;:&lt;[T,io.reactors.Events[S]]):io.reactors.Events[S]"></a>
+      <a id="first[S](&lt;:&lt;[T,Events[S]]):Events[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">first</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="io.reactors.RCell.T">T</span>, <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.first.S">S</span>]]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.first.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@first[S](implicitevidence:&lt;:&lt;[T,io.reactors.Events[S]]):io.reactors.Events[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns an event stream that forwards from the first active nested event stream.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an event stream that forwards from the first active nested event stream.</p><p> Regardless of the order in which the nested event streams were emitted, only the
+ nested event stream that is the first to emit an event gets chosen.</p><p> This is illustrated in the following, where the second event stream in <code>this</code> is
+ the first to emit an event.</p><pre>time   ---------------------------&gt;
+<span class="kw">this</span>       ------<span class="num">4</span>--<span class="num">7</span>---<span class="num">11</span>--------&gt;
+             --<span class="num">1</span>------<span class="num">2</span>-----<span class="num">3</span>-----&gt;
+                 --------<span class="num">0</span>---<span class="num">5</span>----&gt;
+first  --------<span class="num">1</span>------<span class="num">1</span>-----<span class="num">3</span>-----&gt;</pre></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the events in event stream emitted by <code>this</code></p></dd><dt class="param">evidence</dt><dd class="cmt"><p>evidence that events of type <code>T</code> produced by <code>this</code>
+                   are actually event streams of type <code>S</code></p></dd><dt>returns</dt><dd class="cmt"><p>event stream that concatenates all the events from nested
+                   event streams
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@formatted(fmtstr:String):String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="io.reactors.Events#get" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="get:T"></a>
+      <a id="get:T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get</span><span class="result">: <span class="extype" name="io.reactors.RCell.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@get:T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns the first event emitted by this event stream.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the first event emitted by this event stream.</p><p> This method will return immediately and will not block.</p><p> This method will return a value only if this event stream emits one or more values
+ on subscription. Otherwise, this method throws a <code>NoSuchElementException</code>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="io.reactors.Events#groupBy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="groupBy[K](f:T=&gt;K):io.reactors.Events[(K,io.reactors.Events[T])]"></a>
+      <a id="groupBy[K]((T)⇒K):Events[(K,Events[T])]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">groupBy</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="io.reactors.Events.groupBy.K">K</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[(<span class="extype" name="io.reactors.Events.groupBy.K">K</span>, <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>])]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@groupBy[K](f:T=&gt;K):io.reactors.Events[(K,io.reactors.Events[T])]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns an event stream that groups events into event stream using a function.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an event stream that groups events into event stream using a function.</p><p> For each unique key returned by the specified function <code>f</code>, the resulting event
+ stream emits a pair with the key and the event stream of values that map to that
+ key. The resulting event stream unreacts when <code>this</code> event stream unreacts. The
+ nested event streams also unreact when <code>this</code> event stream unreacts.</p><pre>time            -----------------------------&gt;
+<span class="kw">this</span>            ---<span class="num">3</span>-------<span class="num">5</span>----<span class="num">4</span>------<span class="num">7</span>--<span class="num">8</span>--&gt;
+groupBy(_ % <span class="num">2</span>)     (<span class="num">1</span>, <span class="num">3</span>---<span class="num">5</span>-----------<span class="num">7</span>-----&gt;)
+                                (<span class="num">0</span>, <span class="num">4</span>-----<span class="num">8</span>--&gt;)</pre></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"><p>the type of the keys according to which events are grouped</p></dd><dt class="param">f</dt><dd class="cmt"><p>the grouping function for the events</p></dd><dt>returns</dt><dd class="cmt"><p>event stream that emits keys and associated event streams
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="io.reactors.Events#ignoreExceptions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ignoreExceptions:io.reactors.Events[T]"></a>
+      <a id="ignoreExceptions:Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ignoreExceptions</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@ignoreExceptions:io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns an event stream that ignores all exceptions in this event stream.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an event stream that ignores all exceptions in this event stream.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an event stream that forwards all events,
+                    and ignores all exceptions
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#incremental" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="incremental[S](state:=&gt;(io.reactors.Subscription,io.reactors.Observer[S]=&gt;Unit))(implicits:io.reactors.Spec[S]):io.reactors.Events[S]"></a>
+      <a id="incremental[S](⇒(Subscription,(Observer[S])⇒Unit))(Spec[S]):Events[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">incremental</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span name="state">state: ⇒ (<a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a>, (<a href="Observer.html" class="extype" name="io.reactors.Observer">Observer</a>[<span class="extype" name="io.reactors.Events.incremental.S">S</span>]) ⇒ <span class="extype" name="scala.Unit">Unit</span>)</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="s">s: <a href="package$$Spec.html" class="extype" name="io.reactors.Spec">Spec</a>[<span class="extype" name="io.reactors.Events.incremental.S">S</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.incremental.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@incremental[S](state:=&gt;(io.reactors.Subscription,io.reactors.Observer[S]=&gt;Unit))(implicits:io.reactors.Spec[S]):io.reactors.Events[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Incrementally computes state, and emits events to an observer.</p><div class="fullcomment"><div class="comment cmt"><p>Incrementally computes state, and emits events to an observer.</p><p> Creates an incrementally updated state, and uses it to emit events to an observer
+ whenever <code>this</code> event stream emits an event.
+</p></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>type of the output events</p></dd><dt class="param">state</dt><dd class="cmt"><p>function that creates some incrementally computed state, and
+                  returns a tuple of the subscription for that state, and the
+                  function that emits events from this state</p></dd><dt>returns</dt><dd class="cmt"><p>an event stream that emits a sampled view of the state whenever
+                  <code>this</code> event stream emits an event
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.RCell#isEmpty" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isEmpty:Boolean"></a>
+      <a id="isEmpty:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isEmpty</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@isEmpty:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns <code>false</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Returns <code>false</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="io.reactors.RCell">RCell</a> → <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="io.reactors.Events#liftTry" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="liftTry:io.reactors.Events[scala.util.Try[T]]"></a>
+      <a id="liftTry:Events[Try[T]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">liftTry</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="io.reactors.RCell.T">T</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@liftTry:io.reactors.Events[scala.util.Try[T]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Converts an event stream of <code>Events[T]</code> to type <code>Events[Try[T]]</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Converts an event stream of <code>Events[T]</code> to type <code>Events[Try[T]]</code>.</p><p> Inbound exceptions are lifted into <code>Failure</code> events, while normal events are
+ converted into <code>Success</code> events.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="map[S](f:T=&gt;S):io.reactors.Events[S]"></a>
+      <a id="map[S]((T)⇒S):Events[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">map</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="io.reactors.Events.map.S">S</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.map.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@map[S](f:T=&gt;S):io.reactors.Events[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns a new stream that maps events from <code>this</code> stream using the function <code>f</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a new stream that maps events from <code>this</code> stream using the function <code>f</code>.</p><pre>time    ---------------------&gt;
+<span class="kw">this</span>    --e1------e2------|
+mapped  --f(e1)---f(e2)---|</pre></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the mapped events</p></dd><dt class="param">f</dt><dd class="cmt"><p>the mapping function</p></dd><dt>returns</dt><dd class="cmt"><p>event stream value with the mapped events
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#mutate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mutate[M1&gt;:Null&lt;:AnyRef,M2&gt;:Null&lt;:AnyRef,M3&gt;:Null&lt;:AnyRef](m1:io.reactors.Events.Mutable[M1],m2:io.reactors.Events.Mutable[M2],m3:io.reactors.Events.Mutable[M3])(f:(M1,M2,M3)=&gt;T=&gt;Unit)(implicitdummy:io.reactors.Spec[T]):io.reactors.Subscription"></a>
+      <a id="mutate[M1&lt;:AnyRef&gt;:Null,M2&lt;:AnyRef&gt;:Null,M3&lt;:AnyRef&gt;:Null](Mutable[M1],Mutable[M2],Mutable[M3])((M1,M2,M3)⇒(T)⇒Unit)(Spec[T]):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mutate</span><span class="tparams">[<span name="M1">M1 &gt;: <span class="extype" name="scala.Null">Null</span> &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>, <span name="M2">M2 &gt;: <span class="extype" name="scala.Null">Null</span> &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>, <span name="M3">M3 &gt;: <span class="extype" name="scala.Null">Null</span> &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>]</span><span class="params">(<span name="m1">m1: <a href="Events$$Mutable.html" class="extype" name="io.reactors.Events.Mutable">Mutable</a>[<span class="extype" name="io.reactors.Events.mutate.M1">M1</span>]</span>, <span name="m2">m2: <a href="Events$$Mutable.html" class="extype" name="io.reactors.Events.Mutable">Mutable</a>[<span class="extype" name="io.reactors.Events.mutate.M2">M2</span>]</span>, <span name="m3">m3: <a href="Events$$Mutable.html" class="extype" name="io.reactors.Events.Mutable">Mutable</a>[<span class="extype" name="io.reactors.Events.mutate.M3">M3</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="io.reactors.Events.mutate.M1">M1</span>, <span class="extype" name="io.reactors.Events.mutate.M2">M2</span>, <span class="extype" name="io.reactors.Events.mutate.M3">M3</span>) ⇒ (<span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="dummy">dummy: <a href="package$$Spec.html" class="extype" name="io.reactors.Spec">Spec</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@mutate[M1&gt;:Null&lt;:AnyRef,M2&gt;:Null&lt;:AnyRef,M3&gt;:Null&lt;:AnyRef](m1:io.reactors.Events.Mutable[M1],m2:io.reactors.Events.Mutable[M2],m3:io.reactors.Events.Mutable[M3])(f:(M1,M2,M3)=&gt;T=&gt;Unit)(implicitdummy:io.reactors.Spec[T]):io.reactors.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Mutates multiple mutable event stream values <code>m1</code>, <code>m2</code> and <code>m3</code> each time that
+ <code>this</code> event stream produces an event.</p><div class="fullcomment"><div class="comment cmt"><p>Mutates multiple mutable event stream values <code>m1</code>, <code>m2</code> and <code>m3</code> each time that
+ <code>this</code> event stream produces an event.</p><p> Note that the objects <code>m1</code>, <code>m2</code> and <code>m3</code> are mutated simultaneously, and events
+ are propagated after the mutation ends. This version of the <code>mutate</code> works on
+ multiple event streams.
+</p></div><dl class="paramcmts block"><dt class="tparam">M1</dt><dd class="cmt"><p>the type of the first mutable event stream</p></dd><dt class="tparam">M2</dt><dd class="cmt"><p>the type of the second mutable event stream</p></dd><dt class="tparam">M3</dt><dd class="cmt"><p>the type of the third mutable event stream</p></dd><dt class="param">m1</dt><dd class="cmt"><p>the first mutable stream</p></dd><dt class="param">m2</dt><dd class="cmt"><p>the second mutable stream</p></dd><dt class="param">m3</dt><dd class="cmt"><p>the second mutable stream</p></dd><dt class="param">f</dt><dd class="cmt"><p>the function that modifies the mutables</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription used to cancel this mutation
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#mutate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mutate[M1&gt;:Null&lt;:AnyRef,M2&gt;:Null&lt;:AnyRef](m1:io.reactors.Events.Mutable[M1],m2:io.reactors.Events.Mutable[M2])(f:(M1,M2)=&gt;T=&gt;Unit):io.reactors.Subscription"></a>
+      <a id="mutate[M1&lt;:AnyRef&gt;:Null,M2&lt;:AnyRef&gt;:Null](Mutable[M1],Mutable[M2])((M1,M2)⇒(T)⇒Unit):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mutate</span><span class="tparams">[<span name="M1">M1 &gt;: <span class="extype" name="scala.Null">Null</span> &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>, <span name="M2">M2 &gt;: <span class="extype" name="scala.Null">Null</span> &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>]</span><span class="params">(<span name="m1">m1: <a href="Events$$Mutable.html" class="extype" name="io.reactors.Events.Mutable">Mutable</a>[<span class="extype" name="io.reactors.Events.mutate.M1">M1</span>]</span>, <span name="m2">m2: <a href="Events$$Mutable.html" class="extype" name="io.reactors.Events.Mutable">Mutable</a>[<span class="extype" name="io.reactors.Events.mutate.M2">M2</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="io.reactors.Events.mutate.M1">M1</span>, <span class="extype" name="io.reactors.Events.mutate.M2">M2</span>) ⇒ (<span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@mutate[M1&gt;:Null&lt;:AnyRef,M2&gt;:Null&lt;:AnyRef](m1:io.reactors.Events.Mutable[M1],m2:io.reactors.Events.Mutable[M2])(f:(M1,M2)=&gt;T=&gt;Unit):io.reactors.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Mutates multiple mutable event stream values <code>m1</code> and <code>m2</code> each time that <code>this</code>
+ event stream produces an event.</p><div class="fullcomment"><div class="comment cmt"><p>Mutates multiple mutable event stream values <code>m1</code> and <code>m2</code> each time that <code>this</code>
+ event stream produces an event.</p><p> Note that the objects <code>m1</code> and <code>m2</code> are mutated simultaneously, and events are
+ propagated after the mutation ends. This version of the <code>mutate</code> works on multiple
+ event streams.
+</p></div><dl class="paramcmts block"><dt class="tparam">M1</dt><dd class="cmt"><p>the type of the first mutable event stream</p></dd><dt class="tparam">M2</dt><dd class="cmt"><p>the type of the second mutable event stream</p></dd><dt class="param">m1</dt><dd class="cmt"><p>the first mutable stream</p></dd><dt class="param">m2</dt><dd class="cmt"><p>the second mutable stream</p></dd><dt class="param">f</dt><dd class="cmt"><p>the function that modifies the mutables</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription used to cancel this mutation
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#mutate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mutate[M&gt;:Null&lt;:AnyRef](m:io.reactors.Events.Mutable[M])(f:M=&gt;(T=&gt;Unit)):io.reactors.Subscription"></a>
+      <a id="mutate[M&lt;:AnyRef&gt;:Null](Mutable[M])((M)⇒(T)⇒Unit):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mutate</span><span class="tparams">[<span name="M">M &gt;: <span class="extype" name="scala.Null">Null</span> &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>]</span><span class="params">(<span name="m">m: <a href="Events$$Mutable.html" class="extype" name="io.reactors.Events.Mutable">Mutable</a>[<span class="extype" name="io.reactors.Events.mutate.M">M</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="io.reactors.Events.mutate.M">M</span>) ⇒ (<span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@mutate[M&gt;:Null&lt;:AnyRef](m:io.reactors.Events.Mutable[M])(f:M=&gt;(T=&gt;Unit)):io.reactors.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Mutates the target mutable event stream called <code>mutable</code> each time <code>this</code>
+ event stream produces an event.</p><div class="fullcomment"><div class="comment cmt"><p>Mutates the target mutable event stream called <code>mutable</code> each time <code>this</code>
+ event stream produces an event.</p><p> Here is an example, given an event stream of type <code>r</code>:</p><pre><span class="kw">val</span> eventLog = <span class="kw">new</span> Events.Mutable(mutable.Buffer[<span class="std">String</span>]())
+<span class="kw">val</span> eventLogMutations = r.mutate(eventLog) { buffer <span class="kw">=&gt;</span> event <span class="kw">=&gt;</span>
+  buffer += <span class="lit">"at "</span> + System.nanoTime + <span class="lit">": "</span> + event
+} <span class="cmt">// <-- eventLog event propagated</span></pre><p> Whenever an event arrives on <code>r</code>, an entry is added to the buffer underlying
+ <code>eventLog</code>. After the mutation completes, a modification event is produced by
+ the <code>eventLog</code> and can be used subsequently:</p><pre><span class="kw">val</span> uiUpdates = eventLog onEvent { b <span class="kw">=&gt;</span>
+  eventListWidget.add(b.last)
+}</pre><p> <b>Note:</b>
+ No two events will ever be concurrently processed by different threads on the same
+ event stream mutable, but an event that is propagated from within the <code>mutation</code>
+ can trigger an event on <code>this</code>.
+ The result is that <code>mutation</code> is invoked concurrently on the same thread.
+ The following code is problematic has a feedback loop in the dataflow graph:</p><pre><span class="kw">val</span> emitter = <span class="kw">new</span> Events.Emitter[<span class="std">Int</span>]
+<span class="kw">val</span> mutable = <span class="kw">new</span> Events.Mutable[mutable.Buffer[<span class="std">Int</span>]()]
+emitter.mutate(mutable) { buffer <span class="kw">=&gt;</span> n <span class="kw">=&gt;</span>
+  buffer += n
+  <span class="kw">if</span> (n == <span class="num">0</span>)
+    emitter.react(n + <span class="num">1</span>) <span class="cmt">// <-- event propagated</span>
+  assert(buffer.last == n)
+}
+emitter.react(<span class="num">0</span>)</pre><p> The statement <code>emitter.react(n + 1)</code> in the <code>mutate</code> block
+ suspends the current mutation, calls the mutation
+ recursively and changes the value of <code>cell</code>, and the assertion fails when
+ the first mutation resumes.</p><p> Care must be taken to avoid <code>f</code> from emitting events in feedback loops.
+</p></div><dl class="paramcmts block"><dt class="tparam">M</dt><dd class="cmt"><p>the type of the event stream mutable value</p></dd><dt class="param">m</dt><dd class="cmt"><p>the target mutable stream to be mutated with events from this stream</p></dd><dt class="param">f</dt><dd class="cmt"><p>the function that modifies <code>mutable</code> given an event of
+             type <code>T</code></p></dd><dt>returns</dt><dd class="cmt"><p>a subscription used to cancel this mutation
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#mux" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mux[S](implicitevidence:&lt;:&lt;[T,io.reactors.Events[S]],implicitds:io.reactors.Spec[S]):io.reactors.Events[S]"></a>
+      <a id="mux[S](&lt;:&lt;[T,Events[S]],Spec[S]):Events[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mux</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="io.reactors.RCell.T">T</span>, <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.mux.S">S</span>]]</span>, <span name="ds">ds: <a href="package$$Spec.html" class="extype" name="io.reactors.Spec">Spec</a>[<span class="extype" name="io.reactors.Events.mux.S">S</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.mux.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@mux[S](implicitevidence:&lt;:&lt;[T,io.reactors.Events[S]],implicitds:io.reactors.Spec[S]):io.reactors.Events[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns events from the last event stream that <code>this</code> emitted as an
+ event of its own, in effect multiplexing the nested reactives.</p><div class="fullcomment"><div class="comment cmt"><p>Returns events from the last event stream that <code>this</code> emitted as an
+ event of its own, in effect multiplexing the nested reactives.</p><p> The resulting event stream only emits events from the event stream last
+ emitted by <code>this</code>, the preceding event streams are ignored.</p><p> This combinator is only available if this event stream emits events
+ that are themselves event streams.</p><p> Example:</p><pre><span class="kw">val</span> currentEvents = <span class="kw">new</span> Events.Emitter[Events[<span class="std">Int</span>]]
+<span class="kw">val</span> e1 = <span class="kw">new</span> Events.Emitter[<span class="std">Int</span>]
+<span class="kw">val</span> e2 = <span class="kw">new</span> Events.Emitter[<span class="std">Int</span>]
+<span class="kw">val</span> currentEvent = currentEvents.mux()
+<span class="kw">val</span> prints = currentEvent.onEvent(println)
+
+currentEvents.react(e1)
+e2.react(<span class="num">1</span>) <span class="cmt">// nothing is printed</span>
+e1.react(<span class="num">2</span>) <span class="cmt">// 2 is printed</span>
+currentEvents.react(e2)
+e2.react(<span class="num">6</span>) <span class="cmt">// 6 is printed</span>
+e1.react(<span class="num">7</span>) <span class="cmt">// nothing is printed</span></pre><p> Shown on the diagram:</p><pre>time            -------------------&gt;
+currentEvents   --e1------e2-------&gt;
+e1              --------<span class="num">2</span>----<span class="num">6</span>-----&gt;
+e2              -----<span class="num">1</span>----------<span class="num">7</span>--&gt;
+currentEvent    --------<span class="num">2</span>----<span class="num">6</span>-----&gt;</pre><p> <b>Use case:</b></p><pre><span class="kw">def</span> mux[S](): Events[S]</pre></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the events in the nested event stream</p></dd><dt class="param">evidence</dt><dd class="cmt"><p>an implicit evidence that <code>this</code> event stream is nested -- it
+                    emits events of type <code>T</code> that is actually an <code>Events[S]</code></p></dd><dt>returns</dt><dd class="cmt"><p>event stream of events from the event stream last emitted by
+                    <code>this</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="io.reactors.Signal#nonEmpty" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nonEmpty:Boolean"></a>
+      <a id="nonEmpty:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nonEmpty</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@nonEmpty:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns <code>true</code> iff this signal has a value.</p><div class="fullcomment"><div class="comment cmt"><p>Returns <code>true</code> iff this signal has a value.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a></dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@notify():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="io.reactors.Events#on" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="on(observer:=&gt;Unit)(implicitdummy:io.reactors.Spec[T]):io.reactors.Subscription"></a>
+      <a id="on(⇒Unit)(Spec[T]):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">on</span><span class="params">(<span name="observer">observer: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="dummy">dummy: <a href="package$$Spec.html" class="extype" name="io.reactors.Spec">Spec</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@on(observer:=&gt;Unit)(implicitdummy:io.reactors.Spec[T]):io.reactors.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Registers a callback for react events, disregarding their values</p><div class="fullcomment"><div class="comment cmt"><p>Registers a callback for react events, disregarding their values</p><p> A shorthand for <code>onReaction</code> -- called whenever an event occurs.</p><p> This method is handy when the precise event value is not important,
+ or the type of the event is <code>Unit</code>.
+</p></div><dl class="paramcmts block"><dt class="param">observer</dt><dd class="cmt"><p>the callback invoked when an event arrives</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription for unsubscribing from reactions
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#onDone" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onDone(observer:=&gt;Unit)(implicitdummy:io.reactors.Spec[T]):io.reactors.Subscription"></a>
+      <a id="onDone(⇒Unit)(Spec[T]):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onDone</span><span class="params">(<span name="observer">observer: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="dummy">dummy: <a href="package$$Spec.html" class="extype" name="io.reactors.Spec">Spec</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@onDone(observer:=&gt;Unit)(implicitdummy:io.reactors.Spec[T]):io.reactors.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Executes the specified block when <code>this</code> event stream unreacts.</p><div class="fullcomment"><div class="comment cmt"><p>Executes the specified block when <code>this</code> event stream unreacts.
+</p></div><dl class="paramcmts block"><dt class="param">observer</dt><dd class="cmt"><p>the callback invoked when <code>this</code> unreacts</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription for the unreaction notification
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#onEvent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onEvent(observer:T=&gt;Unit):io.reactors.Subscription"></a>
+      <a id="onEvent((T)⇒Unit):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onEvent</span><span class="params">(<span name="observer">observer: (<span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@onEvent(observer:T=&gt;Unit):io.reactors.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Registers callback for react events.</p><div class="fullcomment"><div class="comment cmt"><p>Registers callback for react events.</p><p> A shorthand for <code>onReaction</code> -- the specified function is invoked whenever
+ there is an event.
+</p></div><dl class="paramcmts block"><dt class="param">observer</dt><dd class="cmt"><p>the callback for events</p></dd><dt>returns</dt><dd class="cmt"><p>a subcriptions for unsubscribing from reactions
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#onEventOrDone" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onEventOrDone(reactFunc:T=&gt;Unit)(unreactFunc:=&gt;Unit):io.reactors.Subscription"></a>
+      <a id="onEventOrDone((T)⇒Unit)(⇒Unit):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onEventOrDone</span><span class="params">(<span name="reactFunc">reactFunc: (<span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="params">(<span name="unreactFunc">unreactFunc: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@onEventOrDone(reactFunc:T=&gt;Unit)(unreactFunc:=&gt;Unit):io.reactors.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Registers callbacks for react and unreact events.</p><div class="fullcomment"><div class="comment cmt"><p>Registers callbacks for react and unreact events.</p><p> A shorthand for <code>onReaction</code> -- the specified functions are invoked whenever there
+ is an event or an unreaction.
+</p></div><dl class="paramcmts block"><dt class="param">reactFunc</dt><dd class="cmt"><p>called when this event stream produces an event</p></dd><dt class="param">unreactFunc</dt><dd class="cmt"><p>called when this event stream unreacts</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription for unsubscribing from reactions
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#onExcept" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onExcept(pf:PartialFunction[Throwable,Unit]):io.reactors.Subscription"></a>
+      <a id="onExcept(PartialFunction[Throwable,Unit]):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onExcept</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Throwable">Throwable</span>, <span class="extype" name="scala.Unit">Unit</span>]</span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@onExcept(pf:PartialFunction[Throwable,Unit]):io.reactors.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Executes the specified block when <code>this</code> event stream forwards an exception.</p><div class="fullcomment"><div class="comment cmt"><p>Executes the specified block when <code>this</code> event stream forwards an exception.
+</p></div><dl class="paramcmts block"><dt class="param">pf</dt><dd class="cmt"><p>the partial function used to handle the exception</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription for the exception notifications
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#onMatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onMatch(observer:PartialFunction[T,Unit])(implicitsub:&lt;:&lt;[T,AnyRef]):io.reactors.Subscription"></a>
+      <a id="onMatch(PartialFunction[T,Unit])(&lt;:&lt;[T,AnyRef]):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onMatch</span><span class="params">(<span name="observer">observer: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="io.reactors.RCell.T">T</span>, <span class="extype" name="scala.Unit">Unit</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sub">sub: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="io.reactors.RCell.T">T</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@onMatch(observer:PartialFunction[T,Unit])(implicitsub:&lt;:&lt;[T,AnyRef]):io.reactors.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Registers callback for events that match the specified patterns.</p><div class="fullcomment"><div class="comment cmt"><p>Registers callback for events that match the specified patterns.</p><p> A shorthand for <code>onReaction</code> -- the specified partial function is applied
+ to only those events for which it is defined.</p><p> This method only works for <code>AnyRef</code> values.</p><p> Example:</p><pre>r onMatch {
+  <span class="kw">case</span> s: <span class="std">String</span> <span class="kw">=&gt;</span> println(s)
+  <span class="kw">case</span> n: <span class="std">Int</span>    <span class="kw">=&gt;</span> println(<span class="lit">"number "</span> + s)
+}</pre><p> <b>Use case</b>:</p><pre><span class="kw">def</span> onMatch(reactor: PartialFunction[T, <span class="std">Unit</span>]): Subscription</pre></div><dl class="paramcmts block"><dt class="param">observer</dt><dd class="cmt"><p>the callback for those events for which it is defined</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription for unsubscribing from reactions
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.RCell#onReaction" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onReaction(obs:io.reactors.Observer[T]):io.reactors.Subscription"></a>
+      <a id="onReaction(Observer[T]):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onReaction</span><span class="params">(<span name="obs">obs: <a href="Observer.html" class="extype" name="io.reactors.Observer">Observer</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@onReaction(obs:io.reactors.Observer[T]):io.reactors.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Registers a new <code>observer</code> to this event stream.</p><div class="fullcomment"><div class="comment cmt"><p>Registers a new <code>observer</code> to this event stream.</p><p> The <code>observer</code> argument may be invoked multiple times -- whenever an event is
+ produced, or an exception occurs, and at most once when the event stream is
+ terminated. After the event stream terminates, no events or exceptions are
+ propagated on this event stream any more.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a subscription for unsubscribing from reactions
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="io.reactors.RCell">RCell</a> → <a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#once" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="once:io.reactors.Events[T]"></a>
+      <a id="once:Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">once</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@once:io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates an event stream that forwards an event from this event stream only once.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an event stream that forwards an event from this event stream only once.</p><p> The resulting event stream emits only a single event produced by <code>this</code>
+ event stream after <code>once</code> is called, and then unreacts.</p><pre>time -----------------&gt;
+<span class="kw">this</span> --<span class="num">1</span>-----<span class="num">2</span>----<span class="num">3</span>---&gt;
+once      ---<span class="num">2</span>|</pre></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an event stream with the first event from <code>this</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Signal#past2" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="past2(init:T):io.reactors.Events[(T,T)]"></a>
+      <a id="past2(T):Events[(T,T)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">past2</span><span class="params">(<span name="init">init: <span class="extype" name="io.reactors.RCell.T">T</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[(<span class="extype" name="io.reactors.RCell.T">T</span>, <span class="extype" name="io.reactors.RCell.T">T</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@past2(init:T):io.reactors.Events[(T,T)]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates a new signal that emits tuples of the current
+ and the last event emitted by <code>this</code> signal.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new signal that emits tuples of the current
+ and the last event emitted by <code>this</code> signal.</p><pre>time  ----------------------&gt;
+<span class="kw">this</span>  <span class="num">1</span>----<span class="num">2</span>------<span class="num">3</span>----<span class="num">4</span>----&gt;
+past2 i,<span class="num">1</span>--<span class="num">1</span>,<span class="num">2</span>----<span class="num">2</span>,<span class="num">3</span>--<span class="num">3</span>,<span class="num">4</span>--&gt;</pre></div><dl class="paramcmts block"><dt class="param">init</dt><dd class="cmt"><p>the initial previous value, <code>i</code> in the diagram above</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and a signal of tuples of the current and
+                 last event
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a></dd></dl></div>
+    </li><li name="io.reactors.Events#pipe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="pipe(ch:io.reactors.Channel[T]):io.reactors.Subscription"></a>
+      <a id="pipe(Channel[T]):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pipe</span><span class="params">(<span name="ch">ch: <a href="Channel.html" class="extype" name="io.reactors.Channel">Channel</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@pipe(ch:io.reactors.Channel[T]):io.reactors.Subscription" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Pipes the events on this input stream to the target channel.</p><div class="fullcomment"><div class="comment cmt"><p>Pipes the events on this input stream to the target channel.</p><p> Exceptions are ignored.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#possibly" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="possibly(probability:Double):io.reactors.Events[T]"></a>
+      <a id="possibly(Double):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">possibly</span><span class="params">(<span name="probability">probability: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@possibly(probability:Double):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Forwards an event from this event stream with some probability.</p><div class="fullcomment"><div class="comment cmt"><p>Forwards an event from this event stream with some probability.</p><p> The probability is specified as a real value from 0.0 to 1.0.
+</p></div><dl class="paramcmts block"><dt class="param">probability</dt><dd class="cmt"><p>the probability to forward an event</p></dd><dt>returns</dt><dd class="cmt"><p>the event stream that forwards events with some probability
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.RCell#react" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="react(x:T,hint:Any):Unit"></a>
+      <a id="react(T,Any):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">react</span><span class="params">(<span name="x">x: <span class="extype" name="io.reactors.RCell.T">T</span></span>, <span name="hint">hint: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@react(x:T,hint:Any):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Called by an event stream when an event <code>value</code> is produced.</p><div class="fullcomment"><div class="comment cmt"><p>Called by an event stream when an event <code>value</code> is produced.
+</p></div><dl class="paramcmts block"><dt class="param">hint</dt><dd class="cmt"><p>an additional, optional value from the event source, usually <code>null</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="io.reactors.RCell">RCell</a> → <a href="Observer.html" class="extype" name="io.reactors.Observer">Observer</a></dd></dl></div>
+    </li><li name="io.reactors.RCell#react" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="react(x:T):Unit"></a>
+      <a id="react(T):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">react</span><span class="params">(<span name="x">x: <span class="extype" name="io.reactors.RCell.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@react(x:T):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Same as <code>:=</code>.</p>
+    </li><li name="io.reactors.Events#recover" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="recover[U&gt;:T](pf:PartialFunction[Throwable,U])(implicitevid:&lt;:&lt;[U,AnyRef]):io.reactors.Events[U]"></a>
+      <a id="recover[U&gt;:T](PartialFunction[Throwable,U])(&lt;:&lt;[U,AnyRef]):Events[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">recover</span><span class="tparams">[<span name="U">U &gt;: <span class="extype" name="io.reactors.RCell.T">T</span></span>]</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Throwable">Throwable</span>, <span class="extype" name="io.reactors.Events.recover.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evid">evid: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="io.reactors.Events.recover.U">U</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.recover.U">U</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@recover[U&gt;:T](pf:PartialFunction[Throwable,U])(implicitevid:&lt;:&lt;[U,AnyRef]):io.reactors.Events[U]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Transforms emitted exceptions into an event stream.</p><div class="fullcomment"><div class="comment cmt"><p>Transforms emitted exceptions into an event stream.</p><p> If the specified partial function is defined for the exception,
+ an event is emitted.
+ Otherwise, the same exception is forwarded.
+</p></div><dl class="paramcmts block"><dt class="tparam">U</dt><dd class="cmt"><p>type of events exceptions are mapped to</p></dd><dt class="param">pf</dt><dd class="cmt"><p>partial mapping from functions to events</p></dd><dt>returns</dt><dd class="cmt"><p>an event stream that emits events when an exception arrives
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#reducePast" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reducePast[S](z:S)(op:(S,T)=&gt;S):io.reactors.Events[S]"></a>
+      <a id="reducePast[S](S)((S,T)⇒S):Events[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reducePast</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="io.reactors.Events.reducePast.S">S</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="io.reactors.Events.reducePast.S">S</span>, <span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="io.reactors.Events.reducePast.S">S</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.reducePast.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@reducePast[S](z:S)(op:(S,T)=&gt;S):io.reactors.Events[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Reduces all the events in this event stream.</p><div class="fullcomment"><div class="comment cmt"><p>Reduces all the events in this event stream.</p><p> Emits a single event *after* the event stream unreacts, and then it unreacts
+ itself. For example, the event stream <code>this.reducePast(0)(_ + _)</code> graphically:</p><pre>time       -----------------&gt;
+<span class="kw">this</span>       --<span class="num">1</span>-----<span class="num">2</span>----<span class="num">3</span>-|
+reducePast ---------------<span class="num">6</span>|</pre></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the events in the resulting event stream</p></dd><dt class="param">z</dt><dd class="cmt"><p>the initial value of the reduce past</p></dd><dt class="param">op</dt><dd class="cmt"><p>the operator that combines the last event and the current one</p></dd><dt>returns</dt><dd class="cmt"><p>an event stream that emits the reduction of all events once
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#sample" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sample[S](f:=&gt;S):io.reactors.Events[S]"></a>
+      <a id="sample[S](⇒S):Events[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sample</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span name="f">f: ⇒ <span class="extype" name="io.reactors.Events.sample.S">S</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.sample.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@sample[S](f:=&gt;S):io.reactors.Events[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Whenever <code>this</code> stream emits, uses the sampling function to emit another event.</p><div class="fullcomment"><div class="comment cmt"><p>Whenever <code>this</code> stream emits, uses the sampling function to emit another event.</p><p> This combinator is useful when there is a clear ordering of events in different
+ event stream, and the incremental system state needs to be sampled at specific
+ points in time. The sampling function is guaranteed to be called only once per
+ each emitted event (however, if there are multiple subscribers to the resulting
+ event stream, then the sampling function will be called once for each subscriber).
+</p></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the sampled events</p></dd><dt class="param">f</dt><dd class="cmt"><p>the sampling function</p></dd><dt>returns</dt><dd class="cmt"><p>event stream value with the sampled events
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#scanPast" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scanPast[S](z:S)(op:(S,T)=&gt;S):io.reactors.Events[S]"></a>
+      <a id="scanPast[S](S)((S,T)⇒S):Events[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">scanPast</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="io.reactors.Events.scanPast.S">S</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="io.reactors.Events.scanPast.S">S</span>, <span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="io.reactors.Events.scanPast.S">S</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.scanPast.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@scanPast[S](z:S)(op:(S,T)=&gt;S):io.reactors.Events[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates a new event stream <code>s</code> that produces events by consecutively
+ applying the specified operator <code>op</code> to the previous event that <code>s</code>
+ produced and the current event that this event stream value produced.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new event stream <code>s</code> that produces events by consecutively
+ applying the specified operator <code>op</code> to the previous event that <code>s</code>
+ produced and the current event that this event stream value produced.</p><p> The <code>scanPast</code> operation allows the current event from this event stream to be
+ mapped into a different event by looking &quot;into the past&quot;, i.e. at the
+ event previously emitted by the resulting event stream.</p><p> Example -- assume that an event stream <code>r</code> produces events <code>1</code>, <code>2</code> and
+ <code>3</code>. The following <code>s</code>:</p><pre><span class="kw">val</span> s = r.scanPast(<span class="num">0</span>)((sum, n) <span class="kw">=&gt;</span> sum + n)</pre><p> will produce events <code>1</code>, <code>3</code> (<code>1 + 2</code>) and <code>6</code> (<code>3 + 3</code>).
+ <b>Note:</b> the initial value <code>0</code> is <b>not emitted</b>.
+ Shown graphically:</p><pre>time     -----------------&gt;
+<span class="kw">this</span>     --<span class="num">1</span>-----<span class="num">2</span>----<span class="num">3</span>---&gt;
+scanPast --<span class="num">1</span>-----<span class="num">3</span>----<span class="num">6</span>---&gt;|</pre><p> The <code>scanPast</code> can also be used to produce an event stream of a different
+ type. The following produces a complete history of all the events seen so
+ far:</p><pre><span class="kw">val</span> s2 = r.scanPast(<span class="std">List</span>[<span class="std">Int</span>]()) {
+  (history, n) <span class="kw">=&gt;</span> n :: history
+}</pre><p> The <code>s2</code> will produce events <code>1 :: Nil</code>, <code>2 :: 1 :: Nil</code> and
+ <code>3 :: 2 :: 1 :: Nil</code>.
+ <b>Note:</b> the initial value <code>Nil</code> is <b>not emitted</b>.</p><p> This operation is closely related to a <code>scanLeft</code> on a collection --
+ if an event stream were a sequence of elements, then <code>scanLeft</code> would
+ produce a new sequence whose elements correspond to the events of the
+ resulting event stream.
+</p></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the events in the resulting event stream</p></dd><dt class="param">z</dt><dd class="cmt"><p>the initial value of the scan past</p></dd><dt class="param">op</dt><dd class="cmt"><p>the operator the combines the last produced and the
+                  current event into a new one</p></dd><dt>returns</dt><dd class="cmt"><p>an event stream that scans events from <code>this</code> event stream
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#sliding" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sliding(sz:Int)(implicits:io.reactors.Spec[T]):io.reactors.Events[io.reactors.common.Conc.Queue[T]]"></a>
+      <a id="sliding(Int)(Spec[T]):Events[Queue[T]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sliding</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="s">s: <a href="package$$Spec.html" class="extype" name="io.reactors.Spec">Spec</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.common.Conc.Queue">Queue</span>[<span class="extype" name="io.reactors.RCell.T">T</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@sliding(sz:Int)(implicits:io.reactors.Spec[T]):io.reactors.Events[io.reactors.common.Conc.Queue[T]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates a sliding window of the events produced in this event stream.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a sliding window of the events produced in this event stream.</p><pre>time       -------------------------------------------&gt;
+<span class="kw">this</span>       -----<span class="num">1</span>----<span class="num">2</span>------<span class="num">3</span>----------<span class="num">4</span>---------|
+batch(<span class="num">3</span>)   -----[<span class="num">1</span>]--[<span class="num">2</span>,<span class="num">1</span>]--[<span class="num">3</span>,<span class="num">2</span>,<span class="num">1</span>]----[<span class="num">4</span>,<span class="num">3</span>,<span class="num">2</span>]---|</pre><p> <b>Note:</b> whenever an event arrives, the sliding window must be updated.
+ The sliding window is represented with an immutable queue data structure.
+ This data structure is used to incrementally a new version of the sliding window.
+ The update operation takes <code>O(1)</code> time, but needs to allocate around 7 objects on
+ average. That is generally not very expensive, but clients that really need top
+ performance should use <code>mutate</code> with a mutable queue data structure to maintain
+ the sliding window.</p><p> The resulting <code>Conc.Queue</code> has <code>O(log n)</code> access to elements, where <code>n</code> is the
+ size of the sliding window. It be converted to an array in <code>O(n)</code> time.
+</p></div><dl class="paramcmts block"><dt class="param">sz</dt><dd class="cmt"><p>size of the sliding window</p></dd><dt>returns</dt><dd class="cmt"><p>the sliding window data structure
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#sync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sync[S,R](that:io.reactors.Events[S])(f:(T,S)=&gt;R)(implicitat:io.reactors.Arrayable[T],implicitas:io.reactors.Arrayable[S]):io.reactors.Events[R]"></a>
+      <a id="sync[S,R](Events[S])((T,S)⇒R)(Arrayable[T],Arrayable[S]):Events[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sync</span><span class="tparams">[<span name="S">S</span>, <span name="R">R</span>]</span><span class="params">(<span name="that">that: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.sync.S">S</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="io.reactors.RCell.T">T</span>, <span class="extype" name="io.reactors.Events.sync.S">S</span>) ⇒ <span class="extype" name="io.reactors.Events.sync.R">R</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="at">at: <span class="extype" name="io.reactors.Arrayable">Arrayable</span>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>, <span name="as">as: <span class="extype" name="io.reactors.Arrayable">Arrayable</span>[<span class="extype" name="io.reactors.Events.sync.S">S</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.sync.R">R</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@sync[S,R](that:io.reactors.Events[S])(f:(T,S)=&gt;R)(implicitat:io.reactors.Arrayable[T],implicitas:io.reactors.Arrayable[S]):io.reactors.Events[R]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Syncs the arrival of events from <code>this</code> and <code>that</code> event stream.</p><div class="fullcomment"><div class="comment cmt"><p>Syncs the arrival of events from <code>this</code> and <code>that</code> event stream.</p><p> Ensures that pairs of events from this event stream and that event stream
+ are emitted together.
+ If the events produced in time by <code>this</code> and <code>that</code>, the sync will be as
+ follows:</p><pre>time   ---------------------------&gt;
+<span class="kw">this</span>   ----<span class="num">1</span>---------<span class="num">2</span>-------<span class="num">4</span>----&gt;
+that   --<span class="num">1</span>-----<span class="num">2</span>--<span class="num">3</span>---------------&gt;
+sync   ----<span class="num">1</span>,<span class="num">1</span>-------<span class="num">2</span>,<span class="num">2</span>-----<span class="num">4</span>,<span class="num">3</span>--&gt;</pre><p> Pairs of events produced from <code>this</code> and <code>that</code> are then transformed
+ using specified function <code>f</code>.
+ For example, clients that want to output tuples do:</p><pre><span class="kw">val</span> synced = (a sync b) { (a, b) <span class="kw">=&gt;</span> (a, b) }</pre><p> Clients that, for example, want to create differences in pairs of events
+ do:</p><pre><span class="kw">val</span> diffs = (a sync b)(_ - _)</pre><p> The resulting event stream unreacts either when
+ <code>this</code> unreacts and there are no more buffered events from this,
+ or when <code>that</code> unreacts and there are no more buffered events from
+ <code>that</code>.</p><p> <b>Use case:</b></p><pre><span class="kw">def</span> sync[S, R](that: Events[S])(f: (T, S) <span class="kw">=&gt;</span> R): Events[R]</pre><p> <b>Note:</b> This operation potentially caches events from <code>this</code> and <code>that</code>.
+ Unless certain that both <code>this</code> produces a bounded number of events
+ before the <code>that</code> produces an event, and vice versa, this operation
+ should not be called.
+</p></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the events in <code>that</code> event stream</p></dd><dt class="tparam">R</dt><dd class="cmt"><p>the type of the events in the resulting event stream</p></dd><dt class="param">that</dt><dd class="cmt"><p>the event stream to sync with</p></dd><dt class="param">f</dt><dd class="cmt"><p>the mapping function for the pair of events</p></dd><dt class="param">at</dt><dd class="cmt"><p>evidence that arrays can be created for the type <code>T</code></p></dd><dt class="param">as</dt><dd class="cmt"><p>evidence that arrays can be created for the type <code>S</code></p></dd><dt>returns</dt><dd class="cmt"><p>the event stream with the resulting events
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Signal#syncWith" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="syncWith[S,R](that:io.reactors.Signal[S])(f:(T,S)=&gt;R)(implicitat:io.reactors.Arrayable[T],implicitas:io.reactors.Arrayable[S]):io.reactors.Signal[R]"></a>
+      <a id="syncWith[S,R](Signal[S])((T,S)⇒R)(Arrayable[T],Arrayable[S]):Signal[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">syncWith</span><span class="tparams">[<span name="S">S</span>, <span name="R">R</span>]</span><span class="params">(<span name="that">that: <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a>[<span class="extype" name="io.reactors.Signal.syncWith.S">S</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="io.reactors.RCell.T">T</span>, <span class="extype" name="io.reactors.Signal.syncWith.S">S</span>) ⇒ <span class="extype" name="io.reactors.Signal.syncWith.R">R</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="at">at: <span class="extype" name="io.reactors.Arrayable">Arrayable</span>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>, <span name="as">as: <span class="extype" name="io.reactors.Arrayable">Arrayable</span>[<span class="extype" name="io.reactors.Signal.syncWith.S">S</span>]</span>)</span><span class="result">: <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a>[<span class="extype" name="io.reactors.Signal.syncWith.R">R</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@syncWith[S,R](that:io.reactors.Signal[S])(f:(T,S)=&gt;R)(implicitat:io.reactors.Arrayable[T],implicitas:io.reactors.Arrayable[S]):io.reactors.Signal[R]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Synchronizes events on two signals, and returns another signal.</p><div class="fullcomment"><div class="comment cmt"><p>Synchronizes events on two signals, and returns another signal.</p><p> <b>Note:</b> this is the same as <code>sync</code>, but it works on signals, and returns a
+ a signal.
+</p></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the events in <code>that</code> signal</p></dd><dt class="tparam">R</dt><dd class="cmt"><p>the type of the events in the resulting signal</p></dd><dt class="param">that</dt><dd class="cmt"><p>the signal to sync with</p></dd><dt class="param">f</dt><dd class="cmt"><p>the mapping function for the pair of events</p></dd><dt>returns</dt><dd class="cmt"><p>the signal with the synchronized values
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="io.reactors.Events#tail" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tail:io.reactors.Events[T]"></a>
+      <a id="tail:Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tail</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@tail:io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Emits all the events from this even stream except the first one.</p><div class="fullcomment"><div class="comment cmt"><p>Emits all the events from this even stream except the first one.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>event stream with the forwarded events
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#take" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="take(n:Int):io.reactors.Events[T]"></a>
+      <a id="take(Int):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">take</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@take(n:Int):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Takes <code>n</code> events from this event stream, and unreacts.</p><div class="fullcomment"><div class="comment cmt"><p>Takes <code>n</code> events from this event stream, and unreacts.
+</p></div><dl class="paramcmts block"><dt class="param">n</dt><dd class="cmt"><p>number of events to take</p></dd><dt>returns</dt><dd class="cmt"><p>event stream with the forwarded events
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#takeWhile" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="takeWhile(p:T=&gt;Boolean):io.reactors.Events[T]"></a>
+      <a id="takeWhile((T)⇒Boolean):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">takeWhile</span><span class="params">(<span name="p">p: (<span class="extype" name="io.reactors.RCell.T">T</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@takeWhile(p:T=&gt;Boolean):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns a new event stream that forwards the events from <code>this</code> event stream as
+ long as they satisfy the predicate <code>p</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a new event stream that forwards the events from <code>this</code> event stream as
+ long as they satisfy the predicate <code>p</code>.</p><p> After an event that does not specify the predicate occurs, the resulting event
+ stream unreacts.</p><p> If the predicate throws an exception, the exceptions is propagated, and the
+ resulting event stream unreacts.</p><pre>time             ------------------------&gt;
+<span class="kw">this</span>             -<span class="num">0</span>---<span class="num">1</span>--<span class="num">2</span>--<span class="num">3</span>-<span class="num">4</span>--<span class="num">1</span>-<span class="num">5</span>--<span class="num">2</span>--&gt;
+takeWhile(_ &lt; <span class="num">4</span>)     -<span class="num">1</span>--<span class="num">2</span>--<span class="num">3</span>-|</pre></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>the predicate that specifies whether to take the element</p></dd><dt>returns</dt><dd class="cmt"><p>event stream with the forwarded events
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#toCold" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toCold(init:T):io.reactors.Signal[T]"></a>
+      <a id="toCold(T):Signal[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toCold</span><span class="params">(<span name="init">init: <span class="extype" name="io.reactors.RCell.T">T</span></span>)</span><span class="result">: <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@toCold(init:T):io.reactors.Signal[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Given an initial event <code>init</code>, converts the event stream into a cold <code>Signal</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Given an initial event <code>init</code>, converts the event stream into a cold <code>Signal</code>.</p><p> Cold signals emit events only when some observer is subscribed to them.
+ As soon as there are no subscribers for the signal, the signal unsubscribes itself
+ from its source event stream. While unsubscribed, the signal **does not update its
+ value**, even if its event source (<code>this</code> event stream) emits events.</p><p> If there is at least one subscription to the cold signal, the signal subscribes
+ itself to its event source (<code>this</code> event stream) again.</p><p> The <code>unsubscribe</code> method on the resulting signal does nothing -- the subscription
+ of the cold signal unsubscribes only after all of the subscribers unsubscribe, or
+ the source event stream unreacts.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#toEmpty" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toEmpty:io.reactors.Signal[T]"></a>
+      <a id="toEmpty:Signal[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toEmpty</span><span class="result">: <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@toEmpty:io.reactors.Signal[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Converts this event stream into a <code>Signal</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Converts this event stream into a <code>Signal</code>.</p><p> The resulting signal initially does not contain an event,
+ and subsequently contains any event that <code>this</code> event stream produces.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the signal version of the current event stream
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#toIVar" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toIVar:io.reactors.IVar[T]"></a>
+      <a id="toIVar:IVar[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toIVar</span><span class="result">: <a href="IVar.html" class="extype" name="io.reactors.IVar">IVar</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@toIVar:io.reactors.IVar[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates an <code>IVar</code> event stream value, completed with the first event from
+ this event stream.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an <code>IVar</code> event stream value, completed with the first event from
+ this event stream.</p><p> After the <code>IVar</code> is assigned, all subsequent events are ignored.
+ If the <code>self</code> event stream is unreacted before any event arrives, the
+ <code>IVar</code> is closed.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an <code>IVar</code> with the first event from this event stream
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#toRCell" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toRCell:io.reactors.RCell[T]"></a>
+      <a id="toRCell:RCell[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toRCell</span><span class="result">: <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@toRCell:io.reactors.RCell[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates an initially empty <code>RCell</code>, updated with events of this event stream.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an initially empty <code>RCell</code>, updated with events of this event stream.</p><p> After the first event gets produced, the <code>RCell</code> is assigned this value, and is
+ from there on not empty. The <code>RCell</code> can also, alternatively, be modified by
+ clients.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an <code>RCell</code> with the first event from this event stream
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#toSignal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toSignal(init:T):io.reactors.Signal[T]"></a>
+      <a id="toSignal(T):Signal[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toSignal</span><span class="params">(<span name="init">init: <span class="extype" name="io.reactors.RCell.T">T</span></span>)</span><span class="result">: <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@toSignal(init:T):io.reactors.Signal[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Given an initial event <code>init</code>, converts this event stream into a <code>Signal</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Given an initial event <code>init</code>, converts this event stream into a <code>Signal</code>.</p><p> The resulting signal initially contains the event <code>init</code>,
+ and subsequently any event that <code>this</code> event stream produces.
+</p></div><dl class="paramcmts block"><dt class="param">init</dt><dd class="cmt"><p>an initial value for the signal</p></dd><dt>returns</dt><dd class="cmt"><p>the signal version of the current event stream
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.RCell#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@toString():String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="io.reactors.RCell">RCell</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="io.reactors.Events#union" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="union[S](implicitevidence:&lt;:&lt;[T,io.reactors.Events[S]],implicitds:io.reactors.Spec[S]):io.reactors.Events[S]"></a>
+      <a id="union[S](&lt;:&lt;[T,Events[S]],Spec[S]):Events[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">union</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="io.reactors.RCell.T">T</span>, <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.union.S">S</span>]]</span>, <span name="ds">ds: <a href="package$$Spec.html" class="extype" name="io.reactors.Spec">Spec</a>[<span class="extype" name="io.reactors.Events.union.S">S</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.union.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@union[S](implicitevidence:&lt;:&lt;[T,io.reactors.Events[S]],implicitds:io.reactors.Spec[S]):io.reactors.Events[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Unifies the events produced by all the event streams emitted by <code>this</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Unifies the events produced by all the event streams emitted by <code>this</code>.</p><p> This operation is only available for event stream values that emit
+ other event streams as events.
+ The resulting event stream unifies events of all the event streams emitted by
+ <code>this</code>. Once <code>this</code> and all the event streams emitted by <code>this</code> unreact, the
+ resulting event stream terminates.</p><p> <b>Note:</b> if the same event stream is emitted multiple times, it will be
+ subscribed to multiple times.</p><p> Example:</p><pre>time  --------------------------&gt;
+<span class="kw">this</span>     --<span class="num">1</span>----<span class="num">2</span>--------<span class="num">3</span>------&gt;
+             ---------<span class="num">5</span>----<span class="num">6</span>----&gt;
+               ---<span class="num">4</span>----------<span class="num">7</span>--&gt;
+union -----<span class="num">1</span>----<span class="num">2</span>-<span class="num">4</span>---<span class="num">5</span>--<span class="num">3</span>-<span class="num">6</span>-<span class="num">7</span>--&gt;</pre><p> <b>Use case:</b></p><pre><span class="kw">def</span> union[S](): Events[S]</pre></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of the events in event streams emitted by <code>this</code></p></dd><dt class="param">evidence</dt><dd class="cmt"><p>evidence that events of type <code>T</code> produced by <code>this</code>
+                   are actually event stream values of type <code>S</code></p></dd><dt>returns</dt><dd class="cmt"><p>the event stream with the union of all the events from the
+                   nested event streams
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#union" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="union(that:io.reactors.Events[T]):io.reactors.Events[T]"></a>
+      <a id="union(Events[T]):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">union</span><span class="params">(<span name="that">that: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@union(that:io.reactors.Events[T]):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates a union of <code>this</code> and <code>that</code> event stream.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a union of <code>this</code> and <code>that</code> event stream.</p><p> The resulting event stream emits events from both <code>this</code> and <code>that</code>
+ event stream.
+ It unreacts when both <code>this</code> and <code>that</code> event stream unreact.
+</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p>another event stream for the union</p></dd><dt>returns</dt><dd class="cmt"><p>the event stream with unified events from <code>this</code> and <code>that</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.Events#unliftTry" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unliftTry[S](implicitevid:&lt;:&lt;[T,scala.util.Try[S]]):io.reactors.Events[S]"></a>
+      <a id="unliftTry[S](&lt;:&lt;[T,Try[S]]):Events[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unliftTry</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="evid">evid: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="io.reactors.RCell.T">T</span>, <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="io.reactors.Events.unliftTry.S">S</span>]]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.unliftTry.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@unliftTry[S](implicitevid:&lt;:&lt;[T,scala.util.Try[S]]):io.reactors.Events[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Converts an event stream of <code>Events[Try[S]]</code> to type <code>Events[S]</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Converts an event stream of <code>Events[Try[S]]</code> to type <code>Events[S]</code>.</p><p> Normal events are emitted for <code>Success</code> objects, and exceptions for <code>Failure</code>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.RCell#unreact" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unreact():Unit"></a>
+      <a id="unreact():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unreact</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@unreact():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Does nothing -- a cell never unreacts.</p><div class="fullcomment"><div class="comment cmt"><p>Does nothing -- a cell never unreacts.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="io.reactors.RCell">RCell</a> → <a href="Observer.html" class="extype" name="io.reactors.Observer">Observer</a></dd></dl></div>
+    </li><li name="io.reactors.Events#unreacted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unreacted(implicitds:io.reactors.Spec[T]):io.reactors.Events[Unit]"></a>
+      <a id="unreacted(Spec[T]):Events[Unit]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unreacted</span><span class="params">(<span class="implicit">implicit </span><span name="ds">ds: <a href="package$$Spec.html" class="extype" name="io.reactors.Spec">Spec</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@unreacted(implicitds:io.reactors.Spec[T]):io.reactors.Events[Unit]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns a new event stream that emits an event when this event stream unreacts.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a new event stream that emits an event when this event stream unreacts.</p><p> After the current event stream unreacts, the result event stream first emits an
+ event of type <code>Unit</code>, and then unreacts itself.</p><p> Exceptions from this event stream are propagated until the resulting event stream
+ unreacts -- after that, <code>this</code> event stream is not allowed to produce exceptions.</p><p> Shown on the diagram:</p><pre>time            -------------------&gt;
+<span class="kw">this</span>            --<span class="num">1</span>--<span class="num">2</span>-----<span class="num">3</span>-|
+currentEvent    -------------()-|</pre></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the unreaction event stream and subscription
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="io.reactors.RCell#unsubscribe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unsubscribe():Unit"></a>
+      <a id="unsubscribe():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unsubscribe</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@unsubscribe():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">If this <code>RCell</code> is bound to an event source, this unsubscribes from it.</p><div class="fullcomment"><div class="comment cmt"><p>If this <code>RCell</code> is bound to an event source, this unsubscribes from it.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="io.reactors.RCell">RCell</a> → <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></dd></dl></div>
+    </li><li name="io.reactors.Events#until" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="until[S](that:io.reactors.Events[S]):io.reactors.Events[T]"></a>
+      <a id="until[S](Events[S]):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">until</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span name="that">that: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.until.S">S</span>]</span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@until[S](that:io.reactors.Events[S]):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates a new event stream value that produces events from <code>this</code> event stream
+ value until <code>that</code> produces an event.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new event stream value that produces events from <code>this</code> event stream
+ value until <code>that</code> produces an event.</p><p> If <code>this</code> unreacts before <code>that</code> produces a value, the resulting event stream
+ unreacts.
+ Otherwise, the resulting event stream unreacts whenever <code>that</code> produces a
+ value.
+</p></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of <code>that</code> event stream</p></dd><dt class="param">that</dt><dd class="cmt"><p>the event stream until whose first event the result
+                   propagates events</p></dd><dt>returns</dt><dd class="cmt"><p>the resulting event stream that emits only until <code>that</code> emits
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@wait():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="io.reactors.Signal#withSubscription" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withSubscription(s:io.reactors.Subscription):io.reactors.Signal[T]"></a>
+      <a id="withSubscription(Subscription):Signal[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withSubscription</span><span class="params">(<span name="s">s: <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></span>)</span><span class="result">: <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@withSubscription(s:io.reactors.Subscription):io.reactors.Signal[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns another signal with the same value, and an additional subscription.</p><div class="fullcomment"><div class="comment cmt"><p>Returns another signal with the same value, and an additional subscription.
+</p></div><dl class="paramcmts block"><dt class="param">s</dt><dd class="cmt"><p>the additional subscription to unsubscribe to</p></dd><dt>returns</dt><dd class="cmt"><p>a signal with the same events and value, and an additional
+                 subscription
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a></dd></dl></div>
+    </li><li name="io.reactors.Signal#zip" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="zip[S,R](that:io.reactors.Signal[S])(f:(T,S)=&gt;R):io.reactors.Signal[R]"></a>
+      <a id="zip[S,R](Signal[S])((T,S)⇒R):Signal[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zip</span><span class="tparams">[<span name="S">S</span>, <span name="R">R</span>]</span><span class="params">(<span name="that">that: <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a>[<span class="extype" name="io.reactors.Signal.zip.S">S</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="io.reactors.RCell.T">T</span>, <span class="extype" name="io.reactors.Signal.zip.S">S</span>) ⇒ <span class="extype" name="io.reactors.Signal.zip.R">R</span></span>)</span><span class="result">: <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a>[<span class="extype" name="io.reactors.Signal.zip.R">R</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@zip[S,R](that:io.reactors.Signal[S])(f:(T,S)=&gt;R):io.reactors.Signal[R]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Zips values of <code>this</code> and <code>that</code> signal using the specified function <code>f</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Zips values of <code>this</code> and <code>that</code> signal using the specified function <code>f</code>.</p><p> Whenever either of the two signals changes, the resulting signal also
+ changes.
+ When <code>this</code> emits an event, the current value of <code>that</code> is used to produce
+ a signal on <code>that</code>, and vice versa.</p><pre>time ---------------------------------&gt;
+<span class="kw">this</span> --<span class="num">1</span>----<span class="num">2</span>-----<span class="num">4</span>----------<span class="num">8</span>--------&gt;
+that --a----------------b---------c---&gt;
+zip  --<span class="num">1</span>,a--<span class="num">2</span>,a---<span class="num">4</span>,a---<span class="num">4</span>,b--<span class="num">8</span>,b--<span class="num">8</span>,c-&gt;</pre><p> When either of the input signals unreacts, the resulting signal also
+ unreacts.</p><p> The resulting tuple of events from <code>this</code> and <code>that</code> is mapped using the
+ user-specified mapping function <code>f</code>.
+ For example, to produce tuples:</p><pre><span class="kw">val</span> tuples = (a zip b) { (a, b) <span class="kw">=&gt;</span> (a, b) }</pre><p> To produce the difference between two integer signals:</p><pre><span class="kw">val</span> differences = (a zip b)(_ - _)</pre><p> <b>Note:</b> clients looking into pairing incoming events from two signals
+ you should use the <code>sync</code> method inherited from <code>Events</code>.
+</p></div><dl class="paramcmts block"><dt class="tparam">S</dt><dd class="cmt"><p>the type of <code>that</code> signal</p></dd><dt class="tparam">R</dt><dd class="cmt"><p>the type of the resulting signal</p></dd><dt class="param">that</dt><dd class="cmt"><p>the signal to zip <code>this</code> with</p></dd><dt class="param">f</dt><dd class="cmt"><p>the function that maps a tuple of values into an outgoing
+                  event</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription and the signal that emits zipped events
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a></dd></dl></div>
+    </li><li name="io.reactors.Events#zipHint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="zipHint[S](f:(T,Any)=&gt;S):io.reactors.Events[S]"></a>
+      <a id="zipHint[S]((T,Any)⇒S):Events[S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zipHint</span><span class="tparams">[<span name="S">S</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="io.reactors.RCell.T">T</span>, <span class="extype" name="scala.Any">Any</span>) ⇒ <span class="extype" name="io.reactors.Events.zipHint.S">S</span></span>)</span><span class="result">: <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.Events.zipHint.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@zipHint[S](f:(T,Any)=&gt;S):io.reactors.Events[S]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Zips values from this event stream with the hint value.</p><div class="fullcomment"><div class="comment cmt"><p>Zips values from this event stream with the hint value.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Events.html" class="extype" name="io.reactors.Events">Events</a></dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(RCell[T],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#io.reactors.RCell@→[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="io.reactors.Observer">
+              <h3>Inherited from <a href="Observer.html" class="extype" name="io.reactors.Observer">Observer</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</h3>
+            </div><div class="parent" name="io.reactors.Signal">
+              <h3>Inherited from <a href="Signal.html" class="extype" name="io.reactors.Signal">Signal</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</h3>
+            </div><div class="parent" name="io.reactors.Subscription">
+              <h3>Inherited from <a href="Subscription.html" class="extype" name="io.reactors.Subscription">Subscription</a></h3>
+            </div><div class="parent" name="io.reactors.Events">
+              <h3>Inherited from <a href="Events.html" class="extype" name="io.reactors.Events">Events</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]</h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>] to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="io.reactors.RCell">RCell</a>[<span class="extype" name="io.reactors.RCell.T">T</span>]]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
