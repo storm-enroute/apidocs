@@ -1,0 +1,1040 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>protocol - io.reactors.protocol</title>
+          <meta name="description" content="protocol - io.reactors.protocol" />
+          <meta name="keywords" content="protocol io.reactors.protocol" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'io.reactors.protocol.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="io">io</a>.<a href="../package.html" class="extype" name="io.reactors">reactors</a></p>
+        <h1>protocol</h1><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">protocol</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="io.reactors.protocol.BackpressureProtocols">BackpressureProtocols</span>, <span class="extype" name="io.reactors.protocol.CommunicationAbstractions">CommunicationAbstractions</span>, <span class="extype" name="io.reactors.protocol.ReliableProtocols">ReliableProtocols</span>, <span class="extype" name="io.reactors.protocol.TwoWayProtocols">TwoWayProtocols</span>, <span class="extype" name="io.reactors.protocol.RendezvousProtocols">RendezvousProtocols</span>, <span class="extype" name="io.reactors.protocol.ScatterGatherProtocols">ScatterGatherProtocols</span>, <span class="extype" name="io.reactors.protocol.RouterProtocols">RouterProtocols</span>, <span class="extype" name="io.reactors.protocol.ServerProtocols">ServerProtocols</span>, <span class="extype" name="io.reactors.protocol.ConvenienceProtocols">ConvenienceProtocols</span>, <span class="extype" name="io.reactors.protocol.Conversions">Conversions</span>, <span class="extype" name="io.reactors.protocol.Patterns">Patterns</span>, <span class="extype" name="io.reactors.protocol.ChannelProtocols">ChannelProtocols</span>, <span class="extype" name="io.reactors.protocol.StandardAbstractions">StandardAbstractions</span>, <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="io.reactors.protocol"><span>protocol</span></li><li class="in" name="io.reactors.protocol.BackpressureProtocols"><span>BackpressureProtocols</span></li><li class="in" name="io.reactors.protocol.CommunicationAbstractions"><span>CommunicationAbstractions</span></li><li class="in" name="io.reactors.protocol.ReliableProtocols"><span>ReliableProtocols</span></li><li class="in" name="io.reactors.protocol.TwoWayProtocols"><span>TwoWayProtocols</span></li><li class="in" name="io.reactors.protocol.RendezvousProtocols"><span>RendezvousProtocols</span></li><li class="in" name="io.reactors.protocol.ScatterGatherProtocols"><span>ScatterGatherProtocols</span></li><li class="in" name="io.reactors.protocol.RouterProtocols"><span>RouterProtocols</span></li><li class="in" name="io.reactors.protocol.ServerProtocols"><span>ServerProtocols</span></li><li class="in" name="io.reactors.protocol.ConvenienceProtocols"><span>ConvenienceProtocols</span></li><li class="in" name="io.reactors.protocol.Conversions"><span>Conversions</span></li><li class="in" name="io.reactors.protocol.Patterns"><span>Patterns</span></li><li class="in" name="io.reactors.protocol.ChannelProtocols"><span>ChannelProtocols</span></li><li class="in" name="io.reactors.protocol.StandardAbstractions"><span>StandardAbstractions</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="io.reactors.protocol.BackpressureProtocols.BackpressureChannelBuilderOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BackpressureChannelBuilderOps[R&lt;:&lt;?&gt;,T&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="BackpressureChannelBuilderOps[R,T]:BackpressureChannelBuilderOps[R,T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BackpressureChannelBuilderOps</span><span class="tparams">[<span name="R">R</span>, <span name="T">T</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@BackpressureChannelBuilderOps[R,T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackpressureProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.BackpressureProtocols.BackpressureConnectorOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BackpressureConnectorOps[R&lt;:&lt;?&gt;,T&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="BackpressureConnectorOps[R,T]:BackpressureConnectorOps[R,T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BackpressureConnectorOps</span><span class="tparams">[<span name="R">R</span>, <span name="T">T</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@BackpressureConnectorOps[R,T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackpressureProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.BackpressureProtocols.BackpressureReactorCompanionOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BackpressureReactorCompanionOpsextendsAnyRef"></a>
+      <a id="BackpressureReactorCompanionOps:BackpressureReactorCompanionOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BackpressureReactorCompanionOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@BackpressureReactorCompanionOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackpressureProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.BackpressureProtocols.BackpressureServerOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BackpressureServerOps[R&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="BackpressureServerOps[R]:BackpressureServerOps[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BackpressureServerOps</span><span class="tparams">[<span name="R">R</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@BackpressureServerOps[R]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackpressureProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.BackpressureProtocols.BackpressureSystemOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BackpressureSystemOpsextendsAnyRef"></a>
+      <a id="BackpressureSystemOps:BackpressureSystemOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BackpressureSystemOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@BackpressureSystemOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackpressureProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.CommunicationAbstractions.Connection" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Connection[T&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="Connection[T]:Connection[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Connection</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@Connection[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CommunicationAbstractions</dd></dl></div>
+    </li><li name="io.reactors.protocol.Patterns.DurationEventOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DurationEventOps[T&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="DurationEventOps[T]:DurationEventOps[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DurationEventOps</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@DurationEventOps[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Patterns</dd></dl></div>
+    </li><li name="io.reactors.protocol.Conversions.FutureOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FutureOps[T&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="FutureOps[T]:FutureOps[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FutureOps</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@FutureOps[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Conversions</dd></dl></div>
+    </li><li name="io.reactors.protocol.CommunicationAbstractions.Pump" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Pump[T&lt;:&lt;?&gt;]extendsProductwithSerializable"></a>
+      <a id="Pump[T]:Pump[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Pump</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@Pump[T]extendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CommunicationAbstractions</dd></dl></div>
+    </li><li name="io.reactors.protocol.ReliableProtocols.Reliable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Reliable[T&lt;:&lt;?&gt;]extendsProductwithSerializable"></a>
+      <a id="Reliable[T]:Reliable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Reliable</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@Reliable[T]extendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReliableProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ReliableProtocols.ReliableChannelBuilderOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReliableChannelBuilderOpsextendsAnyRef"></a>
+      <a id="ReliableChannelBuilderOps:ReliableChannelBuilderOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReliableChannelBuilderOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ReliableChannelBuilderOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReliableProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ReliableProtocols.ReliableConnectorOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReliableConnectorOps[T&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="ReliableConnectorOps[T]:ReliableConnectorOps[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReliableConnectorOps</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ReliableConnectorOps[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReliableProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ReliableProtocols.ReliableReactorCompanionOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReliableReactorCompanionOpsextendsAnyRef"></a>
+      <a id="ReliableReactorCompanionOps:ReliableReactorCompanionOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReliableReactorCompanionOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ReliableReactorCompanionOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReliableProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ReliableProtocols.ReliableServerOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReliableServerOps[T&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="ReliableServerOps[T]:ReliableServerOps[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReliableServerOps</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ReliableServerOps[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReliableProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ReliableProtocols.ReliableSystemOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReliableSystemOpsextendsAnyRef"></a>
+      <a id="ReliableSystemOps:ReliableSystemOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReliableSystemOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ReliableSystemOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReliableProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ReliableProtocols.ReliableTwoWayChannelBuilderOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReliableTwoWayChannelBuilderOpsextendsAnyRef"></a>
+      <a id="ReliableTwoWayChannelBuilderOps:ReliableTwoWayChannelBuilderOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReliableTwoWayChannelBuilderOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ReliableTwoWayChannelBuilderOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReliableProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ReliableProtocols.ReliableTwoWayConnectorOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReliableTwoWayConnectorOps[I&lt;:&lt;?&gt;,O&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="ReliableTwoWayConnectorOps[I,O]:ReliableTwoWayConnectorOps[I,O]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReliableTwoWayConnectorOps</span><span class="tparams">[<span name="I">I</span>, <span name="O">O</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ReliableTwoWayConnectorOps[I,O]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReliableProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ReliableProtocols.ReliableTwoWayReactorCompanionOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReliableTwoWayReactorCompanionOpsextendsAnyRef"></a>
+      <a id="ReliableTwoWayReactorCompanionOps:ReliableTwoWayReactorCompanionOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReliableTwoWayReactorCompanionOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ReliableTwoWayReactorCompanionOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReliableProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ReliableProtocols.ReliableTwoWayServerOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReliableTwoWayServerOps[I&lt;:&lt;?&gt;,O&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="ReliableTwoWayServerOps[I,O]:ReliableTwoWayServerOps[I,O]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReliableTwoWayServerOps</span><span class="tparams">[<span name="I">I</span>, <span name="O">O</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ReliableTwoWayServerOps[I,O]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReliableProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ReliableProtocols.ReliableTwoWaySystemOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReliableTwoWaySystemOps[I&lt;:&lt;?&gt;,O&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="ReliableTwoWaySystemOps[I,O]:ReliableTwoWaySystemOps[I,O]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReliableTwoWaySystemOps</span><span class="tparams">[<span name="I">I</span>, <span name="O">O</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ReliableTwoWaySystemOps[I,O]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReliableProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.RendezvousProtocols.RendezvousChannelBuilderOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RendezvousChannelBuilderOpsextendsAnyRef"></a>
+      <a id="RendezvousChannelBuilderOps:RendezvousChannelBuilderOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RendezvousChannelBuilderOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@RendezvousChannelBuilderOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RendezvousProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.RouterProtocols.RouterChannelBuilderOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RouterChannelBuilderOpsextendsAnyRef"></a>
+      <a id="RouterChannelBuilderOps:RouterChannelBuilderOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RouterChannelBuilderOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@RouterChannelBuilderOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RouterProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.RouterProtocols.RouterConnectorOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RouterConnectorOps[T&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="RouterConnectorOps[T]:RouterConnectorOps[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RouterConnectorOps</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@RouterConnectorOps[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RouterProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.RouterProtocols.RouterReactorCompanionOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RouterReactorCompanionOpsextendsAnyRef"></a>
+      <a id="RouterReactorCompanionOps:RouterReactorCompanionOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RouterReactorCompanionOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@RouterReactorCompanionOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RouterProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.RouterProtocols.RouterSystemOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RouterSystemOpsextendsAnyRef"></a>
+      <a id="RouterSystemOps:RouterSystemOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RouterSystemOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@RouterSystemOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RouterProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ScatterGatherProtocols.ScatterGather" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ScatterGather[T&lt;:&lt;?&gt;,S&lt;:&lt;?&gt;]=io.reactors.protocol.Server[Seq[T],Seq[S]]"></a>
+      <a id="ScatterGather[T,S]:ScatterGather[T,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ScatterGather</span><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> = <span class="extype" name="io.reactors.Channel">Channel</span>[<span class="extype" name="io.reactors.protocol.ServerProtocols.Server.Req">Req</span>[<a href="../../../scala/package.html#Seq[+A&lt;:&lt;?&gt;]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="io.reactors.protocol.ScatterGatherProtocols.ScatterGather.T">T</span>], <a href="../../../scala/package.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="io.reactors.protocol.ScatterGatherProtocols.ScatterGather.S">S</span>]]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ScatterGather[T,S]=io.reactors.protocol.Server[Seq[T],Seq[S]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScatterGatherProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ScatterGatherProtocols.ScatterGatherConnectorOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ScatterGatherConnectorOps[T&lt;:&lt;?&gt;,S&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="ScatterGatherConnectorOps[T,S]:ScatterGatherConnectorOps[T,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ScatterGatherConnectorOps</span><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ScatterGatherConnectorOps[T,S]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScatterGatherProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ScatterGatherProtocols.ScatterGatherReactorCompanionOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ScatterGatherReactorCompanionOps[T&lt;:&lt;?&gt;,S&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="ScatterGatherReactorCompanionOps[T,S]:ScatterGatherReactorCompanionOps[T,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ScatterGatherReactorCompanionOps</span><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ScatterGatherReactorCompanionOps[T,S]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScatterGatherProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ScatterGatherProtocols.ScatterGatherReactorSystemOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ScatterGatherReactorSystemOps[T&lt;:&lt;?&gt;,S&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="ScatterGatherReactorSystemOps[T,S]:ScatterGatherReactorSystemOps[T,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ScatterGatherReactorSystemOps</span><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ScatterGatherReactorSystemOps[T,S]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScatterGatherProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ServerProtocols.Server" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Server[T&lt;:&lt;?&gt;,S&lt;:&lt;?&gt;]=io.reactors.Channel[ServerProtocols.this.Server.Req[T,S]]"></a>
+      <a id="Server[T,S]:Server[T,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Server</span><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> = <span class="extype" name="io.reactors.Channel">Channel</span>[<span class="extype" name="io.reactors.protocol.ServerProtocols.Server.Req">Req</span>[<span class="extype" name="io.reactors.protocol.ServerProtocols.Server.T">T</span>, <span class="extype" name="io.reactors.protocol.ServerProtocols.Server.S">S</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@Server[T,S]=io.reactors.Channel[ServerProtocols.this.Server.Req[T,S]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ServerProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ServerProtocols.ServerChannelBuilderOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ServerChannelBuilderOpsextendsAnyRef"></a>
+      <a id="ServerChannelBuilderOps:ServerChannelBuilderOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ServerChannelBuilderOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ServerChannelBuilderOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ServerProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ServerProtocols.ServerConnectorOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ServerConnectorOps[T&lt;:&lt;?&gt;,S&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="ServerConnectorOps[T,S]:ServerConnectorOps[T,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ServerConnectorOps</span><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ServerConnectorOps[T,S]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ServerProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ServerProtocols.ServerOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ServerOps[T&lt;:&lt;?&gt;,S&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="ServerOps[T,S]:ServerOps[T,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ServerOps</span><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ServerOps[T,S]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ServerProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ServerProtocols.ServerReactorCompanionOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ServerReactorCompanionOpsextendsAnyRef"></a>
+      <a id="ServerReactorCompanionOps:ServerReactorCompanionOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ServerReactorCompanionOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ServerReactorCompanionOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ServerProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.CommunicationAbstractions.ServerSide" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ServerSide[R&lt;:&lt;?&gt;,C&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="ServerSide[R,C]:ServerSide[R,C]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ServerSide</span><span class="tparams">[<span name="R">R</span>, <span name="C">C</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ServerSide[R,C]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CommunicationAbstractions</dd></dl></div>
+    </li><li name="io.reactors.protocol.ServerProtocols.ServerStreamConnectorOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ServerStreamConnectorOps[T&lt;:&lt;?&gt;,S&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="ServerStreamConnectorOps[T,S]:ServerStreamConnectorOps[T,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ServerStreamConnectorOps</span><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ServerStreamConnectorOps[T,S]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ServerProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ServerProtocols.ServerStreamOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ServerStreamOps[T&lt;:&lt;?&gt;,S&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="ServerStreamOps[T,S]:ServerStreamOps[T,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ServerStreamOps</span><span class="tparams">[<span name="T">T</span>, <span name="S">S</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ServerStreamOps[T,S]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ServerProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ServerProtocols.ServerSystemOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ServerSystemOpsextendsAnyRef"></a>
+      <a id="ServerSystemOps:ServerSystemOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ServerSystemOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@ServerSystemOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ServerProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.Conversions.TraversableOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TraversableOps[T&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="TraversableOps[T]:TraversableOps[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TraversableOps</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@TraversableOps[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Conversions</dd></dl></div>
+    </li><li name="io.reactors.protocol.TwoWayProtocols.TwoWay" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TwoWay[I&lt;:&lt;?&gt;,O&lt;:&lt;?&gt;]extendsConnection[I]withProductwithSerializable"></a>
+      <a id="TwoWay[I,O]:TwoWay[I,O]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TwoWay</span><span class="tparams">[<span name="I">I</span>, <span name="O">O</span>]</span><span class="result"> extends <a href="#Connection[T]extendsAnyRef" class="extmbr" name="io.reactors.protocol.Connection">Connection</a>[<span class="extype" name="io.reactors.protocol.TwoWayProtocols.TwoWay.I">I</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@TwoWay[I,O]extendsConnection[I]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TwoWayProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.TwoWayProtocols.TwoWayChannelBuilderOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TwoWayChannelBuilderOpsextendsAnyRef"></a>
+      <a id="TwoWayChannelBuilderOps:TwoWayChannelBuilderOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TwoWayChannelBuilderOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@TwoWayChannelBuilderOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TwoWayProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.TwoWayProtocols.TwoWayConnectorOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TwoWayConnectorOps[I&lt;:&lt;?&gt;,O&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="TwoWayConnectorOps[I,O]:TwoWayConnectorOps[I,O]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TwoWayConnectorOps</span><span class="tparams">[<span name="I">I</span>, <span name="O">O</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@TwoWayConnectorOps[I,O]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TwoWayProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.TwoWayProtocols.TwoWayReactorCompanionOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TwoWayReactorCompanionOpsextendsAnyRef"></a>
+      <a id="TwoWayReactorCompanionOps:TwoWayReactorCompanionOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TwoWayReactorCompanionOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@TwoWayReactorCompanionOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TwoWayProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.TwoWayProtocols.TwoWayServerOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TwoWayServerOps[I&lt;:&lt;?&gt;,O&lt;:&lt;?&gt;]extendsAnyRef"></a>
+      <a id="TwoWayServerOps[I,O]:TwoWayServerOps[I,O]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TwoWayServerOps</span><span class="tparams">[<span name="I">I</span>, <span name="O">O</span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@TwoWayServerOps[I,O]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TwoWayProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.TwoWayProtocols.TwoWaySystemOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TwoWaySystemOpsextendsAnyRef"></a>
+      <a id="TwoWaySystemOps:TwoWaySystemOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TwoWaySystemOps</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@TwoWaySystemOpsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TwoWayProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.CommunicationAbstractions.Valve" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Valve[T&lt;:&lt;?&gt;]extendsProductwithSerializable"></a>
+      <a id="Valve[T]:Valve[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Valve</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@Valve[T]extendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CommunicationAbstractions</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="io.reactors.protocol.ServerProtocols.Server" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Server"></a>
+      <a id="Server:Server"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Server</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@Server" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ServerProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.TwoWayProtocols.TwoWay" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TwoWay"></a>
+      <a id="TwoWay:TwoWay"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TwoWay</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@TwoWay" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TwoWayProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ChannelProtocols#channelOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="channelOps[T](ch:io.reactors.Channel[T])(implicitevidence$1:io.reactors.Arrayable[T]):io.reactors.protocol.ChannelProtocols.ChannelOps[T]"></a>
+      <a id="channelOps[T](Channel[T])(Arrayable[T]):ChannelOps[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">channelOps</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="ch">ch: <span class="extype" name="io.reactors.Channel">Channel</span>[<span class="extype" name="io.reactors.protocol.ChannelProtocols.channelOps.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="io.reactors.Arrayable">Arrayable</span>[<span class="extype" name="io.reactors.protocol.ChannelProtocols.channelOps.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="io.reactors.protocol.ChannelProtocols.ChannelOps">ChannelOps</span>[<span class="extype" name="io.reactors.protocol.ChannelProtocols.channelOps.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@channelOps[T](ch:io.reactors.Channel[T])(implicitevidence$1:io.reactors.Arrayable[T]):io.reactors.protocol.ChannelProtocols.ChannelOps[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ChannelProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.ConvenienceProtocols#reactorSystemOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reactorSystemOps(system:io.reactors.ReactorSystem):io.reactors.protocol.Convenience.ReactorSystemOps"></a>
+      <a id="reactorSystemOps(ReactorSystem):ReactorSystemOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reactorSystemOps</span><span class="params">(<span name="system">system: <span class="extype" name="io.reactors.ReactorSystem">ReactorSystem</span></span>)</span><span class="result">: <span class="extype" name="io.reactors.protocol.Convenience.ReactorSystemOps">ReactorSystemOps</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@reactorSystemOps(system:io.reactors.ReactorSystem):io.reactors.protocol.Convenience.ReactorSystemOps" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ConvenienceProtocols</dd></dl></div>
+    </li><li name="io.reactors.protocol.Patterns#retry" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="retry[T&lt;:&lt;?&gt;](backoffScheme:&lt;?&gt;)(req:&lt;?&gt;):io.reactors.Events[T]"></a>
+      <a id="retry[T](Seq[Duration])(⇒Events[T]):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">retry</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="backoffScheme">backoffScheme: <a href="../../../scala/package.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="scala.concurrent.duration.Duration">Duration</span>]</span>)</span><span class="params">(<span name="req">req: ⇒ <span class="extype" name="io.reactors.Events">Events</span>[<span class="extype" name="io.reactors.protocol.Patterns.retry.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="io.reactors.Events">Events</span>[<span class="extype" name="io.reactors.protocol.Patterns.retry.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@retry[T](backoffScheme:Seq[scala.concurrent.duration.Duration])(req:=&gt;io.reactors.Events[T]):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Patterns</dd></dl></div>
+    </li><li name="io.reactors.protocol.Patterns#retry" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="retry[T&lt;:&lt;?&gt;](numTimes:&lt;?&gt;,delay:&lt;?&gt;)(req:&lt;?&gt;):io.reactors.Events[T]"></a>
+      <a id="retry[T](Int,Duration)(⇒Events[T]):Events[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">retry</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="numTimes">numTimes: <span class="extype" name="scala.Int">Int</span></span>, <span name="delay">delay: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>)</span><span class="params">(<span name="req">req: ⇒ <span class="extype" name="io.reactors.Events">Events</span>[<span class="extype" name="io.reactors.protocol.Patterns.retry.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="io.reactors.Events">Events</span>[<span class="extype" name="io.reactors.protocol.Patterns.retry.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#io.reactors.protocol.package@retry[T](numTimes:Int,delay:scala.concurrent.duration.Duration)(req:=&gt;io.reactors.Events[T]):io.reactors.Events[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Patterns</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="io.reactors.protocol.BackpressureProtocols">
+              <h3>Inherited from <span class="extype" name="io.reactors.protocol.BackpressureProtocols">BackpressureProtocols</span></h3>
+            </div><div class="parent" name="io.reactors.protocol.CommunicationAbstractions">
+              <h3>Inherited from <span class="extype" name="io.reactors.protocol.CommunicationAbstractions">CommunicationAbstractions</span></h3>
+            </div><div class="parent" name="io.reactors.protocol.ReliableProtocols">
+              <h3>Inherited from <span class="extype" name="io.reactors.protocol.ReliableProtocols">ReliableProtocols</span></h3>
+            </div><div class="parent" name="io.reactors.protocol.TwoWayProtocols">
+              <h3>Inherited from <span class="extype" name="io.reactors.protocol.TwoWayProtocols">TwoWayProtocols</span></h3>
+            </div><div class="parent" name="io.reactors.protocol.RendezvousProtocols">
+              <h3>Inherited from <span class="extype" name="io.reactors.protocol.RendezvousProtocols">RendezvousProtocols</span></h3>
+            </div><div class="parent" name="io.reactors.protocol.ScatterGatherProtocols">
+              <h3>Inherited from <span class="extype" name="io.reactors.protocol.ScatterGatherProtocols">ScatterGatherProtocols</span></h3>
+            </div><div class="parent" name="io.reactors.protocol.RouterProtocols">
+              <h3>Inherited from <span class="extype" name="io.reactors.protocol.RouterProtocols">RouterProtocols</span></h3>
+            </div><div class="parent" name="io.reactors.protocol.ServerProtocols">
+              <h3>Inherited from <span class="extype" name="io.reactors.protocol.ServerProtocols">ServerProtocols</span></h3>
+            </div><div class="parent" name="io.reactors.protocol.ConvenienceProtocols">
+              <h3>Inherited from <span class="extype" name="io.reactors.protocol.ConvenienceProtocols">ConvenienceProtocols</span></h3>
+            </div><div class="parent" name="io.reactors.protocol.Conversions">
+              <h3>Inherited from <span class="extype" name="io.reactors.protocol.Conversions">Conversions</span></h3>
+            </div><div class="parent" name="io.reactors.protocol.Patterns">
+              <h3>Inherited from <span class="extype" name="io.reactors.protocol.Patterns">Patterns</span></h3>
+            </div><div class="parent" name="io.reactors.protocol.ChannelProtocols">
+              <h3>Inherited from <span class="extype" name="io.reactors.protocol.ChannelProtocols">ChannelProtocols</span></h3>
+            </div><div class="parent" name="io.reactors.protocol.StandardAbstractions">
+              <h3>Inherited from <span class="extype" name="io.reactors.protocol.StandardAbstractions">StandardAbstractions</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
